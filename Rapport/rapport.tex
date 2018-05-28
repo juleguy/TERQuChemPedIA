@@ -1,0 +1,151 @@
+\documentclass{report}
+\usepackage[utf8]{inputenc}    
+\usepackage[T1]{fontenc}
+\usepackage[francais]{babel}
+\usepackage{wrapfig}
+\usepackage{graphicx}
+\usepackage{listings,xcolor}
+\usepackage{appendix}
+\usepackage{adjustbox}
+\usepackage{titling}
+\usepackage{float}
+\usepackage{pdfpages}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage[hidelinks]{hyperref}
+\usepackage{arydshln}
+\usepackage{fixltx2e}
+\usepackage{amsmath}
+
+% Rotation de texte
+\newcommand*\rot{\rotatebox{90}}
+\newcommand*\halfrot{\rotatebox{135}}
+
+% Alias pour texte en indice
+\newcommand{\indice}{\textsubscript}
+
+% Vecteur colonne
+\newcommand{\colvect}[1]{\ensuremath{\begin{pmatrix}#1\end{pmatrix}}}
+
+
+\hypersetup{
+    colorlinks,
+    citecolor=black,
+    filecolor=black,
+    linkcolor=blue,
+    urlcolor=blue
+}
+
+%Géométrie des pages
+\usepackage{geometry}
+\geometry{hmargin=2.2cm,vmargin=2.2cm}
+
+%Définition des couleurs pour le code xml
+\definecolor{colorxmlnode}{rgb}{0.2, 0.2, 0.2} 
+\definecolor{maroon}{RGB}{178 34 34}
+
+
+%Profondeur des compteurs et de la tableofcontents
+\setcounter{secnumdepth}{3}
+\setcounter{tocdepth}{2}
+
+
+%lst xml
+\lstdefinelanguage{XML}
+{
+  basicstyle=\ttfamily,
+  morestring=[s]{"}{"},
+  morecomment=[s]{?}{?},
+  morecomment=[s]{!--}{--},
+  commentstyle=\color{darkgreen},
+  moredelim=[s][\color{black}]{>}{<},
+  moredelim=[s][\color{red}]{\ }{=},
+  stringstyle=\color{blue},
+  identifierstyle=\color{maroon}
+}
+
+
+\addto\captionsfrench{%
+  \renewcommand\appendixname{Annexe}
+  \renewcommand\appendixpagename{Annexes}
+}
+
+%Définition des commandes \noeud et \classe
+\newcommand\classe[1]{\mbox{\textit{#1}}}
+\newcommand\noeud[1]{\textcolor{colorxmlnode}{<\mbox{#1}>}}
+
+
+
+
+\begin{document}
+
+\begin{titlepage}
+	\centering
+	
+    \vspace*{1.2 cm}
+    
+   	\textsc{\LARGE Master i informatique\\Travail Encadré de Recherche\\[0.3cm]\large Juin 2018}
+
+	\vspace{2.2cm}
+    
+    
+	\rule{\linewidth }{0.2 mm} \\[0.15 cm]
+    {\LARGE \textbf{Rapport QuChemPedia}\\[0.2cm] \large
+		\textbf{Sous titre}}\\
+	\rule{\linewidth}{0.2 mm}
+       \vspace*{0.1 cm}
+	
+	\begin{center}
+	\vspace{0.3cm}
+	
+	\emph{Auteur}\\
+	\vspace{0.1cm}
+	Jules \bsc{Leguy}\\ 
+	
+	
+	\vspace{0.5cm}
+	\emph{Encadrants}\\
+	\vspace{0.1cm}
+	Benoit \bsc{Da Mota}\\
+	Thomas \bsc{Cauchy}
+	\end{center}		
+	
+	\vspace{1.0cm}
+
+
+    
+    
+\end{titlepage}
+
+
+\tableofcontents
+
+\chapter{Introduction}
+	\input{1-Introduction/introduction.tex}
+
+\chapter{Description des problèmes}
+		
+\chapter{Représentations géométriques moléculaires}
+	\section{Matrice des coordonnées}
+		\input{3-Representations_moleculaires/coordonnees.tex}
+
+	\section{Matrice réduite des distances inter-atomiques}
+		\input{3-Representations_moleculaires/distances_relatives.tex}
+		
+	\section{Matrice réduite des distances à des points fixes}
+		
+	\section{}
+
+\chapter{Modèles prédictifs}
+
+\chapter{Conclusion}
+	\input{5-Conclusion/conclusion.tex}
+	
+
+\addappheadtotoc
+\appendixpage
+
+\appendix
+
+
+\end{document}

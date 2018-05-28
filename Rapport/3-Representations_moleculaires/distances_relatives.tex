@@ -1,0 +1,284 @@
+\subsection{Motivation}
+
+\par Cette représentation est issue du travail qui a été fait précédemment sur ce projet, et consiste à représenter une molécule par ses distances inter-atomiques. L'intérêt de cette représentation est que les réseaux de neurones qui l'utilisent travaillent dans des repères relatifs. Lorsqu'ils effectuent des prédictions, ils n'ont pas besoin de \textit{comprendre} les notions mathématiques de géométrie permettant de déduire la position d'un point dans un repère à partir de ses distances à d'autres points, contrairement à la représentation décrite en (REF REPR ABS). Cette représentation est donc très commode pour les modèles prédictifs dont l'objectif est de corriger les distances entre deux atomes, puisqu'elle est basée sur les distances entre les paires d'atomes.
+
+\par De plus, l'utilisation d'une représentation basée sur les distances relatives permet d'offrir une représentation unique pour les molécules ayant des ensembles d'atomes pouvant effectuer des rotations, contrairement aux représentations basées sur les coordonnées (REF REPR COORDS) ou sur des distances à des points fixes (REF REPR DIST ABS).
+
+\par Lorsque les modèles utilisent cette représentation en sortie, ou plus précisément que l'on déduit la matrice réduite des distances inter-atomiques de la sortie du modèle (voir REF SORTIE DELTA\_DIST+H), nous devons toutefois trouver une méthode (voir REF PRINC RECONSTRUCT) pour reconstruire les molécules sous la forme d'une matrice de coordonnées (REF REPR COORDS).
+
+\subsection{Formalisation}
+
+\par Pour ne pas surcharger les modèles d'information, nous ne travaillons pas sur la matrice de distances inter-atomiques complète, mais sur un sous-ensemble de cardinalité minimale de cette matrice telle que nous pouvons reconstruire sans ambiguïté un ensemble de coordonnées représentant les positions des atomes de la molécule. La matrice des distances étant symétrique et la diagonale étant nulle, toute l'information est contenue dans chaque demi-matrice triangulaire privée de la diagonale. \\
+
+\begin{figure}[h!]
+	\centering
+	
+	
+	\begin{tabular}{c|c|c|c|c|c|c|c|c|c|c|c|c}
+	    & a\textsubscript{0} & a\textsubscript{1} & a\textsubscript{2} & a\textsubscript{3} & a\textsubscript{4} & ... & a\textsubscript{n-4} & a\textsubscript{n-3} & a\textsubscript{n-2} & 
+	    	 a\textsubscript{n-1}  & a\textsubscript{n}\\ \hline
+		a\textsubscript{0} & \textbf{d\textsubscript{0,0}} & \textbf{d\textsubscript{0,1}} & \textbf{d\textsubscript{0,2}} & 
+		    \textbf{d\textsubscript{0,3}} & \textbf{d\textsubscript{0,4}} & \textbf{...} & \textbf{d\textsubscript{0,n-4}} & 
+		    \textbf{d\textsubscript{0,n-3}} & \textbf{d\textsubscript{0,n-2}} & \textbf{d\textsubscript{0,n-1}}
+		    & \textbf{d\textsubscript{0,n}} \\ \hline
+		a\textsubscript{1} & \textbf{d\textsubscript{1,0}} & \textbf{d\textsubscript{1,1}} & \textbf{d\textsubscript{1,2}} & 
+			\textbf{d\textsubscript{1,3}} & \textbf{d\textsubscript{1,4}} & \textbf{...} & \textbf{d\textsubscript{1,n-4}} & 
+			\textbf{d\textsubscript{1,n-3}} & \textbf{d\textsubscript{1,n-2}} & \textbf{d\textsubscript{1,n-1}} & 
+			\textbf{d\textsubscript{1,n}} \\ \hline
+		a\textsubscript{2} & \textbf{d\textsubscript{2,0}} & \textbf{d\textsubscript{2,1}} & \textbf{d\textsubscript{2,2}} &
+			\textbf{d\textsubscript{2,3}} & \textbf{d\textsubscript{2,4}} & \textbf{...} & \textbf{d\textsubscript{2,n-4}} & 
+			\textbf{d\textsubscript{2,n-3}} & \textbf{d\textsubscript{2,n-2}} & \textbf{d\textsubscript{2,n-1}} & 
+			\textbf{d\textsubscript{2,n}} \\ \hline
+		a\textsubscript{3} & \textbf{d\textsubscript{3,0}} & \textbf{d\textsubscript{3,1}} & \textbf{d\textsubscript{3,2}} & 
+			\textbf{d\textsubscript{3,3}} & \textbf{d\textsubscript{3,4}} & \textbf{...} & \textbf{d\textsubscript{3,n-4}} & 
+			\textbf{d\textsubscript{3,n-3}} & \textbf{d\textsubscript{3,n-2}} & \textbf{d\textsubscript{3,n-1}} & 
+			\textbf{d\textsubscript{3,n}} \\ \hline
+		a\textsubscript{4} & \textbf{d\textsubscript{4,0}} & \textbf{d\textsubscript{4,1}} & \textbf{d\textsubscript{4,2}} & 
+			\textbf{d\textsubscript{4,3}} & \textbf{d\textsubscript{4,4}} & \textbf{...} & \textbf{d\textsubscript{4,n-4}} & 
+			\textbf{d\textsubscript{4,n-3}} & \textbf{d\textsubscript{4,n-2}} & \textbf{d\textsubscript{4,n-1}} & 
+			\textbf{d\textsubscript{4,n}} \\ \hline
+			
+		\rot{... } & \textbf{\rot{... }} & \textbf{\rot{... }} & \textbf{\rot{... }} & \textbf{\rot{... }} & 
+		\textbf{\rot{... }} & \textbf{\halfrot{ ... }} & \textbf{\rot{... }} & \textbf{\rot{... }} & \textbf{\rot{... }} & 
+		\textbf{\rot{... }} & \textbf{\rot{... }} \\ \hline
+
+
+		a\textsubscript{n-4} & \textbf{d\textsubscript{n-4,0}} & \textbf{d\textsubscript{n-4,1}} & \textbf{d\textsubscript{n-4,2}} & 
+			\textbf{d\textsubscript{n-4,3}} & \textbf{d\textsubscript{n-4,4}} & \textbf{...} & \textbf{d\textsubscript{n-4,n-4}} & 
+			\textbf{d\textsubscript{n-4,n-3}} & \textbf{d\textsubscript{n-4,n-2}} & \textbf{d\textsubscript{n-4,n-1}} & 
+			\textbf{d\textsubscript{n-3,n}} \\ \hline
+
+		a\textsubscript{n-3} & \textbf{d\textsubscript{n-3,0}} & \textbf{d\textsubscript{n-3,1}} & \textbf{d\textsubscript{n-3,2}} & 
+			\textbf{d\textsubscript{n-3,3}} & \textbf{d\textsubscript{n-3,4}} & \textbf{...} & \textbf{d\textsubscript{n-3,n-4}} & 
+			\textbf{d\textsubscript{n-3,n-3}} & \textbf{d\textsubscript{n-3,n-2}} & \textbf{d\textsubscript{n-3,n-1}} & 
+			\textbf{d\textsubscript{n-3,n}} \\ \hline
+		a\textsubscript{n-2} & \textbf{d\textsubscript{n-2,0}} & \textbf{d\textsubscript{n-2,1}} & \textbf{d\textsubscript{n-2,2}} & 
+			\textbf{d\textsubscript{n-2,3}} & \textbf{d\textsubscript{n-2,4}} & \textbf{...} & \textbf{d\textsubscript{n-2,n-4}} & 
+			\textbf{d\textsubscript{n-2,n-3}} & \textbf{d\textsubscript{n-2,n-2}} & \textbf{d\textsubscript{n-2,n-1}} & 
+			\textbf{d\textsubscript{n-2,n}} \\ \hline
+		a\textsubscript{n-1} & \textbf{d\textsubscript{n-1,0}} & \textbf{d\textsubscript{n-1,1}} & \textbf{d\textsubscript{n-1,2}} & 
+			\textbf{d\textsubscript{n-1,3}} & \textbf{d\textsubscript{n-1,4}} & \textbf{...} & \textbf{d\textsubscript{n-1,n-4}} & 
+			\textbf{d\textsubscript{n-1,n-3}} & \textbf{d\textsubscript{n-1,n-2}} & \textbf{d\textsubscript{n-1,n-1}} & 
+			\textbf{d\textsubscript{n-1,n}} \\ \hline
+		a\textsubscript{n} & \textbf{d\textsubscript{n,0}} & \textbf{d\textsubscript{n,1}} & \textbf{d\textsubscript{n,2}} & 
+			\textbf{d\textsubscript{n,3}} & \textbf{d\textsubscript{n,4}} & \textbf{...} & \textbf{d\textsubscript{n,n-4}} & 
+			\textbf{d\textsubscript{n,n-3}} & \textbf{d\textsubscript{n,n-2}} & \textbf{d\textsubscript{n,n-1}} & 
+			\textbf{d\textsubscript{n,n}} \\ \hline
+		
+	\end{tabular}
+
+	
+	\caption{Matrice complète des distances inter-atomiques d'une molécule}
+\end{figure}
+
+\par De plus, nous n'avons besoin que des distances à quatre points pour retrouver la position de chaque atome (voir REF RECONSTRUCT), nous nous contentons donc de garder les quatre premières distances de chaque ligne de la matrice triangulaire supérieure privée de la diagonale.
+
+
+\begin{figure}[h!]
+	\centering
+	
+	
+	\begin{tabular}{c|c|c|c|c|c|c|c|c|c|c|c|c}
+	    & a\textsubscript{0} & a\textsubscript{1} & a\textsubscript{2} & a\textsubscript{3} & a\textsubscript{4} & ... & a\textsubscript{n-4} & a\textsubscript{n-3} & a\textsubscript{n-2} & 
+	    	 a\textsubscript{n-1}  & a\textsubscript{n}\\ \hline
+		a\textsubscript{0} & d\textsubscript{0,0} & \textbf{d\textsubscript{0,1}} & \textbf{d\textsubscript{0,2}} & 
+		    \textbf{d\textsubscript{0,3}} & \textbf{d\textsubscript{0,4}} & ... & d\textsubscript{0,n-4} & 
+		    d\textsubscript{0,n-3} & d\textsubscript{0,n-2} & d\textsubscript{0,n-1}
+		    & d\textsubscript{0,n} \\ \hline
+		a\textsubscript{1} & d\textsubscript{1,0} & d\textsubscript{1,1} & \textbf{d\textsubscript{1,2}} & 
+			\textbf{d\textsubscript{1,3}} & \textbf{d\textsubscript{1,4}} & ... & d\textsubscript{1,n-4} & 
+			d\textsubscript{1,n-3} & d\textsubscript{1,n-2} & d\textsubscript{1,n-1} & 
+			d\textsubscript{1,n} \\ \hline
+		a\textsubscript{2} & d\textsubscript{2,0} & d\textsubscript{2,1} & d\textsubscript{2,2} &
+			\textbf{d\textsubscript{2,3}} & \textbf{d\textsubscript{2,4}} & ... & d\textsubscript{2,n-4} & 
+			d\textsubscript{2,n-3} & d\textsubscript{2,n-2} & d\textsubscript{2,n-1} & 
+			d\textsubscript{2,n} \\ \hline
+		a\textsubscript{3} & d\textsubscript{3,0} & d\textsubscript{3,1} & d\textsubscript{3,2} & 
+			d\textsubscript{3,3} & \textbf{d\textsubscript{3,4}} & ... & d\textsubscript{3,n-4} & 
+			d\textsubscript{3,n-3} & d\textsubscript{3,n-2} & d\textsubscript{3,n-1} & 
+			d\textsubscript{3,n} \\ \hline
+			
+		a\textsubscript{4} & d\textsubscript{4,0} & d\textsubscript{4,1} & d\textsubscript{4,2} & 
+			d\textsubscript{4,3} & \textbf{d\textsubscript{4,4}} & ... & d\textsubscript{4,n-4} & 
+			d\textsubscript{4,n-3} & d\textsubscript{4,n-2} & d\textsubscript{4,n-1} & 
+			d\textsubscript{4,n} \\ \hline
+			
+		\rot{... } & \rot{... } & \rot{... } & \rot{... } & \rot{... } & 
+		\rot{... } & \halfrot{ ... } & \rot{... } & \rot{... } & \rot{... } & 
+		\rot{... } & \rot{... } \\ \hline
+	    	
+	    	
+		a\textsubscript{n-4} & d\textsubscript{n-4,0} & d\textsubscript{n-4,1} & d\textsubscript{n-4,2} & 
+			d\textsubscript{n-4,3} & d\textsubscript{n-4,4} & ... & d\textsubscript{n-4,n-4} & 
+			\textbf{d\textsubscript{n-4,n-3}} & \textbf{d\textsubscript{n-4,n-2}} & \textbf{d\textsubscript{n-4,n-1}} & 
+			\textbf{d\textsubscript{n-4,n}} \\ \hline	    
+		a\textsubscript{n-3} & d\textsubscript{n-3,0} & d\textsubscript{n-3,1} & d\textsubscript{n-3,2} & 
+			d\textsubscript{n-3,3} & d\textsubscript{n-3,4} & ... & d\textsubscript{n-3,n-4} & 
+			d\textsubscript{n-3,n-3} & \textbf{d\textsubscript{n-3,n-2}} & \textbf{d\textsubscript{n-3,n-1}} & 
+			\textbf{d\textsubscript{n-3,n}} \\ \hline
+		a\textsubscript{n-2} & d\textsubscript{n-2,0} & d\textsubscript{n-2,1} & d\textsubscript{n-2,2} & 
+			d\textsubscript{n-2,3} & d\textsubscript{n-2,4} & ... & d\textsubscript{n-2,n-4} & 
+			d\textsubscript{n-2,n-3} & d\textsubscript{n-2,n-2} & \textbf{d\textsubscript{n-2,n-1}} & 
+			\textbf{d\textsubscript{n-2,n}} \\ \hline
+		a\textsubscript{n-1} & d\textsubscript{n-1,0} & d\textsubscript{n-1,1} & d\textsubscript{n-1,2} & 
+			d\textsubscript{n-1,3} & d\textsubscript{n-1,4} & ... & d\textsubscript{n-1,n-4} & 
+			d\textsubscript{n-1,n-3} & d\textsubscript{n-1,n-2} & d\textsubscript{n-1,n-1} & 
+			\textbf{d\textsubscript{n-1,n}} \\ \hline
+		a\textsubscript{n} & d\textsubscript{n,0} & d\textsubscript{n,1} & d\textsubscript{n,2} & 
+			d\textsubscript{n,3} & d\textsubscript{n,4} & ... & d\textsubscript{n,n-4} & 
+			d\textsubscript{n,n-3} & d\textsubscript{n,n-2} & d\textsubscript{n,n-1} & d\textsubscript{n,n} \\ \hline
+		
+	\end{tabular}
+
+	
+	\caption{Matrice réduite des distances inter-atomiques d'une molécule (en gras)}
+\end{figure}
+
+\begin{figure}[h!]
+	\centering
+	
+	
+	\begin{tabular}{|c|c|c|c|}
+		\hline
+		\textbf{d\textsubscript{0,1}} & \textbf{d\textsubscript{0,2}} & \textbf{d\textsubscript{0,3}} & \textbf{d\textsubscript{0,4}} \\ \hline
+		\textbf{d\textsubscript{1,2}} & \textbf{d\textsubscript{1,3}} & \textbf{d\textsubscript{1,4}} & \textbf{d\textsubscript{1,5}} \\ \hline
+		\textbf{d\textsubscript{2,3}} & \textbf{d\textsubscript{2,4}} & \textbf{d\textsubscript{2,5}} & \textbf{d\textsubscript{2,6}} \\ \hline
+		\textbf{d\textsubscript{3,4}} & \textbf{d\textsubscript{3,5}} & \textbf{d\textsubscript{3,6}} & \textbf{d\textsubscript{3,7}} \\ \hline
+		\textbf{\rot{... }} & \textbf{\rot{... }} & \textbf{\rot{... }} & \textbf{\rot{... }} \\ \hline
+		\textbf{d\textsubscript{n-4,n-3}} & \textbf{d\textsubscript{n-4,n-2}} & \textbf{d\textsubscript{n-4,n-1}} & \textbf{d\textsubscript{n-4,n}} \\ \hline
+		\textbf{d\textsubscript{n-3,n-2}} & \textbf{d\textsubscript{n-3,n-1}} & \textbf{d\textsubscript{n-3,n}} & \textbf{0} \\ \hline
+		\textbf{d\textsubscript{n-2,n-1}} & \textbf{d\textsubscript{n-2,n}} & \textbf{0} & \textbf{0} \\ \hline
+		\textbf{d\textsubscript{n-1,n}} & \textbf{0} & \textbf{0} & \textbf{0} \\ \hline
+	\end{tabular}
+
+	
+	\caption{Matrice réduite des distances inter-atomiques d'une molécule}
+\end{figure}
+
+\newpage
+\subsection{Reconstruction des molécules}
+
+\par Lorsqu'un modèle a pour sortie une matrice réduite des distances inter-atomiques lorsqu'il effectue des prédictions, il faut définir une méthode pour reconstruire une matrice des coordonnées (ref REPR MAT COORDS) de façon automatique à partir de cette sortie, la seule contrainte étant que la distance relative entre chaque paire d'atomes soit respectée. Il ne s'agit pour autant pas d'une tâche triviale, elle s'est en effet avérée impossible en pratique pour les grosses molécules à cause de la propagation des erreurs qu'elle induit (voir REF PROPAG ERREURS).
+
+\subsubsection{Formalisation de la méthode de reconstruction}
+
+\paragraph{Nécessité et limite de l'introduction d'un atome fictif} Notre méthode de reconstruction des atomes doit permettre de respecter la chiralité\footnote{Un composé chimique est dit chiral s'il n'est pas superposable à son image dans un miroir. (\url{https://fr.wikipedia.org/wiki/Chiralité_(chimie))}} des molécules. Or, en déduisant uniquement la position d'un atome de ses distances aux quatre atomes précédents, il existe des cas pour lesquels il existe plusieurs solutions pour la position de l'atome (deux si les quatre atomes précédents sur un même plan ou une infinité si les quatre atomes précédents appartiennent à une droite). Pour pallier ce problème, la méthode retenue précédemment a été d'introduire un nouveau point (que l'on nomme atome fictif) et que l'on place arbitrairement dans la molécule, à une position telle qu'il n'appartient pas au plan formé par les trois premiers atomes, ou à la droite formée par les trois premiers atomes s'ils sont alignés. De cette façon, les atomes suivants seront placés sans ambiguïté.\\
+Cependant, on peut imaginer des cas pour lesquels la technique de l'introduction d'un atome fictif ne permet pas de lever l'ambiguïté, notamment pour les molécules possédant une chaîne de carbones liés par des doubles liaisons (et formant donc une droite). La méthode ne permettra pas dans ce cas de déterminer les positions des atomes en bout de chaîne tel que leurs distances relatives soient respectées, cette information étant perdue lors de la création de la matrice réduite des distances inter-atomiques. \\
+Cette représentation n'est donc pas viable en pratique. Cela fait partie des raisons (voir également REF PB SQRT) pour lesquelles nous sommes passés à la représentation par matrice réduite des distances à des points fixes (REF MATR RED FIXES).
+
+\paragraph{Placement de l'atome fictif} Puisque l'on définit la position de chaque atome en fonction de ses distances aux quatre atomes précédents, on doit d'abord placer les quatre premiers atomes de façon partiellement arbitraire. Le premier atome de la molécule dans notre représentation étant l'atome fictif a\indice{0}, nous commençons par le placer à la position qui lui a été attribuée.
+
+\paragraph{Placement de l'atome a\indice{1}} Une fois l'atome a\indice{0} placé, il existe une infinité de solutions pour la position de l'atome a\indice{1}. On peut en effet le placer à tout point appartenant à la surface de la sphère de centre a\indice{0} et de rayon d\indice{0,1}.
+
+
+
+\paragraph{Placement de l'atome a\indice{2}} L'atome a\indice{2} appartient au cercle solution de l'intersection entre les sphères de centres a\indice{0} et a\indice{1} et de rayons d\indice{0,2} et d\indice{1,2}. On choisit donc arbitrairement une position appartenant à ce cercle.
+
+
+
+\paragraph{Placement de l'atome a\indice{3}} Dans le cas général, il existe deux solutions pour le placement de l'atome a\indice{3}, l'intersection non nulle de trois sphères étant deux points si tous les points ne sont pas sur un même plan ou une même droite. On choisit arbitrairement un point parmi ces deux solutions, car il n'y a pas à ce stade d'ambiguïté de chiralité de la molécule, une molécule composée de trois atomes ne possédant pas de chiralité (l'atome fictif a\indice{0} ne fait pas partie de la molécule).
+
+
+\paragraph{Placement de l'atome a\indice{n}} Pour placer l'atome a\indice{$n$} ($n$ étant strictement inférieur à la taille de la molécule), nous généralisons la méthode de placement de l'atome a\indice{3}. Plutôt que de travailler sur l'intersection de quatre sphères, nous travaillons toujours sur l'intersection de trois sphères et nous utilisons la dernière distance pour discriminer les deux solutions obtenues. Cela facilite grandement la résolution des équations mathématiques associées et permet d'obtenir des solutions sensiblement équivalentes. \\
+Formellement, nous calculons les positions des deux points solutions de l'intersection des trois sphères de centres a\indice{n-4}, a\indice{n-3}, et a\indice{n-2} et de rayons d\indice{n-4,n}, d\indice{n-3,n} et d\indice{n-2,n}, et nous discriminons les deux solutions selon la distance d\indice{n-1,n}. 
+
+\begin{figure}
+	\centering
+	\includegraphics[scale=0.27]{images/1_sphere.png}
+	\caption{Placement de l'atome a\indice{1} (image extraite du rapport de N.Roux)}
+\end{figure}
+
+\begin{figure}
+	\centering
+	\includegraphics[scale=0.3]{images/2_spheres.png}
+	\caption{Placement de l'atome a\indice{2} (image extraite du rapport de N.Roux)}
+\end{figure}
+
+
+\begin{figure}
+	\centering
+	\includegraphics[scale=0.3]{images/3_spheres.png}
+	\caption{Placement de l'atome a\indice{3} (image extraite du rapport de N.Roux)}
+\end{figure}
+
+
+\begin{figure}
+	\centering
+	\includegraphics[scale=0.3]{images/3_spheres_gen.png}
+	\caption{Placement de l'atome a\indice{n} (image extraite du rapport de N.Roux)}
+\end{figure}
+
+\subsubsection{Reconstruction automatique des positions en utilisant un solveur}
+
+\par Nous développons ici une méthode permettant de déterminer les coordonnées d'un atome quelconque en utilisant un solveur d'équations non linéaires \footnote{\url{https://en.wikipedia.org/wiki/Nonlinear_system}}. Nous utilisons la bibliothèque Sympy\footnote{\url{http://www.sympy.org/fr/}}.\\
+
+\par Tout d'abord, l'atome fictif a\indice{0} doit être placé à la position qui lui a été attribuée (REF PLACEMENT AT FICTIF). Nous plaçons ensuite arbitrairement les trois atomes suivants, de sorte que leurs distances relatives soient respectées. Pour simplifier le problème, nous effectuons une translation temporaire telle que a\indice{0}$'$ est à l'origine du repère. Nous plaçons alors a\indice{1}$'$ sur l'axe $x$, à une distance d\indice{0,1} de l'origine, et a\indice{2}$'$ sur le plan tel que $z=0$, à une position telle que les distances d\indice{0,2} et d\indice{1,2} sont respectées. Pour finir, nous plaçons a\indice{3}$'$ à l'une des deux solutions de l'intersection des sphères associées au problème (REF PLACEMENT A3). Le choix de la solution est arbitraire car la reconstruction de la bonne chiralité de la molécule ne dépend pas du placement des trois premiers atomes non fictifs.\\
+
+
+
+\begin{figure}[!h]
+	\centering
+	
+	\[
+	a_{0}'\left \{
+   	\begin{array}{l}
+      x_{0}'=0\\
+      y_{0}'=0\\
+	  z_{0}'=0
+   	\end{array}
+   	\right .
+   	\:
+   	a_{1}'\left \{
+   	\begin{array}{l}
+      x_{1}'=d_{0,1}\\
+      y_{1}'=0\\
+	  z_{1}'=0
+   	\end{array}
+   	\right .
+   	\:
+	a_{2}'\left \{
+   	\begin{array}{l}
+      x_{2}'=\frac{d_{0,2}^2 - d_{1,2}^2 + x_{1}^2}{2x_{1}'}\\
+      y_{2}'=\sqrt{d_{2,0}^2 - x_{2}'^2}\\
+	  z_{2}'=0
+   	\end{array}
+   	\right .
+   	\:
+   	a_{3}'\left \{
+   	\begin{array}{l}
+      x_{3}'=\frac{d_{0,3}^2+x_1'^2-d_{1,3}^2}{2x_{1}'}\\
+      y_{3}'=\frac{-2x_3'x_2'+d_{0,2}^2-d_{2,3}^2+d_{0,3}^2}{2y_2'}\\
+	  z_{3}'=\sqrt{-x_3'^2-y_3'^2+d_{0,3}^2}
+   	\end{array}
+   	\right .
+	\]
+		
+	\caption{Placement des atomes a\indice{0}$'$, a\indice{1}$'$, a\indice{2}$'$ et a\indice{3}$'$}
+\end{figure}
+
+
+\par Une fois que les quatre premiers atomes sont placés, nous leur appliquons une translation selon le vecteur $\vec{a_0}$, de sorte que l'atome fictif soit à sa position originale, et que les distances relatives des atomes a\indice{0}, a\indice{1}, a\indice{2} et a\indice{3} soient toujours consistantes. Nous faisons alors appel au solveur pour résoudre les équations associées au placement des autres atomes de de la molécule. Pour chaque atome, nous sélectionnons la solution respectant au mieux la distance d\indice{n-1,n} (REF PLACEMENT AN).
+
+
+\begin{figure}[!h]
+	\centering
+	
+	\[
+	\left \{
+   	\begin{array}{l}
+      d_{n-4,n}^2=(x_n-x_{n-4})^2 + (y_n-y_{n-4})^2 + (z_n-z_{n-4})^2\\
+	  d_{n-3,n}^2=(x_n-x_{n-3})^2 + (y_n-y_{n-3})^2 + (z_n-z_{n-3})^2\\
+      d_{n-2,n}^2=(x_n-x_{n-2})^2 + (y_n-y_{n-2})^2 + (z_n-z_{n-2})^2\\
+   	\end{array}
+   	\right .
+	\]
+	
+	\caption{Équations de sphères permettant d'obtenir la position d'un atome quelconque de la molécule}
+\end{figure}
+
+\paragraph{Limites de l'approche par solveur} L'utilisation d'un solveur calculant les solutions au cas par cas pose deux problèmes importants. Le premier concerne les performances de la solution. En effet, la résolution des systèmes d'équations consomme beaucoup de ressources et prend donc un temps non négligeable si on souhaite appliquer la méthode à un grand nombre de molécules.\\
+Le second problème est lié à la propagation des erreurs lors de la reconstruction (REF RECONSTRUCT TRILAT). À cause du manque de précision de certaines valeurs, certaines intersections de sphères sont vides et il n'existe pas de solutions exactes. Le solveur renvoie alors des solutions imaginaires que nous ne pouvons pas interpréter. Ce problème se manifeste avant tout sur les molécules de taille importante, mais il est impossible de déterminer une taille limite au delà de laquelle nous ne pouvons pas reconstruire les molécules. Cela implique qu'il existe des molécules que nous ne pouvons pas reconstruire, et que nous ne pouvons pas déterminer à l'avance quelles molécules peuvent être reconstruites ou non.
+
+\subsubsection{Reconstruction automatique des positions en utilisant des équations de trilatération}
+
+
