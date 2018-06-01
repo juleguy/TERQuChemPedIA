@@ -1,0 +1,60 @@
+{
+  "paths":{
+        "train_set_loc":"../../data/train_set_riken_v2_reduced.h5",
+        "test_set_loc":"../../data/test_set_riken_v2_reduced.h5",
+        "train_prepared_input_loc":"../../data/DIST_REL_OH_02/train_prepared_input.h5",
+        "test_prepared_input_loc":"../../data/DIST_REL_OH_02/test_prepared_input.h5",
+        "train_labels_loc":"../../data/DIST_REL_OH_02/train_labels.h5",
+        "test_labels_loc":"../../data/DIST_REL_OH_02/test_labels.h5",
+        "model_loc":"../../models/DIST_REL_OH_02/dist_rel_oh_02.tflearn",
+        "logs_dir":"../../models/DIST_REL_OH_02/logs/",
+        "bonds_lengths_loc":"/home/jleguy/data/stats/OH/OH_bonds_lengths_total_set.h5",
+        "plots_dir":"../../figures/"
+  },
+  "tasks":[
+    {
+      "prepare_model_data": {
+        "selected_mols": {
+          "mol_min_size": "2",
+          "mol_max_size": "60",
+          "max_anum": "9",
+          "anum_1": "8",
+          "anum_2": "1",
+          "min_bond_size": "0.9",
+          "max_bond_size": "1.25"
+        },
+        "params": {
+          "nb_mol_from_train": "16000000",
+          "nb_mol_from_test": "3200000",
+          "pos_class": "True",
+          "one_hot_anums": "True",
+          "amasses": "True",
+          "distances": "True",
+          "distances_cut_off": "2",
+          "batch_size": "1000"
+        }
+      }
+    },
+    {
+      "model_train": {
+        "model_name": "DIST_REL_OH_02",
+        "model_type": "NN",
+        "params": {
+          "epochs": "300",
+          "last_layer_width": "870",
+          "batch_size": "5000",
+          "learning_rate": "0.01",
+          "epsilon": "0.001",
+          "stddev_init": "0.001",
+          "hidden_act": "elu",
+          "outlayer_act": "linear",
+          "depth": "3",
+          "weight_decay": "0.001",
+          "gpu_mem_prop": "0.3",
+          "save_model": "True",
+          "dropout": "0.98"
+        }
+      }
+    }
+  ]
+}

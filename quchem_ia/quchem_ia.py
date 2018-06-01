@@ -358,14 +358,18 @@ def _plot_predictions(plot_predictions_json):
         # Checking that specific attributes for NN are specified
         _check_key(params, last_layer_width_k)
         _check_key(params, depth_k)
+        _check_key(params, hidden_act_k)
+        _check_key(params, outlayer_act_k)
 
         last_layer_width = int(params[last_layer_width_k])
         depth = int(params[depth_k])
+        hidden_act = params[hidden_act_k]
+        outlayer_act = params[outlayer_act_k]
 
         plots.plot_nn_model_results(paths.model_loc, model_name, anum_1, anum_2, paths.bonds_lengths_loc,
                                     paths.test_prepared_input_loc, paths.test_labels_loc, paths.plots_dir,
                                     plot_error_distrib, plot_targets_error_distrib, plot_targets_predictions,
-                                    batch_size, last_layer_width, depth)
+                                    batch_size, last_layer_width, depth, hidden_act, outlayer_act)
 
 
 

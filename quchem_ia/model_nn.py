@@ -158,7 +158,7 @@ def train_model(input_X_h5_loc, labels_y_h5_loc, model_name, model_loc, logs_loc
 
 
 def predict(model_loc, test_prepared_input_loc, test_labels_loc, batch_size, last_layer_width,
-            depth):
+            depth, hidden_act, outlayer_act):
     """
     Predicts given test data with the given neural network and returns the error vector and the prediction vector
     :param model_loc:
@@ -177,7 +177,7 @@ def predict(model_loc, test_prepared_input_loc, test_labels_loc, batch_size, las
     first_layer_width = len(input_X[0])
 
     # NN Creation
-    network = _nn_creation(first_layer_width, last_layer_width, depth)
+    network = _nn_creation(first_layer_width, last_layer_width, depth, hidden_act=hidden_act, outlayer_act=outlayer_act)
 
     # Model creation
     model = tfl.DNN(network)
@@ -192,10 +192,5 @@ def predict(model_loc, test_prepared_input_loc, test_labels_loc, batch_size, las
         j = min(len(input_X), i + batch_size)
         predictions.extend(model.predict(np.array(input_X[i:j])))
         i += batch_size
-
-    print("predictions : ")
-    print(predictions[:20])
-    print("targets : ")
-    print(labels_y[:20])
 
     return _rmse_test(labels_y, predictions).reshape(1, -1)[0], predictions, labels_y

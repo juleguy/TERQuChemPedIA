@@ -22,9 +22,11 @@
           "plot_targets_predictions":"True",
           "asymb_1":"C",
           "asymb_2":"C",
-          "batch_size":"10000",
+          "batch_size":"1060",
           "last_layer_width":"870",
-          "depth":"3"
+          "depth":"3",
+          "hidden_act":"elu",
+          "outlayer_act":"linear"
         }
       }
     }
