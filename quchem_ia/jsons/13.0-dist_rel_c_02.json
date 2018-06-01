@@ -1,13 +1,13 @@
 {
   "paths":{
-        "train_set_loc":"../data/train_set_riken_v2_reduced.h5",
-        "test_set_loc":"../data/test_set_riken_v2_reduced.h5",
-        "train_prepared_input_loc":"../data/DIST_REL_C_02/train_set_prepared_input.h5",
-        "test_prepared_input_loc":"../data/DIST_REL_C_02/test_set_prepared_input.h5",
-        "train_labels_loc":"../data/DIST_REL_C_02/train_set_labels.h5",
-        "test_labels_loc":"../data/DIST_REL_C_02/train_set_labels.h5",
-        "model_loc":"../models/DIST_REL_C_02/",
-        "logs_loc":"../models_DIST_REL_C_02/"
+        "train_set_loc":"../../data/train_set_riken_v2_reduced.h5",
+        "test_set_loc":"../../data/test_set_riken_v2_reduced.h5",
+        "train_prepared_input_loc":"../../data/DIST_REL_C_02/train_set_prepared_input.h5",
+        "test_prepared_input_loc":"../../data/DIST_REL_C_02/test_set_prepared_input.h5",
+        "train_labels_loc":"../../data/DIST_REL_C_02/train_set_labels.h5",
+        "test_labels_loc":"../../data/DIST_REL_C_02/train_set_labels.h5",
+        "model_loc":"../../models/DIST_REL_C_02/",
+        "logs_loc":"../../models_DIST_REL_C_02/"
   },
   "tasks":[
     {
@@ -54,9 +54,5 @@
         }
       }
     }
-
-
   ]
-
-
 }
