@@ -1,0 +1,13 @@
+
+input_data_loc = ""
+train_set_loc = ""
+test_set_loc = ""
+train_prepared_input_loc = ""
+test_prepared_input_loc = ""
+train_labels_loc = ""
+test_labels_loc = ""
+bonds_lengths_loc = ""
+plots_dir = ""
+model_loc = ""
+dataset_loc = ""
+logs_loc = ""

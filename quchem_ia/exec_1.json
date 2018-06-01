@@ -1,0 +1,93 @@
+{
+  "paths":{
+        "input_data_loc":"../data/minimal_set_reduced.h5",
+        "train_set_loc":"tests/train.h5",
+        "test_set_loc":"tests/test.h5",
+        "train_prepared_input_loc":"tests/train_prepared.h5",
+        "test_prepared_input_loc":"tests/test_prepared.h5",
+        "train_labels_loc":"tests/train_labels.h5",
+        "test_labels_loc":"tests/test_labels.h5",
+        "model_loc":"tests/MODEL_TEST/model_test.tflearn",
+        "logs_loc":"tests/MODEL_TEST/logs"
+  },
+  "tasks":[
+    {
+      "data_split": {
+        "paths": {
+          "input_data_loc": "../data/minimal_set_reduced.h5",
+          "train_set_loc": "tests/train.h5",
+          "test_set_loc": "tests/test.h5"
+        },
+        "params": {
+          "train_proportion": "0.8",
+          "random_state": "12"
+        }
+      }
+    },
+    {
+      "bonds_stats":{
+        "paths":{
+          "dataset_loc":"../data/minimal_set_reduced.h5",
+          "bonds_lengths_loc":"tests/lengths.h5"
+        },
+        "params":{
+          "max_anum":"9",
+          "mol_min_size":"2",
+          "mol_max_size":"15",
+          "anum_1":"8",
+          "anum_2":"1",
+          "batch_size":"5000"
+        }
+      }
+
+    },
+    {
+      "prepare_model_data": {
+        "selected_mols": {
+          "mol_min_size": "2",
+          "mol_max_size": "30",
+          "max_anum": "9",
+          "anum_1": "6",
+          "anum_2": "1",
+          "min_bond_size": "0",
+          "max_bond_size": "1.25"
+        },
+        "params": {
+          "nb_mol_from_train": "500",
+          "nb_mol_from_test": "100",
+          "pos_class": "True",
+          "one_hot_anums": "True",
+          "amasses": "True",
+          "distances": "True",
+          "distances_cut_off": "5",
+          "batch_size": "10000"
+        }
+      }
+    },
+    {
+      "model_train":{
+        "model_name":"DIST_MOD_TEST",
+        "model_type":"NN",
+        "params":{
+          "epochs":"5",
+          "last_layer_width":"50",
+          "batch_size":"1000",
+          "learning_rate":"0.001",
+          "epsilon":"0.00001",
+          "stddev_init":"0.001",
+          "hidden_act":"relu",
+          "outlayer_act":"linear",
+          "depth":"4",
+          "weight_decay":"0.001",
+          "gpu_mem_prop":"1",
+          "save_model":"True",
+          "dropout":"0.99"
+        }
+      }
+    }
+
+
+  ]
+
+
+}

@@ -277,8 +277,93 @@ Formellement, nous calculons les positions des deux points solutions de l'inters
 \end{figure}
 
 \paragraph{Limites de l'approche par solveur} L'utilisation d'un solveur calculant les solutions au cas par cas pose deux problèmes importants. Le premier concerne les performances de la solution. En effet, la résolution des systèmes d'équations consomme beaucoup de ressources et prend donc un temps non négligeable si on souhaite appliquer la méthode à un grand nombre de molécules.\\
-Le second problème est lié à la propagation des erreurs lors de la reconstruction (REF RECONSTRUCT TRILAT). À cause du manque de précision de certaines valeurs, certaines intersections de sphères sont vides et il n'existe pas de solutions exactes. Le solveur renvoie alors des solutions imaginaires que nous ne pouvons pas interpréter. Ce problème se manifeste avant tout sur les molécules de taille importante, mais il est impossible de déterminer une taille limite au delà de laquelle nous ne pouvons pas reconstruire les molécules. Cela implique qu'il existe des molécules que nous ne pouvons pas reconstruire, et que nous ne pouvons pas déterminer à l'avance quelles molécules peuvent être reconstruites ou non.
+Le second problème est lié à la propagation des erreurs lors de la reconstruction (REF RECONSTRUCT TRILAT). À cause du manque de précision de certaines valeurs, certaines intersections de sphères sont vides. Le solveur renvoie alors des solutions imaginaires que nous ne pouvons pas interpréter. Ce problème se manifeste avant tout sur les molécules de taille importante, mais il est impossible de déterminer une taille limite au delà de laquelle nous ne pouvons pas reconstruire les molécules. Cela implique qu'il existe des molécules que nous ne pouvons pas reconstruire, et que nous ne pouvons pas déterminer à l'avance si une molécule donnée peut être reconstruite.
+
+\begin{figure}[!h]
+	\centering
+	
+	\begin{tabular}{|l|r|r|}
+		
+	
+	\end{tabular}
+	
+	\caption{Temps d'exécution de la résolution par solveur}
+\end{figure}
 
 \subsubsection{Reconstruction automatique des positions en utilisant des équations de trilatération}
 
+\par Afin de pallier les problèmes liés à l'utilisation d'un solveur pour construire l'ensemble des positions des atomes d'une molécule à partir de la matrice réduite des distances inter-atomiques, nous utilisons une méthode permettant de calculer les positions de chaque point à partir d'un ensemble d'équations. Cette méthode est décrite sur Wikipédia\footnote{\url{https://en.wikipedia.org/wiki/Trilateration}}. Il s'agit d'une méthode de trilatération de points, c'est à dire que l'on cherche à déterminer la position d'un point en fonction de ses distances à trois points dont les positions sont connues, par opposition à la triangulation\footnote{\url{https://fr.wikipedia.org/wiki/Triangulation}} pour laquelle on détermine la position d'un point en fonction de ses angles à des points dont les positions sont connues.\\
 
+\par De même que pour la méthode utilisant un solveur (REF SOLV), nous commençons par placer l'atome fictif a\indice{0} à la position qui lui a été attribuée, puis les atomes a\indice{1}, a\indice{2} et a\indice{3} de façon arbitraire telle que les distances relatives des atomes a\indice{$i$}, $i \in \{0, ..., 3\}$ soient respectées. Nous utilisons pour cela les équations décrites en (REF FIG PLACEMENT).\\
+
+\par Une fois les quatre premiers atomes placés, nous cherchons à placer l'atome a\indice{$n$} de la molécule en fonction de ses distances aux quatre atomes précédents. Nous calculons les solutions en considérant que $a\indice{n-4}'$ est à l'origine du repère, que $a\indice{n-3}'$ est sur l'axe $x$, et que $a\indice{n-2}'$ est sur le plan tel que $z=0$, puis nous effectuons une translation des solutions dans le système de coordonnées original. Pour cela, nous définissons les quantités et vecteurs suivants. 
+\par La notation $\hat{u}$ indique un vecteur $u$ de norme 1, et nous considérons que $\overline{a_i}$ représente le vecteur allant de l'origine au point $a_i$, dans le but de simplifier l'écriture des équations.\\
+
+\vspace{0.4cm}
+
+\centerline{Vecteur unitaire dans la direction de $a_{n-4}$ à $a_{n-3}$ :}
+
+\[
+\hat{e_x} = \frac{\overline{a_{n-3}}-\overline{a_{n-4}}}{d_{n-4,n-3}}
+\]
+
+\vspace{0.4cm}
+
+\centerline{Ordre de grandeur signé de la composante $x$ dans le nouveau}
+\centerline{ système de coordonnées du vecteur $\overline{a_{n-4}a_{n-2}}$ : }
+\[
+i = \hat{e_x}\cdot(\overline{a_{n-4}}-\overline{a_{n-2}})
+\]
+
+\vspace{0.4cm}
+
+\centerline{Vecteur unitaire dans la direction $y$ par rapport à $\hat{e_x}$:}
+\[
+\hat{e_y} = \frac{\overline{a_{n-2}}-\overline{a_{n-4}}-i\hat{e_x}}{\begin{Vmatrix}\overline{a_{n-2}}-\overline{a_{n-4}}-i\hat{e_x}\end{Vmatrix}}
+\]
+
+\vspace{0.4cm}
+
+\centerline{Vecteur unitaire dans la direction $z$ par rapport à $\hat{e_x}$ et $\hat{e_y}$:}
+\[
+\hat{e_z} = \hat{e_x}\times\hat{e_y}
+\]
+
+\vspace{0.4cm}
+
+\centerline{Ordre de grandeur signé de la composante $y$ dans le nouveau}
+\centerline{ système de coordonnées du vecteur $\overline{a_{n-4}a_{n-2}}$ : }
+\[
+j = \hat{e_y}\cdot(\overline{a_{n-4}}-\overline{a_{n-2}})
+\]
+
+\vspace{0.4cm}
+\par On calcule alors les deux solutions pour $a_n'$ selon les équations suivantes.
+
+\vspace{0.4cm}
+
+\[
+a_{n}'\left \{
+   	\begin{array}{l}
+      x_{n}'= \frac{d_{n-4,n}^2 - d_{n-3,n}^2 + d_{n-4,n-3}^2}{2d_{n-4,n-2}}\\
+      y_{n}'= \frac{d_{n-4,n}^2 - d_{n-2,n}^2 + i^2 + j^2}{2j}-\frac{i}{j}x_{n}'\\
+	  z_{n}'= \pm\sqrt{d_{n-4,n}^2 - x_{n}'^2 - y_{n}'^2}
+   	\end{array}
+   	\right .
+   	\:
+\]
+
+\vspace{0.4cm}
+
+\par Enfin, nous translatons les deux solutions $a_n'$ dans le système de coordonnées original selon le vecteur suivant.
+
+\[
+\overline{p} = \overline{a_{n-4}} + x_{n}'\hat{e_x} + y_{n}'\hat{e_y} + z_{n}'\hat{e_z}.
+\]
+
+\vspace{0.4cm}
+
+Nous obtenons alors deux solutions $a_n$, et nous sélectionnons celle telle que la distance $d_{n-1,n}$ est la plus cohérente.
+
+
+\paragraph{Performances et limites}
