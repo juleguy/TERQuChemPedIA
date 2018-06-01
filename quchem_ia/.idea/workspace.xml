@@ -11,7 +11,7 @@
   </component>
   <component name="CoverageDataManager">
     <SUITE FILE_PATH="coverage/quchem_ia$data_preparation.coverage" NAME="data_preparation Coverage Results" MODIFIED="1527673243660" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/quchem_ia$quchem_ia.coverage" NAME="quchem_ia Coverage Results" MODIFIED="1527753786199" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/quchem_ia$quchem_ia.coverage" NAME="quchem_ia Coverage Results" MODIFIED="1527856673927" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/quchem_ia$model_nn.coverage" NAME="model_nn Coverage Results" MODIFIED="1527767373217" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
   <component name="DatabaseView">
@@ -29,124 +29,107 @@
     <select />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.5">
-      <split-first>
-        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file leaf-file-name="data_preparation.py" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/data_preparation.py">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="355">
-                  <caret line="188" selection-start-line="188" selection-end-line="188" />
-                  <folding>
-                    <element signature="e#0#11#0" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="h5_keys.py" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/h5_keys.py">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="144">
-                  <caret line="8" column="26" selection-start-line="8" selection-start-column="26" selection-end-line="8" selection-end-column="26" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="json_keys.py" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/json_keys.py">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="-68">
-                  <caret line="21" column="22" selection-start-line="21" selection-start-column="22" selection-end-line="21" selection-end-column="22" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="exec_1.json" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/jsons/exec_1.json">
-              <provider selected="true" editor-type-id="text-editor">
-                <state>
-                  <caret column="1" selection-start-column="1" selection-end-column="1" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="exec_2.json" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/jsons/exec_2.json">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="-522">
-                  <caret line="10" column="42" selection-start-line="10" selection-start-column="42" selection-end-line="10" selection-end-column="42" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="model_nn.py" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/model_nn.py">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="-131">
-                  <caret line="130" selection-start-line="130" selection-end-line="130" />
-                  <folding>
-                    <element signature="e#0#23#0" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="quchem_ia.py" pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/quchem_ia.py">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="389">
-                  <caret line="336" column="38" selection-start-line="336" selection-start-column="38" selection-end-line="336" selection-end-column="38" />
-                  <folding>
-                    <element signature="e#0#11#0" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="paths.py" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/paths.py">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="216">
-                  <caret line="12" column="6" selection-start-line="12" selection-start-column="6" selection-end-line="12" selection-end-column="6" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="13.0-dist_rel_c_02_test.json" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/tests/13.0-dist_rel_c_02_test.json">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="450">
-                  <caret line="25" column="34" selection-start-line="25" selection-start-column="34" selection-end-line="25" selection-end-column="34" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="13.0-dist_rel_c_02.json" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/jsons/13.0-dist_rel_c_02.json">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="162">
-                  <caret line="9" column="52" selection-start-line="9" selection-start-column="52" selection-end-line="9" selection-end-column="52" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-        </leaf>
-      </split-first>
-      <split-second>
-        <leaf>
-          <file leaf-file-name="13.0-dist_rel_c_02_test.json" pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/tests/13.0-dist_rel_c_02_test.json">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="144">
-                  <caret line="14" column="26" lean-forward="true" selection-start-line="14" selection-start-column="26" selection-end-line="14" selection-end-column="26" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-        </leaf>
-      </split-second>
-    </splitter>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="h5_keys.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/h5_keys.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="144">
+              <caret line="8" column="26" selection-start-line="8" selection-start-column="26" selection-end-line="8" selection-end-column="26" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="json_keys.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/json_keys.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="295">
+              <caret line="68" column="54" selection-start-line="68" selection-start-column="54" selection-end-line="68" selection-end-column="54" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="exec_2.json" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/jsons/exec_2.json">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-13">
+              <caret line="42" column="21" lean-forward="true" selection-start-line="42" selection-start-column="21" selection-end-line="42" selection-end-column="21" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="exec_3.json" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/jsons/exec_3.json">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="73">
+              <caret line="10" column="50" selection-start-line="10" selection-start-column="50" selection-end-line="10" selection-end-column="50" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="model_nn.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/model_nn.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="131">
+              <caret line="192" column="65" lean-forward="true" selection-start-line="192" selection-start-column="65" selection-end-line="192" selection-end-column="65" />
+              <folding>
+                <element signature="e#0#23#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="exec_4.json" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/jsons/exec_4.json">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="90">
+              <caret line="5" column="38" selection-start-line="5" selection-start-column="38" selection-end-line="5" selection-end-column="38" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="plots.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/plots.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="234">
+              <caret line="13" column="19" selection-start-line="13" selection-start-column="19" selection-end-line="13" selection-end-column="19" />
+              <folding>
+                <element signature="e#0#31#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="quchem_ia.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/quchem_ia.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1051">
+              <caret line="408" column="21" selection-start-line="408" selection-start-column="21" selection-end-line="408" selection-end-column="21" />
+              <folding>
+                <element signature="e#0#11#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="13.0-dist_rel_c_02_test.json" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/tests/13.0-dist_rel_c_02_test.json">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="450">
+              <caret line="25" column="34" selection-end-line="57" selection-end-column="1" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="13.0-dist_rel_c_02.json" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/jsons/13.0-dist_rel_c_02.json">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="126">
+              <caret line="7" column="56" selection-end-line="57" selection-end-column="1" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -165,10 +148,12 @@
       <find>batch_s</find>
       <find>model_d</find>
       <find>succ</find>
-      <find>reshape</find>
       <find>logs</find>
-      <find>max_anu</find>
       <find>compute_in</find>
+      <find>max_anu</find>
+      <find>reshape</find>
+      <find>min_size</find>
+      <find>bond</find>
     </findStrings>
   </component>
   <component name="IdeDocumentHistory">
@@ -181,16 +166,22 @@
         <option value="$PROJECT_DIR$/h5_keys.py" />
         <option value="$PROJECT_DIR$/bonds_lengths_stats.py" />
         <option value="$PROJECT_DIR$/exec_1.json" />
-        <option value="$PROJECT_DIR$/model_nn.py" />
         <option value="$PROJECT_DIR$/dist_rel_c_02.json" />
         <option value="$PROJECT_DIR$/tests/MODEL_TEST/13.0-dist_rel_c_02_test.json" />
-        <option value="$PROJECT_DIR$/jsons/exec_2.json" />
         <option value="$PROJECT_DIR$/paths.py" />
-        <option value="$PROJECT_DIR$/json_keys.py" />
         <option value="$PROJECT_DIR$/data_preparation.py" />
         <option value="$PROJECT_DIR$/tests/13.0-dist_rel_c_02_test.json" />
+        <option value="$PROJECT_DIR$/exec_3.json" />
+        <option value="$PROJECT_DIR$/models.py" />
         <option value="$PROJECT_DIR$/jsons/13.0-dist_rel_c_02.json" />
+        <option value="$PROJECT_DIR$/json_keys.py" />
+        <option value="$PROJECT_DIR$/exec_4.json" />
+        <option value="$PROJECT_DIR$/jsons/exec_3.json" />
+        <option value="$PROJECT_DIR$/jsons/exec_4.json" />
         <option value="$PROJECT_DIR$/quchem_ia.py" />
+        <option value="$PROJECT_DIR$/plots.py" />
+        <option value="$PROJECT_DIR$/model_nn.py" />
+        <option value="$PROJECT_DIR$/jsons/exec_2.json" />
       </list>
     </option>
   </component>
@@ -228,17 +219,6 @@
             <path>
               <item name="quchem_ia" type="b2602c69:ProjectViewProjectNode" />
               <item name="quchem_ia" type="462c0819:PsiDirectoryNode" />
-              <item name="tests" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="quchem_ia" type="b2602c69:ProjectViewProjectNode" />
-              <item name="quchem_ia" type="462c0819:PsiDirectoryNode" />
-              <item name="tests" type="462c0819:PsiDirectoryNode" />
-              <item name="MODEL_TEST" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="quchem_ia" type="b2602c69:ProjectViewProjectNode" />
-              <item name="quchem_ia" type="462c0819:PsiDirectoryNode" />
               <item name="venv" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
@@ -258,8 +238,8 @@
       <recent name="$PROJECT_DIR$/tests/MODEL_TEST" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/tests" />
       <recent name="$PROJECT_DIR$/jsons" />
+      <recent name="$PROJECT_DIR$/tests" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -387,12 +367,12 @@
       <window_info anchor="bottom" id="Database Changes" order="13" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="9" show_stripe_button="false" />
       <window_info anchor="bottom" id="Python Console" order="12" sideWeight="0.91720086" weight="0.104166664" />
-      <window_info active="true" anchor="bottom" id="Run" order="3" sideWeight="0.86752135" visible="true" weight="0.3256579" />
+      <window_info active="true" anchor="bottom" id="Run" order="3" sideWeight="0.86752135" visible="true" weight="0.4989035" />
       <window_info anchor="bottom" id="Terminal" order="11" sideWeight="0.9166667" weight="0.32894737" />
       <window_info content_ui="combo" id="Project" order="0" sideWeight="0.499187" visible="true" weight="0.15064102" />
       <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
       <window_info anchor="right" id="Database" order="3" weight="0.32959402" />
-      <window_info anchor="right" id="SciView" order="4" weight="0.32959402" />
+      <window_info anchor="right" id="SciView" order="4" visible="true" weight="0.0" />
       <window_info id="Structure" order="1" sideWeight="0.500813" side_tool="true" weight="0.16025642" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Debug" order="4" weight="0.3991228" />
@@ -586,20 +566,34 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/model_nn.py">
+    <entry file="file://$PROJECT_DIR$/data_preparation.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-131">
-          <caret line="130" selection-start-line="130" selection-end-line="130" />
+        <state relative-caret-position="355">
+          <caret line="188" selection-start-line="188" selection-end-line="188" />
           <folding>
-            <element signature="e#0#23#0" expanded="true" />
+            <element signature="e#0#11#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/13.0-dist_rel_c_02_test.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="450">
+          <caret line="25" column="34" selection-end-line="57" selection-end-column="1" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/paths.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="216">
-          <caret line="12" column="6" selection-start-line="12" selection-start-column="6" selection-end-line="12" selection-end-column="6" />
+          <caret line="12" column="6" selection-start-line="12" selection-end-line="12" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jsons/13.0-dist_rel_c_02.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="126">
+          <caret line="7" column="56" selection-end-line="57" selection-end-column="1" />
         </state>
       </provider>
     </entry>
@@ -612,49 +606,59 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/json_keys.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-68">
-          <caret line="21" column="22" selection-start-line="21" selection-start-column="22" selection-end-line="21" selection-end-column="22" />
+        <state relative-caret-position="295">
+          <caret line="68" column="54" selection-start-line="68" selection-start-column="54" selection-end-line="68" selection-end-column="54" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/data_preparation.py">
+    <entry file="file://$PROJECT_DIR$/jsons/exec_4.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="355">
-          <caret line="188" selection-start-line="188" selection-end-line="188" />
+        <state relative-caret-position="90">
+          <caret line="5" column="38" selection-start-line="5" selection-start-column="38" selection-end-line="5" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/plots.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="234">
+          <caret line="13" column="19" selection-start-line="13" selection-start-column="19" selection-end-line="13" selection-end-column="19" />
+          <folding>
+            <element signature="e#0#31#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jsons/exec_3.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="73">
+          <caret line="10" column="50" selection-start-line="10" selection-start-column="50" selection-end-line="10" selection-end-column="50" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/quchem_ia.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1051">
+          <caret line="408" column="21" selection-start-line="408" selection-start-column="21" selection-end-line="408" selection-end-column="21" />
           <folding>
             <element signature="e#0#11#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/model_nn.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="131">
+          <caret line="192" column="65" lean-forward="true" selection-start-line="192" selection-start-column="65" selection-end-line="192" selection-end-column="65" />
+          <folding>
+            <element signature="e#0#23#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/jsons/exec_2.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-522">
-          <caret line="10" column="42" selection-start-line="10" selection-start-column="42" selection-end-line="10" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/jsons/13.0-dist_rel_c_02.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="162">
-          <caret line="9" column="52" selection-start-line="9" selection-start-column="52" selection-end-line="9" selection-end-column="52" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tests/13.0-dist_rel_c_02_test.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="450">
-          <caret line="25" column="34" selection-start-line="25" selection-start-column="34" selection-end-line="25" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/quchem_ia.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="389">
-          <caret line="336" column="38" selection-start-line="336" selection-start-column="38" selection-end-line="336" selection-end-column="38" />
-          <folding>
-            <element signature="e#0#11#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="-13">
+          <caret line="42" column="21" lean-forward="true" selection-start-line="42" selection-start-column="21" selection-end-line="42" selection-end-column="21" />
         </state>
       </provider>
     </entry>

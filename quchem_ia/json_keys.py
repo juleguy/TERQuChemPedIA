@@ -66,7 +66,7 @@ asymb_1_k = "asymb_1"
 asymb_2_k = "asymb_2"
 plot_error_distrib_k = "plot_error_distrib"
 plot_targets_error_distrib_k = "plot_targets_error_distrib"
-plot_targets_predictions_k = "plot_targets_predictions_k"
+plot_targets_predictions_k = "plot_targets_predictions"
 
 # Bonds stats keys
 bonds_stats_k = "bonds_stats"

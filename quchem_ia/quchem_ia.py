@@ -3,6 +3,7 @@ from json_keys import *
 from data_preparation import data_split
 from data_preparation import generate_data_wished_size, generate_data
 import model_nn
+import plots
 import bonds_lengths_stats
 
 import paths
@@ -304,6 +305,73 @@ def _bonds_stats(bonds_stats_json):
                                              max_anum, mol_min_size, mol_max_size)
 
 
+def _plot_predictions(plot_predictions_json):
+    """
+    Plots the result of the predictions of a model
+    :param plot_predictions_json:
+    :return:
+    """
+
+    # Loading paths if specified
+    if paths_k in plot_predictions_json:
+        _load_paths(plot_predictions_json[paths_k])
+
+    # Checking keys and loading values
+    _check_key(plot_predictions_json, params_k)
+    params = plot_predictions_json[params_k]
+
+    # Checking that the json is complete
+    _check_key(params, model_name_k)
+    _check_key(params, anum_1_k)
+    _check_key(params, anum_2_k)
+    _check_key(params, plot_error_distrib_k)
+    _check_key(params, plot_targets_error_distrib_k)
+    _check_key(params, plot_targets_predictions_k)
+    _check_key(params, model_type_k)
+    _check_key(params, batch_size_k)
+
+    # Loading parameters
+    model_name = params[model_name_k]
+    anum_1 = int(params[anum_1_k])
+    anum_2 = int(params[anum_2_k])
+    plot_error_distrib = params[plot_error_distrib_k] == "True"
+    plot_targets_error_distrib = params[plot_targets_error_distrib_k] == "True"
+    plot_targets_predictions = params[plot_targets_predictions_k] == "True"
+    model_type = params[model_type_k]
+    batch_size = int(params[batch_size_k])
+
+    # Checking that paths are specified
+    if paths.model_loc == "":
+        raise RuntimeError(model_loc_k + " cannot be empty")
+    if paths.test_prepared_input_loc == "":
+        raise RuntimeError(test_prepared_input_loc_k + " cannot be empty")
+    if paths.test_labels_loc == "":
+        raise RuntimeError(test_labels_loc_k + " cannot be empty")
+    if paths.plots_dir == "":
+        raise RuntimeError(plots_dir_k + " cannot be empty")
+    if paths.bonds_lengths_loc == "":
+        raise RuntimeError(bonds_lengths_loc_k + " cannot be empty")
+
+    # Plotting for a neural network model
+    if model_type == "NN":
+
+        # Checking that specific attributes for NN are specified
+        _check_key(params, last_layer_width_k)
+        _check_key(params, depth_k)
+
+        last_layer_width = int(params[last_layer_width_k])
+        depth = int(params[depth_k])
+
+        plots.plot_nn_model_results(paths.model_loc, model_name, anum_1, anum_2, paths.bonds_lengths_loc,
+                                    paths.test_prepared_input_loc, paths.test_labels_loc, paths.plots_dir,
+                                    plot_error_distrib, plot_targets_error_distrib, plot_targets_predictions,
+                                    batch_size, last_layer_width, depth)
+
+
+
+
+
+
 def execute(json_path):
 
     # Opening json file
@@ -333,5 +401,9 @@ def execute(json_path):
             elif bonds_stats_k in task:
                 _bonds_stats(task[bonds_stats_k])
 
+            # Executing potential model results plotting
+            elif plot_predictions_k in task:
+                _plot_predictions(task[plot_predictions_k])
 
-execute("../../code/13.0-dist_rel_c_02.json")
+
+execute("jsons/exec_4.json")

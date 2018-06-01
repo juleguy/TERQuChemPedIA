@@ -5,7 +5,7 @@
         "train_prepared_input_loc":"../../data/DIST_REL_C_02/train_set_prepared_input.h5",
         "test_prepared_input_loc":"../../data/DIST_REL_C_02/test_set_prepared_input.h5",
         "train_labels_loc":"../../data/DIST_REL_C_02/train_set_labels.h5",
-        "test_labels_loc":"../../data/DIST_REL_C_02/train_set_labels.h5",
+        "test_labels_loc":"../../data/DIST_REL_C_02/test_set_labels.h5",
         "model_loc":"../../models/DIST_REL_C_02/DIST_REL_C_02.tflearn",
         "logs_dir":"../../models_DIST_REL_C_02/logs/"
   },

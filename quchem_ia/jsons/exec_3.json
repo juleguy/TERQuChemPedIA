@@ -1,0 +1,32 @@
+{
+  "paths":{
+        "train_set_loc":"tests/train.h5",
+        "test_set_loc":"tests/test.h5",
+        "train_prepared_input_loc":"tests/train_prepared.h5",
+        "test_prepared_input_loc":"tests/test_prepared.h5",
+        "train_labels_loc":"tests/train_labels.h5",
+        "test_labels_loc":"tests/test_labels.h5",
+        "model_loc":"tests/DIST_REL_C_02/dist_rel_c_02.tflearn",
+        "logs_dir":"tests/DIST_REL_C_02/logs/",
+        "bonds_lengths_loc":"tests/cc_lengths.h5",
+        "plots_dir":""
+  },
+  "tasks":[
+    {
+      "bonds_stats":{
+        "paths":{
+          "dataset_loc":"tests/test.h5",
+          "bonds_lengths_loc":"tests/cc_lengths.h5"
+        },
+        "params":{
+          "max_anum":"9",
+          "mol_min_size":"2",
+          "mol_max_size":"60",
+          "anum_1":"6",
+          "anum_2":"6",
+          "batch_size":"5000"
+        }
+      }
+    }
+  ]
+}
