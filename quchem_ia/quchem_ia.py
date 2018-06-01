@@ -47,8 +47,8 @@ def _load_paths(paths_json):
     if dataset_loc_k in paths_json:
         paths.dataset_loc = paths_json[dataset_loc_k]
 
-    if logs_loc_k in paths_json:
-        paths.logs_loc = paths_json[logs_loc_k]
+    if logs_dir_k in paths_json:
+        paths.logs_dir = paths_json[logs_dir_k]
 
 
 def _check_key(container_json, key):
@@ -115,7 +115,7 @@ def _data_preparation(prepare_data_json):
 
     mol_min_size = int(selected_mols_json[mol_min_size_k])
     mol_max_size = int(selected_mols_json[mol_max_size_k])
-    max_anum = int(selected_mols_json[mol_max_size_k])
+    max_anum = int(selected_mols_json[max_anum_k])
     anum_1 = int(selected_mols_json[anum_1_k])
     anum_2 = int(selected_mols_json[anum_2_k])
     min_bond_size = float(selected_mols_json[min_bond_size_k])
@@ -252,12 +252,12 @@ def _model_train(model_train_json):
         save_model = params_json[save_model_k] == "True"
 
         # Checking that a log path has been specified
-        if paths.logs_loc == "":
-            raise RuntimeError(logs_loc_k + " logs_loc cannot be empty")
+        if paths.logs_dir == "":
+            raise RuntimeError(logs_dir_k + " logs_loc cannot be empty")
 
         # Training the model
         model_nn.train_model(paths.train_prepared_input_loc, paths.train_labels_loc, model_name, paths.model_loc,
-                             paths.logs_loc, epochs, last_layer_width, batch_size, learning_rate, epsilon, dropout,
+                             paths.logs_dir, epochs, last_layer_width, batch_size, learning_rate, epsilon, dropout,
                              stddev_init, hidden_act, outlayer_act, depth, weight_decay, gpu_mem_prop, save_model)
 
 

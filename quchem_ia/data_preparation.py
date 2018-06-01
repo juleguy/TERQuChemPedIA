@@ -188,6 +188,7 @@ def _compute_input_width(max_anum, one_hot_anum, distances, pos_class, amasses):
     """
     return 0 + (one_hot_anum and max_anum) + (distances and 2) + (pos_class and 3) + (amasses and 1)
 
+
 def _distance_constraint(at, at_ref1, at_ref2, cut_off_distance):
     return cut_off_distance is None or \
                                     _compute_distance(at, at_ref1) < cut_off_distance or \
@@ -373,7 +374,7 @@ def generate_data(original_dataset_loc, prepared_input_loc, labels_loc, anum1, a
 
         while x_min_batch <= nb_total_mol:
 
-            print("New batch (molécules from " + str(x_min_batch) + " to " + str(min(x_max_batch, nb_total_mol)) +
+            print("New batch (molecules from " + str(x_min_batch) + " to " + str(min(x_max_batch, nb_total_mol)) +
                   ") --- " + str(float(min(x_min_batch, nb_total_mol) / nb_total_mol * 100)) + " %")
 
             # Loading data of current batch in memory

@@ -19,7 +19,7 @@ test_labels_loc_k = "test_labels_loc"
 bonds_lengths_loc_k = "bonds_lengths_loc"
 plots_dir_k = "plots_dir"
 model_loc_k = "model_loc"
-logs_loc_k = "logs_loc"
+logs_dir_k = "logs_dir"
 
 # Data split keys
 data_split_k = "data_split"
