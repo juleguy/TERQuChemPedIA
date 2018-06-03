@@ -5,7 +5,7 @@
         "paths":{
           "test_prepared_input_loc":"../../data/DIST_REL_OH_02/test_prepared_input.h5",
           "test_labels_loc":"../../data/DIST_REL_OH_02/test_labels.h5",
-          "plots_dir":"../../DIST_REL_OH_02",
+          "plots_dir":"../../figures/DIST_REL_OH_02/",
           "logs_dir":"../../models/DIST_REL_OH_02/logs/",
           "bonds_lengths_loc":"/home/jleguy/data/stats/OH/OH_bonds_lengths_total_set.h5",
           "model_loc":"../../models/DIST_REL_OH_02/dist_rel_oh_02.tflearn"
@@ -33,7 +33,7 @@
         "paths":{
           "test_prepared_input_loc":"../../data/DIST_REL_CH_02/test_prepared_input.h5",
           "test_labels_loc":"../../data/DIST_REL_CH_02/test_labels.h5",
-          "plots_dir":"../../DIST_REL_CH_02",
+          "plots_dir":"../../figures/DIST_REL_CH_02/",
           "logs_dir":"../../models/DIST_REL_CH_02/logs/",
           "bonds_lengths_loc":"/home/jleguy/data/stats/CH/CH_bonds_lengths_total_set.h5",
           "model_loc":"../../models/DIST_REL_CH_02/dist_rel_ch_02.tflearn"
@@ -61,7 +61,7 @@
         "paths":{
           "test_prepared_input_loc":"../../data/DIST_REL_CC_02/test_prepared_input.h5",
           "test_labels_loc":"../../data/DIST_REL_CC_02/test_labels.h5",
-          "plots_dir":"../../DIST_REL_CC_02",
+          "plots_dir":"../../figures/DIST_REL_OH_02/",
           "logs_dir":"../../models/DIST_REL_CC_02/logs/",
           "bonds_lengths_loc":"/home/jleguy/data/stats/CC/CC_bonds_lengths_total_set.h5",
           "model_loc":"../../models/DIST_REL_CC_02/dist_rel_cc_02.tflearn"

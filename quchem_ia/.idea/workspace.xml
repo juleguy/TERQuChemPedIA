@@ -32,7 +32,7 @@
     <splitter split-orientation="horizontal" split-proportion="0.83858764">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file leaf-file-name="plots.py" pinned="false" current-in-tab="true">
+          <file leaf-file-name="plots.py" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/plots.py">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="538">
@@ -59,7 +59,7 @@
           <file leaf-file-name="quchem_ia.py" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/quchem_ia.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="686">
+                <state relative-caret-position="1834">
                   <caret line="483" column="49" selection-start-line="483" selection-start-column="49" selection-end-line="483" selection-end-column="49" />
                   <folding>
                     <element signature="e#0#11#0" expanded="true" />
@@ -77,11 +77,11 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="14.3-stats_dist_rel_xy_2.json" pinned="false" current-in-tab="false">
+          <file leaf-file-name="14.3-stats_dist_rel_xy_2.json" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/jsons/14.3-stats_dist_rel_xy_2.json">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="1386">
-                  <caret line="77" column="22" selection-start-line="77" selection-start-column="22" selection-end-line="77" selection-end-column="22" />
+                <state relative-caret-position="214">
+                  <caret line="65" column="67" selection-start-line="65" selection-start-column="67" selection-end-line="65" selection-end-column="67" />
                 </state>
               </provider>
             </entry>
@@ -98,8 +98,8 @@
           <file leaf-file-name="14.1-train_dist_rel_ch_02.json" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/jsons/14.1-train_dist_rel_ch_02.json">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="180">
-                  <caret line="19" column="26" selection-end-line="59" selection-end-column="1" />
+                <state relative-caret-position="-20">
+                  <caret line="18" column="31" lean-forward="true" selection-start-line="18" selection-start-column="31" selection-end-line="18" selection-end-column="31" />
                 </state>
               </provider>
             </entry>
@@ -182,13 +182,13 @@
       <find>bond</find>
       <find>dists</find>
       <find>linear</find>
-      <find>6</find>
       <find>ch</find>
       <find>fit</find>
       <find>gp</find>
       <find>batch_</find>
       <find>CH</find>
       <find>OH</find>
+      <find>6</find>
     </findStrings>
   </component>
   <component name="IdeDocumentHistory">
@@ -219,10 +219,10 @@
         <option value="$PROJECT_DIR$/paths.py" />
         <option value="$PROJECT_DIR$/model_nn.py" />
         <option value="$PROJECT_DIR$/jsons/exec_5.json" />
-        <option value="$PROJECT_DIR$/jsons/14.3-stats_dist_rel_xy_2.json" />
         <option value="$PROJECT_DIR$/json_keys.py" />
         <option value="$PROJECT_DIR$/quchem_ia.py" />
         <option value="$PROJECT_DIR$/plots.py" />
+        <option value="$PROJECT_DIR$/jsons/14.3-stats_dist_rel_xy_2.json" />
       </list>
     </option>
   </component>
@@ -755,13 +755,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/jsons/14.1-train_dist_rel_ch_02.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="19" column="26" selection-end-line="59" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/venv/lib/python3.5/site-packages/sklearn/model_selection/_search.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="267">
@@ -807,23 +800,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/quchem_ia.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="686">
-          <caret line="483" column="49" selection-start-line="483" selection-start-column="49" selection-end-line="483" selection-end-column="49" />
-          <folding>
-            <element signature="e#0#11#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/jsons/14.3-stats_dist_rel_xy_2.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1386">
-          <caret line="77" column="22" selection-start-line="77" selection-start-column="22" selection-end-line="77" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/json_keys.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1152">
@@ -838,6 +814,30 @@
           <folding>
             <element signature="e#0#31#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jsons/14.1-train_dist_rel_ch_02.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-20">
+          <caret line="18" column="31" lean-forward="true" selection-start-line="18" selection-start-column="31" selection-end-line="18" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/quchem_ia.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1834">
+          <caret line="483" column="49" selection-start-line="483" selection-start-column="49" selection-end-line="483" selection-end-column="49" />
+          <folding>
+            <element signature="e#0#11#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jsons/14.3-stats_dist_rel_xy_2.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="214">
+          <caret line="65" column="67" selection-start-line="65" selection-start-column="67" selection-end-line="65" selection-end-column="67" />
         </state>
       </provider>
     </entry>
