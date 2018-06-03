@@ -62,8 +62,6 @@ save_model_k = "save_model"
 
 # Plot predictions keys
 plot_predictions_k = "plot_predictions"
-asymb_1_k = "asymb_1"
-asymb_2_k = "asymb_2"
 plot_error_distrib_k = "plot_error_distrib"
 plot_targets_error_distrib_k = "plot_targets_error_distrib"
 plot_targets_predictions_k = "plot_targets_predictions"
@@ -72,4 +70,10 @@ plot_targets_predictions_k = "plot_targets_predictions"
 bonds_stats_k = "bonds_stats"
 dataset_loc_k = "dataset_loc"
 
+# Grid search
+grid_search_cv_k = "grid_search_cv"
+grid_params_k = "grid_params"
+n_jobs_k = "n_jobs"
+cv_k = "cv"
+models_dir_k = "models_dir"
 

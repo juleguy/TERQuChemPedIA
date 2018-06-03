@@ -1,0 +1,49 @@
+{
+  "paths":{
+    "models_dir":"tests/gridsearch/",
+    "logs_dir":"tests/logs/",
+    "train_prepared_input_loc":"tests/train_prepared.h5",
+    "train_labels_loc":"tests/train_labels.h5"
+  },
+  "tasks":[
+    {
+      "grid_search_cv":{
+        "params":{
+          "model_type":"NN",
+          "n_jobs":"1",
+          "cv":"2",
+          "save_model":"True",
+          "gpu_mem_prop":"0.8"
+        },
+        "grid_params":[
+          {
+            "learning_rate": [0.01, 0.001],
+            "depth": [2],
+            "epsilon":[0.001],
+            "dropout":[0.97],
+            "stddev_init":[0.001],
+            "hidden_act":["elu"],
+            "outlayer_act":["linear"],
+            "weight_decay":[0.001],
+            "last_layer_width":[58],
+            "batch_size":[1000],
+            "epochs":[5]
+          },
+          {
+            "learning_rate": [0.1],
+            "depth": [2],
+            "epsilon":[0.001],
+            "dropout":[0.97],
+            "stddev_init":[0.001],
+            "hidden_act":["elu"],
+            "outlayer_act":["linear"],
+            "weight_decay":[0.001],
+            "last_layer_width":[58],
+            "batch_size":[1000],
+            "epochs":[5]
+          }
+        ]
+      }
+    }
+  ]
+}

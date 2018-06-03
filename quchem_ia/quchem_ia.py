@@ -5,7 +5,6 @@ from data_preparation import generate_data_wished_size, generate_data
 import model_nn
 import plots
 import bonds_lengths_stats
-
 import paths
 
 
@@ -50,6 +49,9 @@ def _load_paths(paths_json):
 
     if logs_dir_k in paths_json:
         paths.logs_dir = paths_json[logs_dir_k]
+
+    if models_dir_k in paths_json:
+        paths.models_dir = paths_json[models_dir_k]
 
 
 def _check_key(container_json, key):
@@ -372,8 +374,73 @@ def _plot_predictions(plot_predictions_json):
                                     batch_size, last_layer_width, depth, hidden_act, outlayer_act)
 
 
+def _grid_search_cv(grid_search_json):
+    """
+    Grid searching best parameters for a model
+    :param grid_search_json:
+    :return:
+    """
 
+    # Loading paths if specified
+    if paths_k in grid_search_json:
+        _load_paths(grid_search_json[paths_k])
 
+    # Checking keys and loading grid_params object
+    _check_key(grid_search_json, grid_params_k)
+    grid_params = grid_search_json[grid_params_k]
+
+    # Checking keys and loading params object
+    _check_key(grid_search_json, params_k)
+    params = grid_search_json[params_k]
+
+    # Checking that the param object is complete
+    _check_key(params, model_type_k)
+    _check_key(params, n_jobs_k)
+    _check_key(params, cv_k)
+    _check_key(params, save_model_k)
+
+    # Loading params
+    model_type = params[model_type_k]
+    n_jobs = int(params[n_jobs_k])
+    cv = int(params[cv_k])
+    save_model = params[save_model_k] == "True"
+
+    # Checking that a models directory has been specified if the models must be saved
+    if save_model and paths.models_dir == "":
+        raise RuntimeError(models_dir_k + " cannot be empty since the models must be saved")
+
+    # Checking that the prepared input and the targets have been specified
+    if paths.train_prepared_input_loc == "":
+        raise RuntimeError(train_prepared_input_loc_k + " cannot be empty")
+
+    if paths.train_labels_loc == "":
+        raise RuntimeError(train_set_loc_k + " cannot be empty")
+
+    # Grid search in case of neural network model
+    if model_type == "NN":
+
+        # Loading NN specific param
+        _check_key(params, gpu_mem_prop_k)
+        gpu_mem_prop = float(params[gpu_mem_prop_k])
+
+        # Adding logs_dir, model_loc, save_model and gpu_mem_prop to all the grids
+        for grid in grid_params:
+            grid[logs_dir_k] = [paths.logs_dir]
+            grid[save_model_k] = [save_model]
+            grid[models_dir_k] = [paths.models_dir]
+            grid[gpu_mem_prop_k] = [gpu_mem_prop]
+
+        # Checking that all the grids are complete
+        nn_params = [learning_rate_k, epsilon_k, dropout_k, stddev_init_k, hidden_act_k, outlayer_act_k, weight_decay_k,
+                     last_layer_width_k, depth_k, batch_size_k, epochs_k]
+
+        for nn_param in nn_params:
+            for grid in grid_params:
+                if nn_param not in grid:
+                    raise RuntimeError(nn_param + " must be specified in grid "+str(grid))
+
+        # Grid search
+        model_nn.grid_search_cv(paths.train_prepared_input_loc, paths.train_labels_loc, grid_params, cv, n_jobs)
 
 
 def execute(json_path):
@@ -409,5 +476,9 @@ def execute(json_path):
             elif plot_predictions_k in task:
                 _plot_predictions(task[plot_predictions_k])
 
+            # Executing potential grid search
+            elif grid_search_cv_k in task:
+                _grid_search_cv(task[grid_search_cv_k])
 
-execute("jsons/exec_4.json")
+
+execute("../../code/14.3-stats_dist_rel_xy_2.json")

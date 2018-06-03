@@ -1,12 +1,15 @@
-import tensorflow as tf
+import uuid
 from tflearn.layers.core import input_data, dropout, fully_connected
 from tflearn.layers.estimator import regression
 from tflearn.optimizers import Adam
-import tflearn as tfl
 import math
 import h5py
 import numpy as np
 from h5_keys import *
+from sklearn.base import BaseEstimator, RegressorMixin
+import tensorflow as tf
+import tflearn as tfl
+from sklearn.model_selection import GridSearchCV
 
 
 def _rmse(pred, targets):
@@ -73,13 +76,13 @@ def _nn_creation(first_layer_width, last_layer_width, depth, epsilon=1e-8, learn
     network = input_data(shape=[None, first_layer_width], name='input')
 
     # Calculating width coef
-    width_coef = (last_layer_width - first_layer_width) / (depth - 1)
+    width_coef = (last_layer_width - first_layer_width) / (depth + 1)
 
     # Creating hidden layers
     for i in range(depth):
 
         # Computing current width
-        curr_width = math.floor(width_coef * i + first_layer_width)
+        curr_width = math.floor(width_coef * (i+1) + first_layer_width)
 
         # Creating current layer
         network = fully_connected(network, curr_width, activation=hidden_act, name='fc' + str(i), weights_init=winit,
@@ -194,3 +197,98 @@ def predict(model_loc, test_prepared_input_loc, test_labels_loc, batch_size, las
         i += batch_size
 
     return _rmse_test(labels_y, predictions).reshape(1, -1)[0], predictions, labels_y
+
+
+class NNRegressor(BaseEstimator, RegressorMixin):
+    """ Wrapper around TFLearn to use models as Scikit-learn models
+    Inspired of http://danielhnyk.cz/creating-your-own-estimator-scikit-learn/ """
+
+    def __init__(self, logs_dir=None, models_dir=None, learning_rate=None, epsilon=None, dropout=None,
+                 stddev_init=None, hidden_act=None, outlayer_act=None, weight_decay=None,
+                 last_layer_width=None, depth=None, batch_size=None, epochs=None, gpu_mem_prop=None, save_model=None,
+                 score_fun=_rmse_valid, loss_fun=_rmse):
+
+        self.logs_dir = logs_dir
+        self.learning_rate = learning_rate
+        self.epsilon = epsilon
+        self.dropout = dropout
+        self.stddev_init = stddev_init
+        self.hidden_act = hidden_act
+        self.outlayer_act = outlayer_act
+        self.weight_decay = weight_decay
+        self.last_layer_width = last_layer_width
+        self.depth = depth
+        self.batch_size = batch_size
+        self.epochs = epochs
+        self.loss_fun = loss_fun
+        self.score_fun = score_fun
+        self.gpu_mem_prop = gpu_mem_prop
+        self.save_model = save_model
+        self.models_dir = models_dir
+        self.model = None
+
+    def fit(self, X, y=None):
+        tf.reset_default_graph()
+        tfl.init_graph(gpu_memory_fraction=self.gpu_mem_prop)
+
+        # Computing model name according to its parameters so that it can be easily retrieved if saved.
+        # Also adding an ID of 8 characters, so that the logs are recorded in different directories
+        # There is no guarantee that the ID is unique but collisions should not happen often and that would only
+        # mess with tensorboard graphs
+        model_name = ("lr" + str(self.learning_rate) + "|eps" + str(self.epsilon) + "|do" + str(self.dropout) +
+                      "|stddev_init" + str(self.stddev_init) + "|hidact" + self.hidden_act + "|out" +
+                      self.outlayer_act + "|wd" + str(self.weight_decay) + "|lastlayw" + str(self.last_layer_width) +
+                      "|d" + str(self.depth) + "|batchs" + str(self.batch_size) + "|epochs" + str(self.epochs) +
+                      "|id"+str(uuid.uuid4())[:8])
+
+        # Computing first layer width (all the examples of the dataset must have the same width)
+        first_layer_width = len(X[0])
+
+        # Neural network creation
+        network = _nn_creation(first_layer_width, self.last_layer_width, self.depth, self.epsilon, self.learning_rate,
+                               self.dropout, self.stddev_init, self.hidden_act, self.outlayer_act, self.weight_decay,
+                               self.score_fun, self.loss_fun, self.gpu_mem_prop)
+
+        # Model creation
+        self.model = tfl.DNN(network, tensorboard_verbose=3, tensorboard_dir=self.logs_dir)
+
+        # Training
+        self.model.fit(X_inputs=X, Y_targets=y, batch_size=self.batch_size,
+                       shuffle=True, snapshot_step=100, validation_set=0.1,
+                       show_metric=True, run_id=model_name, n_epoch=self.epochs)
+
+        if self.save_model:
+            self.model.save(self.models_dir+model_name+".tflearn")
+
+    def predict(self, X, y=None):
+        return self.model.predict(X, y)
+
+    def score(self, X, y=None):
+        return self.model.evaluate(X, y, batch_size=100)[0]
+
+
+def grid_search_cv(train_prepared_input_loc, train_labels_loc, parameters_grid, cv, n_jobs):
+    """
+    Performs a grid search of the specified parameters on the specified set.
+    Uses scikit-learn GridSearchCV method that also performs a cross validation.
+    :param train_prepared_input_loc: inputs location
+    :param train_labels_loc: targets location
+    :param parameters_grid: grid of parameters
+    :param cv: number of cross validations
+    :param n_jobs: number of cpu jobs
+    :return:
+    """
+
+    # Loading inputs and targets
+    input_X = np.array(h5py.File(train_prepared_input_loc)[inputs_key])
+    labels_y = np.array(h5py.File(train_labels_loc)[targets_key])
+
+    # Creating the Scikit-Learn model from our Scikit-Learn like regressor
+    grid_search = GridSearchCV(estimator=NNRegressor(), param_grid=parameters_grid, cv=cv, n_jobs=n_jobs)
+
+    # Grid search
+    grid_search.fit(input_X, labels_y)
+
+    print("Best score: %0.3f" % grid_search.best_score_)
+    print("Best parameters set:")
+    print(grid_search.best_estimator_.get_params())

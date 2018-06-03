@@ -20,7 +20,7 @@ def plot_distrib_rmses_val(rmses, model_name, figures_loc):
 
     # Linear Y scale
     ax1 = fig.add_subplot(121)
-    ax1.set_title(model_name + "model\n Errors distribution")
+    ax1.set_title(model_name + " model\n Errors distribution")
     ax1.set_xlabel("Absolute error (mÅ)")
     ax1.set_ylabel("Test set occurrences (linear scale)")
     ax1.hist(rmses, floor(max(rmses)-min(rmses)))
@@ -30,7 +30,7 @@ def plot_distrib_rmses_val(rmses, model_name, figures_loc):
     ax2.set_yscale("log")
     ax2.set_title(model_name + "model\n Errors distribution")
     ax2.set_xlabel("Absolute error (mÅ)")
-    ax2.set_ylabel("Test set occurrences (linear scale)")
+    ax2.set_ylabel("Test set occurrences (logarithmic scale)")
 
     ax2.hist(rmses, floor(max(rmses) - min(rmses)))
 
@@ -49,7 +49,7 @@ def plot_rmse_distrib_dist(rmses, targets, model_name, figures_loc, bonds_length
     ax.set_title(model_name + " model " + "\nError distribution depending on target distances")
     ax.set_xlabel("Target distance (mÅ)")
     ax.set_ylabel("Absolute error (mÅ)")
-    ax.plot(targets, rmses, ",", label="Absolute error (mÅ)")
+    ax.plot(targets, rmses, ",", label="Absolute error (mÅ)", alpha=0.8)
     ax.set_xlim(xmin=min(targets), xmax=max(targets))
 
     ax2 = plt.subplot(gs[1])
@@ -121,6 +121,7 @@ def plot_targets_pred(targets, preds, anum_1, anum_2, model_name, figures_loc, b
 
 
 def print_stats_errors(errors):
+    print("Dataset size : "+str(len(errors)))
     print("Mean error : " + str(np.mean(errors)))
     print("Median error : " + str(np.median(errors)))
     print("Standard deviation : " + str(np.std(errors)))
@@ -135,6 +136,8 @@ def plot_nn_model_results(model_loc, model_name, anum_1, anum_2, bonds_lengths_l
 
     errors, predictions, targets = model_nn.predict(model_loc, test_prepared_input_loc, test_labels_loc,
                                                     batch_size, last_layer_width, depth, hidden_act, outlayer_act)
+
+    print("Plotting "+model_name)
 
     print_stats_errors(errors)
 
