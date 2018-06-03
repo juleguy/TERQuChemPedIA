@@ -172,6 +172,9 @@ def predict(model_loc, test_prepared_input_loc, test_labels_loc, batch_size, las
     :param depth:
     :return: error vector, prediction vector, targets vector
     """
+
+    tf.reset_default_graph()
+
     # Loading inputs and targets
     input_X = np.array(h5py.File(test_prepared_input_loc)[inputs_key])
     labels_y = np.array(h5py.File(test_labels_loc)[targets_key])

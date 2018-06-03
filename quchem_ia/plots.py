@@ -28,7 +28,7 @@ def plot_distrib_rmses_val(rmses, model_name, figures_loc):
     # Logarithmic Y scale
     ax2 = fig.add_subplot(122)
     ax2.set_yscale("log")
-    ax2.set_title(model_name + "model\n Errors distribution")
+    ax2.set_title(model_name + " model\n Errors distribution")
     ax2.set_xlabel("Absolute error (mÅ)")
     ax2.set_ylabel("Test set occurrences (logarithmic scale)")
 

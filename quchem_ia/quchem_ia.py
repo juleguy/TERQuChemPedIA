@@ -368,11 +368,12 @@ def _plot_predictions(plot_predictions_json):
         hidden_act = params[hidden_act_k]
         outlayer_act = params[outlayer_act_k]
 
-        plots.plot_nn_model_results(paths.model_loc, model_name, anum_1, anum_2, paths.bonds_lengths_loc,
-                                    paths.test_prepared_input_loc, paths.test_labels_loc, paths.plots_dir,
-                                    plot_error_distrib, plot_targets_error_distrib, plot_targets_predictions,
-                                    batch_size, last_layer_width, depth, hidden_act, outlayer_act)
 
+        # plots.plot_nn_model_results(paths.model_loc, model_name, anum_1, anum_2, paths.bonds_lengths_loc,
+        #                             paths.test_prepared_input_loc, paths.test_labels_loc, paths.plots_dir,
+        #                             plot_error_distrib, plot_targets_error_distrib, plot_targets_predictions,
+        #                             batch_size, last_layer_width, depth, hidden_act, outlayer_act)
+        #
 
 def _grid_search_cv(grid_search_json):
     """

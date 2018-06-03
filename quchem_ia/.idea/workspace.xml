@@ -29,14 +29,14 @@
     <select />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.83858764">
+    <splitter split-orientation="horizontal" split-proportion="0.65217394">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
           <file leaf-file-name="plots.py" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/plots.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="538">
-                  <caret line="139" column="32" selection-start-line="139" selection-start-column="32" selection-end-line="139" selection-end-column="32" />
+                <state relative-caret-position="372">
+                  <caret line="147" column="71" selection-start-line="147" selection-start-column="71" selection-end-line="147" selection-end-column="71" />
                   <folding>
                     <element signature="e#0#31#0" expanded="true" />
                   </folding>
@@ -47,8 +47,8 @@
           <file leaf-file-name="model_nn.py" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/model_nn.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="-2664">
-                  <caret line="95" column="21" lean-forward="true" selection-start-line="95" selection-start-column="21" selection-end-line="95" selection-end-column="21" />
+                <state relative-caret-position="208">
+                  <caret line="175" selection-start-line="175" selection-end-line="175" />
                   <folding>
                     <element signature="e#0#11#0" expanded="true" />
                   </folding>
@@ -56,11 +56,11 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="quchem_ia.py" pinned="false" current-in-tab="false">
+          <file leaf-file-name="quchem_ia.py" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/quchem_ia.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="1834">
-                  <caret line="483" column="49" selection-start-line="483" selection-start-column="49" selection-end-line="483" selection-end-column="49" />
+                <state relative-caret-position="268">
+                  <caret line="484" selection-start-line="484" selection-end-line="484" />
                   <folding>
                     <element signature="e#0#11#0" expanded="true" />
                   </folding>
@@ -77,11 +77,11 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="14.3-stats_dist_rel_xy_2.json" pinned="false" current-in-tab="true">
+          <file leaf-file-name="14.3-stats_dist_rel_xy_2.json" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/jsons/14.3-stats_dist_rel_xy_2.json">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="214">
-                  <caret line="65" column="67" selection-start-line="65" selection-start-column="67" selection-end-line="65" selection-end-column="67" />
+                  <caret line="65" column="67" selection-end-line="93" selection-end-column="1" />
                 </state>
               </provider>
             </entry>
@@ -98,8 +98,8 @@
           <file leaf-file-name="14.1-train_dist_rel_ch_02.json" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/jsons/14.1-train_dist_rel_ch_02.json">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="-20">
-                  <caret line="18" column="31" lean-forward="true" selection-start-line="18" selection-start-column="31" selection-end-line="18" selection-end-column="31" />
+                <state relative-caret-position="324">
+                  <caret line="18" column="31" lean-forward="true" selection-end-line="59" selection-end-column="1" />
                 </state>
               </provider>
             </entry>
@@ -126,7 +126,7 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="json_keys.py" pinned="false" current-in-tab="true">
+          <file leaf-file-name="json_keys.py" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/json_keys.py">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="1152">
@@ -149,6 +149,15 @@
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="522">
                   <caret line="29" column="9" lean-forward="true" selection-start-line="14" selection-start-column="8" selection-end-line="29" selection-end-column="9" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="test.json" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/jsons/test.json">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="1674">
+                  <caret line="93" column="1" selection-start-line="93" selection-start-column="1" selection-end-line="93" selection-end-column="1" />
                 </state>
               </provider>
             </entry>
@@ -189,6 +198,8 @@
       <find>CH</find>
       <find>OH</find>
       <find>6</find>
+      <find>tf.reset_default_graph()</find>
+      <find>predic</find>
     </findStrings>
   </component>
   <component name="IdeDocumentHistory">
@@ -217,12 +228,13 @@
         <option value="$PROJECT_DIR$/jsons/14.1-train_dist_rel_ch_02.json" />
         <option value="$PROJECT_DIR$/jsons/14.2-train_dist_rel_oh_02.json" />
         <option value="$PROJECT_DIR$/paths.py" />
-        <option value="$PROJECT_DIR$/model_nn.py" />
         <option value="$PROJECT_DIR$/jsons/exec_5.json" />
         <option value="$PROJECT_DIR$/json_keys.py" />
-        <option value="$PROJECT_DIR$/quchem_ia.py" />
-        <option value="$PROJECT_DIR$/plots.py" />
         <option value="$PROJECT_DIR$/jsons/14.3-stats_dist_rel_xy_2.json" />
+        <option value="$PROJECT_DIR$/jsons/test.json" />
+        <option value="$PROJECT_DIR$/plots.py" />
+        <option value="$PROJECT_DIR$/model_nn.py" />
+        <option value="$PROJECT_DIR$/quchem_ia.py" />
       </list>
     </option>
   </component>
@@ -410,16 +422,16 @@
     <layout>
       <window_info anchor="bottom" id="TODO" order="7" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.13247864" side_tool="true" weight="0.3256579" />
-      <window_info anchor="right" x="0" y="0" width="430" height="853" id="Documentation" order="5" sideWeight="0.502193" side_tool="true" visible="true" weight="0.0" />
+      <window_info anchor="right" x="0" y="0" width="430" height="853" id="Documentation" order="5" sideWeight="0.5040486" side_tool="true" visible="true" weight="0.0" />
       <window_info anchor="bottom" id="Database Changes" order="13" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="9" show_stripe_button="false" />
       <window_info anchor="bottom" id="Python Console" order="12" sideWeight="0.91720086" weight="0.18092105" />
-      <window_info anchor="bottom" id="Run" order="3" sideWeight="0.86752135" visible="true" weight="0.0" />
+      <window_info active="true" anchor="bottom" id="Run" order="3" sideWeight="0.86752135" visible="true" weight="0.45833334" />
       <window_info anchor="bottom" id="Terminal" order="11" sideWeight="0.9166667" weight="0.32894737" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.499187" visible="true" weight="0.15224358" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.499187" visible="true" weight="0.15224358" />
       <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
       <window_info anchor="right" id="Database" order="3" weight="0.32959402" />
-      <window_info anchor="right" id="SciView" order="4" sideWeight="0.49780703" visible="true" weight="0.0" />
+      <window_info anchor="right" id="SciView" order="4" sideWeight="0.4959514" visible="true" weight="0.0" />
       <window_info id="Structure" order="1" sideWeight="0.500813" side_tool="true" weight="0.16025642" />
       <window_info anchor="bottom" id="Concurrent Activities Diagram" order="0" weight="0.32894737" />
       <window_info id="Favorites" order="2" side_tool="true" />
@@ -776,16 +788,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/model_nn.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2664">
-          <caret line="95" column="21" lean-forward="true" selection-start-line="95" selection-start-column="21" selection-end-line="95" selection-end-column="21" />
-          <folding>
-            <element signature="e#0#11#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/jsons/exec_4.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="522">
@@ -807,37 +809,54 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/jsons/14.3-stats_dist_rel_xy_2.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="214">
+          <caret line="65" column="67" selection-end-line="93" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jsons/14.1-train_dist_rel_ch_02.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="324">
+          <caret line="18" column="31" lean-forward="true" selection-end-line="59" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jsons/test.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1674">
+          <caret line="93" column="1" selection-start-line="93" selection-start-column="1" selection-end-line="93" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/plots.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="538">
-          <caret line="139" column="32" selection-start-line="139" selection-start-column="32" selection-end-line="139" selection-end-column="32" />
+        <state relative-caret-position="372">
+          <caret line="147" column="71" selection-start-line="147" selection-start-column="71" selection-end-line="147" selection-end-column="71" />
           <folding>
             <element signature="e#0#31#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/jsons/14.1-train_dist_rel_ch_02.json">
+    <entry file="file://$PROJECT_DIR$/model_nn.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-20">
-          <caret line="18" column="31" lean-forward="true" selection-start-line="18" selection-start-column="31" selection-end-line="18" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/quchem_ia.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1834">
-          <caret line="483" column="49" selection-start-line="483" selection-start-column="49" selection-end-line="483" selection-end-column="49" />
+        <state relative-caret-position="208">
+          <caret line="175" selection-start-line="175" selection-end-line="175" />
           <folding>
             <element signature="e#0#11#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/jsons/14.3-stats_dist_rel_xy_2.json">
+    <entry file="file://$PROJECT_DIR$/quchem_ia.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="214">
-          <caret line="65" column="67" selection-start-line="65" selection-start-column="67" selection-end-line="65" selection-end-column="67" />
+        <state relative-caret-position="268">
+          <caret line="484" selection-start-line="484" selection-end-line="484" />
+          <folding>
+            <element signature="e#0#11#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
