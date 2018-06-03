@@ -57,9 +57,8 @@ def plot_rmse_distrib_dist(rmses, targets, model_name, figures_loc, bonds_length
     bonds_lengths_h5 = h5py.File(bonds_lengths_loc, "r")
     bonds_lengths = np.array(bonds_lengths_h5[distances_key])
     hist_bonds = np.histogram(bonds_lengths, np.arange(min(targets)/1000, max(targets)/1000, 0.001))[0]
+    ax2.axis('off')
 
-    # Set the colormap and norm to correspond to the data for which
-    # the colorbar will be used.
     cmap = mpl.cm.Blues
     norm = mpl.colors.Normalize()
 
@@ -93,17 +92,16 @@ def plot_targets_pred(targets, preds, anum_1, anum_2, model_name, figures_loc, b
 
     # Perfect model plot
     x = np.linspace(min(targets), max(targets))
-    ax.plot(x, fun_id(x), color='darkgreen', label="Perfect theoretical model")
-    ax.legend(loc='upper center', shadow=False)
+    ax.plot(x, fun_id(x), color='darkgreen', label="Theoretical perfect model")
+    ax.legend(loc='lower center', shadow=False)
 
     # Distances representation plot
     ax2 = plt.subplot(gs[1])
     bonds_lengths_h5 = h5py.File(bonds_lengths_loc, "r")
     bonds_lengths = np.array(bonds_lengths_h5[distances_key])
     hist_bonds = np.histogram(bonds_lengths, np.arange(min(targets) / 1000, max(targets) / 1000, 0.001))[0]
+    ax2.axis('off')
 
-    # Set the colormap and norm to correspond to the data for which
-    # the colorbar will be used.
     cmap = mpl.cm.Blues
     norm = mpl.colors.Normalize()
 
