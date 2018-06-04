@@ -2,6 +2,7 @@ import matplotlib.pyplot as plt
 import matplotlib as mpl
 from math import floor
 import model_nn
+import model_svm
 import numpy as np
 from matplotlib import gridspec
 from h5_keys import *
@@ -12,7 +13,7 @@ mpl.rcParams['agg.path.chunksize'] = 10000
 
 
 def plot_distrib_rmses_val(rmses, model_name, figures_loc):
-    """ Display errors distribution according to a given padding """
+    """ Display errors distribution """
 
     fig = plt.figure()
 
@@ -21,7 +22,7 @@ def plot_distrib_rmses_val(rmses, model_name, figures_loc):
     # Linear Y scale
     ax1 = fig.add_subplot(121)
     ax1.set_title(model_name + " model\n Errors distribution")
-    ax1.set_xlabel("Absolute error (mÅ)")
+    ax1.set_xlabel("Absolute error (pm)")
     ax1.set_ylabel("Test set occurrences (linear scale)")
     ax1.hist(rmses, floor(max(rmses)-min(rmses)))
 
@@ -29,7 +30,7 @@ def plot_distrib_rmses_val(rmses, model_name, figures_loc):
     ax2 = fig.add_subplot(122)
     ax2.set_yscale("log")
     ax2.set_title(model_name + " model\n Errors distribution")
-    ax2.set_xlabel("Absolute error (mÅ)")
+    ax2.set_xlabel("Absolute error (pm)")
     ax2.set_ylabel("Test set occurrences (logarithmic scale)")
 
     ax2.hist(rmses, floor(max(rmses) - min(rmses)))
@@ -42,14 +43,14 @@ def plot_distrib_rmses_val(rmses, model_name, figures_loc):
 
 def plot_rmse_distrib_dist(rmses, targets, model_name, figures_loc, bonds_lengths_loc):
 
-    gs = gridspec.GridSpec(2, 1, height_ratios=[10, 1])
+    gs = gridspec.GridSpec(2, 1, height_ratios=[13, 1])
 
     ax = plt.subplot(gs[0])
 
     ax.set_title(model_name + " model " + "\nError distribution depending on target distances")
-    ax.set_xlabel("Target distance (mÅ)")
-    ax.set_ylabel("Absolute error (mÅ)")
-    ax.plot(targets, rmses, ",", label="Absolute error (mÅ)", alpha=0.8)
+    ax.set_xlabel("Target distance (pm)")
+    ax.set_ylabel("Absolute error (pm)")
+    ax.plot(targets, rmses, ",", label="Absolute error (pm)", alpha=0.8)
     ax.set_xlim(xmin=min(targets), xmax=max(targets))
 
     ax2 = plt.subplot(gs[1])
@@ -84,9 +85,9 @@ def plot_targets_pred(targets, preds, anum_1, anum_2, model_name, figures_loc, b
 
     # Predictions depending on target distances plot
     ax = plt.subplot(gs[0])
-    ax.set_title(model_name + " model\n Predictions depending on targets distances")
-    ax.set_xlabel("Target distance (mÅ)")
-    ax.set_ylabel("Predicted distance (mÅ)")
+    ax.set_title(model_name + " model\n Predictions depending on target distances")
+    ax.set_xlabel("Target distance (pm)")
+    ax.set_ylabel("Predicted distance (pm)")
     ax.plot(targets, preds, ",")
     ax.set_xlim(xmin=min(targets), xmax=max(targets))
 
@@ -127,14 +128,18 @@ def print_stats_errors(errors):
     print("Max error : " + str(max(errors)))
 
 
-def plot_nn_model_results(model_loc, model_name, anum_1, anum_2, bonds_lengths_loc,
-                          test_prepared_input_loc, test_labels_loc, plots_dir, plot_error_distrib,
-                          plot_targets_error_distrib, plot_targets_predictions, batch_size, last_layer_width, depth,
-                          hidden_act, outlayer_act):
+def plot_model_results(model_type, model_loc, model_name, anum_1, anum_2, bonds_lengths_loc,
+                       test_prepared_input_loc, test_labels_loc, plots_dir, plot_error_distrib,
+                       plot_targets_error_distrib, plot_targets_predictions, batch_size,
+                       last_layer_width=None, depth=None, hidden_act=None, outlayer_act=None):
 
-    errors, predictions, targets = model_nn.predict(model_loc, test_prepared_input_loc, test_labels_loc,
-                                                    batch_size, last_layer_width, depth, hidden_act, outlayer_act)
+    if model_type == "NN":
+        errors, predictions, targets = model_nn.predict(model_loc, test_prepared_input_loc, test_labels_loc,
+                                                        batch_size, last_layer_width, depth, hidden_act, outlayer_act)
 
+    elif model_type == "SVM":
+        errors, predictions, targets = model_svm.predict(model_loc, test_prepared_input_loc, test_labels_loc,
+                                                         batch_size)
     print("Plotting "+model_name)
 
     print_stats_errors(errors)
@@ -147,3 +152,6 @@ def plot_nn_model_results(model_loc, model_name, anum_1, anum_2, bonds_lengths_l
 
     if plot_targets_predictions:
         plot_targets_pred(targets, predictions, anum_1, anum_2, model_name, plots_dir, bonds_lengths_loc)
+
+
+

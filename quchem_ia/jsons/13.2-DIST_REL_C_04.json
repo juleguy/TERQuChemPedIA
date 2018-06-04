@@ -1,0 +1,59 @@
+{
+  "paths":{
+        "train_set_loc":"../../data/train_set_riken_v2_reduced.h5",
+        "test_set_loc":"../../data/test_set_riken_v2_reduced.h5",
+        "train_prepared_input_loc":"../../data/DIST_REL_C_04/train_set_prepared_input.h5",
+        "test_prepared_input_loc":"../../data/DIST_REL_C_04/test_set_prepared_input.h5",
+        "train_labels_loc":"../../data/DIST_REL_C_04/train_set_labels.h5",
+        "test_labels_loc":"../../data/DIST_REL_C_04/test_set_labels.h5",
+        "model_loc":"../../models/DIST_REL_C_04/DIST_REL_C_04.tflearn",
+        "logs_dir":"../../models/DIST_REL_C_04/logs/"
+  },
+  "tasks":[
+    {
+      "prepare_model_data": {
+        "selected_mols": {
+          "mol_min_size": "2",
+          "mol_max_size": "60",
+          "max_anum": "9",
+          "anum_1": "6",
+          "anum_2": "6",
+          "min_bond_size": "0",
+          "max_bond_size": "1.6"
+        },
+        "params": {
+          "nb_mol_from_train": "400000",
+          "nb_mol_from_test": "80000",
+          "pos_class": "True",
+          "one_hot_anums": "True",
+          "amasses": "True",
+          "distances": "True",
+          "distances_cut_off": "2",
+          "batch_size": "10000",
+          "distances_fun":"squareinv"
+        }
+      }
+    },
+    {
+      "model_train":{
+        "model_name":"DIST_REL_C_04",
+        "model_type":"NN",
+        "params":{
+          "epochs":"150",
+          "last_layer_width":"870",
+          "batch_size":"5000",
+          "learning_rate":"0.01",
+          "epsilon":"0.001",
+          "stddev_init":"0.001",
+          "hidden_act":"elu",
+          "outlayer_act":"linear",
+          "depth":"3",
+          "weight_decay":"0.001",
+          "gpu_mem_prop":"0.48",
+          "save_model":"True",
+          "dropout":"0.98"
+        }
+      }
+    }
+  ]
+}

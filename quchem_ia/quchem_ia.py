@@ -3,9 +3,11 @@ from json_keys import *
 from data_preparation import data_split
 from data_preparation import generate_data_wished_size, generate_data
 import model_nn
+import model_svm
 import plots
 import bonds_lengths_stats
 import paths
+from grid_search import grid_search_cv
 
 
 def _load_paths(paths_json):
@@ -143,7 +145,12 @@ def _data_preparation(prepare_data_json):
     distances = params_json[distances_k] == "True"
     batch_size = int(params_json[batch_size_k])
 
-    # Checking paths are loaded
+    # Checking distances_fun in distances specified and loading value
+    if distances:
+        _check_key(params_json, distances_fun_k)
+        distances_fun_str = params_json[distances_fun_k]
+
+    # Checking that paths are loaded
     if paths.train_set_loc == "":
         raise RuntimeError(train_set_loc_k + " cannot be empty")
 
@@ -163,13 +170,13 @@ def _data_preparation(prepare_data_json):
         generate_data_wished_size(paths.train_set_loc, paths.train_prepared_input_loc, paths.train_labels_loc, anum_1,
                                   anum_2, wished_train_size, batch_size, max_anum, min_bond_size, max_bond_size,
                                   mol_min_size, mol_max_size, distances_cut_off, one_hot_anums, distances, pos_class,
-                                  amasses)
+                                  amasses, distances_fun_str)
 
         # Generating data on test set
         generate_data_wished_size(paths.test_set_loc, paths.test_prepared_input_loc, paths.test_labels_loc, anum_1,
                                   anum_2, wished_test_size, batch_size, max_anum, min_bond_size, max_bond_size,
                                   mol_min_size, mol_max_size, distances_cut_off, one_hot_anums, distances, pos_class,
-                                  amasses)
+                                  amasses, distances_fun_str)
 
     # Number of molecules mode
     elif nb_mol_from_train_k in params_json and nb_mol_from_test_k in params_json:
@@ -180,12 +187,12 @@ def _data_preparation(prepare_data_json):
         # Generating data on train set
         generate_data(paths.train_set_loc, paths.train_prepared_input_loc, paths.train_labels_loc, anum_1, anum_2,
                       nb_mol_from_train, batch_size, max_anum, min_bond_size, max_bond_size, mol_min_size, mol_max_size,
-                      distances_cut_off, one_hot_anums, distances, pos_class, amasses)
+                      distances_cut_off, one_hot_anums, distances, pos_class, amasses, distances_fun_str)
 
         # Generating data on test set
         generate_data(paths.test_set_loc, paths.test_prepared_input_loc, paths.test_labels_loc, anum_1, anum_2,
                       nb_mol_from_test, batch_size, max_anum, min_bond_size, max_bond_size, mol_min_size, mol_max_size,
-                      distances_cut_off, one_hot_anums, distances, pos_class, amasses)
+                      distances_cut_off, one_hot_anums, distances, pos_class, amasses, distances_fun_str)
 
     else:
         raise RuntimeError("A couple ("+wished_test_size_k+", "+wished_test_size_k+") or ("+nb_mol_from_test_k+", " +
@@ -208,6 +215,10 @@ def _model_train(model_train_json):
     model_name = model_train_json[model_name_k]
     _check_key(model_train_json, model_type_k)
     model_type = model_train_json[model_type_k]
+    _check_key(model_train_json, params_k)
+    params_json = model_train_json[params_k]
+    _check_key(params_json, save_model_k)
+    save_model = params_json[save_model_k] == "True"
 
     # Checking that paths are specified
     if paths.train_prepared_input_loc == "":
@@ -216,15 +227,13 @@ def _model_train(model_train_json):
     if paths.train_labels_loc == "":
         raise RuntimeError(train_set_loc_k + " cannot be empty")
 
-    if paths.model_loc == "":
-        raise RuntimeError(model_loc_k + " cannot be empty")
+    if save_model and paths.model_loc == "":
+        raise RuntimeError(model_loc_k + " cannot be empty since the model must be saved")
 
     # Training neural network
     if model_type == "NN":
 
         # Checking presence of neural network parameters
-        _check_key(model_train_json, params_k)
-        params_json = model_train_json[params_k]
         _check_key(params_json, epochs_k)
         _check_key(params_json, last_layer_width_k)
         _check_key(params_json, batch_size_k)
@@ -237,7 +246,6 @@ def _model_train(model_train_json):
         _check_key(params_json, depth_k)
         _check_key(params_json, weight_decay_k)
         _check_key(params_json, gpu_mem_prop_k)
-        _check_key(params_json, save_model_k)
 
         # Loading parameters
         epochs = int(params_json[epochs_k])
@@ -252,7 +260,6 @@ def _model_train(model_train_json):
         depth = int(params_json[depth_k])
         weight_decay = float(params_json[weight_decay_k])
         gpu_mem_prop = float(params_json[gpu_mem_prop_k])
-        save_model = params_json[save_model_k] == "True"
 
         # Checking that a log path has been specified
         if paths.logs_dir == "":
@@ -262,6 +269,55 @@ def _model_train(model_train_json):
         model_nn.train_model(paths.train_prepared_input_loc, paths.train_labels_loc, model_name, paths.model_loc,
                              paths.logs_dir, epochs, last_layer_width, batch_size, learning_rate, epsilon, dropout,
                              stddev_init, hidden_act, outlayer_act, depth, weight_decay, gpu_mem_prop, save_model)
+
+    # Training SVM model
+    elif model_type == "SVM":
+
+        # Checking presence of SVM parameters
+        _check_key(params_json, kernel_k)
+        _check_key(params_json, C_k)
+        _check_key(params_json, epsilon_k)
+        _check_key(params_json, coef0_k)
+        _check_key(params_json, shrinking_k)
+        _check_key(params_json, tol_k)
+        _check_key(params_json, cache_size_k)
+        _check_key(params_json, verbose_k)
+        _check_key(params_json, max_iter_k)
+
+        # Loading kernel type and checking and loading specific kernel parameters presence
+        kernel = params_json[kernel_k]
+
+        if kernel == "rbf" or kernel == "sigmoid" or kernel == "poly":
+            _check_key(params_json, gamma_k)
+            if params_json[gamma_k] == "auto":
+                gamma = "auto"
+            else:
+                gamma = float(params_json[gamma_k])
+        else:
+            gamma = None
+
+        if kernel_k == "poly":
+            _check_key(params_json, degree_k)
+            degree = int(params_json[degree_k])
+        else:
+            degree = 1
+
+        # Loading generic SVM parameters
+        epsilon = float(params_json[epsilon_k])
+        coef0 = float(params_json[coef0_k])
+        shrinking = params_json[shrinking_k] == "True"
+        tol = float(params_json[tol_k])
+        cache_size = float(params_json[cache_size_k])
+        verbose = params_json[verbose_k] == "True"
+        max_iter = int(params_json[max_iter_k])
+        C = float(params_json[C_k])
+
+        print(max_iter)
+
+
+        # Training the model
+        model_svm.train_model(paths.train_prepared_input_loc, paths.train_labels_loc, paths.model_loc, C, kernel,
+                              epsilon, degree, gamma, coef0, shrinking, tol, cache_size, verbose, max_iter, save_model)
 
 
 def _bonds_stats(bonds_stats_json):
@@ -368,11 +424,50 @@ def _plot_predictions(plot_predictions_json):
         hidden_act = params[hidden_act_k]
         outlayer_act = params[outlayer_act_k]
 
+        plots.plot_model_results("NN", paths.model_loc, model_name, anum_1, anum_2, paths.bonds_lengths_loc,
+                                 paths.test_prepared_input_loc, paths.test_labels_loc, paths.plots_dir,
+                                 plot_error_distrib, plot_targets_error_distrib, plot_targets_predictions,
+                                 batch_size, last_layer_width=last_layer_width, depth=depth, hidden_act=hidden_act,
+                                 outlayer_act=outlayer_act)
 
-        plots.plot_nn_model_results(paths.model_loc, model_name, anum_1, anum_2, paths.bonds_lengths_loc,
-                                    paths.test_prepared_input_loc, paths.test_labels_loc, paths.plots_dir,
-                                    plot_error_distrib, plot_targets_error_distrib, plot_targets_predictions,
-                                    batch_size, last_layer_width, depth, hidden_act, outlayer_act)
+    # Plotting for a SVM model
+    elif model_type == "SVM":
+
+        plots.plot_model_results("SVM", paths.model_loc, model_name, anum_1, anum_2, paths.bonds_lengths_loc,
+                                 paths.test_prepared_input_loc, paths.test_labels_loc, paths.plots_dir,
+                                 plot_error_distrib, plot_targets_error_distrib, plot_targets_predictions,
+                                 batch_size)
+
+
+def _check_grid(params, grid_params):
+    """
+    Checks if all of the specified params are present in the specified grid
+    :param params: list of required parameters
+    :param grid_params: grid to give to scikit learn GridSearchCV
+    :return:
+    """
+    for nn_param in params:
+        for grid in grid_params:
+            if nn_param not in grid:
+                raise RuntimeError(nn_param + " must be specified in grid " + str(grid))
+
+
+def _string_list_to_bool_list(string_list):
+    """
+    Converts a list of strings representing booleans ("True", "False") into a boolean list of two elements at most
+    :param string_list:
+    :return:
+    """
+
+    boolean_list = []
+
+    if "True" in string_list:
+        boolean_list.append(True)
+
+    if "False" in string_list:
+        boolean_list.append(False)
+
+    return boolean_list
 
 
 def _grid_search_cv(grid_search_json):
@@ -398,17 +493,11 @@ def _grid_search_cv(grid_search_json):
     _check_key(params, model_type_k)
     _check_key(params, n_jobs_k)
     _check_key(params, cv_k)
-    _check_key(params, save_model_k)
 
     # Loading params
     model_type = params[model_type_k]
     n_jobs = int(params[n_jobs_k])
     cv = int(params[cv_k])
-    save_model = params[save_model_k] == "True"
-
-    # Checking that a models directory has been specified if the models must be saved
-    if save_model and paths.models_dir == "":
-        raise RuntimeError(models_dir_k + " cannot be empty since the models must be saved")
 
     # Checking that the prepared input and the targets have been specified
     if paths.train_prepared_input_loc == "":
@@ -417,31 +506,38 @@ def _grid_search_cv(grid_search_json):
     if paths.train_labels_loc == "":
         raise RuntimeError(train_set_loc_k + " cannot be empty")
 
-    # Grid search in case of neural network model
+    # Checking specific parameters
     if model_type == "NN":
 
         # Loading NN specific param
         _check_key(params, gpu_mem_prop_k)
         gpu_mem_prop = float(params[gpu_mem_prop_k])
 
-        # Adding logs_dir, model_loc, save_model and gpu_mem_prop to all the grids
+        # Adding NN specific param to the grids
         for grid in grid_params:
-            grid[logs_dir_k] = [paths.logs_dir]
-            grid[save_model_k] = [save_model]
-            grid[models_dir_k] = [paths.models_dir]
             grid[gpu_mem_prop_k] = [gpu_mem_prop]
+            grid[logs_dir_k] = [paths.logs_dir]
 
         # Checking that all the grids are complete
         nn_params = [learning_rate_k, epsilon_k, dropout_k, stddev_init_k, hidden_act_k, outlayer_act_k, weight_decay_k,
                      last_layer_width_k, depth_k, batch_size_k, epochs_k]
+        _check_grid(nn_params, grid_params)
 
-        for nn_param in nn_params:
-            for grid in grid_params:
-                if nn_param not in grid:
-                    raise RuntimeError(nn_param + " must be specified in grid "+str(grid))
+    if model_type == "SVM":
 
-        # Grid search
-        model_nn.grid_search_cv(paths.train_prepared_input_loc, paths.train_labels_loc, grid_params, cv, n_jobs)
+        # Checking that all the grids are complete
+        svm_params = [kernel_k, epsilon_k, coef0_k, shrinking_k, tol_k, cache_size_k, verbose_k, max_iter_k, C_k,
+                      degree_k, gamma_k]
+        _check_grid(svm_params, grid_params)
+
+        # Converting "True" and "False" strings to boolean values
+        boolean_attributes = [shrinking_k, verbose_k]
+        for grid in grid_params:
+            for boolean_attribute in boolean_attributes:
+                grid[boolean_attribute] = _string_list_to_bool_list(grid[boolean_attribute])
+
+    # Grid search
+    grid_search_cv(model_type, paths.train_prepared_input_loc, paths.train_labels_loc, grid_params, cv, n_jobs)
 
 
 def execute(json_path):
@@ -482,4 +578,4 @@ def execute(json_path):
                 _grid_search_cv(task[grid_search_cv_k])
 
 
-execute("../../code/14.3-stats_dist_rel_xy_2.json")
+execute("jsons/15.0-SVM_test.json")

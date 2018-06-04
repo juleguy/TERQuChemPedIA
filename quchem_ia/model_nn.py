@@ -9,7 +9,6 @@ from h5_keys import *
 from sklearn.base import BaseEstimator, RegressorMixin
 import tensorflow as tf
 import tflearn as tfl
-from sklearn.model_selection import GridSearchCV
 
 
 def _rmse(pred, targets):
@@ -163,14 +162,15 @@ def train_model(input_X_h5_loc, labels_y_h5_loc, model_name, model_loc, logs_loc
 def predict(model_loc, test_prepared_input_loc, test_labels_loc, batch_size, last_layer_width,
             depth, hidden_act, outlayer_act):
     """
-    Predicts given test data with the given neural network and returns the error vector and the prediction vector
+    Predicts given test data with the given neural network and returns the error vector, the prediction vector and
+    the targets vector
     :param model_loc:
     :param test_prepared_input_loc:
     :param test_labels_loc:
     :param batch_size:
     :param last_layer_width:
     :param depth:
-    :return: error vector, prediction vector, targets vector
+    :return: error vector, prediction vector, targets vector (in pm)
     """
 
     tf.reset_default_graph()
@@ -199,16 +199,18 @@ def predict(model_loc, test_prepared_input_loc, test_labels_loc, batch_size, las
         predictions.extend(model.predict(np.array(input_X[i:j])))
         i += batch_size
 
-    return _rmse_test(labels_y, predictions).reshape(1, -1)[0], predictions, labels_y
+    predictions = np.array(predictions)
+
+    return (_rmse_test(labels_y, predictions).reshape(1, -1)[0])/10, predictions/10, labels_y/10
 
 
 class NNRegressor(BaseEstimator, RegressorMixin):
     """ Wrapper around TFLearn to use models as Scikit-learn models
     Inspired of http://danielhnyk.cz/creating-your-own-estimator-scikit-learn/ """
 
-    def __init__(self, logs_dir=None, models_dir=None, learning_rate=None, epsilon=None, dropout=None,
+    def __init__(self, logs_dir=None, learning_rate=None, epsilon=None, dropout=None,
                  stddev_init=None, hidden_act=None, outlayer_act=None, weight_decay=None,
-                 last_layer_width=None, depth=None, batch_size=None, epochs=None, gpu_mem_prop=None, save_model=None,
+                 last_layer_width=None, depth=None, batch_size=None, epochs=None, gpu_mem_prop=None,
                  score_fun=_rmse_valid, loss_fun=_rmse):
 
         self.logs_dir = logs_dir
@@ -226,23 +228,21 @@ class NNRegressor(BaseEstimator, RegressorMixin):
         self.loss_fun = loss_fun
         self.score_fun = score_fun
         self.gpu_mem_prop = gpu_mem_prop
-        self.save_model = save_model
-        self.models_dir = models_dir
         self.model = None
 
     def fit(self, X, y=None):
         tf.reset_default_graph()
         tfl.init_graph(gpu_memory_fraction=self.gpu_mem_prop)
 
-        # Computing model name according to its parameters so that it can be easily retrieved if saved.
+        # Computing model name according to its parameters so that it can be easily retrieved.
         # Also adding an ID of 8 characters, so that the logs are recorded in different directories
         # There is no guarantee that the ID is unique but collisions should not happen often and that would only
         # mess with tensorboard graphs
-        model_name = ("lr" + str(self.learning_rate) + "|eps" + str(self.epsilon) + "|do" + str(self.dropout) +
-                      "|stddev_init" + str(self.stddev_init) + "|hidact" + self.hidden_act + "|out" +
-                      self.outlayer_act + "|wd" + str(self.weight_decay) + "|lastlayw" + str(self.last_layer_width) +
-                      "|d" + str(self.depth) + "|batchs" + str(self.batch_size) + "|epochs" + str(self.epochs) +
-                      "|id"+str(uuid.uuid4())[:8])
+        model_name = ("lr:" + str(self.learning_rate) + "|eps:" + str(self.epsilon) + "|do:" + str(self.dropout) +
+                      "|stddev_init:" + str(self.stddev_init) + "|hidact:" + self.hidden_act + "|outact:" +
+                      self.outlayer_act + "|wd:" + str(self.weight_decay) + "|lastlayw:" + str(self.last_layer_width) +
+                      "|d:" + str(self.depth) + "|batchs:" + str(self.batch_size) + "|epochs:" + str(self.epochs) +
+                      "|id:"+str(uuid.uuid4())[:8])
 
         # Computing first layer width (all the examples of the dataset must have the same width)
         first_layer_width = len(X[0])
@@ -260,9 +260,6 @@ class NNRegressor(BaseEstimator, RegressorMixin):
                        shuffle=True, snapshot_step=100, validation_set=0.1,
                        show_metric=True, run_id=model_name, n_epoch=self.epochs)
 
-        if self.save_model:
-            self.model.save(self.models_dir+model_name+".tflearn")
-
     def predict(self, X, y=None):
         return self.model.predict(X, y)
 
@@ -270,28 +267,3 @@ class NNRegressor(BaseEstimator, RegressorMixin):
         return self.model.evaluate(X, y, batch_size=100)[0]
 
 
-def grid_search_cv(train_prepared_input_loc, train_labels_loc, parameters_grid, cv, n_jobs):
-    """
-    Performs a grid search of the specified parameters on the specified set.
-    Uses scikit-learn GridSearchCV method that also performs a cross validation.
-    :param train_prepared_input_loc: inputs location
-    :param train_labels_loc: targets location
-    :param parameters_grid: grid of parameters
-    :param cv: number of cross validations
-    :param n_jobs: number of cpu jobs
-    :return:
-    """
-
-    # Loading inputs and targets
-    input_X = np.array(h5py.File(train_prepared_input_loc)[inputs_key])
-    labels_y = np.array(h5py.File(train_labels_loc)[targets_key])
-
-    # Creating the Scikit-Learn model from our Scikit-Learn like regressor
-    grid_search = GridSearchCV(estimator=NNRegressor(), param_grid=parameters_grid, cv=cv, n_jobs=n_jobs)
-
-    # Grid search
-    grid_search.fit(input_X, labels_y)
-
-    print("Best score: %0.3f" % grid_search.best_score_)
-    print("Best parameters set:")
-    print(grid_search.best_estimator_.get_params())

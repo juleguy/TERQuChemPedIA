@@ -43,10 +43,13 @@ distances_k = "distances"
 distances_cut_off_k = "distances_cut_off"
 min_bond_size_k = "min_bond_size"
 max_bond_size_k = "max_bond_size"
+distances_fun_k = "distances_fun"
 
 # Model train keys
 model_type_k = "model_type"
 model_train_k = "model_train"
+
+# NN keys
 epochs_k = "epochs"
 last_layer_width_k = "last_layer_width"
 depth_k = "depth"
@@ -59,6 +62,18 @@ outlayer_act_k = "outlayer_act"
 weight_decay_k = "weight_decay"
 gpu_mem_prop_k = "gpu_mem_prop"
 save_model_k = "save_model"
+
+# SVM keys
+kernel_k = "kernel"
+degree_k = "degree"
+gamma_k = "gamma"
+coef0_k = "coef0"
+shrinking_k = "shrinking"
+tol_k = "tol"
+cache_size_k = "cache_size"
+verbose_k = "verbose"
+max_iter_k = "max_iter"
+C_k = "C"
 
 # Plot predictions keys
 plot_predictions_k = "plot_predictions"

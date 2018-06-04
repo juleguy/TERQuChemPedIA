@@ -1,0 +1,54 @@
+{
+  "paths":{
+        "train_set_loc":"tests/train.h5",
+        "test_set_loc":"tests/test.h5",
+        "train_prepared_input_loc":"tests/train_prepared.h5",
+        "test_prepared_input_loc":"tests/test_prepared.h5",
+        "train_labels_loc":"tests/train_labels.h5",
+        "test_labels_loc":"tests/test_labels.h5",
+        "model_loc":"tests/DIST_REL_C_02/dist_rel_c_02_svm.pkl",
+        "bonds_lengths_loc":"tests/cc_lengths.h5",
+        "plots_dir":"tests/DIST_REL_C_02_svm/"
+  },
+  "tasks":[
+    {
+      "model_train": {
+        "model_name": "DIST_REL_C_02_basic_svm",
+        "model_type": "SVM",
+        "params": {
+          "kernel":"rbf",
+          "epsilon":"0.1",
+          "gamma":"auto",
+          "coef0":"0",
+          "shrinking":"True",
+          "tol":"0.001",
+          "cache_size":"200",
+          "verbose":"True",
+          "save_model": "True",
+          "max_iter":"-1",
+          "C":"1"
+        }
+      }
+    },
+    {
+      "plot_predictions": {
+        "params": {
+          "model_name": "DIST_REL_C_02_basic_svm",
+          "model_type": "SVM",
+          "anum_1": "6",
+          "anum_2": "6",
+          "plot_error_distrib": "True",
+          "plot_targets_error_distrib": "True",
+          "plot_targets_predictions": "True",
+          "asymb_1": "C",
+          "asymb_2": "C",
+          "batch_size": "1060",
+          "last_layer_width": "870",
+          "depth": "3",
+          "hidden_act": "elu",
+          "outlayer_act": "linear"
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,45 @@
+{
+  "paths":{
+    "train_prepared_input_loc":"tests/train_prepared.h5",
+    "train_labels_loc":"tests/train_labels.h5"
+  },
+  "tasks":[
+    {
+      "grid_search_cv":{
+        "params":{
+          "model_type":"SVM",
+          "n_jobs":"3",
+          "cv":"2"
+        },
+        "grid_params":[
+          {
+            "epsilon": [0.1],
+            "kernel": ["rbf", "linear"],
+            "degree": [1],
+            "gamma": ["auto"],
+            "coef0": [0],
+            "shrinking": ["True"],
+            "tol": [0.001],
+            "cache_size": [200],
+            "verbose": ["True"],
+            "max_iter": [-1],
+            "C": [1]
+          },
+          {
+            "epsilon": [0.1, 0.01],
+            "degree": [1],
+            "kernel": ["rbf"],
+            "gamma": ["auto"],
+            "coef0": [0],
+            "shrinking": ["True"],
+            "tol": [0.001],
+            "cache_size": [200],
+            "verbose": ["True"],
+            "max_iter": [-1],
+            "C": [1]
+          }
+        ]
+      }
+    }
+  ]
+}

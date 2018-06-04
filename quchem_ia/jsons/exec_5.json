@@ -1,6 +1,5 @@
 {
   "paths":{
-    "models_dir":"tests/gridsearch/",
     "logs_dir":"tests/logs/",
     "train_prepared_input_loc":"tests/train_prepared.h5",
     "train_labels_loc":"tests/train_labels.h5"
@@ -12,7 +11,6 @@
           "model_type":"NN",
           "n_jobs":"1",
           "cv":"2",
-          "save_model":"True",
           "gpu_mem_prop":"0.8"
         },
         "grid_params":[

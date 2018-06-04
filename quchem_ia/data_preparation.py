@@ -197,7 +197,7 @@ def _distance_constraint(at, at_ref1, at_ref2, cut_off_distance):
 
 def _prepare_mol_data(coords_mol, anums_mol, amasses_mol, anum_1, anum_2, pubchem_id, min_bond_size, max_bond_size,
                       max_anum, max_mol_size, cut_off_distance=None, pos_class=True, one_hot_anum=True, amasses=True,
-                      distances=True):
+                      distances=True, distances_fun=None):
     """
     Preparing inputs and targets for the models from one molecule. Taking the data describing the molecule (coordinates,
     atomic numbers and atomic masses) and the atomic numbers of the couples of atoms whose distance of bonds must be
@@ -278,10 +278,11 @@ def _prepare_mol_data(coords_mol, anums_mol, amasses_mol, anum_1, anum_2, pubche
 
                                 # If included, recording the distances to both of the atoms of the couple
                                 if distances:
-                                    input_rn[input_rn_idx][last_input_id:last_input_id + 2] = _compute_distances(
-                                        coords_mol[k],
-                                        coords_mol[i],
-                                        coords_mol[j])
+                                    input_rn[input_rn_idx][last_input_id:last_input_id + 2] = distances_fun(
+                                        _compute_distances(
+                                            coords_mol[k],
+                                            coords_mol[i],
+                                            coords_mol[j]))
                                     last_input_id += 2
 
                                 # If included, recording the positional class of the atom
@@ -309,9 +310,24 @@ def _prepare_mol_data(coords_mol, anums_mol, amasses_mol, anum_1, anum_2, pubche
     return np.array(inputs_RN), np.array(targets_RN), np.array(pubchem_ids)
 
 
+def identity_distances_fun(distances):
+    """ Applies identity function to distances """
+    return distances
+
+
+def inv_distances_fun(distances):
+    """ Applies inverse function to distances """
+    return np.reciprocal(distances)
+
+
+def squareinv_distances_fun(distances):
+    """ Applies square inverse function to distances """
+    return np.reciprocal(np.square(distances))
+
+
 def generate_data(original_dataset_loc, prepared_input_loc, labels_loc, anum1, anum2, nb_mol, batch_size, max_anum,
                   min_bond_size, max_bond_size, min_mol_size, max_mol_size, cut_off_distance=None,
-                  one_hot_anums=True, distances=True, pos_class=True, amasses=True):
+                  one_hot_anums=True, distances=True, pos_class=True, amasses=True, distances_fun_str=""):
     """
     Generates the prepared inputs and the targets for the specified dataset and the specified atoms couple from the
     nb_mol first molecules of the dataset
@@ -348,6 +364,14 @@ def generate_data(original_dataset_loc, prepared_input_loc, labels_loc, anum1, a
     # Creating input and labels files
     input_rn_dataset_h5 = h5py.File(prepared_input_loc, 'w')
     labels_dataset_h5 = h5py.File(labels_loc, 'w')
+
+    # Selecting distances function
+    if distances_fun_str == "identity":
+        distances_fun = identity_distances_fun
+    elif distances_fun_str == "inv":
+        distances_fun = inv_distances_fun
+    elif distances_fun_str == "squareinv":
+        distances_fun = squareinv_distances_fun
 
     try:
 
@@ -403,7 +427,7 @@ def generate_data(original_dataset_loc, prepared_input_loc, labels_loc, anum1, a
                         input_masses[batch_idx], anum1, anum2,
                         input_ids[batch_idx], min_bond_size, max_bond_size,
                         max_anum, max_mol_size, cut_off_distance, pos_class, one_hot_anums,
-                        amasses, distances)
+                        amasses, distances, distances_fun)
 
                     # Adding inputs and targets to the arrays of the current batch
                     if len(curr_inputs_np) > 0:
@@ -443,7 +467,8 @@ def generate_data(original_dataset_loc, prepared_input_loc, labels_loc, anum1, a
 
 def generate_data_wished_size(original_dataset_loc, prepared_input_loc, labels_loc, anum1, anum2, wished_size,
                               batch_size, max_anum, min_bond_size, max_bond_size, min_mol_size, max_mol_size,
-                              cut_off_distance=None, one_hot_anums=True, distances=True, pos_class=True, amasses=True):
+                              cut_off_distance=None, one_hot_anums=True, distances=True, pos_class=True, amasses=True,
+                              distances_fun_str = ""):
     """
     Generates a dataset of size that approximates a given wished size
     """
@@ -454,7 +479,7 @@ def generate_data_wished_size(original_dataset_loc, prepared_input_loc, labels_l
     generate_data(original_dataset_loc, prepared_input_loc, labels_loc, anum1, anum2, mini_set_size, batch_size,
                   max_anum, min_bond_size, max_bond_size, min_mol_size, max_mol_size,
                   cut_off_distance=cut_off_distance, one_hot_anums=one_hot_anums, distances=distances,
-                  pos_class=pos_class, amasses=amasses)
+                  pos_class=pos_class, amasses=amasses, distances_fun_str=distances_fun_str)
 
     # Computing the number of generated examples from mini_set_size molecules
     mini_set_prepared_input_h5 = h5py.File(prepared_input_loc, "r")
@@ -468,4 +493,5 @@ def generate_data_wished_size(original_dataset_loc, prepared_input_loc, labels_l
     # Generation of the dataset
     generate_data(original_dataset_loc, prepared_input_loc, labels_loc, anum1, anum2, nb_mol, batch_size,
                   max_anum, min_bond_size, max_bond_size, min_mol_size, max_mol_size, cut_off_distance=cut_off_distance,
-                  one_hot_anums=one_hot_anums, distances=distances, pos_class=pos_class, amasses=amasses)
+                  one_hot_anums=one_hot_anums, distances=distances, pos_class=pos_class, amasses=amasses,
+                  distances_fun_str=distances_fun_str)
