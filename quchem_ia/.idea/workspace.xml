@@ -60,8 +60,20 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="15.6-train_dist_rel_oh_03.json" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/jsons/15.6-train_dist_rel_oh_03.json">
+      <file leaf-file-name="quchem_ia.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/quchem_ia.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="322">
+              <caret line="590" lean-forward="true" selection-start-line="590" selection-end-line="590" />
+              <folding>
+                <element signature="e#0#11#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="14.6-train_dist_rel_oh_03.json" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/jsons/14.6-train_dist_rel_oh_03.json">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="108">
               <caret line="33" column="29" selection-start-line="33" selection-start-column="29" selection-end-line="33" selection-end-column="29" />
@@ -69,11 +81,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="15.0-SVM_test.json" pinned="false" current-in-tab="true">
+      <file leaf-file-name="15.0-SVM_test.json" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/jsons/15.0-SVM_test.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="72">
-              <caret line="12" column="11" selection-start-line="12" selection-start-column="11" selection-end-line="12" selection-end-column="11" />
+            <state relative-caret-position="792">
+              <caret line="44" column="10" lean-forward="true" selection-start-line="44" selection-start-column="10" selection-end-line="44" selection-end-column="10" />
             </state>
           </provider>
         </entry>
@@ -110,18 +122,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="36">
               <caret line="2" column="8" selection-end-line="59" selection-end-column="1" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="model_svm.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/model_svm.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="336">
-              <caret line="56" column="40" selection-start-line="56" selection-start-column="40" selection-end-line="56" selection-end-column="40" />
-              <folding>
-                <element signature="e#0#27#0" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -210,7 +210,6 @@
         <option value="$PROJECT_DIR$/json_keys.py" />
         <option value="$PROJECT_DIR$/jsons/exec_4.json" />
         <option value="$PROJECT_DIR$/jsons/exec_8.json" />
-        <option value="$PROJECT_DIR$/quchem_ia.py" />
         <option value="$PROJECT_DIR$/jsons/exec_1.json" />
         <option value="$PROJECT_DIR$/data_preparation.py" />
         <option value="$PROJECT_DIR$/stats.py" />
@@ -221,6 +220,7 @@
         <option value="$PROJECT_DIR$/jsons/14.5-train_dist_rel_ch_03.json" />
         <option value="$PROJECT_DIR$/jsons/15.6-train_dist_rel_oh_03.json" />
         <option value="$PROJECT_DIR$/jsons/15.0-SVM_test.json" />
+        <option value="$PROJECT_DIR$/quchem_ia.py" />
       </list>
     </option>
   </component>
@@ -408,8 +408,8 @@
       <window_info anchor="bottom" id="Version Control" order="9" show_stripe_button="false" />
       <window_info anchor="bottom" id="Python Console" order="12" sideWeight="0.91720086" weight="0.18092105" />
       <window_info anchor="bottom" id="Run" order="3" sideWeight="0.86752135" weight="0.46820176" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="11" sideWeight="0.9166667" visible="true" weight="0.36842105" />
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.499187" visible="true" weight="0.16025642" />
+      <window_info anchor="bottom" id="Terminal" order="11" sideWeight="0.9166667" visible="true" weight="0.36842105" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.499187" visible="true" weight="0.16025642" />
       <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
       <window_info anchor="right" id="Database" order="3" weight="0.32959402" />
       <window_info anchor="right" id="SciView" order="4" sideWeight="0.4878472" visible="true" weight="0.17948718" />
@@ -659,6 +659,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="154">
           <caret line="22" column="12" lean-forward="true" selection-start-line="22" selection-start-column="12" selection-end-line="22" selection-end-column="12" />
+          <folding>
+            <element signature="e#0#18#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -729,16 +732,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="558">
           <caret line="31" column="4" selection-start-line="31" selection-start-column="4" selection-end-line="31" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/quchem_ia.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="10458">
-          <caret line="591" column="21" selection-start-line="591" selection-start-column="21" selection-end-line="591" selection-end-column="21" />
-          <folding>
-            <element signature="e#0#11#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -824,7 +817,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/jsons/15.6-train_dist_rel_oh_03.json">
+    <entry file="file://$PROJECT_DIR$/jsons/14.6-train_dist_rel_oh_03.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="108">
           <caret line="33" column="29" selection-start-line="33" selection-start-column="29" selection-end-line="33" selection-end-column="29" />
@@ -840,8 +833,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/jsons/15.0-SVM_test.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="72">
-          <caret line="12" column="11" selection-start-line="12" selection-start-column="11" selection-end-line="12" selection-end-column="11" />
+        <state relative-caret-position="792">
+          <caret line="44" column="10" lean-forward="true" selection-start-line="44" selection-start-column="10" selection-end-line="44" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/quchem_ia.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="322">
+          <caret line="590" lean-forward="true" selection-start-line="590" selection-end-line="590" />
+          <folding>
+            <element signature="e#0#11#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
