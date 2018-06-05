@@ -31,28 +31,8 @@
           "amasses": "True",
           "distances": "True",
           "distances_cut_off": "2",
-          "batch_size": "1000"
-        }
-      }
-    },
-    {
-      "model_train": {
-        "model_name": "DIST_REL_C_02_basic",
-        "model_type": "NN",
-        "params": {
-          "epochs": "50",
-          "last_layer_width": "870",
-          "batch_size": "5000",
-          "learning_rate": "0.01",
-          "epsilon": "0.001",
-          "stddev_init": "0.001",
-          "hidden_act": "elu",
-          "outlayer_act": "linear",
-          "depth": "3",
-          "weight_decay": "0.001",
-          "gpu_mem_prop": "1",
-          "save_model": "True",
-          "dropout": "0.98"
+          "batch_size": "1000",
+          "distances_fun":"identity"
         }
       }
     }

@@ -66,7 +66,43 @@ def _colorbar_bonds_lengths_representation(ax, targets, bonds_lengths_loc):
 
     cb1.set_label('Bond lengths representation')
 
+def _print_typical_bonds_lengths(ax, anum_1, anum_2):
 
+    if anum_1 == 6 and anum_2 == 6:
+
+        x_axe_coord = ax.transAxes.inverted().transform(ax.transData.transform((1200, 0)))[0]
+        ax.annotate('triple bounds', xy=(x_axe_coord, 0), xytext=(x_axe_coord - 0.1, 0.1), xycoords=ax.transAxes,
+                    arrowprops=dict(facecolor='red', shrink=0.05),
+                    )
+
+        x_axe_coord = ax.transAxes.inverted().transform(ax.transData.transform((1340, 0)))[0]
+        ax.annotate('double bounds', xy=(x_axe_coord, 0), xytext=(x_axe_coord, 0.1), xycoords=ax.transAxes,
+                    arrowprops=dict(facecolor='red', shrink=0.05),
+                    )
+
+        x_axe_coord = ax.transAxes.inverted().transform(ax.transData.transform((1540, 0)))[0]
+        ax.annotate('single bonds', xy=(x_axe_coord, 0), xytext=(x_axe_coord, 0.1), xycoords=ax.transAxes,
+                    arrowprops=dict(facecolor='red', shrink=0.05),
+                    )
+
+        x_axe_coord = ax.transAxes.inverted().transform(ax.transData.transform((1400, 0)))[0]
+        ax.annotate('aromatic bonds', xy=(x_axe_coord, 0), xytext=(x_axe_coord, 0.1), xycoords=ax.transAxes,
+                    arrowprops=dict(facecolor='red', shrink=0.05),
+                    )
+
+    elif anum_1 == 6 and anum_2 == 1:
+
+        x_axe_coord = ax.transAxes.inverted().transform(ax.transData.transform((1090, 0)))[0]
+        ax.annotate('simple', xy=(x_axe_coord, 0), xytext=(x_axe_coord, 0.1), xycoords=ax.transAxes,
+                    arrowprops=dict(facecolor='red', shrink=0.05),
+                    )
+
+    elif anum_1 == 8 and anum_2 == 1:
+
+        x_axe_coord = ax.transAxes.inverted().transform(ax.transData.transform((980, 0)))[0]
+        ax.annotate('simple', xy=(x_axe_coord, 0), xytext=(x_axe_coord, 0.1), xycoords=ax.transAxes,
+                    arrowprops=dict(facecolor='red', shrink=0.05),
+                    )
 
 def plot_rmse_distrib_dist(rmses, targets, model_name, figures_loc, bonds_lengths_loc, display_plot, anum_1, anum_2):
 
@@ -117,9 +153,6 @@ def plot_targets_pred(targets, preds, anum_1, anum_2, model_name, figures_loc, b
     _colorbar_bonds_lengths_representation(ax2, targets, bonds_lengths_loc)
 
     plt.tight_layout()
-
-    if not os.path.exists(train_set_loc):
-        os.makedirs(train_set_loc)
 
     plt.savefig(figures_loc + model_name + "_preds_targets.png", dpi=250)
 

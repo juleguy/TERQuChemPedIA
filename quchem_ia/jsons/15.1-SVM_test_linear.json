@@ -1,0 +1,62 @@
+{
+  "paths":{
+        "train_set_loc":"../../data/train_set_riken_v2_reduced.h5",
+        "test_set_loc":"../../data/test_set_riken_v2_reduced.h5",
+        "train_prepared_input_loc":"../../data/DIST_REL_C_04/train_set_prepared_input.h5",
+        "test_prepared_input_loc":"../../data/DIST_REL_C_04/test_set_prepared_input.h5",
+        "train_labels_loc":"../../data/DIST_REL_C_04/train_set_labels.h5",
+        "test_labels_loc":"../../data/DIST_REL_C_04/test_set_labels.h5",
+        "model_loc":"../../models/DIST_REL_C_SVM_01/dist_rel_c_svm_lin.pkl",
+        "bonds_lengths_loc":"/home/jleguy/data/stats/C/C_bonds_lengths_total_set.h5",
+        "plots_dir":"../../figures/DIST_REL_C_SVM_01_lin/"
+  },
+  "tasks":[
+    {
+      "model_train": {
+        "model_name": "DIST_REL_C_SVM_01_lin",
+        "model_type": "SVM",
+        "params": {
+          "kernel":"linear",
+          "epsilon":"0.1",
+          "gamma":"auto",
+          "coef0":"0",
+          "shrinking":"True",
+          "tol":"0.001",
+          "cache_size":"200",
+          "verbose":"True",
+          "save_model": "True",
+          "max_iter":"-1",
+          "C":"1"
+        }
+      }
+    },
+    {
+      "plot_predictions": {
+        "paths":{
+          "train_set_loc":"tests/train.h5",
+          "test_set_loc":"tests/test.h5",
+          "train_prepared_input_loc":"tests/DIST_REL_C_SVM_01/train_prepared_input_inv.h5",
+          "test_prepared_input_loc":"tests/DIST_REL_C_SVM_01/test_prepared_input_inv.h5",
+          "train_labels_loc":"tests/DIST_REL_C_SVM_01/train_labels_inv.h5",
+          "test_labels_loc":"tests/DIST_REL_C_SVM_01/test_labels_inv.h5",
+          "model_loc":"tests/DIST_REL_C_SVM_01/dist_rel_c_svm.pkl",
+          "bonds_lengths_loc":"tests/cc_lengths.h5",
+          "plots_dir":"tests/DIST_REL_C_SVM_01/"
+        },
+        "params": {
+          "model_name": "DIST_REL_C_SVM_01_lin",
+          "model_type": "SVM",
+          "anum_1": "6",
+          "anum_2": "6",
+          "plot_error_distrib": "True",
+          "plot_targets_error_distrib": "True",
+          "plot_targets_predictions": "True",
+          "asymb_1": "C",
+          "asymb_2": "C",
+          "batch_size": "1060",
+          "display_plots":"True"
+        }
+      }
+    }
+  ]
+}
