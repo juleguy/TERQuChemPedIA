@@ -24,7 +24,9 @@
           "last_layer_width":"870",
           "depth":"3",
           "hidden_act":"elu",
-          "outlayer_act":"linear"
+          "outlayer_act":"linear",
+          "display_plots":"True"
+
         }
       }
     },
@@ -52,7 +54,9 @@
           "last_layer_width":"870",
           "depth":"3",
           "hidden_act":"elu",
-          "outlayer_act":"linear"
+          "outlayer_act":"linear",
+          "display_plots":"True"
+
         }
       }
     },
@@ -80,7 +84,9 @@
           "last_layer_width":"870",
           "depth":"3",
           "hidden_act":"elu",
-          "outlayer_act":"linear"
+          "outlayer_act":"linear",
+          "display_plots":"True"
+
         }
       }
 
