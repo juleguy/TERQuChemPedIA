@@ -295,7 +295,7 @@ def _model_train(model_train_json):
             else:
                 gamma = float(params_json[gamma_k])
         else:
-            gamma = None
+            gamma = -1
 
         if kernel_k == "poly":
             _check_key(params_json, degree_k)
@@ -312,9 +312,6 @@ def _model_train(model_train_json):
         verbose = params_json[verbose_k] == "True"
         max_iter = int(params_json[max_iter_k])
         C = float(params_json[C_k])
-
-        print(max_iter)
-
 
         # Training the model
         model_svm.train_model(paths.train_prepared_input_loc, paths.train_labels_loc, paths.model_loc, C, kernel,
