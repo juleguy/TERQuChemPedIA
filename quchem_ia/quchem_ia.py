@@ -546,6 +546,7 @@ def _grid_search_cv(grid_search_json):
 def CID_errors_threshold(cid_errors_threshold_json):
     pass
 
+
 def execute(json_path):
 
     # Opening json file
@@ -586,4 +587,5 @@ def execute(json_path):
 
 # Executing given json files
 for arg in sys.argv:
+    print(sys.argv)
     execute(arg)
