@@ -295,7 +295,7 @@ def _model_train(model_train_json):
             else:
                 gamma = float(params_json[gamma_k])
         else:
-            gamma = -1
+            gamma = 0.1
 
         if kernel_k == "poly":
             _check_key(params_json, degree_k)
@@ -585,6 +585,8 @@ def execute(json_path):
             elif grid_search_cv_k in task:
                 _grid_search_cv(task[grid_search_cv_k])
 
+
+#execute("jsons/exec_4.json")
 
 # Executing given json files
 for arg in sys.argv[1:]:
