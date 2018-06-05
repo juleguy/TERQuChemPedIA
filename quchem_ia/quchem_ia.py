@@ -4,10 +4,11 @@ from data_preparation import data_split
 from data_preparation import generate_data_wished_size, generate_data
 import model_nn
 import model_svm
-import plots
+import stats
 import bonds_lengths_stats
 import paths
 from grid_search import grid_search_cv
+import sys
 
 
 def _load_paths(paths_json):
@@ -363,6 +364,32 @@ def _bonds_stats(bonds_stats_json):
                                              max_anum, mol_min_size, mol_max_size)
 
 
+def _predict(model_type, params):
+    """ Prediction on the test set """
+
+    _check_key(params, batch_size_k)
+    batch_size = int(params[batch_size_k])
+
+    # Predictions of a neural network model
+    if model_type == "NN":
+        # Checking that specific attributes for NN are specified
+        _check_key(params, last_layer_width_k)
+        _check_key(params, depth_k)
+        _check_key(params, hidden_act_k)
+        _check_key(params, outlayer_act_k)
+
+        last_layer_width = int(params[last_layer_width_k])
+        depth = int(params[depth_k])
+        hidden_act = params[hidden_act_k]
+        outlayer_act = params[outlayer_act_k]
+
+        return model_nn.predict(paths.model_loc, paths.test_prepared_input_loc, paths.test_labels_loc, batch_size,
+                                last_layer_width, depth, hidden_act, outlayer_act)
+
+    elif model_type == "SVM":
+        return model_svm.predict(paths.model_loc, paths.test_prepared_input_loc, paths.test_labels_loc, batch_size)
+
+
 def _plot_predictions(plot_predictions_json):
     """
     Plots the result of the predictions of a model
@@ -386,7 +413,6 @@ def _plot_predictions(plot_predictions_json):
     _check_key(params, plot_targets_error_distrib_k)
     _check_key(params, plot_targets_predictions_k)
     _check_key(params, model_type_k)
-    _check_key(params, batch_size_k)
 
     # Loading parameters
     model_name = params[model_name_k]
@@ -396,7 +422,6 @@ def _plot_predictions(plot_predictions_json):
     plot_targets_error_distrib = params[plot_targets_error_distrib_k] == "True"
     plot_targets_predictions = params[plot_targets_predictions_k] == "True"
     model_type = params[model_type_k]
-    batch_size = int(params[batch_size_k])
 
     # Checking that paths are specified
     if paths.model_loc == "":
@@ -410,33 +435,12 @@ def _plot_predictions(plot_predictions_json):
     if paths.bonds_lengths_loc == "":
         raise RuntimeError(bonds_lengths_loc_k + " cannot be empty")
 
-    # Plotting for a neural network model
-    if model_type == "NN":
+    # Prediction
+    errors, predictions, targets = _predict(model_type, params)
 
-        # Checking that specific attributes for NN are specified
-        _check_key(params, last_layer_width_k)
-        _check_key(params, depth_k)
-        _check_key(params, hidden_act_k)
-        _check_key(params, outlayer_act_k)
-
-        last_layer_width = int(params[last_layer_width_k])
-        depth = int(params[depth_k])
-        hidden_act = params[hidden_act_k]
-        outlayer_act = params[outlayer_act_k]
-
-        plots.plot_model_results("NN", paths.model_loc, model_name, anum_1, anum_2, paths.bonds_lengths_loc,
-                                 paths.test_prepared_input_loc, paths.test_labels_loc, paths.plots_dir,
-                                 plot_error_distrib, plot_targets_error_distrib, plot_targets_predictions,
-                                 batch_size, last_layer_width=last_layer_width, depth=depth, hidden_act=hidden_act,
-                                 outlayer_act=outlayer_act)
-
-    # Plotting for a SVM model
-    elif model_type == "SVM":
-
-        plots.plot_model_results("SVM", paths.model_loc, model_name, anum_1, anum_2, paths.bonds_lengths_loc,
-                                 paths.test_prepared_input_loc, paths.test_labels_loc, paths.plots_dir,
-                                 plot_error_distrib, plot_targets_error_distrib, plot_targets_predictions,
-                                 batch_size)
+    # Plot
+    stats.plot_model_results(errors, predictions, targets, model_name, anum_1, anum_2, paths.bonds_lengths_loc,
+                             paths.plots_dir, plot_error_distrib, plot_targets_error_distrib, plot_targets_predictions)
 
 
 def _check_grid(params, grid_params):
@@ -539,6 +543,8 @@ def _grid_search_cv(grid_search_json):
     # Grid search
     grid_search_cv(model_type, paths.train_prepared_input_loc, paths.train_labels_loc, grid_params, cv, n_jobs)
 
+def CID_errors_threshold(cid_errors_threshold_json):
+    pass
 
 def execute(json_path):
 
@@ -578,4 +584,6 @@ def execute(json_path):
                 _grid_search_cv(task[grid_search_cv_k])
 
 
-execute("jsons/15.0-SVM_test.json")
+# Executing given json files
+for arg in sys.argv:
+    execute(arg)

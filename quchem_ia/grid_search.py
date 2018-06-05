@@ -10,6 +10,10 @@ def grid_search_cv(model_type, train_prepared_input_loc, train_labels_loc, param
     """
     Performs a grid search of the specified parameters on the specified set.
     Uses scikit-learn GridSearchCV method that also performs a cross validation.
+
+    Part of the code extracted from :
+    http://scikit-learn.org/stable/auto_examples/model_selection/plot_grid_search_digits.html
+
     :param model_type : type of the model
     :param train_prepared_input_loc: inputs location
     :param train_labels_loc: targets location
@@ -36,6 +40,15 @@ def grid_search_cv(model_type, train_prepared_input_loc, train_labels_loc, param
 
     # Grid search
     grid_search.fit(input_X, labels_y)
+
+    print()
+    print("Grid scores on development set:")
+    print()
+    means = grid_search.cv_results_['mean_test_score']
+    stds = grid_search.cv_results_['std_test_score']
+    for mean, std, params in zip(means, stds, grid_search.cv_results_['params']):
+        print("%0.3f (+/-%0.03f) for %r"
+              % (mean, std * 2, params))
 
     print("Best score: %0.3f" % grid_search.best_score_)
     print("Best parameters set:")

@@ -1,8 +1,7 @@
 import matplotlib.pyplot as plt
 import matplotlib as mpl
 from math import floor
-import model_nn
-import model_svm
+import h5_keys
 import numpy as np
 from matplotlib import gridspec
 from h5_keys import *
@@ -128,18 +127,9 @@ def print_stats_errors(errors):
     print("Max error : " + str(max(errors)))
 
 
-def plot_model_results(model_type, model_loc, model_name, anum_1, anum_2, bonds_lengths_loc,
-                       test_prepared_input_loc, test_labels_loc, plots_dir, plot_error_distrib,
-                       plot_targets_error_distrib, plot_targets_predictions, batch_size,
-                       last_layer_width=None, depth=None, hidden_act=None, outlayer_act=None):
+def plot_model_results(errors, predictions, targets, model_name, anum_1, anum_2, bonds_lengths_loc, plots_dir,
+                       plot_error_distrib, plot_targets_error_distrib, plot_targets_predictions):
 
-    if model_type == "NN":
-        errors, predictions, targets = model_nn.predict(model_loc, test_prepared_input_loc, test_labels_loc,
-                                                        batch_size, last_layer_width, depth, hidden_act, outlayer_act)
-
-    elif model_type == "SVM":
-        errors, predictions, targets = model_svm.predict(model_loc, test_prepared_input_loc, test_labels_loc,
-                                                         batch_size)
     print("Plotting "+model_name)
 
     print_stats_errors(errors)
@@ -154,4 +144,13 @@ def plot_model_results(model_type, model_loc, model_name, anum_1, anum_2, bonds_
         plot_targets_pred(targets, predictions, anum_1, anum_2, model_name, plots_dir, bonds_lengths_loc)
 
 
+def biggest_errors_CIDs(errors, test_prepared_input_loc, n):
+    """
+    Prints the CIDs the molecules causing the n biggest errors
+    :param errors:
+    :param predictions:
+    :param targets:
+    :return:
+    """
 
+    cids = np.array(h5py.File(test_prepared_input_loc, 'r')[h5_keys.pubchem_id_key])
