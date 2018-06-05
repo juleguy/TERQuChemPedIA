@@ -114,8 +114,8 @@
       <file leaf-file-name="stats.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/stats.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="418">
-              <caret line="58" column="100" selection-start-line="58" selection-start-column="100" selection-end-line="58" selection-end-column="100" />
+            <state relative-caret-position="202">
+              <caret line="58" column="99" lean-forward="true" selection-start-line="58" selection-start-column="99" selection-end-line="58" selection-end-column="99" />
               <folding>
                 <element signature="e#0#31#0" expanded="true" />
               </folding>
@@ -409,8 +409,8 @@
       <window_info anchor="bottom" id="Version Control" order="9" show_stripe_button="false" />
       <window_info anchor="bottom" id="Python Console" order="12" sideWeight="0.91720086" weight="0.18092105" />
       <window_info anchor="bottom" id="Run" order="3" sideWeight="0.86752135" weight="0.9122807" />
-      <window_info anchor="bottom" id="Terminal" order="11" sideWeight="0.9166667" visible="true" weight="0.36842105" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.499187" visible="true" weight="0.15705128" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="11" sideWeight="0.9166667" visible="true" weight="0.36842105" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.499187" visible="true" weight="0.15705128" />
       <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
       <window_info anchor="right" id="Database" order="3" weight="0.32959402" />
       <window_info anchor="bottom" id="Find" order="2" sideWeight="0.49839744" weight="0.32894737" />
@@ -837,8 +837,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/stats.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="418">
-          <caret line="58" column="100" selection-start-line="58" selection-start-column="100" selection-end-line="58" selection-end-column="100" />
+        <state relative-caret-position="202">
+          <caret line="58" column="99" lean-forward="true" selection-start-line="58" selection-start-column="99" selection-end-line="58" selection-end-column="99" />
           <folding>
             <element signature="e#0#31#0" expanded="true" />
           </folding>
