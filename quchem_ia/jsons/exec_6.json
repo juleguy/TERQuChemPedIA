@@ -40,13 +40,8 @@
           "plot_error_distrib": "True",
           "plot_targets_error_distrib": "True",
           "plot_targets_predictions": "True",
-          "asymb_1": "C",
-          "asymb_2": "C",
           "batch_size": "1060",
-          "last_layer_width": "870",
-          "depth": "3",
-          "hidden_act": "elu",
-          "outlayer_act": "linear"
+          "display_plots":"True"
         }
       }
     }

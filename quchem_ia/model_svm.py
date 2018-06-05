@@ -20,7 +20,7 @@ def _rmse_test(targets, predictions):
 def train_model(input_X_h5_loc, labels_y_h5_loc, model_loc, C, kernel, epsilon, degree, gamma, coef0,
                 shrinking, tol, cache_size, verbose, max_iter, save_model):
     """
-    Trains a SVM regressor according to the given parameters
+    Trains a SVM regressor with to the given parameters
 
     See Scikit-learn documentation : http://scikit-learn.org/stable/modules/generated/sklearn.svm.SVR.html
 

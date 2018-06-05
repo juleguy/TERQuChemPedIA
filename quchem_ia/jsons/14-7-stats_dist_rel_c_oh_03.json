@@ -1,0 +1,33 @@
+
+{
+  "tasks":[
+    {
+      "plot_predictions":{
+        "paths":{
+          "test_prepared_input_loc":"../../data/DIST_REL_OH_03/test_prepared_input.h5",
+          "test_labels_loc":"../../data/DIST_REL_OH_03/test_labels.h5",
+          "plots_dir":"../../figures/DIST_REL_OH_03/",
+          "logs_dir":"../../models/DIST_REL_OH_03/logs/",
+          "bonds_lengths_loc":"/home/jleguy/data/stats/OH/OH_bonds_lengths_total_set.h5",
+          "model_loc":"../../models/DIST_REL_OH_02/dist_rel_oh_03.tflearn"
+        },
+        "params":{
+          "model_name":"DIST_REL_OH_03",
+          "model_type":"NN",
+          "anum_1":"8",
+          "anum_2":"1",
+          "plot_error_distrib":"True",
+          "plot_targets_error_distrib":"True",
+          "plot_targets_predictions":"True",
+          "asymb_1":"O",
+          "asymb_2":"H",
+          "batch_size":"2000",
+          "last_layer_width":"870",
+          "depth":"3",
+          "hidden_act":"elu",
+          "outlayer_act":"linear"
+        }
+      }
+    }
+  ]
+}

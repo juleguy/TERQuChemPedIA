@@ -39,7 +39,7 @@
           "test_prepared_input_loc":"tests/DIST_REL_C_SVM_01/test_prepared_input_inv.h5",
           "train_labels_loc":"tests/DIST_REL_C_SVM_01/train_labels_inv.h5",
           "test_labels_loc":"tests/DIST_REL_C_SVM_01/test_labels_inv.h5",
-          "model_loc":"tests/DIST_REL_C_SVM_01/dist_rel_c_svm.pkl",
+          "model_loc":"tests/DIST_REL_C_SVM_01/dist_rel_c_svm_lin.pkl",
           "bonds_lengths_loc":"tests/cc_lengths.h5",
           "plots_dir":"tests/DIST_REL_C_SVM_01/"
         },

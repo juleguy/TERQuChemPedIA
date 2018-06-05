@@ -23,7 +23,7 @@ def plot_distrib_rmses_val(rmses, model_name, figures_loc, display_plot):
     ax1.set_title(model_name + " model\n Errors distribution")
     ax1.set_xlabel("Absolute error (pm)")
     ax1.set_ylabel("Test set occurrences (linear scale)")
-    ax1.hist(rmses, floor(max(rmses)-min(rmses)))
+    ax1.hist(rmses, floor(max(rmses)-min(rmses))*10)
 
     # Logarithmic Y scale
     ax2 = fig.add_subplot(122)
@@ -32,7 +32,7 @@ def plot_distrib_rmses_val(rmses, model_name, figures_loc, display_plot):
     ax2.set_xlabel("Absolute error (pm)")
     ax2.set_ylabel("Test set occurrences (logarithmic scale)")
 
-    ax2.hist(rmses, floor(max(rmses) - min(rmses)))
+    ax2.hist(rmses, floor(max(rmses) - min(rmses))*10)
 
     plt.gcf().subplots_adjust(wspace=0.3)
 
@@ -66,43 +66,34 @@ def _colorbar_bonds_lengths_representation(ax, targets, bonds_lengths_loc):
 
     cb1.set_label('Bond lengths representation')
 
+
+def _print_typical_bond_length(ax, bond_type, val):
+
+    x_axe_coord = ax.transAxes.inverted().transform(ax.transData.transform((val, 0)))[0]
+    ax.annotate('', xy=(x_axe_coord, 0), xytext=(x_axe_coord, 0.1), xycoords=ax.transAxes,
+                arrowprops=dict(facecolor='red', edgecolor="black",  alpha=1,  linewidth=0.3,
+                                arrowstyle="simple")
+                )
+    ax.text(x_axe_coord-0.06, 0.12, bond_type+' bonds', transform=ax.transAxes, fontsize=7)
+
+
 def _print_typical_bonds_lengths(ax, anum_1, anum_2):
 
     if anum_1 == 6 and anum_2 == 6:
 
-        x_axe_coord = ax.transAxes.inverted().transform(ax.transData.transform((1200, 0)))[0]
-        ax.annotate('triple bounds', xy=(x_axe_coord, 0), xytext=(x_axe_coord - 0.1, 0.1), xycoords=ax.transAxes,
-                    arrowprops=dict(facecolor='red', shrink=0.05),
-                    )
-
-        x_axe_coord = ax.transAxes.inverted().transform(ax.transData.transform((1340, 0)))[0]
-        ax.annotate('double bounds', xy=(x_axe_coord, 0), xytext=(x_axe_coord, 0.1), xycoords=ax.transAxes,
-                    arrowprops=dict(facecolor='red', shrink=0.05),
-                    )
-
-        x_axe_coord = ax.transAxes.inverted().transform(ax.transData.transform((1540, 0)))[0]
-        ax.annotate('single bonds', xy=(x_axe_coord, 0), xytext=(x_axe_coord, 0.1), xycoords=ax.transAxes,
-                    arrowprops=dict(facecolor='red', shrink=0.05),
-                    )
-
-        x_axe_coord = ax.transAxes.inverted().transform(ax.transData.transform((1400, 0)))[0]
-        ax.annotate('aromatic bonds', xy=(x_axe_coord, 0), xytext=(x_axe_coord, 0.1), xycoords=ax.transAxes,
-                    arrowprops=dict(facecolor='red', shrink=0.05),
-                    )
+        _print_typical_bond_length(ax, "double", 134)
+        _print_typical_bond_length(ax, "single", 154)
+        _print_typical_bond_length(ax, "aromatic", 140)
+        _print_typical_bond_length(ax, "triple", 120)
 
     elif anum_1 == 6 and anum_2 == 1:
 
-        x_axe_coord = ax.transAxes.inverted().transform(ax.transData.transform((1090, 0)))[0]
-        ax.annotate('simple', xy=(x_axe_coord, 0), xytext=(x_axe_coord, 0.1), xycoords=ax.transAxes,
-                    arrowprops=dict(facecolor='red', shrink=0.05),
-                    )
+        _print_typical_bond_length(ax, "single", 109)
 
     elif anum_1 == 8 and anum_2 == 1:
 
-        x_axe_coord = ax.transAxes.inverted().transform(ax.transData.transform((980, 0)))[0]
-        ax.annotate('simple', xy=(x_axe_coord, 0), xytext=(x_axe_coord, 0.1), xycoords=ax.transAxes,
-                    arrowprops=dict(facecolor='red', shrink=0.05),
-                    )
+        _print_typical_bond_length(ax, "single", 98)
+
 
 def plot_rmse_distrib_dist(rmses, targets, model_name, figures_loc, bonds_lengths_loc, display_plot, anum_1, anum_2):
 
@@ -115,6 +106,8 @@ def plot_rmse_distrib_dist(rmses, targets, model_name, figures_loc, bonds_length
     ax.set_ylabel("Absolute error (pm)")
     ax.plot(targets, rmses, ",", label="Absolute error (pm)", alpha=0.8)
     ax.set_xlim(xmin=min(targets), xmax=max(targets))
+
+    _print_typical_bonds_lengths(ax, anum_1, anum_2)
 
     ax2 = plt.subplot(gs[1])
 
@@ -143,10 +136,13 @@ def plot_targets_pred(targets, preds, anum_1, anum_2, model_name, figures_loc, b
     ax.plot(targets, preds, ",")
     ax.set_xlim(xmin=min(targets), xmax=max(targets))
 
+    _print_typical_bonds_lengths(ax, anum_1, anum_2)
+
+
     # Perfect model plot
     x = np.linspace(min(targets), max(targets))
-    ax.plot(x, fun_id(x), color='darkgreen', label="Theoretical perfect model")
-    ax.legend(loc='lower center', shadow=False)
+    ax.plot(x, fun_id(x), color='darkgreen', label="Theoretical perfect model", alpha=0.8)
+    ax.legend(loc='upper center', shadow=False)
 
     # Distances representation plot
     ax2 = plt.subplot(gs[1])
