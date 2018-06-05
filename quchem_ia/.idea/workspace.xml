@@ -63,7 +63,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="quchem_ia.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="quchem_ia.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/quchem_ia.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="358">
@@ -102,11 +102,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="13.3-DIST_REL_C_03&amp;DIST_REL_C_04_stats.json" pinned="false" current-in-tab="false">
+      <file leaf-file-name="13.3-DIST_REL_C_03&amp;DIST_REL_C_04_stats.json" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/jsons/13.3-DIST_REL_C_03&amp;DIST_REL_C_04_stats.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-380">
-              <caret line="9" column="72" selection-start-line="9" selection-start-column="72" selection-end-line="9" selection-end-column="72" />
+            <state relative-caret-position="126">
+              <caret line="31" column="63" selection-start-line="31" selection-start-column="63" selection-end-line="31" selection-end-column="63" />
             </state>
           </provider>
         </entry>
@@ -221,6 +221,7 @@
         <option value="$PROJECT_DIR$/plots.py" />
         <option value="$PROJECT_DIR$/stats.py" />
         <option value="$PROJECT_DIR$/quchem_ia.py" />
+        <option value="$PROJECT_DIR$/jsons/13.3-DIST_REL_C_03&amp;DIST_REL_C_04_stats.json" />
       </list>
     </option>
   </component>
@@ -827,13 +828,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/jsons/13.3-DIST_REL_C_03&amp;DIST_REL_C_04_stats.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-380">
-          <caret line="9" column="72" selection-start-line="9" selection-start-column="72" selection-end-line="9" selection-end-column="72" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/quchem_ia.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="358">
@@ -841,6 +835,13 @@
           <folding>
             <element signature="e#0#11#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jsons/13.3-DIST_REL_C_03&amp;DIST_REL_C_04_stats.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="126">
+          <caret line="31" column="63" selection-start-line="31" selection-start-column="63" selection-end-line="31" selection-end-column="63" />
         </state>
       </provider>
     </entry>
