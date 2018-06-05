@@ -1,9 +1,9 @@
-from sklearn.model_selection import GridSearchCV
 from sklearn.svm import SVR
 import h5py
 from h5_keys import *
 import numpy as np
 from sklearn.externals import joblib
+import os
 
 
 def _rmse_test(targets, predictions):
@@ -54,6 +54,7 @@ def train_model(input_X_h5_loc, labels_y_h5_loc, model_loc, C, kernel, epsilon, 
 
     # Saving the model if specified
     if save_model:
+        os.makedirs(model_loc[:model_loc.rindex(os.path.sep)], exist_ok=True)
         joblib.dump(model, model_loc)
 
 

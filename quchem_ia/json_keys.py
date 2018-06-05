@@ -80,6 +80,7 @@ plot_predictions_k = "plot_predictions"
 plot_error_distrib_k = "plot_error_distrib"
 plot_targets_error_distrib_k = "plot_targets_error_distrib"
 plot_targets_predictions_k = "plot_targets_predictions"
+display_plots_k = "display_plots"
 
 # Bonds stats keys
 bonds_stats_k = "bonds_stats"

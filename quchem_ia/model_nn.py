@@ -9,6 +9,7 @@ from h5_keys import *
 from sklearn.base import BaseEstimator, RegressorMixin
 import tensorflow as tf
 import tflearn as tfl
+import os
 
 
 def _rmse(pred, targets):
@@ -78,7 +79,7 @@ def _nn_creation(first_layer_width, last_layer_width, depth, epsilon=1e-8, learn
     width_coef = (last_layer_width - first_layer_width) / (depth + 1)
 
     # Creating hidden layers
-    for i in range(depth):
+    for i in range(1, depth+1):
 
         # Computing current width
         curr_width = math.floor(width_coef * (i+1) + first_layer_width)
@@ -156,6 +157,7 @@ def train_model(input_X_h5_loc, labels_y_h5_loc, model_name, model_loc, logs_loc
 
     # Saving model
     if save_model:
+        os.makedirs(model_loc[:model_loc.rindex(os.path.sep)], exist_ok=True)
         model.save(model_loc)
 
 

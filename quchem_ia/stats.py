@@ -6,12 +6,12 @@ import numpy as np
 from matplotlib import gridspec
 from h5_keys import *
 import h5py
-
+import os
 
 mpl.rcParams['agg.path.chunksize'] = 10000
 
 
-def plot_distrib_rmses_val(rmses, model_name, figures_loc):
+def plot_distrib_rmses_val(rmses, model_name, figures_loc, display_plot):
     """ Display errors distribution """
 
     fig = plt.figure()
@@ -37,10 +37,38 @@ def plot_distrib_rmses_val(rmses, model_name, figures_loc):
     plt.gcf().subplots_adjust(wspace=0.3)
 
     plt.savefig(figures_loc + model_name + "_distrib_rmse_val.png", dpi=250)
-    plt.show()
+
+    if display_plot:
+        plt.show()
 
 
-def plot_rmse_distrib_dist(rmses, targets, model_name, figures_loc, bonds_lengths_loc):
+def _colorbar_bonds_lengths_representation(ax, targets, bonds_lengths_loc):
+    """
+    Plots the colorbar representing the bonds lengths representation
+    :param ax:
+    :param targets:
+    :param bonds_lengths_loc:
+    :return:
+    """
+    bonds_lengths_h5 = h5py.File(bonds_lengths_loc, "r")
+    bonds_lengths = np.array(bonds_lengths_h5[distances_key])
+    hist_bonds = np.histogram(bonds_lengths*100, np.arange(min(targets), max(targets), 0.001))[0]
+
+    cmap = mpl.cm.bwr_r
+
+    norm = mpl.colors.Normalize()
+
+    ax.set_xticklabels([])
+
+    cb1 = mpl.colorbar.ColorbarBase(ax, cmap=cmap, values=hist_bonds,
+                                    norm=norm,
+                                    orientation='horizontal')
+
+    cb1.set_label('Bond lengths representation')
+
+
+
+def plot_rmse_distrib_dist(rmses, targets, model_name, figures_loc, bonds_lengths_loc, display_plot, anum_1, anum_2):
 
     gs = gridspec.GridSpec(2, 1, height_ratios=[13, 1])
 
@@ -54,32 +82,21 @@ def plot_rmse_distrib_dist(rmses, targets, model_name, figures_loc, bonds_length
 
     ax2 = plt.subplot(gs[1])
 
-    bonds_lengths_h5 = h5py.File(bonds_lengths_loc, "r")
-    bonds_lengths = np.array(bonds_lengths_h5[distances_key])
-    hist_bonds = np.histogram(bonds_lengths, np.arange(min(targets)/10000, max(targets)/10000, 0.00g1))[0]
-    ax2.axis('off')
-
-    cmap = mpl.cm.Blues
-    norm = mpl.colors.Normalize()
-
-    cb1 = mpl.colorbar.ColorbarBase(ax2, cmap=cmap, values=hist_bonds,
-                                    norm=norm,
-                                    orientation='horizontal')
-
-    cb1.set_label('Bond lengths representation')
+    _colorbar_bonds_lengths_representation(ax2, targets, bonds_lengths_loc)
 
     plt.tight_layout()
 
     plt.savefig(figures_loc + model_name + "_distrib_rmse_dist.png", dpi=250)
 
-    plt.show()
+    if display_plot:
+        plt.show()
 
 
 def fun_id(x):
     return x
 
 
-def plot_targets_pred(targets, preds, anum_1, anum_2, model_name, figures_loc, bonds_lengths_loc):
+def plot_targets_pred(targets, preds, anum_1, anum_2, model_name, figures_loc, bonds_lengths_loc, display_plot):
     gs = gridspec.GridSpec(2, 1, height_ratios=[13, 1])
 
     # Predictions depending on target distances plot
@@ -97,25 +114,17 @@ def plot_targets_pred(targets, preds, anum_1, anum_2, model_name, figures_loc, b
 
     # Distances representation plot
     ax2 = plt.subplot(gs[1])
-    bonds_lengths_h5 = h5py.File(bonds_lengths_loc, "r")
-    bonds_lengths = np.array(bonds_lengths_h5[distances_key])
-    hist_bonds = np.histogram(bonds_lengths, np.arange(min(targets) / 10000, max(targets) / 10000, 0.001))[0]
-    ax2.axis('off')
-
-    cmap = mpl.cm.Blues
-    norm = mpl.colors.Normalize()
-
-    cb1 = mpl.colorbar.ColorbarBase(ax2, cmap=cmap, values=hist_bonds,
-                                    norm=norm,
-                                    orientation='horizontal')
-
-    cb1.set_label('Bond lengths representation')
+    _colorbar_bonds_lengths_representation(ax2, targets, bonds_lengths_loc)
 
     plt.tight_layout()
 
+    if not os.path.exists(train_set_loc):
+        os.makedirs(train_set_loc)
+
     plt.savefig(figures_loc + model_name + "_preds_targets.png", dpi=250)
 
-    plt.show()
+    if display_plot:
+        plt.show()
 
 
 def print_stats_errors(errors):
@@ -128,20 +137,24 @@ def print_stats_errors(errors):
 
 
 def plot_model_results(errors, predictions, targets, model_name, anum_1, anum_2, bonds_lengths_loc, plots_dir,
-                       plot_error_distrib, plot_targets_error_distrib, plot_targets_predictions):
+                       plot_error_distrib, plot_targets_error_distrib, plot_targets_predictions, display_plots):
 
     print("Plotting "+model_name)
 
     print_stats_errors(errors)
 
+    if not os.path.exists(plots_dir):
+        os.makedirs(plots_dir)
+
     if plot_error_distrib:
-        plot_distrib_rmses_val(errors, model_name, plots_dir)
+        plot_distrib_rmses_val(errors, model_name, plots_dir, display_plots)
 
     if plot_targets_error_distrib:
-        plot_rmse_distrib_dist(errors, targets, model_name, plots_dir, bonds_lengths_loc)
+        plot_rmse_distrib_dist(errors, targets, model_name, plots_dir, bonds_lengths_loc, display_plots, anum_1,
+                               anum_2)
 
     if plot_targets_predictions:
-        plot_targets_pred(targets, predictions, anum_1, anum_2, model_name, plots_dir, bonds_lengths_loc)
+        plot_targets_pred(targets, predictions, anum_1, anum_2, model_name, plots_dir, bonds_lengths_loc, display_plots)
 
 
 def biggest_errors_CIDs(errors, test_prepared_input_loc, n):

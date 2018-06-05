@@ -1,0 +1,37 @@
+{
+  "paths":{
+        "train_set_loc":"tests/train.h5",
+        "test_set_loc":"tests/test.h5",
+        "train_prepared_input_loc":"tests/train_prepared.h5",
+        "test_prepared_input_loc":"tests/test_prepared.h5",
+        "train_labels_loc":"tests/train_labels.h5",
+        "test_labels_loc":"tests/test_labels.h5",
+        "model_loc":"tests/DIST_REL_C_02/dist_rel_c_02_width_decay.tflearn",
+        "logs_dir":"tests/DIST_REL_C_02/logs/",
+        "bonds_lengths_loc":"",
+        "plots_dir":""
+  },
+  "tasks":[
+    {
+      "model_train": {
+        "model_name": "DIST_REL_C_02_width_decay",
+        "model_type": "NN",
+        "params": {
+          "epochs": "2",
+          "last_layer_width": "58",
+          "batch_size": "5000",
+          "learning_rate": "0.01",
+          "epsilon": "0.001",
+          "stddev_init": "0.001",
+          "hidden_act": "elu",
+          "outlayer_act": "linear",
+          "depth": "2",
+          "weight_decay": "0.001",
+          "gpu_mem_prop": "1",
+          "save_model": "True",
+          "dropout": "0.98"
+        }
+      }
+    }
+  ]
+}

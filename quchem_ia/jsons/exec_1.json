@@ -8,7 +8,7 @@
         "train_labels_loc":"tests/train_labels.h5",
         "test_labels_loc":"tests/test_labels.h5",
         "model_loc":"tests/MODEL_TEST/model_test.tflearn",
-        "logs_loc":"tests/MODEL_TEST/logs"
+        "logs_dir":"tests/MODEL_TEST/logs/"
   },
   "tasks":[
     {
@@ -60,7 +60,8 @@
           "amasses": "True",
           "distances": "True",
           "distances_cut_off": "5",
-          "batch_size": "10000"
+          "batch_size": "10000",
+          "distances_fun":"identity"
         }
       }
     },

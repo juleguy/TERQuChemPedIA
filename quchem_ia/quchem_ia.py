@@ -413,6 +413,7 @@ def _plot_predictions(plot_predictions_json):
     _check_key(params, plot_targets_error_distrib_k)
     _check_key(params, plot_targets_predictions_k)
     _check_key(params, model_type_k)
+    _check_key(params, display_plots_k)
 
     # Loading parameters
     model_name = params[model_name_k]
@@ -421,6 +422,7 @@ def _plot_predictions(plot_predictions_json):
     plot_error_distrib = params[plot_error_distrib_k] == "True"
     plot_targets_error_distrib = params[plot_targets_error_distrib_k] == "True"
     plot_targets_predictions = params[plot_targets_predictions_k] == "True"
+    display_plots = params[display_plots_k] == "True"
     model_type = params[model_type_k]
 
     # Checking that paths are specified
@@ -440,7 +442,8 @@ def _plot_predictions(plot_predictions_json):
 
     # Plot
     stats.plot_model_results(errors, predictions, targets, model_name, anum_1, anum_2, paths.bonds_lengths_loc,
-                             paths.plots_dir, plot_error_distrib, plot_targets_error_distrib, plot_targets_predictions)
+                             paths.plots_dir, plot_error_distrib, plot_targets_error_distrib, plot_targets_predictions,
+                             display_plots)
 
 
 def _check_grid(params, grid_params):
@@ -543,6 +546,7 @@ def _grid_search_cv(grid_search_json):
     # Grid search
     grid_search_cv(model_type, paths.train_prepared_input_loc, paths.train_labels_loc, grid_params, cv, n_jobs)
 
+
 def CID_errors_threshold(cid_errors_threshold_json):
     pass
 
@@ -584,6 +588,8 @@ def execute(json_path):
             elif grid_search_cv_k in task:
                 _grid_search_cv(task[grid_search_cv_k])
 
+
+execute("jsons/exec_1.json")
 
 # Executing given json files
 for arg in sys.argv[1:]:

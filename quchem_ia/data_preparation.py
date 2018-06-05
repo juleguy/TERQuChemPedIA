@@ -4,6 +4,7 @@ from sklearn.model_selection import train_test_split
 from h5_keys import *
 import time
 import math
+import os
 
 
 def data_split(input_data_loc, train_set_loc, test_set_loc, train_proportion=0.9, random_state=12):
@@ -35,6 +36,9 @@ def data_split(input_data_loc, train_set_loc, test_set_loc, train_proportion=0.9
     # Transposing back matrices
     train_set = train_set.T
     test_set = test_set.T
+
+    os.makedirs(train_set_loc[:train_set_loc.rindex(os.path.sep)], exist_ok=True)
+    os.makedirs(test_set_loc[:test_set_loc.rindex(os.path.sep)], exist_ok=True)
 
     # Creating new split datasets h5 files
     print("Creating h5 files...")
@@ -360,6 +364,9 @@ def generate_data(original_dataset_loc, prepared_input_loc, labels_loc, anum1, a
 
     # Loading the input data
     original_dataset_h5 = h5py.File(original_dataset_loc, "r")
+
+    os.makedirs(prepared_input_loc[:prepared_input_loc.rindex(os.path.sep)], exist_ok=True)
+    os.makedirs(labels_loc[:labels_loc.rindex(os.path.sep)], exist_ok=True)
 
     # Creating input and labels files
     input_rn_dataset_h5 = h5py.File(prepared_input_loc, 'w')
