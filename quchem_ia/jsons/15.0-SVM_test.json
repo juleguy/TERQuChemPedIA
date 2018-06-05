@@ -53,7 +53,8 @@
           "plot_targets_predictions": "True",
           "asymb_1": "C",
           "asymb_2": "C",
-          "batch_size": "1060"
+          "batch_size": "1060",
+          "display_plots":"True"
         }
       }
     }

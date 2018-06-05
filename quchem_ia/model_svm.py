@@ -4,6 +4,7 @@ from h5_keys import *
 import numpy as np
 from sklearn.externals import joblib
 import os
+import time
 
 
 def _rmse_test(targets, predictions):
@@ -42,6 +43,8 @@ def train_model(input_X_h5_loc, labels_y_h5_loc, model_loc, C, kernel, epsilon, 
     :return:
     """
 
+    total_time = time.time()
+
     # Loading inputs and targets
     input_X = np.array(h5py.File(input_X_h5_loc)[inputs_key])
     labels_y = np.array(h5py.File(labels_y_h5_loc)[targets_key]).reshape((-1,))
@@ -56,6 +59,8 @@ def train_model(input_X_h5_loc, labels_y_h5_loc, model_loc, C, kernel, epsilon, 
     if save_model:
         os.makedirs(model_loc[:model_loc.rindex(os.path.sep)], exist_ok=True)
         joblib.dump(model, model_loc)
+
+    print("--- %s seconds ---" % (time.time() - total_time))
 
 
 def predict(model_loc, test_prepared_input_loc, test_labels_loc, batch_size):
