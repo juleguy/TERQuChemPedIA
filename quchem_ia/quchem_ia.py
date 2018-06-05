@@ -586,6 +586,6 @@ def execute(json_path):
 
 
 # Executing given json files
-for arg in sys.argv:
+for arg in sys.argv[1:]:
     print(sys.argv)
     execute(arg)
