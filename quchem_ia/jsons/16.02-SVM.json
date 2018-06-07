@@ -33,7 +33,7 @@
           "distances": "True",
           "distances_cut_off": "2",
           "batch_size": "10000",
-          "distances_fun":"squareinv",
+          "distances_fun":"squareinv"
         }
       }
     },

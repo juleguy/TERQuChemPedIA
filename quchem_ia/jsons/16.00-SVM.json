@@ -22,7 +22,6 @@
           "min_bond_size": "0",
           "max_bond_size": "1.6",
           "bond_max_neighbours":"15"
-
         },
         "params": {
           "wished_train_size": "10000",
@@ -33,7 +32,7 @@
           "distances": "True",
           "distances_cut_off": "2",
           "batch_size": "10000",
-          "distances_fun":"squareinv",
+          "distances_fun":"squareinv"
         }
       }
     },
