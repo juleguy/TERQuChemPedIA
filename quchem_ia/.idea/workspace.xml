@@ -30,39 +30,6 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="model_kernel_ridge.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/model_kernel_ridge.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="324">
-              <caret line="24" column="24" selection-start-line="24" selection-start-column="24" selection-end-line="24" selection-end-column="24" />
-              <folding>
-                <element signature="e#0#11#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="stats.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/stats.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1738">
-              <caret line="150" column="94" selection-start-line="150" selection-start-column="94" selection-end-line="150" selection-end-column="94" />
-              <folding>
-                <element signature="e#0#31#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="14-7-stats_dist_rel_c_oh_03.json" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/jsons/14-7-stats_dist_rel_c_oh_03.json">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="198">
-              <caret line="11" column="74" lean-forward="true" selection-start-line="11" selection-start-column="74" selection-end-line="11" selection-end-column="74" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="14.3-stats_dist_rel_xy_2.json" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/jsons/14.3-stats_dist_rel_xy_2.json">
           <provider selected="true" editor-type-id="text-editor">
@@ -72,7 +39,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="14.6-train_dist_rel_oh_03.json" pinned="false" current-in-tab="true">
+      <file leaf-file-name="14.6-train_dist_rel_oh_03.json" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/jsons/14.6-train_dist_rel_oh_03.json">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="270">
@@ -99,11 +66,38 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="exec_10.json" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/jsons/exec_10.json">
+      <file leaf-file-name="15.0-SVM_test_rbf.json" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/jsons/15.0-SVM_test_rbf.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="864">
-              <caret line="48" column="9" selection-start-line="48" selection-start-column="9" selection-end-line="48" selection-end-column="9" />
+            <state relative-caret-position="342">
+              <caret line="40" column="73" lean-forward="true" selection-start-line="40" selection-start-column="73" selection-end-line="40" selection-end-column="73" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="16.00-SVM.json" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/jsons/16.00-SVM.json">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="162">
+              <caret line="27" column="30" lean-forward="true" selection-end-line="75" selection-end-column="1" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="16.01-SVM.json" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/jsons/16.01-SVM.json">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="234">
+              <caret line="34" column="36" lean-forward="true" selection-end-line="75" selection-end-column="1" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="16.02-SVM.json" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/jsons/16.02-SVM.json">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="412">
+              <caret line="35" selection-end-line="75" selection-end-column="1" />
             </state>
           </provider>
         </entry>
@@ -213,9 +207,6 @@
         <option value="$PROJECT_DIR$/jsons/14-7-stats_dist_rel_c_oh_04.json" />
         <option value="$PROJECT_DIR$/jsons/14.3-stats_dist_rel_xy_2.json" />
         <option value="$PROJECT_DIR$/data_preparation.py" />
-        <option value="$PROJECT_DIR$/jsons/16.00-SVM.json" />
-        <option value="$PROJECT_DIR$/jsons/16.01-SVM.json" />
-        <option value="$PROJECT_DIR$/jsons/16.02-SVM.json" />
         <option value="$PROJECT_DIR$/model_svm.py" />
         <option value="$PROJECT_DIR$/json_keys.py" />
         <option value="$PROJECT_DIR$/grid_search.py" />
@@ -232,6 +223,9 @@
         <option value="$PROJECT_DIR$/jsons/14.4-train_dist_rel_cc_03.json" />
         <option value="$PROJECT_DIR$/jsons/14.5-train_dist_rel_ch_03.json" />
         <option value="$PROJECT_DIR$/jsons/14.6-train_dist_rel_oh_03.json" />
+        <option value="$PROJECT_DIR$/jsons/16.01-SVM.json" />
+        <option value="$PROJECT_DIR$/jsons/16.00-SVM.json" />
+        <option value="$PROJECT_DIR$/jsons/16.02-SVM.json" />
       </list>
     </option>
   </component>
@@ -423,8 +417,8 @@
       <window_info anchor="bottom" id="Version Control" order="9" show_stripe_button="false" />
       <window_info anchor="bottom" id="Python Console" order="12" sideWeight="0.9166667" weight="0.4232456" />
       <window_info anchor="bottom" id="Run" order="3" sideWeight="0.8627137" weight="0.2752193" />
-      <window_info anchor="bottom" id="Terminal" order="11" sideWeight="0.8712607" visible="true" weight="0.4375" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.499187" visible="true" weight="0.16666667" />
+      <window_info anchor="bottom" id="Terminal" order="11" sideWeight="0.8712607" weight="0.4375" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.499187" weight="0.16666667" />
       <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
       <window_info anchor="right" id="Database" order="3" weight="0.32959402" />
       <window_info anchor="right" id="SciView" order="4" sideWeight="0.4814815" weight="0.36842105" />
@@ -443,28 +437,29 @@
     </layout>
     <layout-to-restore>
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.499187" visible="true" weight="0.16666667" />
       <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Inspection" order="6" weight="0.4" />
-      <window_info anchor="bottom" id="Cvs" order="5" weight="0.25" />
-      <window_info id="Favorites" order="2" side_tool="true" />
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.499187" visible="true" weight="0.15705128" />
+      <window_info anchor="bottom" id="Version Control" order="9" show_stripe_button="false" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" id="SciView" order="4" sideWeight="0.4814815" weight="0.36842105" />
       <window_info id="Structure" order="1" sideWeight="0.500813" side_tool="true" weight="0.16025642" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="bottom" id="TODO" order="7" />
-      <window_info active="true" anchor="bottom" id="Run" order="3" sideWeight="0.86752135" visible="true" weight="0.3892544" />
-      <window_info anchor="bottom" id="Message" order="1" />
-      <window_info anchor="bottom" id="Debug" order="4" weight="0.3991228" />
-      <window_info anchor="right" x="0" y="0" width="430" height="853" id="Documentation" order="5" sideWeight="0.50816995" side_tool="true" weight="0.32959402" />
-      <window_info anchor="right" id="Database" order="3" weight="0.32959402" />
-      <window_info anchor="bottom" id="Terminal" order="11" sideWeight="0.9166667" weight="0.32894737" />
-      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.13247864" side_tool="true" weight="0.3256579" />
       <window_info anchor="bottom" id="Database Changes" order="13" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="9" show_stripe_button="false" />
-      <window_info anchor="right" id="SciView" order="4" sideWeight="0.49183005" weight="0.32959402" />
+      <window_info anchor="bottom" id="Run" order="3" sideWeight="0.8627137" weight="0.2752193" />
       <window_info anchor="bottom" id="Find" order="2" sideWeight="0.49839744" weight="0.32894737" />
-      <window_info anchor="bottom" id="Concurrent Activities Diagram" order="0" weight="0.32894737" />
-      <window_info anchor="bottom" id="Python Console" order="12" sideWeight="0.91720086" weight="0.18092105" />
+      <window_info anchor="bottom" id="Python Console" order="12" sideWeight="0.9166667" weight="0.4232456" />
+      <window_info anchor="bottom" id="Debug" order="4" sideWeight="0.49893162" weight="0.3991228" />
+      <window_info anchor="right" x="0" y="0" width="430" height="853" id="Documentation" order="6" sideWeight="0.5185185" side_tool="true" weight="0.36842105" />
+      <window_info anchor="right" id="Database" order="3" weight="0.32959402" />
+      <window_info anchor="bottom" id="Terminal" order="11" sideWeight="0.8712607" visible="true" weight="0.4375" />
+      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.13782051" side_tool="true" weight="0.39254385" />
+      <window_info anchor="bottom" id="Inspection" order="6" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="5" weight="0.25" />
+      <window_info anchor="bottom" id="Concurrent Activities Diagram" order="0" sideWeight="0.49946582" weight="0.32894737" />
+      <window_info anchor="bottom" id="Message" order="1" />
+      <window_info anchor="right" id="Coverage" order="5" side_tool="true" />
+      <window_info id="Favorites" order="2" side_tool="true" />
     </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -647,24 +642,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/jsons/16.02-SVM.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="450">
-          <caret line="25" column="33" selection-start-line="25" selection-start-column="33" selection-end-line="25" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/jsons/15.1-SVM_test_linear.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="208">
           <caret line="31" column="5" selection-start-line="31" selection-start-column="5" selection-end-line="59" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/jsons/15.0-SVM_test_rbf.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="720">
-          <caret line="40" column="73" lean-forward="true" selection-start-line="40" selection-start-column="73" selection-end-line="40" selection-end-column="73" />
         </state>
       </provider>
     </entry>
@@ -709,13 +690,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="558">
           <caret line="31" column="4" selection-start-line="31" selection-start-column="4" selection-end-line="31" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/jsons/16.00-SVM.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="530">
-          <caret line="53" column="17" selection-start-line="53" selection-start-column="17" selection-end-line="53" selection-end-column="17" />
         </state>
       </provider>
     </entry>
@@ -764,13 +738,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="486">
           <caret line="27" column="11" selection-start-line="27" selection-start-column="11" selection-end-line="27" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/jsons/16.01-SVM.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="25" column="32" selection-start-line="25" selection-start-column="32" selection-end-line="25" selection-end-column="32" />
         </state>
       </provider>
     </entry>
@@ -849,6 +816,13 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/jsons/14.6-train_dist_rel_oh_03.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="15" column="33" selection-start-line="15" selection-start-column="33" selection-end-line="15" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/jsons/14.4-train_dist_rel_cc_03.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="108">
@@ -863,10 +837,31 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/jsons/14.6-train_dist_rel_oh_03.json">
+    <entry file="file://$PROJECT_DIR$/jsons/15.0-SVM_test_rbf.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="15" column="33" selection-start-line="15" selection-start-column="33" selection-end-line="15" selection-end-column="33" />
+        <state relative-caret-position="342">
+          <caret line="40" column="73" lean-forward="true" selection-start-line="40" selection-start-column="73" selection-end-line="40" selection-end-column="73" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jsons/16.02-SVM.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="412">
+          <caret line="35" selection-end-line="75" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jsons/16.01-SVM.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="234">
+          <caret line="34" column="36" lean-forward="true" selection-end-line="75" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jsons/16.00-SVM.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="162">
+          <caret line="27" column="30" lean-forward="true" selection-end-line="75" selection-end-column="1" />
         </state>
       </provider>
     </entry>

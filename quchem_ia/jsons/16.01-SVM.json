@@ -32,7 +32,7 @@
           "distances_cut_off": "2",
           "batch_size": "10000",
           "distances_fun":"squareinv",
-          "max_bond_neighbours":"10"
+          "bond_max_neighbours":"15"
         }
       }
     },

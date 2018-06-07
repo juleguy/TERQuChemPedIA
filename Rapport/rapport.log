@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2018.4.26)  6 JUN 2018 22:33
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2018.4.26)  7 JUN 2018 12:07
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -952,14 +952,13 @@ Underfull \hbox (badness 10000) in paragraph at lines 1--2
 
  []
 
-) (./3-Representations_moleculaires/distances_relatives.tex
+) (./3-Representations_moleculaires/distances_relatives.tex [4
+
+]
 Underfull \hbox (badness 10000) in paragraph at lines 11--12
 
  []
 
-[4
-
-]
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
@@ -1022,7 +1021,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 300--301
 
  []
 
-[9]) [10] [11]
+[9]) (./3-Representations_moleculaires/distances_absolues.tex) [10] [11]
 Chapitre 4.
 [12
 
@@ -1038,13 +1037,20 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 151.
  (./rapport.aux)
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 151.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 151.
-Package rerunfilecheck Info: File `rapport.out' has not changed.
-(rerunfilecheck)             Checksum: EF9DD109A01F95996C7DF01FE87B6514;888.
+
+
+Package rerunfilecheck Warning: File `rapport.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `rapport.out':
+(rerunfilecheck)             Before: EF9DD109A01F95996C7DF01FE87B6514;888
+(rerunfilecheck)             After:  FC48C318550DF2EC92C2045B96627C8C;952.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 151.
  ) 
 Here is how much of TeX's memory you used:
- 12523 strings out of 494433
- 182917 string characters out of 6170337
+ 12527 strings out of 494433
+ 183059 string characters out of 6170337
  311914 words of memory out of 5000000
  15664 multiletter control sequences out of 15000+600000
  23721 words of font info for 53 fonts, out of 8000000 for 9000
@@ -1076,10 +1082,10 @@ xlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texlive/te
 xmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-di
 st/fonts/type1/public/amsfonts/cm/cmsy5.pfb></usr/share/texlive/texmf-dist/font
 s/type1/public/amsfonts/cm/cmsy7.pfb>
-Output written on rapport.pdf (15 pages, 695814 bytes).
+Output written on rapport.pdf (15 pages, 697472 bytes).
 PDF statistics:
- 680 PDF objects out of 1000 (max. 8388607)
- 271 compressed objects within 3 object streams
- 57 named destinations out of 1000 (max. 500000)
+ 682 PDF objects out of 1000 (max. 8388607)
+ 272 compressed objects within 3 object streams
+ 58 named destinations out of 1000 (max. 500000)
  125 words of extra memory for PDF output out of 10000 (max. 10000000)
 
