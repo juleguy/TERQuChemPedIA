@@ -9,7 +9,7 @@
           "plots_dir":"../../figures/DIST_REL_OH_03/",
           "logs_dir":"../../models/DIST_REL_OH_03/logs/",
           "bonds_lengths_loc":"/home/jleguy/data/stats/OH/OH_bonds_lengths_total_set.h5",
-          "model_loc":"../../models/DIST_REL_OH_03/dist_rel_oh_03.tflearn",
+          "model_loc":"../../models/DIST_REL_OH_03/dist_rel_oh_03.tflearn"
         },
         "params":{
           "model_name":"DIST_REL_OH_03",

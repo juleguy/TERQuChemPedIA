@@ -85,7 +85,7 @@ def _nn_creation(first_layer_width, last_layer_width, depth, epsilon=1e-8, learn
         curr_width = math.floor(width_coef * (i+1) + first_layer_width)
 
         # Creating current layer
-        network = fully_connected(network, curr_width, activation=hidden_act, name='fc' + str(i), weights_init=winit,
+        network = fully_connected(network, curr_width, activation=hidden_act, name='fc' + str(i-1), weights_init=winit,
                                   weight_decay=weight_decay)
 
         print("size : " + str(curr_width))
