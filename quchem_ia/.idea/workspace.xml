@@ -60,18 +60,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="model_ridge.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/model_ridge.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="54">
-              <caret line="9" column="82" selection-start-line="9" selection-start-column="82" selection-end-line="9" selection-end-column="82" />
-              <folding>
-                <element signature="e#0#11#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="exec_6.json" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/jsons/exec_6.json">
           <provider selected="true" editor-type-id="text-editor">
@@ -102,11 +90,20 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="14-7-stats_dist_rel_c_oh_03.json" pinned="false" current-in-tab="false">
+      <file leaf-file-name="14-7-stats_dist_rel_c_oh_03.json" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/jsons/14-7-stats_dist_rel_c_oh_03.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="576">
-              <caret line="32" column="3" lean-forward="true" selection-start-line="32" selection-start-column="3" selection-end-line="32" selection-end-column="3" />
+            <state relative-caret-position="126">
+              <caret line="7" column="10" selection-start-line="7" selection-start-column="10" selection-end-line="7" selection-end-column="10" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="14.6-train_dist_rel_oh_03.json" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/jsons/14.6-train_dist_rel_oh_03.json">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="126">
+              <caret line="7" column="67" lean-forward="true" selection-start-line="7" selection-end-line="8" />
             </state>
           </provider>
         </entry>
@@ -120,7 +117,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="quchem_ia.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="quchem_ia.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/quchem_ia.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="241">
@@ -215,7 +212,6 @@
         <option value="$PROJECT_DIR$/jsons/15.1-SVM_test_linear.json" />
         <option value="$PROJECT_DIR$/jsons/14-7-stats_dist_rel_c_oh_04.json.py" />
         <option value="$PROJECT_DIR$/jsons/14-7-stats_dist_rel_c_oh_04.json" />
-        <option value="$PROJECT_DIR$/jsons/14-7-stats_dist_rel_c_oh_03.json" />
         <option value="$PROJECT_DIR$/jsons/14.3-stats_dist_rel_xy_2.json" />
         <option value="$PROJECT_DIR$/data_preparation.py" />
         <option value="$PROJECT_DIR$/jsons/16.00-SVM.json" />
@@ -232,6 +228,7 @@
         <option value="$PROJECT_DIR$/jsons/exec_10.json" />
         <option value="$PROJECT_DIR$/stats.py" />
         <option value="$PROJECT_DIR$/quchem_ia.py" />
+        <option value="$PROJECT_DIR$/jsons/14-7-stats_dist_rel_c_oh_03.json" />
       </list>
     </option>
   </component>
@@ -424,8 +421,8 @@
       <window_info anchor="bottom" id="Version Control" order="9" show_stripe_button="false" />
       <window_info anchor="bottom" id="Python Console" order="12" sideWeight="0.9166667" weight="0.4232456" />
       <window_info anchor="bottom" id="Run" order="3" sideWeight="0.8627137" weight="0.2752193" />
-      <window_info anchor="bottom" id="Terminal" order="11" sideWeight="0.8712607" visible="true" weight="0.4375" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.499187" visible="true" weight="0.16666667" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="11" sideWeight="0.8712607" visible="true" weight="0.4375" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.499187" visible="true" weight="0.16666667" />
       <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
       <window_info anchor="right" id="Database" order="3" weight="0.32959402" />
       <window_info anchor="right" id="SciView" order="4" sideWeight="0.4814815" visible="true" weight="0.17948718" />
@@ -613,13 +610,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state>
           <caret line="9" column="46" selection-start-line="9" selection-start-column="46" selection-end-line="9" selection-end-column="46" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/jsons/14.6-train_dist_rel_oh_03.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="594">
-          <caret line="33" column="29" selection-start-line="33" selection-start-column="29" selection-end-line="33" selection-end-column="29" />
         </state>
       </provider>
     </entry>
@@ -854,13 +844,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/jsons/14-7-stats_dist_rel_c_oh_03.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="576">
-          <caret line="32" column="3" lean-forward="true" selection-start-line="32" selection-start-column="3" selection-end-line="32" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/quchem_ia.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="241">
@@ -868,6 +851,20 @@
           <folding>
             <element signature="e#0#11#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jsons/14.6-train_dist_rel_oh_03.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="126">
+          <caret line="7" column="67" lean-forward="true" selection-start-line="7" selection-end-line="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jsons/14-7-stats_dist_rel_c_oh_03.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="126">
+          <caret line="7" column="10" selection-start-line="7" selection-start-column="10" selection-end-line="7" selection-end-column="10" />
         </state>
       </provider>
     </entry>

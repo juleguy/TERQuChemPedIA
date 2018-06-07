@@ -4,8 +4,8 @@
     {
       "plot_predictions":{
         "paths":{
-          "test_prepared_input_loc":"../../data/DIST_REL_OH_03/test_set_prepared_input.h5",
-          "test_labels_loc":"../../data/DIST_REL_OH_03/test_set_labels.h5",
+          "test_prepared_input_loc":"../../data/DIST_REL_OH_03/test_prepared_input.h5",
+          "test_labels_loc":"../../data/DIST_REL_OH_03/test_labels.h5",
           "plots_dir":"../../figures/DIST_REL_OH_03/",
           "logs_dir":"../../models/DIST_REL_OH_03/logs/",
           "bonds_lengths_loc":"/home/jleguy/data/stats/OH/OH_bonds_lengths_total_set.h5",
