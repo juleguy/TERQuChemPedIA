@@ -7,7 +7,7 @@
         "train_labels_loc":"../../data/DIST_REL_C_SVM_02/train_set_labels.h5",
         "test_labels_loc":"../../data/DIST_REL_C_SVM_02/test_set_labels.h5",
         "model_loc":"../../models/DIST_REL_C_SVM_02/DIST_REL_C_SVM_02.pkl",
-        "bonds_lengths_loc":"tests/cc_lengths.h5",
+        "bonds_lengths_loc":"/home/jleguy/data/stats/CC/CC_bonds_lengths_total_set.h5",
         "plots_dir":"tests/DIST_REL_C_SVM_02/"
   },
   "tasks":[
