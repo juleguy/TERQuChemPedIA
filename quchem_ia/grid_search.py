@@ -2,8 +2,11 @@ import numpy as np
 import h5py
 from h5_keys import *
 from model_nn import NNRegressor
+from sklearn.linear_model import Ridge
 from sklearn.model_selection import GridSearchCV
 from sklearn.svm import SVR
+from json_keys import *
+from sklearn.kernel_ridge import KernelRidge
 
 
 def grid_search_cv(model_type, train_prepared_input_loc, train_labels_loc, parameters_grid, cv, n_jobs):
@@ -28,13 +31,21 @@ def grid_search_cv(model_type, train_prepared_input_loc, train_labels_loc, param
     labels_y = np.array(h5py.File(train_labels_loc)[targets_key])
 
     # Model creation
-    if model_type == "NN":
+    if model_type == NN_k:
         # Creating the Scikit-Learn model from our Scikit-Learn like regressor
         model = NNRegressor()
 
-    elif model_type == "SVM":
-        model = SVR()
+    else:
         labels_y = labels_y.reshape((-1,))
+
+        if model_type == SVM_k:
+            model = SVR()
+
+        elif model_type == ridge_k:
+            model = Ridge()
+
+        elif model_type == kernel_ridge_k:
+            model = KernelRidge()
 
     grid_search = GridSearchCV(estimator=model, param_grid=parameters_grid, cv=cv, n_jobs=n_jobs)
 

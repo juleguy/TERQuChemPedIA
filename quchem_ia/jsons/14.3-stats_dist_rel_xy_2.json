@@ -86,15 +86,8 @@
           "hidden_act":"elu",
           "outlayer_act":"linear",
           "display_plots":"True"
-
         }
       }
-
     }
-
-
   ]
-
-
-
 }

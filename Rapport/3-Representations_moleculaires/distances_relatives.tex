@@ -366,4 +366,18 @@ a_{n}'\left \{
 Nous obtenons alors deux solutions $a_n$, et nous sélectionnons celle telle que la distance $d_{n-1,n}$ est la plus cohérente.
 
 
-\paragraph{Performances et limites}
+\paragraph{Performances et limites (propagation des erreurs)}
+\par Les équations de trilatération permettent de calculer la matrice des coordonnées de façon très rapide. Néanmoins, de même que la méthode utilisant un solveur d'équations, cette méthode souffre d'un problème de propagation des erreurs intrinsèque à la représentation par matrice réduite des distances inter-atomiques. En effet, lorsque l'on calcule les coordonnées d'un atome à partir de ses distances aux quatre atomes précédents, et que l'on compare ces distances aux distances aux mêmes points de la position nouvellement calculée, on s'aperçoit qu'elles ne sont pas parfaitement identiques. L'erreur est très faible (de l'ordre de $10^{-25}$ m) et est individuellement très au-delà de la précision requise en chimie quantique (environ $10^{-15}$ m), mais elle finit par devenir trop importante du fait de sa propagation au fil des calculs, la position de chaque atome étant calculée à partir de ses distances aux quatre atomes précédents.\\
+La présence d'une racine carrée dans les équations (calcul de $z_n'$) accélère la propagation des erreurs. En effet, après quelques itérations et quelques faibles erreurs, les intersections de sphères deviennent vides, ce qui se traduit dans nos équations par le calcul de la racine d'un nombre négatif. Pour parer cela, nous considérons que le contenu de la racine vaut zéro lorsqu'il est négatif, mais cela introduit une erreur importante et augmente donc la fréquence des intersections vides dans le calcul de la position des atomes suivants.\\
+Afin de retarder l'apparition des erreurs dépassant le seuil toléré, nous aurions pu ajuster les valeurs de $x_n'$ et $y_n'$ lorsque l'on considère que le contenu de la racine est nul selon l'équation ci-dessous. Toutefois, cela n'aurait pas constitué une solution viable car le problème aurait été simplement déplacé dans le temps, l'erreur se propageant tout de même.\\
+Les tests ont montré que l'on pouvait reconstruire les positions des atomes des molécules avec cette méthode de façon fiable pour les molécules de taille inférieure à 15 atomes.
+
+\begin{figure}[!h]
+	\centering
+
+	\[
+		x_n'^2 = d_{n-4,n}^2 - y_n'^2
+	\]
+
+	\caption{Optimisation de $x_n'$ et $y_n'$ lorsque l'on considère que $z_n'$ est nul}
+\end{figure}

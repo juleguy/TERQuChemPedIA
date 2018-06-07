@@ -9,6 +9,9 @@ import bonds_lengths_stats
 import paths
 from grid_search import grid_search_cv
 import sys
+import models
+import model_kernel_ridge
+import model_ridge
 
 
 def _load_paths(paths_json):
@@ -118,6 +121,7 @@ def _data_preparation(prepare_data_json):
     _check_key(selected_mols_json, anum_2_k)
     _check_key(selected_mols_json, min_bond_size_k)
     _check_key(selected_mols_json, max_bond_size_k)
+    _check_key(selected_mols_json, bond_max_neighbours_k)
 
     mol_min_size = int(selected_mols_json[mol_min_size_k])
     mol_max_size = int(selected_mols_json[mol_max_size_k])
@@ -126,6 +130,7 @@ def _data_preparation(prepare_data_json):
     anum_2 = int(selected_mols_json[anum_2_k])
     min_bond_size = float(selected_mols_json[min_bond_size_k])
     max_bond_size = float(selected_mols_json[max_bond_size_k])
+    bond_max_neighbours = int(selected_mols_json[bond_max_neighbours_k])
 
     params_json = prepare_data_json[params_k]
 
@@ -171,13 +176,13 @@ def _data_preparation(prepare_data_json):
         generate_data_wished_size(paths.train_set_loc, paths.train_prepared_input_loc, paths.train_labels_loc, anum_1,
                                   anum_2, wished_train_size, batch_size, max_anum, min_bond_size, max_bond_size,
                                   mol_min_size, mol_max_size, distances_cut_off, one_hot_anums, distances, pos_class,
-                                  amasses, distances_fun_str)
+                                  amasses, distances_fun_str, bond_max_neighbours)
 
         # Generating data on test set
         generate_data_wished_size(paths.test_set_loc, paths.test_prepared_input_loc, paths.test_labels_loc, anum_1,
                                   anum_2, wished_test_size, batch_size, max_anum, min_bond_size, max_bond_size,
                                   mol_min_size, mol_max_size, distances_cut_off, one_hot_anums, distances, pos_class,
-                                  amasses, distances_fun_str)
+                                  amasses, distances_fun_str, bond_max_neighbours)
 
     # Number of molecules mode
     elif nb_mol_from_train_k in params_json and nb_mol_from_test_k in params_json:
@@ -188,12 +193,14 @@ def _data_preparation(prepare_data_json):
         # Generating data on train set
         generate_data(paths.train_set_loc, paths.train_prepared_input_loc, paths.train_labels_loc, anum_1, anum_2,
                       nb_mol_from_train, batch_size, max_anum, min_bond_size, max_bond_size, mol_min_size, mol_max_size,
-                      distances_cut_off, one_hot_anums, distances, pos_class, amasses, distances_fun_str)
+                      distances_cut_off, one_hot_anums, distances, pos_class, amasses, distances_fun_str,
+                      bond_max_neighbours)
 
         # Generating data on test set
         generate_data(paths.test_set_loc, paths.test_prepared_input_loc, paths.test_labels_loc, anum_1, anum_2,
                       nb_mol_from_test, batch_size, max_anum, min_bond_size, max_bond_size, mol_min_size, mol_max_size,
-                      distances_cut_off, one_hot_anums, distances, pos_class, amasses, distances_fun_str)
+                      distances_cut_off, one_hot_anums, distances, pos_class, amasses, distances_fun_str,
+                      bond_max_neighbours)
 
     else:
         raise RuntimeError("A couple ("+wished_test_size_k+", "+wished_test_size_k+") or ("+nb_mol_from_test_k+", " +
@@ -232,7 +239,7 @@ def _model_train(model_train_json):
         raise RuntimeError(model_loc_k + " cannot be empty since the model must be saved")
 
     # Training neural network
-    if model_type == "NN":
+    if model_type == NN_k:
 
         # Checking presence of neural network parameters
         _check_key(params_json, epochs_k)
@@ -272,7 +279,7 @@ def _model_train(model_train_json):
                              stddev_init, hidden_act, outlayer_act, depth, weight_decay, gpu_mem_prop, save_model)
 
     # Training SVM model
-    elif model_type == "SVM":
+    elif model_type == SVM_k:
 
         # Checking presence of SVM parameters
         _check_key(params_json, kernel_k)
@@ -297,7 +304,7 @@ def _model_train(model_train_json):
         else:
             gamma = 0.1
 
-        if kernel_k == "poly":
+        if kernel == "poly":
             _check_key(params_json, degree_k)
             degree = int(params_json[degree_k])
         else:
@@ -316,6 +323,55 @@ def _model_train(model_train_json):
         # Training the model
         model_svm.train_model(paths.train_prepared_input_loc, paths.train_labels_loc, paths.model_loc, C, kernel,
                               epsilon, degree, gamma, coef0, shrinking, tol, cache_size, verbose, max_iter, save_model)
+
+    # Training kernel ridge model
+    elif model_type == kernel_ridge_k:
+
+        # Checking presence of kernel ridge parameters
+        _check_key(params_json, kernel_k)
+        _check_key(params_json, alpha_k)
+        _check_key(params_json, coef0_k)
+
+        # Loading kernel type and checking and loading specific kernel parameters presence
+        kernel = params_json[kernel_k]
+
+        if kernel == "poly":
+            _check_key(params_json, gamma_k)
+            if params_json[gamma_k] == "auto" or params_json[gamma_k] == "None":
+                gamma = None
+            else:
+                gamma = float(params_json[gamma_k])
+
+            _check_key(params_json, degree_k)
+            degree = int(params_json[degree_k])
+        else:
+            gamma = None
+            degree = 1
+
+        # Loading generic kernel ridge parameters
+        alpha = float(params_json[alpha_k])
+        coef0 = float(params_json[coef0_k])
+
+        # Training the model
+        model_kernel_ridge.train_model(paths.train_prepared_input_loc, paths.train_labels_loc, paths.model_loc, alpha,
+                                       kernel, gamma, degree, coef0, save_model)
+
+    # Training ridge regression model
+    elif model_type == ridge_k:
+
+        # Checking presence of ridge parameters
+        _check_key(params_json, alpha_k)
+        _check_key(params_json, max_iter_k)
+        _check_key(params_json, tol_k)
+
+        # Loading ridge parameters
+        alpha = float(params_json[alpha_k])
+        max_iter = int(params_json[max_iter_k])
+        tol = float(params_json[tol_k])
+
+        # Training the model
+        model_ridge.train_model(paths.train_prepared_input_loc, paths.train_labels_loc, paths.model_loc, alpha,
+                                max_iter, tol, save_model)
 
 
 def _bonds_stats(bonds_stats_json):
@@ -368,7 +424,7 @@ def _predict(model_type, params):
     batch_size = int(params[batch_size_k])
 
     # Predictions of a neural network model
-    if model_type == "NN":
+    if model_type == NN_k:
         # Checking that specific attributes for NN are specified
         _check_key(params, last_layer_width_k)
         _check_key(params, depth_k)
@@ -383,8 +439,8 @@ def _predict(model_type, params):
         return model_nn.predict(paths.model_loc, paths.test_prepared_input_loc, paths.test_labels_loc, batch_size,
                                 last_layer_width, depth, hidden_act, outlayer_act)
 
-    elif model_type == "SVM":
-        return model_svm.predict(paths.model_loc, paths.test_prepared_input_loc, paths.test_labels_loc, batch_size)
+    elif model_type == SVM_k or model_type == kernel_ridge_k or model_type == ridge_k:
+        return models.predict(paths.model_loc, paths.test_prepared_input_loc, paths.test_labels_loc, batch_size)
 
 
 def _plot_predictions(plot_predictions_json):
@@ -511,7 +567,7 @@ def _grid_search_cv(grid_search_json):
         raise RuntimeError(train_set_loc_k + " cannot be empty")
 
     # Checking specific parameters
-    if model_type == "NN":
+    if model_type == NN_k:
 
         # Loading NN specific param
         _check_key(params, gpu_mem_prop_k)
@@ -527,7 +583,7 @@ def _grid_search_cv(grid_search_json):
                      last_layer_width_k, depth_k, batch_size_k, epochs_k]
         _check_grid(nn_params, grid_params)
 
-    if model_type == "SVM":
+    elif model_type == SVM_k:
 
         # Checking that all the grids are complete
         svm_params = [kernel_k, epsilon_k, coef0_k, shrinking_k, tol_k, cache_size_k, verbose_k, max_iter_k, C_k,
@@ -540,12 +596,20 @@ def _grid_search_cv(grid_search_json):
             for boolean_attribute in boolean_attributes:
                 grid[boolean_attribute] = _string_list_to_bool_list(grid[boolean_attribute])
 
+    elif model_type == ridge_k:
+
+        # Checking that all the grids are complete
+        ridge_params = [alpha_k, max_iter_k, tol_k, verbose_k]
+        _check_grid(ridge_params, grid_params)
+
+    elif model_type == kernel_ridge_k:
+
+        # Checking that all the grids are complete
+        ridge_params = [alpha_k, kernel_k, gamma_k, degree_k, coef0_k]
+        _check_grid(ridge_params, grid_params)
+
     # Grid search
     grid_search_cv(model_type, paths.train_prepared_input_loc, paths.train_labels_loc, grid_params, cv, n_jobs)
-
-
-def CID_errors_threshold(cid_errors_threshold_json):
-    pass
 
 
 def execute(json_path):
@@ -586,7 +650,7 @@ def execute(json_path):
                 _grid_search_cv(task[grid_search_cv_k])
 
 
-execute("jsons/exec_6.json")
+execute("jsons/exec_10.json")
 
 # Executing given json files
 for arg in sys.argv[1:]:

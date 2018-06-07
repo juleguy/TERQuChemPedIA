@@ -200,8 +200,8 @@ def _distance_constraint(at, at_ref1, at_ref2, cut_off_distance):
 
 
 def _prepare_mol_data(coords_mol, anums_mol, amasses_mol, anum_1, anum_2, pubchem_id, min_bond_size, max_bond_size,
-                      max_anum, max_mol_size, cut_off_distance=None, pos_class=True, one_hot_anum=True, amasses=True,
-                      distances=True, distances_fun=None):
+                      max_anum, cut_off_distance, pos_class, one_hot_anum, amasses,
+                      distances, distances_fun, bond_max_neighbours):
     """
     Preparing inputs and targets for the models from one molecule. Taking the data describing the molecule (coordinates,
     atomic numbers and atomic masses) and the atomic numbers of the couples of atoms whose distance of bonds must be
@@ -218,7 +218,6 @@ def _prepare_mol_data(coords_mol, anums_mol, amasses_mol, anum_1, anum_2, pubche
     :param min_bond_size: Minimum length of bond between two atoms of a couple
     :param max_bond_size: Maximum length of bond between two atoms of a couple
     :param max_anum: max atomic number contained in the molecules we're extracting data from
-    :param max_mol_size: max number of atoms that can be found in the molecule
     :param cut_off_distance: Radius of the sphere of center the center of the two atoms of a couple and inside which we
                              record information about the other atoms. If None, all the atoms of the molecule are
                              considered.
@@ -254,18 +253,29 @@ def _prepare_mol_data(coords_mol, anums_mol, amasses_mol, anum_1, anum_2, pubche
                     dist_couple = _compute_distance(coords_mol[i], coords_mol[j])
 
                     # Initialization of the RN input
-                    input_rn = np.zeros(shape=(max_mol_size - 2, input_rn_width))
+                    input_rn = np.zeros(shape=(bond_max_neighbours, input_rn_width))
 
                     input_rn_idx = 0
+
+                    # Boolean set at False if there are more atoms around the bound than we can store according to the
+                    # bond_max_neighbours parameter
+                    valid_example = True
 
                     # Iterating over all the atoms of the molecule (except for the couple that shares a bond)
                     for k in range(mol_size):
                         if k != i and k != j:
 
-                            # If cut_off_distance is activated, checking if the
+                            # If cut_off_distance is activated, checking if the atom in a neighbour of the bond
                             if cut_off_distance is None or \
                                     _compute_distance(coords_mol[k], coords_mol[j]) < cut_off_distance or \
                                     _compute_distance(coords_mol[k], coords_mol[i]) < cut_off_distance:
+
+                                # If the number of neighbours is above the max, canceling the recording of the current
+                                # bond
+                                if input_rn_idx == bond_max_neighbours - 1:
+                                    valid_example = False
+                                    print("Too many atoms around the bond")
+                                    break
 
                                 last_input_id = 0
 
@@ -299,17 +309,20 @@ def _prepare_mol_data(coords_mol, anums_mol, amasses_mol, anum_1, anum_2, pubche
 
                                 input_rn_idx += 1
 
-                    # Flattening the input of the model
-                    input_rn = input_rn.reshape(-1, )
+                    # Only recording valid examples
+                    if valid_example:
 
-                    # Recording the input for the current couple
-                    inputs_RN.append(input_rn)
+                        # Flattening the input of the model
+                        input_rn = input_rn.reshape(-1, )
 
-                    # Recording the target for the current couple
-                    targets_RN.append(dist_couple * 1000)
+                        # Recording the input for the current couple
+                        inputs_RN.append(input_rn)
 
-                    # Recording the associated pubchem id to the current molecule
-                    pubchem_ids.append(pubchem_id)
+                        # Recording the target for the current couple
+                        targets_RN.append(dist_couple * 1000)
+
+                        # Recording the associated pubchem id to the current molecule
+                        pubchem_ids.append(pubchem_id)
 
     return np.array(inputs_RN), np.array(targets_RN), np.array(pubchem_ids)
 
@@ -330,8 +343,8 @@ def squareinv_distances_fun(distances):
 
 
 def generate_data(original_dataset_loc, prepared_input_loc, labels_loc, anum1, anum2, nb_mol, batch_size, max_anum,
-                  min_bond_size, max_bond_size, min_mol_size, max_mol_size, cut_off_distance=None,
-                  one_hot_anums=True, distances=True, pos_class=True, amasses=True, distances_fun_str=""):
+                  min_bond_size, max_bond_size, min_mol_size, max_mol_size, cut_off_distance,
+                  one_hot_anums, distances, pos_class, amasses, distances_fun_str, bond_max_neighbours):
     """
     Generates the prepared inputs and the targets for the specified dataset and the specified atoms couple from the
     nb_mol first molecules of the dataset
@@ -384,8 +397,8 @@ def generate_data(original_dataset_loc, prepared_input_loc, labels_loc, anum1, a
 
         input_rn_width = _compute_input_width(max_anum, one_hot_anums, distances, pos_class, amasses)
 
-        input_dataset = input_rn_dataset_h5.create_dataset(inputs_key, shape=(0, input_rn_width * (max_mol_size - 2)),
-                                                           maxshape=(None, None),
+        input_dataset = input_rn_dataset_h5.create_dataset(inputs_key, shape=(0, input_rn_width * bond_max_neighbours),
+                                                           maxshape=(None, input_rn_width * bond_max_neighbours),
                                                            dtype=np.float32, compression="gzip",
                                                            chunks=True)
 
@@ -433,8 +446,8 @@ def generate_data(original_dataset_loc, prepared_input_loc, labels_loc, anum1, a
                         input_nums[batch_idx],
                         input_masses[batch_idx], anum1, anum2,
                         input_ids[batch_idx], min_bond_size, max_bond_size,
-                        max_anum, max_mol_size, cut_off_distance, pos_class, one_hot_anums,
-                        amasses, distances, distances_fun)
+                        max_anum, cut_off_distance, pos_class, one_hot_anums,
+                        amasses, distances, distances_fun, bond_max_neighbours)
 
                     # Adding inputs and targets to the arrays of the current batch
                     if len(curr_inputs_np) > 0:
@@ -445,8 +458,8 @@ def generate_data(original_dataset_loc, prepared_input_loc, labels_loc, anum1, a
             # End of the batch #
 
             # Resizing datasets
-            input_dataset.resize((input_dataset.shape[0] + len(inputs_batch), input_rn_width * (max_mol_size - 2)))
             target_dataset.resize((target_dataset.shape[0] + len(inputs_batch), 1))
+            input_dataset.resize((input_dataset.shape[0] + len(inputs_batch), input_rn_width * bond_max_neighbours))
             ids_dataset.resize((ids_dataset.shape[0] + len(inputs_batch), 1))
 
             # Writing data to datasets
@@ -474,8 +487,8 @@ def generate_data(original_dataset_loc, prepared_input_loc, labels_loc, anum1, a
 
 def generate_data_wished_size(original_dataset_loc, prepared_input_loc, labels_loc, anum1, anum2, wished_size,
                               batch_size, max_anum, min_bond_size, max_bond_size, min_mol_size, max_mol_size,
-                              cut_off_distance=None, one_hot_anums=True, distances=True, pos_class=True, amasses=True,
-                              distances_fun_str = ""):
+                              cut_off_distance, one_hot_anums, distances, pos_class, amasses,
+                              distances_fun_str, bond_max_neighbours):
     """
     Generates a dataset of size that approximates a given wished size
     """
@@ -485,8 +498,8 @@ def generate_data_wished_size(original_dataset_loc, prepared_input_loc, labels_l
     # Generation of a dataset on the mini_set_size first examples
     generate_data(original_dataset_loc, prepared_input_loc, labels_loc, anum1, anum2, mini_set_size, batch_size,
                   max_anum, min_bond_size, max_bond_size, min_mol_size, max_mol_size,
-                  cut_off_distance=cut_off_distance, one_hot_anums=one_hot_anums, distances=distances,
-                  pos_class=pos_class, amasses=amasses, distances_fun_str=distances_fun_str)
+                  cut_off_distance, one_hot_anums, distances,
+                  pos_class, amasses, distances_fun_str, bond_max_neighbours)
 
     # Computing the number of generated examples from mini_set_size molecules
     mini_set_prepared_input_h5 = h5py.File(prepared_input_loc, "r")
@@ -499,6 +512,6 @@ def generate_data_wished_size(original_dataset_loc, prepared_input_loc, labels_l
 
     # Generation of the dataset
     generate_data(original_dataset_loc, prepared_input_loc, labels_loc, anum1, anum2, nb_mol, batch_size,
-                  max_anum, min_bond_size, max_bond_size, min_mol_size, max_mol_size, cut_off_distance=cut_off_distance,
-                  one_hot_anums=one_hot_anums, distances=distances, pos_class=pos_class, amasses=amasses,
-                  distances_fun_str=distances_fun_str)
+                  max_anum, min_bond_size, max_bond_size, min_mol_size, max_mol_size, cut_off_distance,
+                  one_hot_anums, distances, pos_class, amasses,
+                  distances_fun_str, bond_max_neighbours)

@@ -44,12 +44,14 @@ distances_cut_off_k = "distances_cut_off"
 min_bond_size_k = "min_bond_size"
 max_bond_size_k = "max_bond_size"
 distances_fun_k = "distances_fun"
+bond_max_neighbours_k = "bond_max_neighbours"
 
 # Model train keys
 model_type_k = "model_type"
 model_train_k = "model_train"
 
 # NN keys
+NN_k = "NN"
 epochs_k = "epochs"
 last_layer_width_k = "last_layer_width"
 depth_k = "depth"
@@ -64,6 +66,7 @@ gpu_mem_prop_k = "gpu_mem_prop"
 save_model_k = "save_model"
 
 # SVM keys
+SVM_k = "SVM"
 kernel_k = "kernel"
 degree_k = "degree"
 gamma_k = "gamma"
@@ -74,6 +77,13 @@ cache_size_k = "cache_size"
 verbose_k = "verbose"
 max_iter_k = "max_iter"
 C_k = "C"
+
+# Kernel ridge keys
+kernel_ridge_k = "kernel_ridge"
+alpha_k = "alpha"
+
+# Ridge keys
+ridge_k = "ridge"
 
 # Plot predictions keys
 plot_predictions_k = "plot_predictions"
