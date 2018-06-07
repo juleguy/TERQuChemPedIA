@@ -1,0 +1,74 @@
+{
+  "paths":{
+        "train_set_loc":"../../data/train_set_riken_v2_reduced.h5",
+        "test_set_loc":"../../data/test_set_riken_v2_reduced.h5",
+        "train_prepared_input_loc":"../../data/DIST_REL_C_KER_QUADRI/train_set_prepared_input.h5",
+        "test_prepared_input_loc":"../../data/DIST_REL_C_KER_QUADRI/test_set_prepared_input.h5",
+        "train_labels_loc":"../../data/DIST_REL_C_KER_QUADRI/train_set_labels.h5",
+        "test_labels_loc":"../../data/DIST_REL_C_KER_QUADRI/test_set_labels.h5"
+  },
+  "tasks":[
+    {
+      "prepare_model_data": {
+        "selected_mols": {
+          "mol_min_size": "2",
+          "mol_max_size": "60",
+          "max_anum": "9",
+          "anum_1": "6",
+          "anum_2": "6",
+          "min_bond_size": "0",
+          "max_bond_size": "1.6",
+          "bond_max_neighbours":"15"
+        },
+        "params": {
+          "wished_train_size": "40000",
+          "wished_test_size": "1",
+          "pos_class": "True",
+          "one_hot_anums": "True",
+          "amasses": "True",
+          "distances": "True",
+          "distances_cut_off": "2",
+          "batch_size": "10000",
+          "distances_fun":"squareinv"
+        }
+      }
+    },
+    {
+      "grid_search_cv":{
+        "params":{
+          "model_type":"SVM",
+          "n_jobs":"",
+          "cv":"3"
+        },
+        "grid_params":[
+          {
+            "kernel": ["linear"],
+            "epsilon": [0.1, 0.01, 0.001, 0.0001],
+            "coef0": [0, 0.01, 0.1, 0.25, 0.5, 1],
+            "shrinking": ["True", "False"],
+            "tol": [0.0001, 0.001, 0.01, 0.1],
+            "cache_size": [500],
+            "verbose": ["True"],
+            "max_iter": [-1],
+            "degree": [1],
+            "gamma": ["auto"],
+            "C": [1, 0.1, 0.01]
+          },
+          {
+            "kernel": ["poly"],
+            "degree": [2, 6],
+            "epsilon": [0.1, 0.01, 0.001, 0.0001],
+            "gamma": ["auto", 0.002, 0.001, 0.01],
+            "coef0": [0, 0.01, 0.1, 0.25, 0.5, 1],
+            "shrinking": ["True", "False"],
+            "tol": [0.0001, 0.001, 0.01, 0.1],
+            "cache_size": [500],
+            "verbose": ["True"],
+            "max_iter": [-1],
+            "C": [1, 0.1, 0.01]
+          }
+        ]
+      }
+    }
+  ]
+}

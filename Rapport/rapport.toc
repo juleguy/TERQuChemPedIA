@@ -17,10 +17,11 @@
 \contentsline {subsubsection}{\numberline {3.2.3.2}Reconstruction automatique des positions en utilisant un solveur}{7}{subsubsection.3.2.3.2}
 \contentsline {paragraph}{Limites de l'approche par solveur}{9}{section*.18}
 \contentsline {subsubsection}{\numberline {3.2.3.3}Reconstruction automatique des positions en utilisant des \IeC {\'e}quations de trilat\IeC {\'e}ration}{9}{subsubsection.3.2.3.3}
-\contentsline {paragraph}{Performances et limites (propagation des erreurs)}{10}{section*.20}
-\contentsline {section}{\numberline {3.3}Matrice r\IeC {\'e}duite des distances \IeC {\`a} des points fixes}{11}{section.3.3}
-\contentsline {subsection}{\numberline {3.3.1}Motivation}{11}{subsection.3.3.1}
+\contentsline {paragraph}{Performances et limites (propagation des erreurs)}{10}{section*.19}
+\contentsline {section}{\numberline {3.3}Matrice des distances \IeC {\`a} des points fixes}{10}{section.3.3}
+\contentsline {subsection}{\numberline {3.3.1}Motivation}{10}{subsection.3.3.1}
+\contentsline {subsection}{\numberline {3.3.2}Formalisation}{11}{subsection.3.3.2}
 \contentsline {section}{\numberline {3.4}}{11}{section.3.4}
 \contentsline {chapter}{\numberline {4}Mod\IeC {\`e}les pr\IeC {\'e}dictifs}{12}{chapter.4}
 \contentsline {chapter}{\numberline {5}Conclusion}{13}{chapter.5}
-\contentsline {chapter}{Appendices}{13}{section*.22}
+\contentsline {chapter}{Appendices}{13}{section*.23}

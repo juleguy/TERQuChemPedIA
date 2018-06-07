@@ -41,7 +41,7 @@
         "model_name": "DIST_REL_C_Ker_Ridge_01",
         "model_type": "kernel_ridge",
         "params": {
-          "alpha":"0.00001",
+          "alpha":"0.001",
           "kernel":"linear",
           "gamma":"None",
           "coef0":"1",

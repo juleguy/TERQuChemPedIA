@@ -19,8 +19,6 @@
           "plot_error_distrib":"True",
           "plot_targets_error_distrib":"True",
           "plot_targets_predictions":"True",
-          "asymb_1":"O",
-          "asymb_2":"H",
           "batch_size":"2000",
           "last_layer_width":"870",
           "depth":"3",

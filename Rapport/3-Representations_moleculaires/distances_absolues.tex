@@ -1,5 +1,39 @@
+
 \subsection{Motivation}
-\par La matrice réduite des distances à des points fixes a pour objectif de corriger les défauts de la représentation géométrique moléculaire par matrice réduite des distances inter-atomiques (REF MATR RED DIST REL). Cette dernière possédait en effet le défaut majeur de ne pas être systématiquement réversible en matrice des coordonnées atomiques (REF REPR MAT COORDS). Ce défaut était dû à la propagation des erreurs induite par le fait que les positions des atomes étaient calculées à partir du calcul de la position des atomes précédents (REF REPR DIST REL RECONSTRUCT). Pour parer cela, nous définissons une représentation telle que la position de chaque atome est définie à partir de distances à quatre points fixes du repère. Les erreurs, même si elles existent toujours à des valeurs minimes (autour de 10^{-25} m), ne se propagent donc plus lors de reconstruction des positions des atomes.\\
+\par La matrice des distances à des points fixes a pour objectif de corriger les défauts de la représentation géométrique moléculaire par matrice réduite des distances inter-atomiques (REF MATR RED DIST REL). Cette dernière possédait en effet le défaut majeur de ne pas être systématiquement réversible en matrice des coordonnées atomiques (REF REPR MAT COORDS). Ce défaut était dû à la propagation des erreurs induite par le fait que les positions des atomes étaient calculées à partir du calcul de la position des atomes précédents (REF REPR DIST REL RECONSTRUCT). Pour parer cela, nous définissons une représentation telle que la position de chaque atome est définie à partir de distances à quatre points fixes du repère. Les erreurs, même si elles existent toujours à des valeurs minimes (autour de $10^{-25}$ m), ne se propagent donc plus lors de la reconstruction des positions des atomes.\\
 Un autre problème résolu par cette nouvelle représentation est qu'il n'existe plus de molécule dont on ne peut pas reconstruire les positions à cause d'une géométrie plane ou linéaire (REF AT FICTIF), le calcul de la position de chaque atome dépendant désormais de la distance à quatre points de l'espace que l'on choisit tels qu'ils n'appartiennent pas à un même plan.\\
 
 \subsection{Formalisation}
+\par Formellement, la matrice contient donc les distances de chaque atome d'une molécule à quatre points fixes du repère. Nous choisissons arbitrairement comme points l'origine du repère, et le point sur chaque axe de distance 1 à l'origine.
+
+\begin{figure}[!h]
+	
+	\[
+		p_0(0, 0, 0) \; \; \; \; \; 
+		p_1(1, 0, 0) \; \; \; \; \; 
+		p_2(0, 1, 0) \: \; \; \; \; 
+		p_3(0, 0, 1)
+	\]
+
+	\caption{Points fixes}
+\end{figure}
+
+\begin{figure}[h!]
+	\centering
+	
+	\begin{tabular}{|c|c|c|c|}
+		\hline
+		\textbf{d\textsubscript{$\mathbf{a_0,p_0}$}} & \textbf{d\textsubscript{$\mathbf{a_0,p_1}$}} & \textbf{d\textsubscript{$\mathbf{a_0,p_2}$}} & \textbf{d\textsubscript{$\mathbf{a_0,p_3}$}} \\ \hline
+		\textbf{d\textsubscript{$\mathbf{a_1,p_0}$}} & \textbf{d\textsubscript{$\mathbf{a_1,p_1}$}} & \textbf{d\textsubscript{$\mathbf{a_1,p_2}$}} & \textbf{d\textsubscript{$\mathbf{a_1,p_3}$}} \\ \hline
+		\rot{... } & \rot{... } & \rot{... } & \rot{... } \\ \hline
+		\textbf{d\textsubscript{$\mathbf{a_n,p_0}$}} & \textbf{d\textsubscript{$\mathbf{a_n,p_1}$}} & \textbf{d\textsubscript{$\mathbf{a_n,p_2}$}} & \textbf{d\textsubscript{$\mathbf{a_n,p_3}$}} \\ \hline
+	\end{tabular}
+	
+	\caption{Matrice des distances à des points fixes (molécule de taille n)}
+\end{figure}
+
+
+\subsection{Reconstruction des molécules}
+\par De même que pour la représentation par matrice réduite des distances inter-atomiques (REF MAT DIST REL), nous devons être capables de passer d'une matrice des distances à des points fixes à une matrice des coordonnées atomiques, afin que les résultats des modèles prédictifs puissent être utilisés par des chimistes.\\
+
+\par La méthode de reconstruction des positions atomiques est très similaire pour les deux représentations. Nous utilisons également les équations de trilatération d'un point à partir des distances à trois points dont les positions sont connues, en utilisant la dernière distance comme un moyen de choisir la bonne solution (voir REF RECONSTRUCT MAT DIST REL). Du fait que la position des quatre points de référence est fixe, les équations se trouvent néanmoins simplifiées.
