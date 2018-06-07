@@ -42,24 +42,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="exec_6.json" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/jsons/exec_6.json">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="954">
-              <caret line="53" column="26" selection-start-line="53" selection-start-column="26" selection-end-line="53" selection-end-column="26" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="paths.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/paths.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="252">
-              <caret line="14" selection-start-line="14" selection-end-line="14" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="stats.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/stats.py">
           <provider selected="true" editor-type-id="text-editor">
@@ -90,11 +72,29 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="14.6-train_dist_rel_oh_03.json" pinned="false" current-in-tab="false">
+      <file leaf-file-name="14.6-train_dist_rel_oh_03.json" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/jsons/14.6-train_dist_rel_oh_03.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="144">
-              <caret line="8" column="42" selection-start-line="8" selection-end-line="9" />
+            <state relative-caret-position="270">
+              <caret line="15" column="33" selection-start-line="15" selection-start-column="33" selection-end-line="15" selection-end-column="33" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="14.4-train_dist_rel_cc_03.json" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/jsons/14.4-train_dist_rel_cc_03.json">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="108">
+              <caret line="15" column="33" selection-start-line="15" selection-start-column="33" selection-end-line="15" selection-end-column="33" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="14.5-train_dist_rel_ch_03.json" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/jsons/14.5-train_dist_rel_ch_03.json">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="270">
+              <caret line="15" column="33" selection-start-line="15" selection-start-column="33" selection-end-line="15" selection-end-column="33" />
             </state>
           </provider>
         </entry>
@@ -120,10 +120,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="model_nn.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="model_nn.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/model_nn.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="219">
+            <state relative-caret-position="489">
               <caret line="87" column="97" selection-start-line="87" selection-start-column="97" selection-end-line="87" selection-end-column="97" />
               <folding>
                 <element signature="e#0#11#0" expanded="true" />
@@ -181,7 +181,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/dist_rel_c_02.json" />
         <option value="$PROJECT_DIR$/tests/MODEL_TEST/13.0-dist_rel_c_02_test.json" />
         <option value="$PROJECT_DIR$/tests/13.0-dist_rel_c_02_test.json" />
         <option value="$PROJECT_DIR$/exec_3.json" />
@@ -205,8 +204,6 @@
         <option value="$PROJECT_DIR$/jsons/exec_8.json" />
         <option value="$PROJECT_DIR$/jsons/exec_1.json" />
         <option value="$PROJECT_DIR$/jsons/14.4-train_dist_rel_cc_02.json" />
-        <option value="$PROJECT_DIR$/jsons/14.4-train_dist_rel_cc_03.json" />
-        <option value="$PROJECT_DIR$/jsons/14.5-train_dist_rel_ch_03.json" />
         <option value="$PROJECT_DIR$/jsons/15.6-train_dist_rel_oh_03.json" />
         <option value="$PROJECT_DIR$/jsons/15.0-SVM_test.json" />
         <option value="$PROJECT_DIR$/jsons/exec_2.json" />
@@ -232,6 +229,9 @@
         <option value="$PROJECT_DIR$/quchem_ia.py" />
         <option value="$PROJECT_DIR$/jsons/14-7-stats_dist_rel_c_oh_03.json" />
         <option value="$PROJECT_DIR$/model_nn.py" />
+        <option value="$PROJECT_DIR$/jsons/14.4-train_dist_rel_cc_03.json" />
+        <option value="$PROJECT_DIR$/jsons/14.5-train_dist_rel_ch_03.json" />
+        <option value="$PROJECT_DIR$/jsons/14.6-train_dist_rel_oh_03.json" />
       </list>
     </option>
   </component>
@@ -584,20 +584,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/jsons/14.4-train_dist_rel_cc_03.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="33" column="30" selection-start-line="33" selection-start-column="30" selection-end-line="33" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/jsons/14.5-train_dist_rel_ch_03.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="183">
-          <caret line="33" column="29" selection-start-line="33" selection-start-column="29" selection-end-line="33" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/jsons/13.0-dist_rel_c_02.json">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -829,13 +815,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/jsons/14.6-train_dist_rel_oh_03.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
-          <caret line="8" column="42" selection-start-line="8" selection-end-line="9" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/jsons/14-7-stats_dist_rel_c_oh_03.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="198">
@@ -862,11 +841,32 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/model_nn.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="219">
+        <state relative-caret-position="489">
           <caret line="87" column="97" selection-start-line="87" selection-start-column="97" selection-end-line="87" selection-end-column="97" />
           <folding>
             <element signature="e#0#11#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jsons/14.4-train_dist_rel_cc_03.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="108">
+          <caret line="15" column="33" selection-start-line="15" selection-start-column="33" selection-end-line="15" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jsons/14.5-train_dist_rel_ch_03.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="15" column="33" selection-start-line="15" selection-start-column="33" selection-end-line="15" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jsons/14.6-train_dist_rel_oh_03.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="15" column="33" selection-start-line="15" selection-start-column="33" selection-end-line="15" selection-end-column="33" />
         </state>
       </provider>
     </entry>
