@@ -52,7 +52,14 @@ def _colorbar_bonds_lengths_representation(ax, targets, bonds_lengths_loc):
     """
     bonds_lengths_h5 = h5py.File(bonds_lengths_loc, "r")
     bonds_lengths = np.array(bonds_lengths_h5[distances_key])
+
     hist_bonds = np.histogram(bonds_lengths * 100, np.arange(min(targets), max(targets), 0.001))[0]
+
+    # Adding 1 to each number to each value so that a log can be applied
+    hist_bonds = np.add(hist_bonds, 1, casting='unsafe')
+
+    # Logarithm of the values
+    hist_bonds = np.log(hist_bonds)
 
     cmap = mpl.cm.bwr_r
 

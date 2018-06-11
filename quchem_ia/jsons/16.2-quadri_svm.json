@@ -37,7 +37,7 @@
       "grid_search_cv":{
         "params":{
           "model_type":"SVM",
-          "n_jobs":"",
+          "n_jobs":"20",
           "cv":"3"
         },
         "grid_params":[

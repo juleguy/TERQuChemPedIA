@@ -650,7 +650,7 @@ def execute(json_path):
                 _grid_search_cv(task[grid_search_cv_k])
 
 
-#execute("jsons/exec_10.json")
+execute("jsons/exec_9.json")
 
 # Executing given json files
 for arg in sys.argv[1:]:

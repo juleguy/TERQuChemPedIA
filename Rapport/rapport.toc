@@ -11,17 +11,33 @@
 \contentsline {paragraph}{N\IeC {\'e}cessit\IeC {\'e} et limite de l'introduction d'un atome fictif}{6}{section*.6}
 \contentsline {paragraph}{Placement de l'atome fictif}{6}{section*.7}
 \contentsline {paragraph}{Placement de l'atome a\textsubscript {1}}{6}{section*.8}
-\contentsline {paragraph}{Placement de l'atome a\textsubscript {2}}{6}{section*.9}
-\contentsline {paragraph}{Placement de l'atome a\textsubscript {3}}{7}{section*.10}
-\contentsline {paragraph}{Placement de l'atome a\textsubscript {n}}{7}{section*.11}
-\contentsline {subsubsection}{\numberline {3.2.3.2}Reconstruction automatique des positions en utilisant un solveur}{7}{subsubsection.3.2.3.2}
-\contentsline {paragraph}{Limites de l'approche par solveur}{9}{section*.18}
+\contentsline {paragraph}{Placement de l'atome a\textsubscript {2}}{6}{section*.10}
+\contentsline {paragraph}{Placement de l'atome a\textsubscript {3}}{7}{section*.12}
+\contentsline {paragraph}{Placement de l'atome a\textsubscript {n}}{7}{section*.14}
+\contentsline {subsubsection}{\numberline {3.2.3.2}Reconstruction automatique des positions en utilisant un solveur}{8}{subsubsection.3.2.3.2}
+\contentsline {paragraph}{Limites de l'approche par solveur}{8}{section*.18}
 \contentsline {subsubsection}{\numberline {3.2.3.3}Reconstruction automatique des positions en utilisant des \IeC {\'e}quations de trilat\IeC {\'e}ration}{9}{subsubsection.3.2.3.3}
 \contentsline {paragraph}{Performances et limites (propagation des erreurs)}{10}{section*.19}
-\contentsline {section}{\numberline {3.3}Matrice des distances \IeC {\`a} des points fixes}{10}{section.3.3}
-\contentsline {subsection}{\numberline {3.3.1}Motivation}{10}{subsection.3.3.1}
+\contentsline {paragraph}{Test de la reconstruction}{10}{section*.21}
+\contentsline {section}{\numberline {3.3}Matrice des distances \IeC {\`a} des points fixes}{11}{section.3.3}
+\contentsline {subsection}{\numberline {3.3.1}Motivation}{11}{subsection.3.3.1}
 \contentsline {subsection}{\numberline {3.3.2}Formalisation}{11}{subsection.3.3.2}
-\contentsline {section}{\numberline {3.4}}{11}{section.3.4}
-\contentsline {chapter}{\numberline {4}Mod\IeC {\`e}les pr\IeC {\'e}dictifs}{12}{chapter.4}
-\contentsline {chapter}{\numberline {5}Conclusion}{13}{chapter.5}
-\contentsline {chapter}{Appendices}{13}{section*.23}
+\contentsline {subsection}{\numberline {3.3.3}Reconstruction des mol\IeC {\'e}cules}{12}{subsection.3.3.3}
+\contentsline {section}{\numberline {3.4}Repr\IeC {\'e}sentation locale des liaisons covalentes}{12}{section.3.4}
+\contentsline {subsection}{\numberline {3.4.1}Motivation}{12}{subsection.3.4.1}
+\contentsline {subsection}{\numberline {3.4.2}Classes positionnelles}{12}{subsection.3.4.2}
+\contentsline {subsection}{\numberline {3.4.3}Distances aux atomes de la liaison}{13}{subsection.3.4.3}
+\contentsline {subsection}{\numberline {3.4.4}S\IeC {\'e}lection de l'information la plus pertinente}{13}{subsection.3.4.4}
+\contentsline {chapter}{\numberline {4}Donnees}{15}{chapter.4}
+\contentsline {chapter}{\numberline {5}Pr\IeC {\'e}diction de longueurs de liaisons converg\IeC {\'e}es}{16}{chapter.5}
+\contentsline {chapter}{\numberline {6}Pr\IeC {\'e}diction de g\IeC {\'e}om\IeC {\'e}tries mol\IeC {\'e}culaires converg\IeC {\'e}es}{17}{chapter.6}
+\contentsline {section}{\numberline {6.1}Motivation et m\IeC {\'e}thodologie}{17}{section.6.1}
+\contentsline {paragraph}{Introduction de bruit}{17}{section*.27}
+\contentsline {paragraph}{Mod\IeC {\`e}les}{17}{section*.28}
+\contentsline {section}{\numberline {6.2}Donn\IeC {\'e}es}{18}{section.6.2}
+\contentsline {section}{\numberline {6.3}\IeC {\'E}valuation des performances}{18}{section.6.3}
+\contentsline {section}{\numberline {6.4}Architectures}{18}{section.6.4}
+\contentsline {section}{\numberline {6.5}Optimisation des mod\IeC {\`e}les}{18}{section.6.5}
+\contentsline {section}{\numberline {6.6}Performances}{18}{section.6.6}
+\contentsline {chapter}{\numberline {7}Conclusion}{19}{chapter.7}
+\contentsline {chapter}{Appendices}{19}{section*.29}

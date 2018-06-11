@@ -170,39 +170,36 @@ Cette représentation n'est donc pas viable en pratique. Cela fait partie des ra
 
 \paragraph{Placement de l'atome a\indice{1}} Une fois l'atome a\indice{0} placé, il existe une infinité de solutions pour la position de l'atome a\indice{1}. On peut en effet le placer à tout point appartenant à la surface de la sphère de centre a\indice{0} et de rayon d\indice{0,1}.
 
-
-
-\paragraph{Placement de l'atome a\indice{2}} L'atome a\indice{2} appartient au cercle solution de l'intersection entre les sphères de centres a\indice{0} et a\indice{1} et de rayons d\indice{0,2} et d\indice{1,2}. On choisit donc arbitrairement une position appartenant à ce cercle.
-
-
-
-\paragraph{Placement de l'atome a\indice{3}} Dans le cas général, il existe deux solutions pour le placement de l'atome a\indice{3}, l'intersection non nulle de trois sphères étant deux points si tous les points ne sont pas sur un même plan ou une même droite. On choisit arbitrairement un point parmi ces deux solutions, car il n'y a pas à ce stade d'ambiguïté de chiralité de la molécule, une molécule composée de trois atomes ne possédant pas de chiralité (l'atome fictif a\indice{0} ne fait pas partie de la molécule).
-
-
-\paragraph{Placement de l'atome a\indice{n}} Pour placer l'atome a\indice{$n$} ($n$ étant strictement inférieur à la taille de la molécule), nous généralisons la méthode de placement de l'atome a\indice{3}. Plutôt que de travailler sur l'intersection de quatre sphères, nous travaillons toujours sur l'intersection de trois sphères et nous utilisons la dernière distance pour discriminer les deux solutions obtenues. Cela facilite grandement la résolution des équations mathématiques associées et permet d'obtenir des solutions sensiblement équivalentes. \\
-Formellement, nous calculons les positions des deux points solutions de l'intersection des trois sphères de centres a\indice{n-4}, a\indice{n-3}, et a\indice{n-2} et de rayons d\indice{n-4,n}, d\indice{n-3,n} et d\indice{n-2,n}, et nous discriminons les deux solutions selon la distance d\indice{n-1,n}. 
-
-\begin{figure}
+\begin{figure}[!h]
 	\centering
 	\includegraphics[scale=0.27]{images/1_sphere.png}
 	\caption{Placement de l'atome a\indice{1} (image extraite du rapport de N.Roux)}
 \end{figure}
 
-\begin{figure}
+\paragraph{Placement de l'atome a\indice{2}} L'atome a\indice{2} appartient au cercle solution de l'intersection entre les sphères de centres a\indice{0} et a\indice{1} et de rayons d\indice{0,2} et d\indice{1,2}. On choisit donc arbitrairement une position appartenant à ce cercle.
+
+\begin{figure}[!h]
 	\centering
 	\includegraphics[scale=0.3]{images/2_spheres.png}
 	\caption{Placement de l'atome a\indice{2} (image extraite du rapport de N.Roux)}
 \end{figure}
 
 
-\begin{figure}
+\paragraph{Placement de l'atome a\indice{3}} Dans le cas général, il existe deux solutions pour le placement de l'atome a\indice{3}, l'intersection non nulle de trois sphères étant deux points si tous les points ne sont pas sur un même plan ou une même droite. On choisit arbitrairement un point parmi ces deux solutions, car il n'y a pas à ce stade d'ambiguïté de chiralité de la molécule, une molécule composée de trois atomes ne possédant pas de chiralité (l'atome fictif a\indice{0} ne fait pas partie de la molécule).
+
+
+\begin{figure}[!h]
 	\centering
 	\includegraphics[scale=0.3]{images/3_spheres.png}
 	\caption{Placement de l'atome a\indice{3} (image extraite du rapport de N.Roux)}
 \end{figure}
 
 
-\begin{figure}
+
+\paragraph{Placement de l'atome a\indice{n}} Pour placer l'atome a\indice{$n$} ($n$ étant strictement inférieur à la taille de la molécule), nous généralisons la méthode de placement de l'atome a\indice{3}. Plutôt que de travailler sur l'intersection de quatre sphères, nous travaillons toujours sur l'intersection de trois sphères et nous utilisons la dernière distance pour discriminer les deux solutions obtenues. Cela facilite grandement la résolution des équations mathématiques associées et permet d'obtenir des solutions sensiblement équivalentes. \\
+Formellement, nous calculons les positions des deux points solutions de l'intersection des trois sphères de centres a\indice{n-4}, a\indice{n-3}, et a\indice{n-2} et de rayons d\indice{n-4,n}, d\indice{n-3,n} et d\indice{n-2,n}, et nous discriminons les deux solutions selon la distance d\indice{n-1,n}. 
+
+\begin{figure}[!h]
 	\centering
 	\includegraphics[scale=0.3]{images/3_spheres_gen.png}
 	\caption{Placement de l'atome a\indice{n} (image extraite du rapport de N.Roux)}
@@ -360,7 +357,6 @@ Nous obtenons alors deux solutions $a_n$, et nous sélectionnons celle telle que
 \par Les équations de trilatération permettent de calculer la matrice des coordonnées de façon très rapide. Néanmoins, de même que la méthode utilisant un solveur d'équations, cette méthode souffre d'un problème de propagation des erreurs intrinsèque à la représentation par matrice réduite des distances inter-atomiques. En effet, lorsque l'on calcule les coordonnées d'un atome à partir de ses distances aux quatre atomes précédents, et que l'on compare ces distances aux distances aux mêmes points de la position nouvellement calculée, on s'aperçoit qu'elles ne sont pas parfaitement identiques. L'erreur est très faible (de l'ordre de $10^{-25}$ m) et est individuellement très au-delà de la précision requise en chimie quantique (environ $10^{-15}$ m), mais elle finit par devenir trop importante du fait de sa propagation au fil des calculs, la position de chaque atome étant calculée à partir de ses distances aux quatre atomes précédents.\\
 La présence d'une racine carrée dans les équations (calcul de $z_n'$) accélère la propagation des erreurs. En effet, après quelques itérations et quelques faibles erreurs, les intersections de sphères deviennent vides, ce qui se traduit dans nos équations par le calcul de la racine d'un nombre négatif. Pour parer cela, nous considérons que le contenu de la racine vaut zéro lorsqu'il est négatif, mais cela introduit une erreur importante et augmente donc la fréquence des intersections vides dans le calcul de la position des atomes suivants.\\
 Afin de retarder l'apparition des erreurs dépassant le seuil toléré, nous aurions pu ajuster les valeurs de $x_n'$ et $y_n'$ lorsque l'on considère que le contenu de la racine est nul selon l'équation ci-dessous. Toutefois, cela n'aurait pas constitué une solution viable car le problème aurait été simplement déplacé dans le temps, l'erreur se propageant tout de même.\\
-Les tests ont montré que l'on pouvait reconstruire les positions des atomes des molécules avec cette méthode de façon fiable pour les molécules de taille inférieure à 15 atomes.
 
 \begin{figure}[!h]
 	\centering
@@ -370,4 +366,20 @@ Les tests ont montré que l'on pouvait reconstruire les positions des atomes des
 	\]
 
 	\caption{Optimisation de $x_n'$ et $y_n'$ lorsque l'on considère que $z_n'$ est nul}
+\end{figure}
+
+\paragraph{Test de la reconstruction}
+Les tests ont montré que l'on pouvait reconstruire les positions des atomes des molécules avec cette méthode de façon fiable pour les molécules de taille inférieure ou égale à 20 atomes. La méthode de test est la suivante. On génère des coordonnées aléatoirement pour 100000 molécules de taille (nombre d'atomes) variable. On utilise la méthode de reconstruction puis on calcule la nouvelle matrice réduite des distances inter-atomiques sur les nouvelles positions. On fait la différence des deux matrices de distances pour obtenir les erreurs et on considère que la reconstruction a été un succès si aucune composante de la matrice des erreurs n'est supérieure à un seuil. Ce seuil est choisi à $10^{-15}$ m, car il correspond à la précision au delà de laquelle les chimistes considèrent qu'il ne s'agit plus d'information mais de bruit. Les résultats sont données dans le tableau suivant.
+
+\begin{figure}[!h]
+	\centering
+	
+	\begin{tabular}{|l|c|c|c|c|c|c|c|c|}
+		\hline
+		Taille des molécules & 10 & 15 & 20 & 25 & 30 & 35 & 40 \\ \hline
+		Molécules mal reconstruites & 0 & 0 & 0 & 18 & 132 & 468 & 1752\\ \hline
+	
+	\end{tabular}
+
+	\caption{Test de la méthode de reconstruction pour la matrice des distances inter-atomiques}
 \end{figure}

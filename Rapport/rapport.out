@@ -9,7 +9,20 @@
 \BOOKMARK [1][-]{section.3.3}{Matrice des distances \340 des points fixes}{chapter.3}% 9
 \BOOKMARK [2][-]{subsection.3.3.1}{Motivation}{section.3.3}% 10
 \BOOKMARK [2][-]{subsection.3.3.2}{Formalisation}{section.3.3}% 11
-\BOOKMARK [1][-]{section.3.4}{}{chapter.3}% 12
-\BOOKMARK [0][-]{chapter.4}{Mod\350les pr\351dictifs}{}% 13
-\BOOKMARK [0][-]{chapter.5}{Conclusion}{}% 14
-\BOOKMARK [0][-]{section*.23}{Appendices}{}% 15
+\BOOKMARK [2][-]{subsection.3.3.3}{Reconstruction des mol\351cules}{section.3.3}% 12
+\BOOKMARK [1][-]{section.3.4}{Repr\351sentation locale des liaisons covalentes}{chapter.3}% 13
+\BOOKMARK [2][-]{subsection.3.4.1}{Motivation}{section.3.4}% 14
+\BOOKMARK [2][-]{subsection.3.4.2}{Classes positionnelles}{section.3.4}% 15
+\BOOKMARK [2][-]{subsection.3.4.3}{Distances aux atomes de la liaison}{section.3.4}% 16
+\BOOKMARK [2][-]{subsection.3.4.4}{S\351lection de l'information la plus pertinente}{section.3.4}% 17
+\BOOKMARK [0][-]{chapter.4}{Donnees}{}% 18
+\BOOKMARK [0][-]{chapter.5}{Pr\351diction de longueurs de liaisons converg\351es}{}% 19
+\BOOKMARK [0][-]{chapter.6}{Pr\351diction de g\351om\351tries mol\351culaires converg\351es}{}% 20
+\BOOKMARK [1][-]{section.6.1}{Motivation et m\351thodologie}{chapter.6}% 21
+\BOOKMARK [1][-]{section.6.2}{Donn\351es}{chapter.6}% 22
+\BOOKMARK [1][-]{section.6.3}{\311valuation des performances}{chapter.6}% 23
+\BOOKMARK [1][-]{section.6.4}{Architectures}{chapter.6}% 24
+\BOOKMARK [1][-]{section.6.5}{Optimisation des mod\350les}{chapter.6}% 25
+\BOOKMARK [1][-]{section.6.6}{Performances}{chapter.6}% 26
+\BOOKMARK [0][-]{chapter.7}{Conclusion}{}% 27
+\BOOKMARK [0][-]{section*.29}{Appendices}{}% 28

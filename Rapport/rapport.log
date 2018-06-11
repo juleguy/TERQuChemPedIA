@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2018.4.26)  7 JUN 2018 16:02
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2018.4.26)  11 JUN 2018 09:37
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -793,7 +793,15 @@ LaTeX Font Info:    Redeclaring font encoding OMS on input line 631.
 LaTeX Info: Redefining \[ on input line 2735.
 LaTeX Info: Redefining \] on input line 2736.
 )
-Package hyperref Info: Option `colorlinks' set `true' on input line 37.
+(/usr/share/texlive/texmf-dist/tex/latex/oberdiek/pdflscape.sty
+Package: pdflscape 2008/08/11 v0.10 Display of landscape pages in PDF (HO)
+
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/lscape.sty
+Package: lscape 2000/10/22 v3.01 Landscape Pages (DPC)
+)
+Package pdflscape Info: Auto-detected driver: pdftex on input line 80.
+)
+Package hyperref Info: Option `colorlinks' set `true' on input line 38.
 
 (/usr/share/texlive/texmf-dist/tex/latex/geometry/geometry.sty
 Package: geometry 2010/09/12 v5.6 Page Geometry
@@ -812,23 +820,23 @@ Package: geometry 2010/09/12 v5.6 Page Geometry
 ) (./rapport.aux)
 \openout1 = `rapport.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 80.
-LaTeX Font Info:    ... okay on input line 80.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 80.
-LaTeX Font Info:    ... okay on input line 80.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 80.
-LaTeX Font Info:    ... okay on input line 80.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 80.
-LaTeX Font Info:    ... okay on input line 80.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 80.
-LaTeX Font Info:    ... okay on input line 80.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 80.
-LaTeX Font Info:    ... okay on input line 80.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 80.
-LaTeX Font Info:    ... okay on input line 80.
-LaTeX Info: Redefining \degres on input line 80.
-LaTeX Info: Redefining \dots on input line 80.
-LaTeX Info: Redefining \up on input line 80.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 81.
+LaTeX Font Info:    ... okay on input line 81.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 81.
+LaTeX Font Info:    ... okay on input line 81.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 81.
+LaTeX Font Info:    ... okay on input line 81.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 81.
+LaTeX Font Info:    ... okay on input line 81.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 81.
+LaTeX Font Info:    ... okay on input line 81.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 81.
+LaTeX Font Info:    ... okay on input line 81.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 81.
+LaTeX Font Info:    ... okay on input line 81.
+LaTeX Info: Redefining \degres on input line 81.
+LaTeX Info: Redefining \dots on input line 81.
+LaTeX Info: Redefining \up on input line 81.
 (/usr/share/texlive/texmf-dist/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count151
@@ -859,19 +867,10 @@ e
 ))
 \c@lstlisting=\count157
 \AtBeginShipoutBox=\box39
-
-(/usr/share/texlive/texmf-dist/tex/latex/oberdiek/pdflscape.sty
-Package: pdflscape 2008/08/11 v0.10 Display of landscape pages in PDF (HO)
-
-(/usr/share/texlive/texmf-dist/tex/latex/graphics/lscape.sty
-Package: lscape 2000/10/22 v3.01 Landscape Pages (DPC)
-)
-Package pdflscape Info: Auto-detected driver: pdftex on input line 80.
-)
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: hyperref package is loaded.
 Package caption Info: End \AtBeginDocument code.
-Package hyperref Info: Link coloring ON on input line 80.
+Package hyperref Info: Link coloring ON on input line 81.
 
 (/usr/share/texlive/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2012/10/27 v2.43 Cross-referencing by name of section
@@ -881,9 +880,9 @@ Package: gettitlestring 2010/12/03 v1.4 Cleanup title references (HO)
 )
 \c@section@level=\count158
 )
-LaTeX Info: Redefining \ref on input line 80.
-LaTeX Info: Redefining \pageref on input line 80.
-LaTeX Info: Redefining \nameref on input line 80.
+LaTeX Info: Redefining \ref on input line 81.
+LaTeX Info: Redefining \pageref on input line 81.
+LaTeX Info: Redefining \nameref on input line 81.
 
 (./rapport.out) (./rapport.out)
 \@outlinefile=\write3
@@ -934,7 +933,7 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.123 \chapter
+l.124 \chapter
               {Introduction} [1
 
 ]
@@ -967,47 +966,60 @@ LaTeX Font Info:    Try loading font information for T1+cmtt on input line 165.
 
  (/usr/share/texlive/texmf-dist/tex/latex/base/t1cmtt.fd
 File: t1cmtt.fd 2014/09/29 v2.5h Standard LaTeX font definitions
-) [6]
-<images/1_sphere.png, id=141, 1742.51pt x 431.6125pt>
+)
+<images/1_sphere.png, id=192, 1742.51pt x 431.6125pt>
 File: images/1_sphere.png Graphic file (type png)
 
 <use images/1_sphere.png>
-Package pdftex.def Info: images/1_sphere.png used on input line 187.
+Package pdftex.def Info: images/1_sphere.png used on input line 175.
 (pdftex.def)             Requested size: 470.484pt x 116.53693pt.
 
-<images/2_spheres.png, id=143, 1577.895pt x 482.80376pt>
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+<images/2_spheres.png, id=194, 1577.895pt x 482.80376pt>
 File: images/2_spheres.png Graphic file (type png)
 
 <use images/2_spheres.png>
-Package pdftex.def Info: images/2_spheres.png used on input line 193.
+Package pdftex.def Info: images/2_spheres.png used on input line 183.
 (pdftex.def)             Requested size: 473.37216pt x 144.84224pt.
 
-<images/3_spheres.png, id=144, 1613.02625pt x 437.635pt>
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[6] <images/3_spheres.png, id=210, 1613.02625pt x 437.635pt>
 File: images/3_spheres.png Graphic file (type png)
 
 <use images/3_spheres.png>
-Package pdftex.def Info: images/3_spheres.png used on input line 200.
+Package pdftex.def Info: images/3_spheres.png used on input line 193.
 (pdftex.def)             Requested size: 483.9116pt x 131.2915pt.
 
-<images/3_spheres_gen.png, id=145, 1601.985pt x 464.73625pt>
+<images/3_spheres_gen.png, id=211, 1601.985pt x 464.73625pt>
 File: images/3_spheres_gen.png Graphic file (type png)
 
 <use images/3_spheres_gen.png>
-Package pdftex.def Info: images/3_spheres_gen.png used on input line 207.
+Package pdftex.def Info: images/3_spheres_gen.png used on input line 204.
 (pdftex.def)             Requested size: 480.59921pt x 139.42194pt.
+ [7 <./images/1_sphere.png> <./images/2_spheres.png> <./images/3_spheres.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 210--211
 
-Underfull \hbox (badness 10000) in paragraph at lines 213--214
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 212--213
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 215--216
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[8 <./images/3_spheres_gen.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 282--283
 
  []
 
-[7 <./images/1_sphere.png> <./images/2_spheres.png>] [8 <./images/3_spheres.png
-> <./images/3_spheres_gen.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 285--286
+
+Underfull \hbox (badness 10000) in paragraph at lines 284--285
 
  []
 
@@ -1016,42 +1028,236 @@ Underfull \hbox (badness 10000) in paragraph at lines 287--288
 
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 290--291
+[9]
+Underfull \hbox (badness 10000) in paragraph at lines 357--360
 
  []
 
-[9]) (./3-Representations_moleculaires/distances_absolues.tex
+[10]) (./3-Representations_moleculaires/distances_absolues.tex
 Underfull \hbox (badness 10000) in paragraph at lines 3--5
 
  []
 
-[10]) [11]
+
+Underfull \hbox (badness 10000) in paragraph at lines 37--38
+
+ []
+
+[11]) (./3-Representations_moleculaires/loc_liaisons.tex [12]
+<images/classes_pos.png, id=285, 1113.15875pt x 737.75626pt>
+File: images/classes_pos.png Graphic file (type png)
+
+<use images/classes_pos.png>
+Package pdftex.def Info: images/classes_pos.png used on input line 14.
+(pdftex.def)             Requested size: 333.95021pt x 221.32858pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 19--21
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 29--30
+
+ []
+
+[13 <./images/classes_pos.png>]
+<images/mol_repliee.png, id=295, 760.8425pt x 669.50125pt>
+File: images/mol_repliee.png Graphic file (type png)
+
+<use images/mol_repliee.png>
+Package pdftex.def Info: images/mol_repliee.png used on input line 36.
+(pdftex.def)             Requested size: 190.21016pt x 167.3749pt.
+) [14 <./images/mol_repliee.png>]
 Chapitre 4.
-[12
+[15
 
 ]
 Chapitre 5.
-(./5-Conclusion/conclusion.tex) [13
-
-] [14
+[16
 
 ]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 151.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 151.
+Chapitre 6.
+(./6-Prediction_de_geometries_moleculaires_convergees/motivation.tex
+Underfull \hbox (badness 10000) in paragraph at lines 1--3
+
+ []
+
+[17
+
+]) (./6-Prediction_de_geometries_moleculaires_convergees/donnees.tex)
+(./6-Prediction_de_geometries_moleculaires_convergees/evaluation.tex)
+(./6-Prediction_de_geometries_moleculaires_convergees/architectures.tex)
+(./6-Prediction_de_geometries_moleculaires_convergees/optimisation.tex)
+(./6-Prediction_de_geometries_moleculaires_convergees/performances.tex)
+[18]
+Chapitre 7.
+(./7-Conclusion/conclusion.tex) [19
+
+] [20
+
+]
+Overfull \hbox (4.72337pt too wide) in paragraph at lines 184--184
+\T1/cmr/m/n/10 molécules 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 185--185
+[]\T1/cmr/m/n/10 Repr.
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 186--186
+[]\T1/cmr/m/n/10 Repr.
+ []
+
+
+Overfull \hbox (4.37775pt too wide) in paragraph at lines 187--187
+\T1/cmr/m/n/10 atomiques 
+ []
+
+
+Overfull \hbox (4.37775pt too wide) in paragraph at lines 188--188
+\T1/cmr/m/n/10 atomiques 
+ []
+
+
+Overfull \hbox (1.84677pt too wide) in paragraph at lines 191--191
+[]\T1/cmr/m/n/10 Profondeur 
+ []
+
+
+Overfull \hbox (4.69286pt too wide) in paragraph at lines 196--196
+[]\T1/cmr/m/n/10 DELTA_DIST+H_01
+ []
+
+
+Underfull \hbox (badness 1565) in paragraph at lines 198--198
+[]\T1/cmr/m/n/10 Matr. dist.
+ []
+
+
+Underfull \hbox (badness 1565) in paragraph at lines 199--199
+[]\T1/cmr/m/n/10 Matr. dist.
+ []
+
+
+Overfull \hbox (2.68846pt too wide) in paragraph at lines 203--203
+\T1/cmr/m/n/10 partiel/total 
+ []
+
+
+Overfull \hbox (2.71912pt too wide) in paragraph at lines 207--207
+[]\T1/cmr/m/n/10 +/++ 
+ []
+
+
+Overfull \hbox (4.69286pt too wide) in paragraph at lines 209--209
+[]\T1/cmr/m/n/10 DELTA_DIST+H_02
+ []
+
+
+Underfull \hbox (badness 1565) in paragraph at lines 211--211
+[]\T1/cmr/m/n/10 Matr. dist.
+ []
+
+
+Underfull \hbox (badness 1565) in paragraph at lines 212--212
+[]\T1/cmr/m/n/10 Matr. dist.
+ []
+
+
+Overfull \hbox (4.69286pt too wide) in paragraph at lines 222--222
+[]\T1/cmr/m/n/10 DELTA_DIST+H_03
+ []
+
+
+Underfull \hbox (badness 1565) in paragraph at lines 224--224
+[]\T1/cmr/m/n/10 Matr. dist.
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 224--224
+\T1/cmr/m/n/10 Matr red.
+ []
+
+
+Underfull \hbox (badness 3168) in paragraph at lines 224--224
+\T1/cmr/m/n/10 dist. inter-
+ []
+
+
+Underfull \hbox (badness 1565) in paragraph at lines 225--225
+[]\T1/cmr/m/n/10 Matr. dist.
+ []
+
+
+Overfull \hbox (4.69286pt too wide) in paragraph at lines 235--235
+[]\T1/cmr/m/n/10 DELTA_DIST+H_04
+ []
+
+
+Underfull \hbox (badness 1565) in paragraph at lines 237--237
+[]\T1/cmr/m/n/10 Matr. dist.
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 237--237
+\T1/cmr/m/n/10 Matr red.
+ []
+
+
+Underfull \hbox (badness 3168) in paragraph at lines 237--237
+\T1/cmr/m/n/10 dist. inter-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 238--238
+[]\T1/cmr/m/n/10 Matr red.
+ []
+
+
+Underfull \hbox (badness 3168) in paragraph at lines 238--238
+\T1/cmr/m/n/10 dist. inter-
+ []
+
+
+Overfull \hbox (4.69286pt too wide) in paragraph at lines 249--249
+[]\T1/cmr/m/n/10 DELTA_DIST+H_05
+ []
+
+
+Underfull \hbox (badness 1565) in paragraph at lines 251--251
+[]\T1/cmr/m/n/10 Matr. dist.
+ []
+
+
+Underfull \hbox (badness 1565) in paragraph at lines 252--252
+[]\T1/cmr/m/n/10 Matr. dist.
+ []
+
+
+Overfull \hbox (30.4729pt too wide) in paragraph at lines 181--264
+ [][] 
+ []
+
+[21
+
+]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 269.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 269.
  (./rapport.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 151.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 151.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 269.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 269.
 Package rerunfilecheck Info: File `rapport.out' has not changed.
-(rerunfilecheck)             Checksum: 3A9938EC8F15F4BD3878602F48E979D3;1008.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 151.
+(rerunfilecheck)             Checksum: 8AC346769685F2D64E3E67003B3284D6;2044.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 269.
  ) 
 Here is how much of TeX's memory you used:
- 12531 strings out of 494433
- 183128 string characters out of 6170337
- 311914 words of memory out of 5000000
- 15666 multiletter control sequences out of 15000+600000
- 23721 words of font info for 53 fonts, out of 8000000 for 9000
+ 12610 strings out of 494433
+ 184964 string characters out of 6170337
+ 311754 words of memory out of 5000000
+ 15689 multiletter control sequences out of 15000+600000
+ 24342 words of font info for 55 fonts, out of 8000000 for 9000
  286 hyphenation exceptions out of 8191
  53i,15n,92p,1286b,439s stack positions out of 5000i,500n,10000p,200000b,80000s
  </home/etudiant/.texmf-var/fonts/pk/ljfour/jknappen/ec/ectt0800.600pk> </hom
@@ -1081,10 +1287,10 @@ exmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texlive/texmf-dis
 t/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/font
 s/type1/public/amsfonts/cm/cmsy5.pfb></usr/share/texlive/texmf-dist/fonts/type1
 /public/amsfonts/cm/cmsy7.pfb>
-Output written on rapport.pdf (15 pages, 707553 bytes).
+Output written on rapport.pdf (22 pages, 900391 bytes).
 PDF statistics:
- 696 PDF objects out of 1000 (max. 8388607)
- 285 compressed objects within 3 object streams
- 60 named destinations out of 1000 (max. 500000)
- 141 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 870 PDF objects out of 1000 (max. 8388607)
+ 395 compressed objects within 4 object streams
+ 90 named destinations out of 1000 (max. 500000)
+ 255 words of extra memory for PDF output out of 10000 (max. 10000000)
 
