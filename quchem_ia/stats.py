@@ -175,7 +175,7 @@ def print_stats(errors, targets):
     print("Standard deviation : " + str(np.std(errors)))
     print("Min error : " + str(min(errors)))
     print("Max error : " + str(max(errors)))
-    print("Relative error : " + str(np.mean(np.divide(errors, targets))*100) + "%")
+    print("Relative error : " + str(np.divide(errors, targets)) + "%")
 
 
 def plot_model_results(errors, predictions, targets, model_name, anum_1, anum_2, bonds_lengths_loc, plots_dir,
