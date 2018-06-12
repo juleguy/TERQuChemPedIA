@@ -45,7 +45,8 @@
             "kernel": ["linear"],
             "alpha":[0.1, 0.01, 0.001],
             "coef0":[],
-            "gamma":[]
+            "gamma":[],
+            "degree":[]
           },
           {
             "kernel": ["poly"],
