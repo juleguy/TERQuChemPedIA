@@ -175,6 +175,10 @@ def print_stats(errors, targets):
     print("Standard deviation : " + str(np.std(errors)))
     print("Min error : " + str(min(errors)))
     print("Max error : " + str(max(errors)))
+
+    print(targets.shape)
+    print(errors.shape)
+
     print("Relative error : " + str(np.divide(errors, targets)) + "%")
 
 
