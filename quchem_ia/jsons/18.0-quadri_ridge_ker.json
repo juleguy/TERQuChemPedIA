@@ -9,7 +9,7 @@
   },
   "tasks":[
     {
-      "prepare_model_data": {
+      "prepare_model_data_IGNORED": {
         "selected_mols": {
           "mol_min_size": "2",
           "mol_max_size": "60",
@@ -44,9 +44,9 @@
           {
             "kernel": ["linear"],
             "alpha":[0.1, 0.01, 0.001],
-            "coef0":[],
-            "gamma":[],
-            "degree":[]
+            "coef0":[1],
+            "gamma":["None"],
+            "degree":[1]
           },
           {
             "kernel": ["poly"],
