@@ -170,7 +170,7 @@ def plot_targets_pred(targets, preds, anum_1, anum_2, model_name, figures_loc, b
 
 def print_stats(errors, targets):
 
-    targets.reshape((-1,))
+    targets = targets.reshape((-1,))
 
     print("Dataset size : " + str(len(errors)))
     print("Mean error : " + str(np.mean(errors)))
