@@ -69,8 +69,8 @@
       <file leaf-file-name="stats.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/stats.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="172">
-              <caret line="177" column="31" lean-forward="true" selection-start-line="177" selection-start-column="31" selection-end-line="177" selection-end-column="31" />
+            <state relative-caret-position="472">
+              <caret line="184" column="31" selection-start-line="184" selection-start-column="31" selection-end-line="184" selection-end-column="31" />
               <folding>
                 <element signature="e#0#31#0" expanded="true" />
               </folding>
@@ -412,17 +412,17 @@
     <layout>
       <window_info anchor="bottom" id="TODO" order="7" weight="0.32894737" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.13782051" side_tool="true" weight="0.39254385" />
-      <window_info anchor="right" x="0" y="0" width="430" height="853" id="Documentation" order="6" sideWeight="0.5208333" side_tool="true" visible="true" weight="0.17788461" />
+      <window_info anchor="right" x="0" y="0" width="430" height="853" id="Documentation" order="6" sideWeight="0.5206612" side_tool="true" visible="true" weight="0.17788461" />
       <window_info anchor="bottom" id="Database Changes" order="13" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="9" show_stripe_button="false" />
       <window_info anchor="bottom" id="Python Console" order="12" sideWeight="0.9166667" weight="0.4232456" />
       <window_info anchor="bottom" id="Run" order="3" sideWeight="0.8627137" weight="0.2752193" />
-      <window_info anchor="bottom" id="Terminal" order="11" sideWeight="0.8712607" weight="0.20394737" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="11" sideWeight="0.8712607" visible="true" weight="0.20394737" />
       <window_info content_ui="combo" id="Project" order="0" sideWeight="0.499187" visible="true" weight="0.17094018" />
       <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
       <window_info anchor="right" id="Database" order="3" weight="0.32959402" />
       <window_info anchor="bottom" id="Find" order="2" sideWeight="0.49839744" weight="0.32894737" />
-      <window_info anchor="right" id="SciView" order="4" sideWeight="0.47916666" visible="true" weight="0.17788461" />
+      <window_info anchor="right" id="SciView" order="4" sideWeight="0.47933885" visible="true" weight="0.17788461" />
       <window_info id="Structure" order="1" sideWeight="0.500813" side_tool="true" weight="0.16025642" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Debug" order="4" sideWeight="0.49893162" weight="0.3991228" />
@@ -836,8 +836,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/stats.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="172">
-          <caret line="177" column="31" lean-forward="true" selection-start-line="177" selection-start-column="31" selection-end-line="177" selection-end-column="31" />
+        <state relative-caret-position="472">
+          <caret line="184" column="31" selection-start-line="184" selection-start-column="31" selection-end-line="184" selection-end-column="31" />
           <folding>
             <element signature="e#0#31#0" expanded="true" />
           </folding>

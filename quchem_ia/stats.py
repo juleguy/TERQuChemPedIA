@@ -182,7 +182,7 @@ def plot_model_results(errors, predictions, targets, model_name, anum_1, anum_2,
                        plot_error_distrib, plot_targets_error_distrib, plot_targets_predictions, display_plots):
     print("Plotting " + model_name)
 
-    print_stats(errors)
+    print_stats(errors, targets)
 
     if not os.path.exists(plots_dir):
         os.makedirs(plots_dir)
