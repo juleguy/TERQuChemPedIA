@@ -40,8 +40,72 @@ Les modèles élaborés lors des stages antérieurs utilisaient la représentati
 
 Certains modèles sont entraînés avec un bruit plus important, tel que 68\% des atomes sont déplacés de 30 pm ou moins. On trouve alors avec la même méthode une valeur pour $\sigma$ de 17,32051. Dans la table des paramètres des modèles en annexe, le bruit faible est noté « + » et le bruit élevé est noté « ++ ».
 
-\subsubsection{Données de taille fixe}
+\subsubsection{Homogénéisation des tailles de données}
 
 Les modèles prédictifs possédant une entrée de taille fixe et les molécules une taille (nombre d'atomes) variable, nous devons adapter la représentation des molécules dont on tente de prédire la géométrie convergée pour fournir une représentation homogène de taille fixe.\\
-Le nombre de caratéristiques (\emph{features}) pour chaque atome d'une molécule et un modèle donné est fixe et dépend de la représentation utilisée. Nous ne décrivons ici en détail que la procédure de \emph{padding}\footnote{rembourrage} pour le modèle \emph{DELTA\_DIST\_+H\_01} car elle est semblable pour tous les modèles.
-La représentation géométrique par matrice des distances à des points fixes (REF MAT DIST PT FIXES) est composée de quatre valeurs par atome. Nous ajoutons en outre les masses atomique, ce qui fait un total de cinq caractéristiques par atome.
+Le nombre de caractéristiques (\emph{features}) pour chaque atome d'une molécule et un modèle donné est fixe et dépend de la représentation utilisée. Nous ne décrivons ici en détail que la procédure de \emph{padding}\footnote{rembourrage} pour le modèle \emph{DELTA\_DIST\_+H\_01} car elle est semblable pour tous les modèles.\\
+La représentation géométrique par matrice des distances à des points fixes (REF MAT DIST PT FIXES) est composée de quatre valeurs par atome. Nous ajoutons en outre les masses atomique, ce qui fait un total de cinq caractéristiques par atome. Pour obtenir une entrée de taille fixe, nous devons déterminer une taille maximale des atomes que l'on accepte dans le modèle. Cette borne est ici fixée à 200. La taille de l'entrée du modèle est alors le produit du nombre de caractéristiques et de la taille maximale des molécules soit ici 1000. Lorsqu'une molécule est de taille inférieure à la taille maximale, les caractéristiques des atomes non définis sont fixées à zéro. Une schématisation de cette entrée est donnée dans la figure suivante.
+
+\begin{figure}[!h]
+	\centering
+	
+	\begin{tabular}{|c|}
+		\hline
+		$d_{a_1,p_0}$ \\ \hline
+		$d_{a_1,p_1}$ \\ \hline
+		$d_{a_1,p_2}$ \\ \hline
+		$d_{a_1,p_3}$ \\ \hline
+		$m_{a_1}$ \\ \hline
+		\rot{... } \\ \hline
+		$d_{a_n,p_0}$ \\ \hline
+		$d_{a_n,p_1}$ \\ \hline
+		$d_{a_n,p_2}$ \\ \hline
+		$d_{a_n,p_3}$ \\ \hline
+		$m_{a_n}$ \\ \hline
+		0 \\ \hline
+		\rot{... } \\ \hline
+		0 \\ \hline		
+	\end{tabular}
+
+	\caption{Entrée du modèle \emph{DELTA\_DIST\_+H\_01} pour une molécule de taille n}
+\end{figure}
+
+\par De même, la sortie du modèle est de taille fixe, mais n'est composée que des valeurs propres à la matrice de distances à des points fixes. À la différence de l'entrée, nous n'attendons pas que les valeurs concernant les atomes non définis soit nulles (REF EVALUATION). Une schématisation de la sortie est donnée dans la figure suivante.
+
+\begin{figure}[!h]
+	\centering
+	
+	\begin{tabular}{|c|}
+		\hline
+		$d_{a'_1,p_0}$ \\ \hline
+		$d_{a'_1,p_1}$ \\ \hline
+		$d_{a'_1,p_2}$ \\ \hline
+		$d_{a'_1,p_3}$ \\ \hline
+		\rot{... } \\ \hline
+		$d_{a'_n,p_0}$ \\ \hline
+		$d_{a'_n,p_1}$ \\ \hline
+		$d_{a'_n,p_2}$ \\ \hline
+		$d_{a'_n,p_3}$ \\ \hline
+		? \\ \hline
+		\rot{... } \\ \hline
+		? \\ \hline		
+	\end{tabular}
+
+	\caption{Sortie du modèle \emph{DELTA\_DIST\_+H\_01} pour une molécule de taille n}
+\end{figure}
+
+\subsubsection{Unités}
+\par De même que pour les modèles prédisant les longueurs de liaisons (REF UNITES DIST\_REL), les modèles décrits ici effectuent leurs prédictions en mÅ, afin d'évaluer des prédictions dans un ordre de grandeur de $10^2$ et d'éviter que la fonction d'évaluation (REF EVALUATION) contenant un carré ne soit influencée par la présence de valeurs proches de zéro.
+
+\subsubsection{Synthèse du flux de données}
+\par Le flux de données général des modèles est donc le suivant. On extrait les caractéristiques d'une molécule (géométrie et différentes propriétés atomiques des atomes), on ajoute du bruit à la géométrie puis on tente de prédire le vecteur bruit. La différence entre la géométrie bruitée et le vecteur bruit donne enfin la géométrie convergée prédite par le modèle. Ce flux est synthétisé dans le schéma suivant.
+
+\vspace{0.5cm}
+
+\begin{figure}[!h]
+	\centering
+	
+	\includegraphics[scale=0.35]{images/flux_donnees.png}
+	
+	\caption{Flux de données des modèles \emph{DELTA\_DIST+H} pour une molécule de taille 4}
+\end{figure}

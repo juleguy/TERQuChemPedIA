@@ -69,8 +69,8 @@
       <file leaf-file-name="stats.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/stats.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="400">
-              <caret line="66" column="69" selection-start-line="66" selection-start-column="69" selection-end-line="66" selection-end-column="69" />
+            <state relative-caret-position="172">
+              <caret line="177" column="31" lean-forward="true" selection-start-line="177" selection-start-column="31" selection-end-line="177" selection-end-column="31" />
               <folding>
                 <element signature="e#0#31#0" expanded="true" />
               </folding>
@@ -87,11 +87,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="13.1-dist_rel_c_02_stats.json" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/jsons/13.1-dist_rel_c_02_stats.json">
+      <file leaf-file-name="16.2-quadri_svm.json" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/jsons/16.2-quadri_svm.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="162">
-              <caret line="9" column="23" selection-end-line="33" selection-end-column="1" />
+            <state relative-caret-position="424">
+              <caret line="59" column="36" lean-forward="true" selection-start-line="59" selection-start-column="36" selection-end-line="59" selection-end-column="36" />
             </state>
           </provider>
         </entry>
@@ -397,22 +397,32 @@
     </task>
     <servers />
   </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+  </component>
   <component name="ToolWindowManager">
     <frame x="0" y="27" width="1920" height="1053" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info anchor="bottom" id="TODO" order="7" />
+      <window_info anchor="bottom" id="TODO" order="7" weight="0.32894737" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.13782051" side_tool="true" weight="0.39254385" />
-      <window_info anchor="right" x="0" y="0" width="430" height="853" id="Documentation" order="6" sideWeight="0.5206612" side_tool="true" visible="true" weight="0.17788461" />
+      <window_info anchor="right" x="0" y="0" width="430" height="853" id="Documentation" order="6" sideWeight="0.5208333" side_tool="true" visible="true" weight="0.17788461" />
       <window_info anchor="bottom" id="Database Changes" order="13" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="9" show_stripe_button="false" />
       <window_info anchor="bottom" id="Python Console" order="12" sideWeight="0.9166667" weight="0.4232456" />
       <window_info anchor="bottom" id="Run" order="3" sideWeight="0.8627137" weight="0.2752193" />
-      <window_info anchor="bottom" id="Terminal" order="11" sideWeight="0.8712607" visible="true" weight="0.20394737" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.499187" visible="true" weight="0.17094018" />
+      <window_info anchor="bottom" id="Terminal" order="11" sideWeight="0.8712607" weight="0.20394737" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.499187" visible="true" weight="0.17094018" />
       <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
       <window_info anchor="right" id="Database" order="3" weight="0.32959402" />
-      <window_info anchor="right" id="SciView" order="4" sideWeight="0.47933885" visible="true" weight="0.17788461" />
+      <window_info anchor="bottom" id="Find" order="2" sideWeight="0.49839744" weight="0.32894737" />
+      <window_info anchor="right" id="SciView" order="4" sideWeight="0.47916666" visible="true" weight="0.17788461" />
       <window_info id="Structure" order="1" sideWeight="0.500813" side_tool="true" weight="0.16025642" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Debug" order="4" sideWeight="0.49893162" weight="0.3991228" />
@@ -423,7 +433,6 @@
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="bottom" id="Message" order="1" />
       <window_info anchor="bottom" id="Cvs" order="5" weight="0.25" />
-      <window_info anchor="bottom" id="Find" order="2" sideWeight="0.49839744" weight="0.32894737" />
       <window_info anchor="bottom" id="Concurrent Activities Diagram" order="0" sideWeight="0.49946582" weight="0.32894737" />
     </layout>
     <layout-to-restore>
@@ -738,13 +747,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/jsons/16.2-quadri_svm.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="190">
-          <caret line="46" column="38" selection-start-line="46" selection-start-column="37" selection-end-line="46" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/jsons/14.5-train_dist_rel_ch_03.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="54">
@@ -825,10 +827,17 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/jsons/16.2-quadri_svm.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="424">
+          <caret line="59" column="36" lean-forward="true" selection-start-line="59" selection-start-column="36" selection-end-line="59" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/stats.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="400">
-          <caret line="66" column="69" selection-start-line="66" selection-start-column="69" selection-end-line="66" selection-end-column="69" />
+        <state relative-caret-position="172">
+          <caret line="177" column="31" lean-forward="true" selection-start-line="177" selection-start-column="31" selection-end-line="177" selection-end-column="31" />
           <folding>
             <element signature="e#0#31#0" expanded="true" />
           </folding>

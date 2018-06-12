@@ -25,7 +25,7 @@ En fonction des modèles qui l'utilisent, on va éventuellement appliquer une fo
 \item{Fonction inverse du carré : influence inversement proportionnelle au carré de la distance, relation d'ordre identique à la réalité chimique et rend mieux compte de l'influence réelle des atomes qui suit la loi de Coulomb\footnote{\url{https://fr.wikipedia.org/wiki/Loi_de_Coulomb_(électrostatique)}} en $\frac{1}{d^2}$.}
 \end{itemize}
 
-\subsection{Sélection de l'information la plus pertinente}
+\subsection{Restriction au voisinage le plus proche}
 \par L'influence des atomes au voisinage de la liaison étant proportionnelle à l'inverse du carré de leurs distances aux atomes de la liaison, elle décroît rapidement lorsque l'on s'éloigne de la liaison. L'influence des atomes n'étant pas au voisinage direct est ainsi négligeable. Dans le but de ne pas saturer l'entrée des modèles d'information inutile, nous n'enregistrons alors que les informations (classes positionnelles, distances et autres informations non géométriques spécifiques aux différents modèles) concernant les atomes au voisinage proche de la liaison. Formellement, nous enregistrons ces informations pour les atomes dont la distance à au moins un des atomes de la liaison est inférieure à un seuil $\epsilon$  donné.\\
 
 \par Un autre avantage de cette sélection est qu'il existe des molécules aux géométries particulières (repliées) telles que des atomes au voisinage d'une liaison ont très peu d'influence sur sa longueur (ne forment aucune liaison covalente avec les deux atomes de la liaison), et dont la proximité va induire les modèles en erreur. La sélection des atomes au voisinage le plus proche de la liaison avec un seuil $\epsilon$ bien choisi va permettre de résoudre ces problèmes.

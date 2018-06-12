@@ -168,20 +168,21 @@ def plot_targets_pred(targets, preds, anum_1, anum_2, model_name, figures_loc, b
         plt.show()
 
 
-def print_stats_errors(errors):
+def print_stats(errors, targets):
     print("Dataset size : " + str(len(errors)))
     print("Mean error : " + str(np.mean(errors)))
     print("Median error : " + str(np.median(errors)))
     print("Standard deviation : " + str(np.std(errors)))
     print("Min error : " + str(min(errors)))
     print("Max error : " + str(max(errors)))
+    print("Relative error : " + str(np.mean(np.divide(errors, targets)*100)) + "%")
 
 
 def plot_model_results(errors, predictions, targets, model_name, anum_1, anum_2, bonds_lengths_loc, plots_dir,
                        plot_error_distrib, plot_targets_error_distrib, plot_targets_predictions, display_plots):
     print("Plotting " + model_name)
 
-    print_stats_errors(errors)
+    print_stats(errors)
 
     if not os.path.exists(plots_dir):
         os.makedirs(plots_dir)

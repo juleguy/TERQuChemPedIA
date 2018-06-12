@@ -14,7 +14,7 @@
 \BOOKMARK [2][-]{subsection.3.4.1}{Motivation}{section.3.4}% 14
 \BOOKMARK [2][-]{subsection.3.4.2}{Classes positionnelles}{section.3.4}% 15
 \BOOKMARK [2][-]{subsection.3.4.3}{Distances aux atomes de la liaison}{section.3.4}% 16
-\BOOKMARK [2][-]{subsection.3.4.4}{S\351lection de l'information la plus pertinente}{section.3.4}% 17
+\BOOKMARK [2][-]{subsection.3.4.4}{Restriction au voisinage le plus proche}{section.3.4}% 17
 \BOOKMARK [0][-]{chapter.4}{Donnees}{}% 18
 \BOOKMARK [0][-]{chapter.5}{Pr\351diction de longueurs de liaisons converg\351es}{}% 19
 \BOOKMARK [0][-]{chapter.6}{Pr\351diction de g\351om\351tries mol\351culaires converg\351es}{}% 20
@@ -29,4 +29,4 @@
 \BOOKMARK [2][-]{subsection.6.2.4}{Optimisation des mod\350les}{section.6.2}% 29
 \BOOKMARK [1][-]{section.6.3}{R\351sultats}{chapter.6}% 30
 \BOOKMARK [0][-]{chapter.7}{Conclusion}{}% 31
-\BOOKMARK [0][-]{section*.32}{Appendices}{}% 32
+\BOOKMARK [0][-]{section*.35}{Appendices}{}% 32
