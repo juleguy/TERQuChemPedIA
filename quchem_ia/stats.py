@@ -55,8 +55,8 @@ def _colorbar_bonds_lengths_representation(ax, targets, bonds_lengths_loc):
 
     hist_bonds = np.histogram(bonds_lengths * 100, np.arange(min(targets), max(targets), 0.001))[0]
 
-    # Clipping the values in the interval [0, half of max]
-    hist_bonds = np.exp(hist_bonds)
+    # Applying exponential
+    #hist_bonds = np.exp(hist_bonds)
 
     cmap = mpl.cm.bwr_r
 
