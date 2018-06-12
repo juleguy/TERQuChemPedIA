@@ -144,23 +144,27 @@
 \chapter{Prédiction de longueurs de liaisons convergées}
 
 \chapter{Prédiction de géométries moléculaires convergées}
-	\section{Motivation et méthodologie}
-		\input{6-Prediction_de_geometries_moleculaires_convergees/motivation.tex}
-		
-	 \section{Données}
-		\input{6-Prediction_de_geometries_moleculaires_convergees/donnees.tex}
 
-	\section{Évaluation des performances}
-		\input{6-Prediction_de_geometries_moleculaires_convergees/evaluation.tex}
+	\section{Introduction}
+		\subsection{Motivation}
+			\input{6-Prediction_de_geometries_moleculaires_convergees/introduction/motivation.tex}
+		\subsection{Méthodologie}
+			\input{6-Prediction_de_geometries_moleculaires_convergees/introduction/methodologie.tex}
+		\subsection{Nomenclature}
+			\input{6-Prediction_de_geometries_moleculaires_convergees/introduction/nomenclature.tex}
+			
+	\section{Données et paramètres des modèles}
+		\subsection{Données}
+			\input{6-Prediction_de_geometries_moleculaires_convergees/modeles/donnees.tex}
+		\subsection{Fonctions d'évaluation}
+			\input{6-Prediction_de_geometries_moleculaires_convergees/modeles/evaluation.tex}	
+		\subsection{Architectures}
+			\input{6-Prediction_de_geometries_moleculaires_convergees/modeles/architectures.tex}
+		\subsection{Optimisation des modèles}
+			\input{6-Prediction_de_geometries_moleculaires_convergees/modeles/optimisation.tex}
 		
-	\section{Architectures}
-		\input{6-Prediction_de_geometries_moleculaires_convergees/architectures.tex}
-		
-	\section{Optimisation des modèles}
-		\input{6-Prediction_de_geometries_moleculaires_convergees/optimisation.tex}
-		
-	\section{Performances}
-		\input{6-Prediction_de_geometries_moleculaires_convergees/performances.tex}
+	\section{Résultats}
+		\input{6-Prediction_de_geometries_moleculaires_convergees/resultats/performances.tex}
 
 
 
@@ -180,7 +184,7 @@
 
 \begin{tabular}{|c|c|c|c|c|c|c|c|c|c|c|c|}
 \hline
-\begin{minipage}{3.3cm} \vspace{5mm}Modèle\vspace{5mm}\end{minipage} & 
+\begin{minipage}{3.5cm} \vspace{5mm}Modèle\vspace{5mm}\end{minipage} & 
 \begin{minipage}{1.3cm}Tailles \\molécules\end{minipage} & 
 \begin{minipage}{1.8cm}Repr. géom.\\ entrée\end{minipage} & 
 \begin{minipage}{1.8cm}Repr. géom.\\ sortie \end{minipage} & 
@@ -193,8 +197,8 @@
 \begin{minipage}{1cm}Taille\\ entrée \end{minipage} & 
 \begin{minipage}{0.9cm}Bruit \end{minipage} \\  \hline
 
-\begin{minipage}{3.3cm}\vspace{5mm}DELTA\_DIST+H\_01 \vspace{1mm} \end{minipage} &
-\begin{minipage}{1.3cm}0 - $\infty$ \end{minipage} &
+\begin{minipage}{3.5cm}\vspace{5mm}DELTA\_DIST+H\_01 \vspace{1mm} \end{minipage} &
+\begin{minipage}{1.3cm}0 - 200 \end{minipage} &
 \begin{minipage}{1.8cm}Matr. dist. pts. fixes \end{minipage} &
 \begin{minipage}{1.8cm}Matr. dist. pts. fixes \end{minipage} &
 \begin{minipage}{1.4cm}Non \end{minipage} &
@@ -206,8 +210,8 @@
 \begin{minipage}{1cm}1000 \end{minipage} &
 \begin{minipage}{0.9cm}+/++ \end{minipage} \\  \hline
 
-\begin{minipage}{3.3cm}\vspace{5mm}DELTA\_DIST+H\_02 \vspace{1mm} \end{minipage} &
-\begin{minipage}{1.3cm}0 - $\infty$ \end{minipage} &
+\begin{minipage}{3.5cm}\vspace{5mm}DELTA\_DIST+H\_02 \vspace{1mm} \end{minipage} &
+\begin{minipage}{1.3cm}0 - 200 \end{minipage} &
 \begin{minipage}{1.8cm}Matr. dist. pts. fixes \end{minipage} &
 \begin{minipage}{1.8cm}Matr. dist. pts. fixes \end{minipage} &
 \begin{minipage}{1.4cm}Non \end{minipage} &
@@ -220,7 +224,7 @@
 \begin{minipage}{0.9cm}+ \end{minipage} \\  \hline
 
 \begin{minipage}{3.3cm}\vspace{1cm}DELTA\_DIST+H\_03 \vspace{5mm} \end{minipage} &
-\begin{minipage}{1.3cm}0 - $\infty$ \end{minipage} &
+\begin{minipage}{1.3cm}0 - 200 \end{minipage} &
 \begin{minipage}{1.8cm}Matr. dist. pts. fixes + \\ Matr red. dist. inter-at. \end{minipage} &
 \begin{minipage}{1.8cm}Matr. dist. pts. fixes \end{minipage} &
 \begin{minipage}{1.4cm}Non \end{minipage} &
@@ -232,8 +236,8 @@
 \begin{minipage}{1cm}1800\end{minipage} &
 \begin{minipage}{0.9cm}++ \end{minipage} \\  \hline
 
-\begin{minipage}{3.3cm}\vspace{1cm}DELTA\_DIST+H\_04 \vspace{5mm} \end{minipage} &
-\begin{minipage}{1.3cm}0 - $\infty$ \end{minipage} &
+\begin{minipage}{3.5cm}\vspace{1cm}DELTA\_DIST+H\_04 \vspace{5mm} \end{minipage} &
+\begin{minipage}{1.3cm}0 - 200 \end{minipage} &
 \begin{minipage}{1.8cm}Matr. dist. pts. fixes + \\ Matr red. dist. inter-at. \end{minipage} &
 \begin{minipage}{1.8cm} Matr red. dist. inter-at. \end{minipage} &
 \begin{minipage}{1.4cm}Non \end{minipage} &
@@ -246,7 +250,7 @@
 \begin{minipage}{0.9cm}++ \end{minipage} \\  \hline
 
 
-\begin{minipage}{3.3cm}\vspace{1cm}DELTA\_DIST+H\_05 \vspace{5mm} \end{minipage} &
+\begin{minipage}{3.5cm}\vspace{1cm}DELTA\_DIST+H\_05 \vspace{5mm} \end{minipage} &
 \begin{minipage}{1.3cm}2 - 60 \end{minipage} &
 \begin{minipage}{1.8cm}Matr. dist. pts. fixes \end{minipage} &
 \begin{minipage}{1.8cm}Matr. dist. pts. fixes \end{minipage} &

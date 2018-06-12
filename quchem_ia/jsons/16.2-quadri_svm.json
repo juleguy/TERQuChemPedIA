@@ -22,7 +22,7 @@
         },
         "params": {
           "wished_train_size": "40000",
-          "wished_test_size": "1",
+          "wished_test_size": "100",
           "pos_class": "True",
           "one_hot_anums": "True",
           "amasses": "True",
@@ -37,35 +37,35 @@
       "grid_search_cv":{
         "params":{
           "model_type":"SVM",
-          "n_jobs":"20",
+          "n_jobs":"30",
           "cv":"3"
         },
         "grid_params":[
           {
             "kernel": ["linear"],
-            "epsilon": [0.1, 0.01, 0.001, 0.0001],
-            "coef0": [0, 0.01, 0.1, 0.25, 0.5, 1],
+            "epsilon": [0.1, 0.001],
+            "coef0": [0, 0.1, 0.5, 1],
             "shrinking": ["True", "False"],
-            "tol": [0.0001, 0.001, 0.01, 0.1],
+            "tol": [0.001, 0.01],
             "cache_size": [500],
             "verbose": ["True"],
             "max_iter": [-1],
             "degree": [1],
             "gamma": ["auto"],
-            "C": [1, 0.1, 0.01]
+            "C": [1, 0.01]
           },
           {
             "kernel": ["poly"],
             "degree": [2, 6],
-            "epsilon": [0.1, 0.01, 0.001, 0.0001],
-            "gamma": ["auto", 0.002, 0.001, 0.01],
-            "coef0": [0, 0.01, 0.1, 0.25, 0.5, 1],
+            "epsilon": [0.1, 0.001],
+            "gamma": ["auto", 0.001, 0.01],
+            "coef0": [0, 0.1, 0.5, 1],
             "shrinking": ["True", "False"],
-            "tol": [0.0001, 0.001, 0.01, 0.1],
+            "tol": [0.001, 0.01],
             "cache_size": [500],
             "verbose": ["True"],
             "max_iter": [-1],
-            "C": [1, 0.1, 0.01]
+            "C": [1, 0.01]
           }
         ]
       }
