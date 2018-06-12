@@ -37,12 +37,13 @@
       }
     },
     {
-      "model_train_IGNORED": {
+      "model_train": {
         "model_name": "DIST_REL_C_Ker_Ridge_01",
         "model_type": "kernel_ridge",
         "params": {
           "alpha":"0.001",
-          "kernel":"linear",
+          "kernel":"poly",
+          "degree":"2",
           "gamma":"None",
           "coef0":"1",
           "save_model":"True"

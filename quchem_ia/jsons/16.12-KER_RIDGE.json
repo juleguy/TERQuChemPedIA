@@ -42,8 +42,9 @@
         "model_type":"kernel_ridge",
         "params":{
           "alpha":"0.01",
-          "kernel":"linear",
+          "kernel":"poly",
           "gamma":"None",
+          "degree":"2",
           "coef0":"1",
           "save_model":"True"
         }
@@ -59,8 +60,6 @@
           "plot_error_distrib": "True",
           "plot_targets_error_distrib": "True",
           "plot_targets_predictions": "True",
-          "asymb_1": "C",
-          "asymb_2": "C",
           "batch_size": "1060",
           "display_plots":"True"
         }

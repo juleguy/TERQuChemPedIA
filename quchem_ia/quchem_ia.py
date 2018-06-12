@@ -608,6 +608,12 @@ def _grid_search_cv(grid_search_json):
         ridge_params = [alpha_k, kernel_k, gamma_k, degree_k, coef0_k]
         _check_grid(ridge_params, grid_params)
 
+        # Converting "None" into None
+        for grid in grid_params:
+            for i, val in enumerate(grid["gamma"]):
+                if val == "None":
+                    grid["gamma"][i] = None
+
     # Grid search
     grid_search_cv(model_type, paths.train_prepared_input_loc, paths.train_labels_loc, grid_params, cv, n_jobs)
 
