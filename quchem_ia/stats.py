@@ -65,7 +65,6 @@ def _colorbar_bonds_lengths_representation(ax, targets, bonds_lengths_loc):
     ax.set_xticklabels([])
 
     cb1 = mpl.colorbar.ColorbarBase(ax, cmap=cmap, values=hist_bonds,
-                                    norm=norm,
                                     orientation='horizontal')
 
     cb1.set_label('Bond lengths representation')

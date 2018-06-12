@@ -30,15 +30,6 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="14.7-stats_dist_rel_xy_03.json" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/jsons/14.7-stats_dist_rel_xy_03.json">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="244">
-              <caret line="54" column="8" selection-start-line="54" selection-start-column="8" selection-end-line="54" selection-end-column="8" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="17.0-train_dist_rel_c_05.json" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/jsons/17.0-train_dist_rel_c_05.json">
           <provider selected="true" editor-type-id="text-editor">
@@ -78,11 +69,20 @@
       <file leaf-file-name="stats.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/stats.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="256">
-              <caret line="58" column="5" selection-start-line="58" selection-start-column="5" selection-end-line="58" selection-end-column="5" />
+            <state relative-caret-position="400">
+              <caret line="66" column="69" selection-start-line="66" selection-start-column="69" selection-end-line="66" selection-end-column="69" />
               <folding>
                 <element signature="e#0#31#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="bonds_lengths_stats.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/bonds_lengths_stats.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-914">
+              <caret line="1" selection-start-line="1" selection-end-line="1" />
             </state>
           </provider>
         </entry>
@@ -99,7 +99,7 @@
       <file leaf-file-name="quchem_ia.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/quchem_ia.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="184">
+            <state relative-caret-position="1336">
               <caret line="651" lean-forward="true" selection-start-line="651" selection-end-line="651" />
               <folding>
                 <element signature="e#0#11#0" expanded="true" />
@@ -408,8 +408,8 @@
       <window_info anchor="bottom" id="Version Control" order="9" show_stripe_button="false" />
       <window_info anchor="bottom" id="Python Console" order="12" sideWeight="0.9166667" weight="0.4232456" />
       <window_info anchor="bottom" id="Run" order="3" sideWeight="0.8627137" weight="0.2752193" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="11" sideWeight="0.8712607" visible="true" weight="0.20394737" />
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.499187" visible="true" weight="0.17094018" />
+      <window_info anchor="bottom" id="Terminal" order="11" sideWeight="0.8712607" visible="true" weight="0.20394737" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.499187" visible="true" weight="0.17094018" />
       <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
       <window_info anchor="right" id="Database" order="3" weight="0.32959402" />
       <window_info anchor="right" id="SciView" order="4" sideWeight="0.47933885" visible="true" weight="0.17788461" />
@@ -472,13 +472,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/bonds_lengths_stats.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="18">
-          <caret line="1" selection-start-line="1" selection-end-line="1" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/jsons/14.1-train_dist_rel_ch_02.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="324">
@@ -801,16 +794,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/quchem_ia.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="184">
-          <caret line="651" lean-forward="true" selection-start-line="651" selection-end-line="651" />
-          <folding>
-            <element signature="e#0#11#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/jsons/17.0-train_dist_rel_c_05.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="88">
@@ -825,10 +808,27 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/bonds_lengths_stats.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-914">
+          <caret line="1" selection-start-line="1" selection-end-line="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/quchem_ia.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1336">
+          <caret line="651" lean-forward="true" selection-start-line="651" selection-end-line="651" />
+          <folding>
+            <element signature="e#0#11#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/stats.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="256">
-          <caret line="58" column="5" selection-start-line="58" selection-start-column="5" selection-end-line="58" selection-end-column="5" />
+        <state relative-caret-position="400">
+          <caret line="66" column="69" selection-start-line="66" selection-start-column="69" selection-end-line="66" selection-end-column="69" />
           <folding>
             <element signature="e#0#31#0" expanded="true" />
           </folding>
