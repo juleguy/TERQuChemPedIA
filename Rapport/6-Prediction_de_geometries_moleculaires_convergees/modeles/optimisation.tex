@@ -1,0 +1,28 @@
+
+\par En plus du choix des données d'entrée, la performance des réseaux de neurones dépend de nombreux paramètres (REF PARAMS RN). Les résultats des modèles décrits dans ce chapitre étant peu probants (REF RESULTATS), j'ai effectué une recherche par quadrillage (REF RECHERCHE QUADRI) large des différents paramètres pour le modèle \emph{DELTA\_DIST\_+H\_05}, avec l'objectif de trouver un ensemble de paramètres menant à de meilleures performances. De même que pour les modèles décrits dans le chapitre précédent (REF QUADRI DIST REL), le temps d'exécution de l'entraînement d'un modèle limite grandement la possibilité d'entraîner des modèles avec des jeux de paramètres variés et un nombre élevé de validations croisées (REF VALID CROISEE) en un temps raisonnable. Il faut donc effectuer un compromis entre la quantité de modèles différents entraînés et le nombre d'entraînements de chacun de ces modèles. L'objectif ici étant de trouver un jeu de paramètres menant à de bonnes performances, dans l'idée de le perfectionner et de le valider par la suite s'il existe, la priorité est donnée au nombre de jeux de paramètres différents plutôt qu'au nombre de validations de chacun de ces jeux.
+
+\par Cette recherche par quadrillage est toutefois relativement large car elle est composée d'une grille décrivant les paramètres de 576 modèles différents avec deux validations croisées, soit un total de 1152 entraînements pendant environ cinq jours. La grille se veut également large car elle fait varier la plupart des paramètres avec des amplitudes relativement élevées.
+
+\begin{figure}
+	\centering
+	
+	\begin{tabular}{|l|l|}
+		\hline
+		\textbf{Paramètres} & \textbf{Valeurs} \\ \hline 
+		Taux d'apprentissage (\textit{learning rate}) & 0.1, 0.0001, 0.00001 \\ \hline
+		Epsilon & 1000, 0.0001 \\ \hline
+		Initialisation poids & 0.2, 0.002 \\ \hline
+		Fonction d'activation couches cachées & elu, crelu \\ \hline
+		Fonction d'activation couche de sortie & linéaire \\ \hline
+		Dégradation des coefficients (\textit{weight decay}) & 0.1, 0.01, 0.001 \\ \hline
+		Largeur & 500 \\ \hline
+		Profondeur & 7, 3 \\ \hline
+		Taille de lot (\textit{batch}) & 500, 2000\\ \hline
+		Époques d'entraînement & 3 \\ \hline
+		
+	\end{tabular}		
+	
+	\caption{Grille de recherche par quadrillage pour le modèle \emph{DELTA\_DIST\_+H\_05}}
+\end{figure}
+
+\par À l'issue de la recherche, aucun ensemble de paramètres n'a mené à de meilleures performances que les modèles précédemment entraînés.

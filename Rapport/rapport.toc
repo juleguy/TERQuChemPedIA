@@ -28,7 +28,7 @@
 \contentsline {subsection}{\numberline {3.4.2}Classes positionnelles}{12}{subsection.3.4.2}
 \contentsline {subsection}{\numberline {3.4.3}Distances aux atomes de la liaison}{13}{subsection.3.4.3}
 \contentsline {subsection}{\numberline {3.4.4}Restriction au voisinage le plus proche}{13}{subsection.3.4.4}
-\contentsline {chapter}{\numberline {4}Donnees}{15}{chapter.4}
+\contentsline {chapter}{\numberline {4}Donn\IeC {\'e}es}{15}{chapter.4}
 \contentsline {chapter}{\numberline {5}Pr\IeC {\'e}diction de longueurs de liaisons converg\IeC {\'e}es}{16}{chapter.5}
 \contentsline {chapter}{\numberline {6}Pr\IeC {\'e}diction de g\IeC {\'e}om\IeC {\'e}tries mol\IeC {\'e}culaires converg\IeC {\'e}es}{17}{chapter.6}
 \contentsline {section}{\numberline {6.1}Introduction}{17}{section.6.1}
@@ -53,7 +53,14 @@
 \contentsline {subsubsection}{\numberline {6.2.2.2}Fonctions de validation}{22}{subsubsection.6.2.2.2}
 \contentsline {subsubsection}{\numberline {6.2.2.3}Erreur introduite par le bruit}{22}{subsubsection.6.2.2.3}
 \contentsline {subsection}{\numberline {6.2.3}Architectures}{22}{subsection.6.2.3}
-\contentsline {subsection}{\numberline {6.2.4}Optimisation des mod\IeC {\`e}les}{22}{subsection.6.2.4}
-\contentsline {section}{\numberline {6.3}R\IeC {\'e}sultats}{22}{section.6.3}
-\contentsline {chapter}{\numberline {7}Conclusion}{23}{chapter.7}
-\contentsline {chapter}{Appendices}{23}{section*.35}
+\contentsline {subsection}{\numberline {6.2.4}Optimisation des param\IeC {\`e}tres}{22}{subsection.6.2.4}
+\contentsline {section}{\numberline {6.3}R\IeC {\'e}sultats}{23}{section.6.3}
+\contentsline {subsection}{\numberline {6.3.1}Estimation des performances lors de l'entra\IeC {\^\i }nement}{23}{subsection.6.3.1}
+\contentsline {subsection}{\numberline {6.3.2}Analyse d\IeC {\'e}taill\IeC {\'e}e d'un mod\IeC {\`e}le}{23}{subsection.6.3.2}
+\contentsline {subsubsection}{\numberline {6.3.2.1}Analyse statistique}{23}{subsubsection.6.3.2.1}
+\contentsline {subsubsection}{\numberline {6.3.2.2}Distribution de l'erreur absolue}{24}{subsubsection.6.3.2.2}
+\contentsline {subsubsection}{\numberline {6.3.2.3}Distribution de l'erreur absolue en fonction des cibles}{24}{subsubsection.6.3.2.3}
+\contentsline {subsubsection}{\numberline {6.3.2.4}Distribution des pr\IeC {\'e}dictions en fonctions des cibles}{25}{subsubsection.6.3.2.4}
+\contentsline {subsection}{\numberline {6.3.3}Abandon de la m\IeC {\'e}thode}{26}{subsection.6.3.3}
+\contentsline {chapter}{\numberline {7}Conclusion}{28}{chapter.7}
+\contentsline {chapter}{Appendices}{29}{section*.44}

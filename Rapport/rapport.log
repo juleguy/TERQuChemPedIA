@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2018.4.26)  12 JUN 2018 18:11
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2018.4.26)  14 JUN 2018 16:24
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -801,7 +801,7 @@ Package: lscape 2000/10/22 v3.01 Landscape Pages (DPC)
 )
 Package pdflscape Info: Auto-detected driver: pdftex on input line 80.
 )
-Package hyperref Info: Option `colorlinks' set `true' on input line 38.
+Package hyperref Info: Option `colorlinks' set `true' on input line 39.
 
 (/usr/share/texlive/texmf-dist/tex/latex/geometry/geometry.sty
 Package: geometry 2010/09/12 v5.6 Page Geometry
@@ -820,23 +820,23 @@ Package: geometry 2010/09/12 v5.6 Page Geometry
 ) (./rapport.aux)
 \openout1 = `rapport.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 81.
-LaTeX Font Info:    ... okay on input line 81.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 81.
-LaTeX Font Info:    ... okay on input line 81.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 81.
-LaTeX Font Info:    ... okay on input line 81.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 81.
-LaTeX Font Info:    ... okay on input line 81.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 81.
-LaTeX Font Info:    ... okay on input line 81.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 81.
-LaTeX Font Info:    ... okay on input line 81.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 81.
-LaTeX Font Info:    ... okay on input line 81.
-LaTeX Info: Redefining \degres on input line 81.
-LaTeX Info: Redefining \dots on input line 81.
-LaTeX Info: Redefining \up on input line 81.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 82.
+LaTeX Font Info:    ... okay on input line 82.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 82.
+LaTeX Font Info:    ... okay on input line 82.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 82.
+LaTeX Font Info:    ... okay on input line 82.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 82.
+LaTeX Font Info:    ... okay on input line 82.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 82.
+LaTeX Font Info:    ... okay on input line 82.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 82.
+LaTeX Font Info:    ... okay on input line 82.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 82.
+LaTeX Font Info:    ... okay on input line 82.
+LaTeX Info: Redefining \degres on input line 82.
+LaTeX Info: Redefining \dots on input line 82.
+LaTeX Info: Redefining \up on input line 82.
 (/usr/share/texlive/texmf-dist/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count151
@@ -870,7 +870,7 @@ e
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: hyperref package is loaded.
 Package caption Info: End \AtBeginDocument code.
-Package hyperref Info: Link coloring ON on input line 81.
+Package hyperref Info: Link coloring ON on input line 82.
 
 (/usr/share/texlive/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2012/10/27 v2.43 Cross-referencing by name of section
@@ -880,9 +880,9 @@ Package: gettitlestring 2010/12/03 v1.4 Cleanup title references (HO)
 )
 \c@section@level=\count158
 )
-LaTeX Info: Redefining \ref on input line 81.
-LaTeX Info: Redefining \pageref on input line 81.
-LaTeX Info: Redefining \nameref on input line 81.
+LaTeX Info: Redefining \ref on input line 82.
+LaTeX Info: Redefining \pageref on input line 82.
+LaTeX Info: Redefining \nameref on input line 82.
 
 (./rapport.out) (./rapport.out)
 \@outlinefile=\write3
@@ -933,7 +933,7 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.124 \chapter
+l.125 \chapter
               {Introduction} [1
 
 ]
@@ -967,7 +967,7 @@ LaTeX Font Info:    Try loading font information for T1+cmtt on input line 165.
  (/usr/share/texlive/texmf-dist/tex/latex/base/t1cmtt.fd
 File: t1cmtt.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
-<images/1_sphere.png, id=212, 1742.51pt x 431.6125pt>
+<images/1_sphere.png, id=227, 1742.51pt x 431.6125pt>
 File: images/1_sphere.png Graphic file (type png)
 
 <use images/1_sphere.png>
@@ -977,7 +977,7 @@ Package pdftex.def Info: images/1_sphere.png used on input line 175.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<images/2_spheres.png, id=214, 1577.895pt x 482.80376pt>
+<images/2_spheres.png, id=229, 1577.895pt x 482.80376pt>
 File: images/2_spheres.png Graphic file (type png)
 
 <use images/2_spheres.png>
@@ -987,14 +987,14 @@ Package pdftex.def Info: images/2_spheres.png used on input line 183.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[6] <images/3_spheres.png, id=230, 1613.02625pt x 437.635pt>
+[6] <images/3_spheres.png, id=245, 1613.02625pt x 437.635pt>
 File: images/3_spheres.png Graphic file (type png)
 
 <use images/3_spheres.png>
 Package pdftex.def Info: images/3_spheres.png used on input line 193.
 (pdftex.def)             Requested size: 483.9116pt x 131.2915pt.
 
-<images/3_spheres_gen.png, id=231, 1601.985pt x 464.73625pt>
+<images/3_spheres_gen.png, id=246, 1601.985pt x 464.73625pt>
 File: images/3_spheres_gen.png Graphic file (type png)
 
 <use images/3_spheres_gen.png>
@@ -1044,7 +1044,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 37--38
  []
 
 [11]) (./3-Representations_moleculaires/loc_liaisons.tex [12]
-<images/classes_pos.png, id=305, 1113.15875pt x 737.75626pt>
+<images/classes_pos.png, id=321, 1113.15875pt x 737.75626pt>
 File: images/classes_pos.png Graphic file (type png)
 
 <use images/classes_pos.png>
@@ -1061,7 +1061,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 29--30
  []
 
 [13 <./images/classes_pos.png>]
-<images/mol_repliee.png, id=316, 760.8425pt x 669.50125pt>
+<images/mol_repliee.png, id=331, 760.8425pt x 669.50125pt>
 File: images/mol_repliee.png Graphic file (type png)
 
 <use images/mol_repliee.png>
@@ -1116,7 +1116,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 17--18
 
  []
 
-[19] [20] <images/flux_donnees.png, id=364, 1117.17375pt x 614.295pt>
+[19] [20] <images/flux_donnees.png, id=379, 1117.17375pt x 614.295pt>
 File: images/flux_donnees.png Graphic file (type png)
 
 <use images/flux_donnees.png>
@@ -1132,210 +1132,291 @@ Underfull \hbox (badness 10000) in paragraph at lines 3--4
 (./6-Prediction_de_geometries_moleculaires_convergees/modeles/architectures.tex
 )
 (./6-Prediction_de_geometries_moleculaires_convergees/modeles/optimisation.tex)
-
+[22]
 (./6-Prediction_de_geometries_moleculaires_convergees/resultats/performances.te
-x) [22]
-Chapitre 7.
-(./7-Conclusion/conclusion.tex) [23
+x
+Underfull \hbox (badness 10000) in paragraph at lines 13--14
 
-] [24
+ []
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[23]
+
+LaTeX Font Warning: Font shape `T1/cmr/m/n' in size <6.49994> not available
+(Font)              size <6> substituted on input line 58.
+
+
+<../figures/DELTA_DIST_+H_05/DELTA_DIST+H_05_distrib_rmse_val.png, id=404, 462.
+528pt x 346.896pt>
+File: ../figures/DELTA_DIST_+H_05/DELTA_DIST+H_05_distrib_rmse_val.png Graphic 
+file (type png)
+
+<use ../figures/DELTA_DIST_+H_05/DELTA_DIST+H_05_distrib_rmse_val.png>
+Package pdftex.def Info: ../figures/DELTA_DIST_+H_05/DELTA_DIST+H_05_distrib_rm
+se_val.png used on input line 74.
+(pdftex.def)             Requested size: 323.76738pt x 242.82553pt.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+<../figures/DELTA_DIST_+H_05/DELTA_DIST+H_05_distrib_rmse_dist.png, id=405, 462
+.528pt x 346.896pt>
+File: ../figures/DELTA_DIST_+H_05/DELTA_DIST+H_05_distrib_rmse_dist.png Graphic
+ file (type png)
+
+<use ../figures/DELTA_DIST_+H_05/DELTA_DIST+H_05_distrib_rmse_dist.png>
+Package pdftex.def Info: ../figures/DELTA_DIST_+H_05/DELTA_DIST+H_05_distrib_rm
+se_dist.png used on input line 89.
+(pdftex.def)             Requested size: 323.76738pt x 242.82553pt.
+
+[24]
+<../figures/DELTA_DIST_+H_05/DELTA_DIST+H_05_preds_targets.png, id=417, 462.528
+pt x 346.896pt>
+File: ../figures/DELTA_DIST_+H_05/DELTA_DIST+H_05_preds_targets.png Graphic fil
+e (type png)
+
+<use ../figures/DELTA_DIST_+H_05/DELTA_DIST+H_05_preds_targets.png>
+Package pdftex.def Info: ../figures/DELTA_DIST_+H_05/DELTA_DIST+H_05_preds_targ
+ets.png used on input line 101.
+(pdftex.def)             Requested size: 323.76738pt x 242.82553pt.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+<../figures/DELTA_DIST_+H_05/DELTA_DIST+H_05_preds_targets_zoom.png, id=418, 46
+2.528pt x 346.896pt>
+File: ../figures/DELTA_DIST_+H_05/DELTA_DIST+H_05_preds_targets_zoom.png Graphi
+c file (type png)
+
+<use ../figures/DELTA_DIST_+H_05/DELTA_DIST+H_05_preds_targets_zoom.png>
+Package pdftex.def Info: ../figures/DELTA_DIST_+H_05/DELTA_DIST+H_05_preds_targ
+ets_zoom.png used on input line 112.
+(pdftex.def)             Requested size: 323.76738pt x 242.82553pt.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[25 <../figures/DELTA_DIST_+H_05/DELTA_DIST+H_05_distrib_rmse_val.png> <../figu
+res/DELTA_DIST_+H_05/DELTA_DIST+H_05_distrib_rmse_dist.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 121--122
+
+ []
+
+[26 <../figures/DELTA_DIST_+H_05/DELTA_DIST+H_05_preds_targets.png> <../figures
+/DELTA_DIST_+H_05/DELTA_DIST+H_05_preds_targets_zoom.png>]) [27]
+Chapitre 7.
+(./7-Conclusion/conclusion.tex) (./bibli.tex [28
+
+]) [29
+
+] [30
 
 ]
-Overfull \hbox (4.72337pt too wide) in paragraph at lines 188--188
+Overfull \hbox (4.72337pt too wide) in paragraph at lines 193--193
 \T1/cmr/m/n/10 molécules 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 189--189
+Underfull \hbox (badness 10000) in paragraph at lines 194--194
 []\T1/cmr/m/n/10 Repr.
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 190--190
+Underfull \hbox (badness 10000) in paragraph at lines 195--195
 []\T1/cmr/m/n/10 Repr.
  []
 
 
-Overfull \hbox (4.37775pt too wide) in paragraph at lines 191--191
+Overfull \hbox (4.37775pt too wide) in paragraph at lines 196--196
 \T1/cmr/m/n/10 atomiques 
  []
 
 
-Overfull \hbox (4.37775pt too wide) in paragraph at lines 192--192
+Overfull \hbox (4.37775pt too wide) in paragraph at lines 197--197
 \T1/cmr/m/n/10 atomiques 
  []
 
 
-Overfull \hbox (1.84677pt too wide) in paragraph at lines 195--195
+Overfull \hbox (1.84677pt too wide) in paragraph at lines 200--200
 []\T1/cmr/m/n/10 Profondeur 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 200--200
+Underfull \hbox (badness 10000) in paragraph at lines 205--205
 []\T1/cmr/m/n/10 DELTA_DIST+H_01
  []
 
 
-Underfull \hbox (badness 1565) in paragraph at lines 202--202
+Underfull \hbox (badness 1565) in paragraph at lines 207--207
 []\T1/cmr/m/n/10 Matr. dist.
  []
 
 
-Underfull \hbox (badness 1565) in paragraph at lines 203--203
+Underfull \hbox (badness 1565) in paragraph at lines 208--208
 []\T1/cmr/m/n/10 Matr. dist.
  []
 
 
-Overfull \hbox (2.68846pt too wide) in paragraph at lines 207--207
+Overfull \hbox (2.68846pt too wide) in paragraph at lines 212--212
 \T1/cmr/m/n/10 partiel/total 
  []
 
 
-Overfull \hbox (2.71912pt too wide) in paragraph at lines 211--211
+Overfull \hbox (2.71912pt too wide) in paragraph at lines 216--216
 []\T1/cmr/m/n/10 +/++ 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 213--213
+Underfull \hbox (badness 10000) in paragraph at lines 218--218
 []\T1/cmr/m/n/10 DELTA_DIST+H_02
  []
 
 
-Underfull \hbox (badness 1565) in paragraph at lines 215--215
+Underfull \hbox (badness 1565) in paragraph at lines 220--220
 []\T1/cmr/m/n/10 Matr. dist.
  []
 
 
-Underfull \hbox (badness 1565) in paragraph at lines 216--216
+Underfull \hbox (badness 1565) in paragraph at lines 221--221
 []\T1/cmr/m/n/10 Matr. dist.
  []
 
 
-Overfull \hbox (4.69286pt too wide) in paragraph at lines 226--226
+Overfull \hbox (4.69286pt too wide) in paragraph at lines 231--231
 []\T1/cmr/m/n/10 DELTA_DIST+H_03
  []
 
 
-Underfull \hbox (badness 1565) in paragraph at lines 228--228
+Underfull \hbox (badness 1565) in paragraph at lines 233--233
 []\T1/cmr/m/n/10 Matr. dist.
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 228--228
+Underfull \hbox (badness 10000) in paragraph at lines 233--233
 \T1/cmr/m/n/10 Matr red.
  []
 
 
-Underfull \hbox (badness 3168) in paragraph at lines 228--228
+Underfull \hbox (badness 3168) in paragraph at lines 233--233
 \T1/cmr/m/n/10 dist. inter-
  []
 
 
-Underfull \hbox (badness 1565) in paragraph at lines 229--229
+Underfull \hbox (badness 1565) in paragraph at lines 234--234
 []\T1/cmr/m/n/10 Matr. dist.
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 239--239
+Underfull \hbox (badness 10000) in paragraph at lines 244--244
 []\T1/cmr/m/n/10 DELTA_DIST+H_04
  []
 
 
-Underfull \hbox (badness 1565) in paragraph at lines 241--241
+Underfull \hbox (badness 1565) in paragraph at lines 246--246
 []\T1/cmr/m/n/10 Matr. dist.
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 241--241
+Underfull \hbox (badness 10000) in paragraph at lines 246--246
 \T1/cmr/m/n/10 Matr red.
  []
 
 
-Underfull \hbox (badness 3168) in paragraph at lines 241--241
+Underfull \hbox (badness 3168) in paragraph at lines 246--246
 \T1/cmr/m/n/10 dist. inter-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 242--242
+Underfull \hbox (badness 10000) in paragraph at lines 247--247
 []\T1/cmr/m/n/10 Matr red.
  []
 
 
-Underfull \hbox (badness 3168) in paragraph at lines 242--242
+Underfull \hbox (badness 3168) in paragraph at lines 247--247
 \T1/cmr/m/n/10 dist. inter-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 253--253
+Underfull \hbox (badness 10000) in paragraph at lines 258--258
 []\T1/cmr/m/n/10 DELTA_DIST+H_05
  []
 
 
-Underfull \hbox (badness 1565) in paragraph at lines 255--255
+Underfull \hbox (badness 1565) in paragraph at lines 260--260
 []\T1/cmr/m/n/10 Matr. dist.
  []
 
 
-Underfull \hbox (badness 1565) in paragraph at lines 256--256
+Underfull \hbox (badness 1565) in paragraph at lines 261--261
 []\T1/cmr/m/n/10 Matr. dist.
  []
 
 
-Overfull \hbox (36.16336pt too wide) in paragraph at lines 185--268
+Overfull \hbox (36.16336pt too wide) in paragraph at lines 190--273
  [][] 
  []
 
-[25
+[31
 
 ]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 273.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 273.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 278.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 278.
  (./rapport.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 273.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 273.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 278.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 278.
 Package rerunfilecheck Info: File `rapport.out' has not changed.
-(rerunfilecheck)             Checksum: 6BAE90A38B16FAD35EF39FCA0DED2834;2329.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 273.
+(rerunfilecheck)             Checksum: 17018D407E65C4D8D361914A88B192C4;2612.
+
+
+LaTeX Font Warning: Size substitutions with differences
+(Font)              up to 0.49994pt have occurred.
+
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 278.
  ) 
 Here is how much of TeX's memory you used:
- 12652 strings out of 494433
- 186173 string characters out of 6170337
- 311754 words of memory out of 5000000
- 15697 multiletter control sequences out of 15000+600000
- 24342 words of font info for 55 fonts, out of 8000000 for 9000
+ 12707 strings out of 494433
+ 187931 string characters out of 6170337
+ 311792 words of memory out of 5000000
+ 15719 multiletter control sequences out of 15000+600000
+ 25108 words of font info for 56 fonts, out of 8000000 for 9000
  286 hyphenation exceptions out of 8191
- 53i,15n,92p,1294b,439s stack positions out of 5000i,500n,10000p,200000b,80000s
- </home/etudiant/.texmf-var/fonts/pk/ljfour/jknappen/ec/ectt0800.600pk> </hom
-e/etudiant/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm0800.600pk> </home/etudia
-nt/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx0700.600pk> </home/etudiant/.texm
-f-var/fonts/pk/ljfour/jknappen/ec/ecrm0700.600pk> </home/etudiant/.texmf-var/fo
-nts/pk/ljfour/jknappen/ec/ecbx1440.600pk> </home/etudiant/.texmf-var/fonts/pk/l
-jfour/jknappen/ec/ecbx2074.600pk> </home/etudiant/.texmf-var/fonts/pk/ljfour/jk
-nappen/ec/ecbx1000.600pk> </home/etudiant/.texmf-var/fonts/pk/ljfour/jknappen/e
-c/ecbx2488.600pk> </home/etudiant/.texmf-var/fonts/pk/ljfour/jknappen/ec/eccc10
-00.600pk> </home/etudiant/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1000.600pk
-> </home/etudiant/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecti1000.600pk> </home
-/etudiant/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1200.600pk> </home/etudian
-t/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1728.600pk> </home/etudiant/.texmf
--var/fonts/pk/ljfour/jknappen/ec/eccc1200.600pk> </home/etudiant/.texmf-var/fon
-ts/pk/ljfour/jknappen/ec/eccc1728.600pk></usr/share/texlive/texmf-dist/fonts/ty
-pe1/public/amsfonts/cm/cmbx5.pfb></usr/share/texlive/texmf-dist/fonts/type1/pub
-lic/amsfonts/cm/cmbx7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/ams
-fonts/cm/cmex10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/
-cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmm
-i5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb>
-</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmib10.pfb></usr
-/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmmib7.pfb></usr/
-share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/t
-exlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/share/texlive/t
-exmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texlive/texmf-dis
-t/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/font
-s/type1/public/amsfonts/cm/cmsy5.pfb></usr/share/texlive/texmf-dist/fonts/type1
-/public/amsfonts/cm/cmsy7.pfb>
-Output written on rapport.pdf (26 pages, 984831 bytes).
+ 53i,15n,92p,1358b,439s stack positions out of 5000i,500n,10000p,200000b,80000s
+ </home/etudiant/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm0600.600pk> </hom
+e/etudiant/.texmf-var/fonts/pk/ljfour/jknappen/ec/ectt0800.600pk> </home/etudia
+nt/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm0800.600pk> </home/etudiant/.texm
+f-var/fonts/pk/ljfour/jknappen/ec/ecbx0700.600pk> </home/etudiant/.texmf-var/fo
+nts/pk/ljfour/jknappen/ec/ecrm0700.600pk> </home/etudiant/.texmf-var/fonts/pk/l
+jfour/jknappen/ec/ecbx1440.600pk> </home/etudiant/.texmf-var/fonts/pk/ljfour/jk
+nappen/ec/ecbx2074.600pk> </home/etudiant/.texmf-var/fonts/pk/ljfour/jknappen/e
+c/ecbx1000.600pk> </home/etudiant/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx24
+88.600pk> </home/etudiant/.texmf-var/fonts/pk/ljfour/jknappen/ec/eccc1000.600pk
+> </home/etudiant/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1000.600pk> </home
+/etudiant/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecti1000.600pk> </home/etudian
+t/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1200.600pk> </home/etudiant/.texmf
+-var/fonts/pk/ljfour/jknappen/ec/ecbx1728.600pk> </home/etudiant/.texmf-var/fon
+ts/pk/ljfour/jknappen/ec/eccc1200.600pk> </home/etudiant/.texmf-var/fonts/pk/lj
+four/jknappen/ec/eccc1728.600pk></usr/share/texlive/texmf-dist/fonts/type1/publ
+ic/amsfonts/cm/cmbx5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsf
+onts/cm/cmbx7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm
+/cmex10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi1
+0.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb><
+/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/sh
+are/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmib10.pfb></usr/share/t
+exlive/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmmib7.pfb></usr/share/te
+xlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/t
+exmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/share/texlive/texmf-dis
+t/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/
+type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/
+public/amsfonts/cm/cmsy5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/
+amsfonts/cm/cmsy7.pfb>
+Output written on rapport.pdf (32 pages, 1207807 bytes).
 PDF statistics:
- 962 PDF objects out of 1000 (max. 8388607)
- 454 compressed objects within 5 object streams
- 115 named destinations out of 1000 (max. 500000)
- 292 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1055 PDF objects out of 1200 (max. 8388607)
+ 510 compressed objects within 6 object streams
+ 138 named destinations out of 1000 (max. 500000)
+ 336 words of extra memory for PDF output out of 10000 (max. 10000000)
 
