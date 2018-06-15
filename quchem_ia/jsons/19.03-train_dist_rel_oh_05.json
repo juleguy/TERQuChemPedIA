@@ -1,0 +1,37 @@
+{
+  "paths": {
+    "train_set_loc": "../../data/train_set_riken_v2_reduced.h5",
+    "test_set_loc": "../../data/test_set_riken_v2_reduced.h5",
+    "train_prepared_input_loc": "../../data/DIST_REL_OH_02/train_prepared_input.h5",
+    "test_prepared_input_loc": "../../data/DIST_REL_OH_02/test_prepared_input.h5",
+    "train_labels_loc": "../../data/DIST_REL_OH_02/train_labels.h5",
+    "test_labels_loc": "../../data/DIST_REL_OH_02/test_labels.h5",
+    "model_loc": "../../models/DIST_REL_OH_05/dist_rel_oh_05.tflearn",
+    "logs_dir": "../../models/DIST_REL_OH_05/logs/",
+    "bonds_lengths_loc": "/home/jleguy/data/stats/OH/OH_bonds_lengths_total_set.h5",
+    "plots_dir": "../../figures/"
+  },
+  "tasks": [
+    {
+      "model_train": {
+        "model_name": "DIST_REL_OH_05",
+        "model_type": "NN",
+        "params": {
+          "epochs": "300",
+          "last_layer_width": "58",
+          "batch_size": "5000",
+          "learning_rate": "0.001",
+          "epsilon": "0.001",
+          "stddev_init": "0.001",
+          "hidden_act": "elu",
+          "outlayer_act": "linear",
+          "depth": "9",
+          "weight_decay": "0.001",
+          "gpu_mem_prop": "0.3",
+          "save_model": "True",
+          "dropout": "0.98"
+        }
+      }
+    }
+  ]
+}
