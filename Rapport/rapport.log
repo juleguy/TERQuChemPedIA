@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2018.4.26)  14 JUN 2018 16:24
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2018.4.26)  15 JUN 2018 14:30
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -925,33 +925,60 @@ LaTeX Info: Redefining \nameref on input line 82.
 
 [1
 
-{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] (./rapport.toc)
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] (./rapport.tocpdfTeX warni
+ng (ext4): destination with the same identifier (name{page.1}) has been already
+ used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.71 ...{\numberline {7}Conclusion}{30}{chapter.7}
+                                                   [1
+
+])
 \tf@toc=\write4
 \openout4 = `rapport.toc'.
 
-pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has 
-been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.125 \chapter
-              {Introduction} [1
-
-]
+ [2]
 Chapitre 1.
-(./1-Introduction/introduction.tex) [2
+(./1-Introduction/introduction.tex) [3
 
 ]
 Chapitre 2.
-[3
+(./2-Contexte/quchempedia.tex) (./2-Contexte/chimie.tex
+Underfull \hbox (badness 10000) in paragraph at lines 3--5
 
-]
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 6--7
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 8--9
+
+ []
+
+<images/iso_niveaux.png, id=237, 872.25874pt x 654.445pt>
+File: images/iso_niveaux.png Graphic file (type png)
+
+<use images/iso_niveaux.png>
+Package pdftex.def Info: images/iso_niveaux.png used on input line 12.
+(pdftex.def)             Requested size: 218.06415pt x 163.61084pt.
+ [4
+
+ <./images/iso_niveaux.png (PNG copy)>]
+Underfull \hbox (badness 10000) in paragraph at lines 22--23
+
+ []
+
+) (./2-Contexte/machine_learning.tex) [5]
 Chapitre 3.
 (./3-Representations_moleculaires/coordonnees.tex
 Underfull \hbox (badness 10000) in paragraph at lines 1--2
 
  []
 
-) (./3-Representations_moleculaires/distances_relatives.tex [4
+) (./3-Representations_moleculaires/distances_relatives.tex [6
 
 ]
 Underfull \hbox (badness 10000) in paragraph at lines 11--12
@@ -961,13 +988,13 @@ Underfull \hbox (badness 10000) in paragraph at lines 11--12
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[5]
+[7]
 LaTeX Font Info:    Try loading font information for T1+cmtt on input line 165.
 
  (/usr/share/texlive/texmf-dist/tex/latex/base/t1cmtt.fd
 File: t1cmtt.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
-<images/1_sphere.png, id=227, 1742.51pt x 431.6125pt>
+<images/1_sphere.png, id=270, 1742.51pt x 431.6125pt>
 File: images/1_sphere.png Graphic file (type png)
 
 <use images/1_sphere.png>
@@ -977,7 +1004,7 @@ Package pdftex.def Info: images/1_sphere.png used on input line 175.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<images/2_spheres.png, id=229, 1577.895pt x 482.80376pt>
+<images/2_spheres.png, id=272, 1577.895pt x 482.80376pt>
 File: images/2_spheres.png Graphic file (type png)
 
 <use images/2_spheres.png>
@@ -987,20 +1014,20 @@ Package pdftex.def Info: images/2_spheres.png used on input line 183.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[6] <images/3_spheres.png, id=245, 1613.02625pt x 437.635pt>
+[8] <images/3_spheres.png, id=287, 1613.02625pt x 437.635pt>
 File: images/3_spheres.png Graphic file (type png)
 
 <use images/3_spheres.png>
 Package pdftex.def Info: images/3_spheres.png used on input line 193.
 (pdftex.def)             Requested size: 483.9116pt x 131.2915pt.
 
-<images/3_spheres_gen.png, id=246, 1601.985pt x 464.73625pt>
+<images/3_spheres_gen.png, id=288, 1601.985pt x 464.73625pt>
 File: images/3_spheres_gen.png Graphic file (type png)
 
 <use images/3_spheres_gen.png>
 Package pdftex.def Info: images/3_spheres_gen.png used on input line 204.
 (pdftex.def)             Requested size: 480.59921pt x 139.42194pt.
- [7 <./images/1_sphere.png> <./images/2_spheres.png> <./images/3_spheres.png>]
+ [9 <./images/1_sphere.png> <./images/2_spheres.png> <./images/3_spheres.png>]
 Underfull \hbox (badness 10000) in paragraph at lines 210--211
 
  []
@@ -1013,7 +1040,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 212--213
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[8 <./images/3_spheres_gen.png>]
+[10 <./images/3_spheres_gen.png>]
 Underfull \hbox (badness 10000) in paragraph at lines 282--283
 
  []
@@ -1028,12 +1055,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 287--288
 
  []
 
-[9]
+[11]
 Underfull \hbox (badness 10000) in paragraph at lines 357--360
 
  []
 
-[10]) (./3-Representations_moleculaires/distances_absolues.tex
+[12]) (./3-Representations_moleculaires/distances_absolues.tex
 Underfull \hbox (badness 10000) in paragraph at lines 3--5
 
  []
@@ -1043,8 +1070,8 @@ Underfull \hbox (badness 10000) in paragraph at lines 37--38
 
  []
 
-[11]) (./3-Representations_moleculaires/loc_liaisons.tex [12]
-<images/classes_pos.png, id=321, 1113.15875pt x 737.75626pt>
+[13]) (./3-Representations_moleculaires/loc_liaisons.tex [14]
+<images/classes_pos.png, id=363, 1113.15875pt x 737.75626pt>
 File: images/classes_pos.png Graphic file (type png)
 
 <use images/classes_pos.png>
@@ -1060,20 +1087,20 @@ Underfull \hbox (badness 10000) in paragraph at lines 29--30
 
  []
 
-[13 <./images/classes_pos.png>]
-<images/mol_repliee.png, id=331, 760.8425pt x 669.50125pt>
+[15 <./images/classes_pos.png>]
+<images/mol_repliee.png, id=373, 760.8425pt x 669.50125pt>
 File: images/mol_repliee.png Graphic file (type png)
 
 <use images/mol_repliee.png>
 Package pdftex.def Info: images/mol_repliee.png used on input line 36.
 (pdftex.def)             Requested size: 190.21016pt x 167.3749pt.
-) [14 <./images/mol_repliee.png>]
+) [16 <./images/mol_repliee.png>]
 Chapitre 4.
-[15
+[17
 
 ]
 Chapitre 5.
-[16
+[18
 
 ]
 Chapitre 6.
@@ -1086,7 +1113,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 1--3
 
 )
 (./6-Prediction_de_geometries_moleculaires_convergees/introduction/methodologie
-.tex) [17
+.tex) [19
 
 ]
 (./6-Prediction_de_geometries_moleculaires_convergees/introduction/nomenclature
@@ -1101,7 +1128,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 5--6
 
  []
 
-[18]
+[20]
 Underfull \hbox (badness 10000) in paragraph at lines 13--14
 
  []
@@ -1116,7 +1143,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 17--18
 
  []
 
-[19] [20] <images/flux_donnees.png, id=379, 1117.17375pt x 614.295pt>
+[21] [22] <images/flux_donnees.png, id=419, 1117.17375pt x 614.295pt>
 File: images/flux_donnees.png Graphic file (type png)
 
 <use images/flux_donnees.png>
@@ -1128,11 +1155,11 @@ Underfull \hbox (badness 10000) in paragraph at lines 3--4
 
  []
 
-[21 <./images/flux_donnees.png>])
+[23 <./images/flux_donnees.png>])
 (./6-Prediction_de_geometries_moleculaires_convergees/modeles/architectures.tex
 )
 (./6-Prediction_de_geometries_moleculaires_convergees/modeles/optimisation.tex)
-[22]
+[24]
 (./6-Prediction_de_geometries_moleculaires_convergees/resultats/performances.te
 x
 Underfull \hbox (badness 10000) in paragraph at lines 13--14
@@ -1142,13 +1169,13 @@ Underfull \hbox (badness 10000) in paragraph at lines 13--14
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[23]
+[25]
 
 LaTeX Font Warning: Font shape `T1/cmr/m/n' in size <6.49994> not available
 (Font)              size <6> substituted on input line 58.
 
 
-<../figures/DELTA_DIST_+H_05/DELTA_DIST+H_05_distrib_rmse_val.png, id=404, 462.
+<../figures/DELTA_DIST_+H_05/DELTA_DIST+H_05_distrib_rmse_val.png, id=446, 462.
 528pt x 346.896pt>
 File: ../figures/DELTA_DIST_+H_05/DELTA_DIST+H_05_distrib_rmse_val.png Graphic 
 file (type png)
@@ -1162,7 +1189,7 @@ se_val.png used on input line 74.
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 
-<../figures/DELTA_DIST_+H_05/DELTA_DIST+H_05_distrib_rmse_dist.png, id=405, 462
+<../figures/DELTA_DIST_+H_05/DELTA_DIST+H_05_distrib_rmse_dist.png, id=447, 462
 .528pt x 346.896pt>
 File: ../figures/DELTA_DIST_+H_05/DELTA_DIST+H_05_distrib_rmse_dist.png Graphic
  file (type png)
@@ -1172,8 +1199,8 @@ Package pdftex.def Info: ../figures/DELTA_DIST_+H_05/DELTA_DIST+H_05_distrib_rm
 se_dist.png used on input line 89.
 (pdftex.def)             Requested size: 323.76738pt x 242.82553pt.
 
-[24]
-<../figures/DELTA_DIST_+H_05/DELTA_DIST+H_05_preds_targets.png, id=417, 462.528
+[26]
+<../figures/DELTA_DIST_+H_05/DELTA_DIST+H_05_preds_targets.png, id=458, 462.528
 pt x 346.896pt>
 File: ../figures/DELTA_DIST_+H_05/DELTA_DIST+H_05_preds_targets.png Graphic fil
 e (type png)
@@ -1187,7 +1214,7 @@ ets.png used on input line 101.
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 
-<../figures/DELTA_DIST_+H_05/DELTA_DIST+H_05_preds_targets_zoom.png, id=418, 46
+<../figures/DELTA_DIST_+H_05/DELTA_DIST+H_05_preds_targets_zoom.png, id=459, 46
 2.528pt x 346.896pt>
 File: ../figures/DELTA_DIST_+H_05/DELTA_DIST+H_05_preds_targets_zoom.png Graphi
 c file (type png)
@@ -1200,191 +1227,191 @@ ets_zoom.png used on input line 112.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[25 <../figures/DELTA_DIST_+H_05/DELTA_DIST+H_05_distrib_rmse_val.png> <../figu
+[27 <../figures/DELTA_DIST_+H_05/DELTA_DIST+H_05_distrib_rmse_val.png> <../figu
 res/DELTA_DIST_+H_05/DELTA_DIST+H_05_distrib_rmse_dist.png>]
 Underfull \hbox (badness 10000) in paragraph at lines 121--122
 
  []
 
-[26 <../figures/DELTA_DIST_+H_05/DELTA_DIST+H_05_preds_targets.png> <../figures
-/DELTA_DIST_+H_05/DELTA_DIST+H_05_preds_targets_zoom.png>]) [27]
+[28 <../figures/DELTA_DIST_+H_05/DELTA_DIST+H_05_preds_targets.png> <../figures
+/DELTA_DIST_+H_05/DELTA_DIST+H_05_preds_targets_zoom.png>]) [29]
 Chapitre 7.
-(./7-Conclusion/conclusion.tex) (./bibli.tex [28
+(./7-Conclusion/conclusion.tex) (./bibli.tex [30
 
-]) [29
+]) [31
 
-] [30
+] [32
 
 ]
-Overfull \hbox (4.72337pt too wide) in paragraph at lines 193--193
+Overfull \hbox (4.72337pt too wide) in paragraph at lines 199--199
 \T1/cmr/m/n/10 molécules 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 194--194
+Underfull \hbox (badness 10000) in paragraph at lines 200--200
 []\T1/cmr/m/n/10 Repr.
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 195--195
+Underfull \hbox (badness 10000) in paragraph at lines 201--201
 []\T1/cmr/m/n/10 Repr.
  []
 
 
-Overfull \hbox (4.37775pt too wide) in paragraph at lines 196--196
+Overfull \hbox (4.37775pt too wide) in paragraph at lines 202--202
 \T1/cmr/m/n/10 atomiques 
  []
 
 
-Overfull \hbox (4.37775pt too wide) in paragraph at lines 197--197
+Overfull \hbox (4.37775pt too wide) in paragraph at lines 203--203
 \T1/cmr/m/n/10 atomiques 
  []
 
 
-Overfull \hbox (1.84677pt too wide) in paragraph at lines 200--200
+Overfull \hbox (1.84677pt too wide) in paragraph at lines 206--206
 []\T1/cmr/m/n/10 Profondeur 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 205--205
+Underfull \hbox (badness 10000) in paragraph at lines 211--211
 []\T1/cmr/m/n/10 DELTA_DIST+H_01
  []
 
 
-Underfull \hbox (badness 1565) in paragraph at lines 207--207
+Underfull \hbox (badness 1565) in paragraph at lines 213--213
 []\T1/cmr/m/n/10 Matr. dist.
  []
 
 
-Underfull \hbox (badness 1565) in paragraph at lines 208--208
+Underfull \hbox (badness 1565) in paragraph at lines 214--214
 []\T1/cmr/m/n/10 Matr. dist.
  []
 
 
-Overfull \hbox (2.68846pt too wide) in paragraph at lines 212--212
+Overfull \hbox (2.68846pt too wide) in paragraph at lines 218--218
 \T1/cmr/m/n/10 partiel/total 
  []
 
 
-Overfull \hbox (2.71912pt too wide) in paragraph at lines 216--216
+Overfull \hbox (2.71912pt too wide) in paragraph at lines 222--222
 []\T1/cmr/m/n/10 +/++ 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 218--218
+Underfull \hbox (badness 10000) in paragraph at lines 224--224
 []\T1/cmr/m/n/10 DELTA_DIST+H_02
  []
 
 
-Underfull \hbox (badness 1565) in paragraph at lines 220--220
+Underfull \hbox (badness 1565) in paragraph at lines 226--226
 []\T1/cmr/m/n/10 Matr. dist.
  []
 
 
-Underfull \hbox (badness 1565) in paragraph at lines 221--221
+Underfull \hbox (badness 1565) in paragraph at lines 227--227
 []\T1/cmr/m/n/10 Matr. dist.
  []
 
 
-Overfull \hbox (4.69286pt too wide) in paragraph at lines 231--231
+Overfull \hbox (4.69286pt too wide) in paragraph at lines 237--237
 []\T1/cmr/m/n/10 DELTA_DIST+H_03
  []
 
 
-Underfull \hbox (badness 1565) in paragraph at lines 233--233
+Underfull \hbox (badness 1565) in paragraph at lines 239--239
 []\T1/cmr/m/n/10 Matr. dist.
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 233--233
+Underfull \hbox (badness 10000) in paragraph at lines 239--239
 \T1/cmr/m/n/10 Matr red.
  []
 
 
-Underfull \hbox (badness 3168) in paragraph at lines 233--233
+Underfull \hbox (badness 3168) in paragraph at lines 239--239
 \T1/cmr/m/n/10 dist. inter-
  []
 
 
-Underfull \hbox (badness 1565) in paragraph at lines 234--234
+Underfull \hbox (badness 1565) in paragraph at lines 240--240
 []\T1/cmr/m/n/10 Matr. dist.
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 244--244
+Underfull \hbox (badness 10000) in paragraph at lines 250--250
 []\T1/cmr/m/n/10 DELTA_DIST+H_04
  []
 
 
-Underfull \hbox (badness 1565) in paragraph at lines 246--246
+Underfull \hbox (badness 1565) in paragraph at lines 252--252
 []\T1/cmr/m/n/10 Matr. dist.
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 246--246
+Underfull \hbox (badness 10000) in paragraph at lines 252--252
 \T1/cmr/m/n/10 Matr red.
  []
 
 
-Underfull \hbox (badness 3168) in paragraph at lines 246--246
+Underfull \hbox (badness 3168) in paragraph at lines 252--252
 \T1/cmr/m/n/10 dist. inter-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 247--247
+Underfull \hbox (badness 10000) in paragraph at lines 253--253
 []\T1/cmr/m/n/10 Matr red.
  []
 
 
-Underfull \hbox (badness 3168) in paragraph at lines 247--247
+Underfull \hbox (badness 3168) in paragraph at lines 253--253
 \T1/cmr/m/n/10 dist. inter-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 258--258
+Underfull \hbox (badness 10000) in paragraph at lines 264--264
 []\T1/cmr/m/n/10 DELTA_DIST+H_05
  []
 
 
-Underfull \hbox (badness 1565) in paragraph at lines 260--260
+Underfull \hbox (badness 1565) in paragraph at lines 266--266
 []\T1/cmr/m/n/10 Matr. dist.
  []
 
 
-Underfull \hbox (badness 1565) in paragraph at lines 261--261
+Underfull \hbox (badness 1565) in paragraph at lines 267--267
 []\T1/cmr/m/n/10 Matr. dist.
  []
 
 
-Overfull \hbox (36.16336pt too wide) in paragraph at lines 190--273
+Overfull \hbox (36.16336pt too wide) in paragraph at lines 196--279
  [][] 
  []
 
-[31
+[33
 
 ]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 278.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 278.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 284.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 284.
  (./rapport.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 278.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 278.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 284.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 284.
 Package rerunfilecheck Info: File `rapport.out' has not changed.
-(rerunfilecheck)             Checksum: 17018D407E65C4D8D361914A88B192C4;2612.
+(rerunfilecheck)             Checksum: FB0C760BB4AB5E28ACEA4D2F8CFC2202;3104.
 
 
 LaTeX Font Warning: Size substitutions with differences
 (Font)              up to 0.49994pt have occurred.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 278.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 284.
  ) 
 Here is how much of TeX's memory you used:
- 12707 strings out of 494433
- 187931 string characters out of 6170337
- 311792 words of memory out of 5000000
- 15719 multiletter control sequences out of 15000+600000
+ 12738 strings out of 494433
+ 188477 string characters out of 6170337
+ 311823 words of memory out of 5000000
+ 15730 multiletter control sequences out of 15000+600000
  25108 words of font info for 56 fonts, out of 8000000 for 9000
  286 hyphenation exceptions out of 8191
- 53i,15n,92p,1358b,439s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 53i,15n,92p,1358b,586s stack positions out of 5000i,500n,10000p,200000b,80000s
  </home/etudiant/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm0600.600pk> </hom
 e/etudiant/.texmf-var/fonts/pk/ljfour/jknappen/ec/ectt0800.600pk> </home/etudia
 nt/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm0800.600pk> </home/etudiant/.texm
@@ -1413,10 +1440,10 @@ t/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/
 type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/
 public/amsfonts/cm/cmsy5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/
 amsfonts/cm/cmsy7.pfb>
-Output written on rapport.pdf (32 pages, 1207807 bytes).
+Output written on rapport.pdf (34 pages, 1355367 bytes).
 PDF statistics:
- 1055 PDF objects out of 1200 (max. 8388607)
- 510 compressed objects within 6 object streams
- 138 named destinations out of 1000 (max. 500000)
- 336 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1110 PDF objects out of 1200 (max. 8388607)
+ 550 compressed objects within 6 object streams
+ 147 named destinations out of 1000 (max. 500000)
+ 389 words of extra memory for PDF output out of 10000 (max. 10000000)
 
