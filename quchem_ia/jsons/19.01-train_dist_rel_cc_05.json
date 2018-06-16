@@ -2,10 +2,10 @@
   "paths":{
         "train_set_loc":"../../data/train_set_riken_v2_reduced.h5",
         "test_set_loc":"../../data/test_set_riken_v2_reduced.h5",
-        "train_prepared_input_loc":"../../data/DIST_REL_CC_02/train_prepared_input.h5",
-        "test_prepared_input_loc":"../../data/DIST_REL_CC_02/test_prepared_input.h5",
-        "train_labels_loc":"../../data/DIST_REL_CC_02/train_labels.h5",
-        "test_labels_loc":"../../data/DIST_REL_CC_02/test_labels.h5",
+        "train_prepared_input_loc":"../../data/DIST_REL_CC_05/train_prepared_input.h5",
+        "test_prepared_input_loc":"../../data/DIST_REL_CC_05/test_prepared_input.h5",
+        "train_labels_loc":"../../data/DIST_REL_CC_05/train_labels.h5",
+        "test_labels_loc":"../../data/DIST_REL_CC_05/test_labels.h5",
         "model_loc":"../../models/DIST_REL_CC_05/dist_rel_cc_05.tflearn",
         "logs_dir":"../../models/DIST_REL_CC_05/logs/",
         "bonds_lengths_loc":"/home/jleguy/data/stats/CC/CC_bonds_lengths_total_set.h5",
@@ -13,12 +13,37 @@
   },
   "tasks":[
     {
+      "prepare_model_data": {
+        "selected_mols": {
+          "mol_min_size": "2",
+          "mol_max_size": "60",
+          "max_anum": "9",
+          "anum_1": "6",
+          "anum_2": "6",
+          "min_bond_size": "0",
+          "max_bond_size": "1.6",
+          "bond_max_neighbours" : "15"
+        },
+        "params": {
+          "nb_mol_from_train": "800000",
+          "nb_mol_from_test": "160000",
+          "pos_class": "True",
+          "one_hot_anums": "True",
+          "amasses": "True",
+          "distances": "True",
+          "distances_cut_off": "2",
+          "batch_size": "10000",
+          "distances_fun":"identity"
+        }
+      }
+    },
+    {
       "model_train": {
         "model_name": "DIST_REL_CC_05",
         "model_type": "NN",
         "params": {
-          "epochs": "300",
-          "last_layer_width": "870",
+          "epochs": "600",
+          "last_layer_width": "15",
           "batch_size": "5000",
           "learning_rate": "0.001",
           "epsilon": "0.001",
