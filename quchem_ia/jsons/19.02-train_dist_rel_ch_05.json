@@ -18,7 +18,7 @@
         "model_type": "NN",
         "params": {
           "epochs": "300",
-          "last_layer_width": "58",
+          "last_layer_width": "870",
           "batch_size": "5000",
           "learning_rate": "0.001",
           "epsilon": "0.001",
