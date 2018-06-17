@@ -55,7 +55,6 @@ def _colorbar_bonds_lengths_representation(ax, targets, bonds_lengths_loc):
 
     ax.set_xlim(xmin=min(targets), xmax=max(targets))
     ax.hist(bonds_lengths*100, floor(max(targets)-min(targets))*10)
-    ax.axis("off")
 
     # cmap = mpl.cm.bwr_r
     #
