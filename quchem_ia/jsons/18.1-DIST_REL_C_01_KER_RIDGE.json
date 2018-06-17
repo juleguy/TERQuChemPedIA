@@ -8,11 +8,11 @@
         "test_labels_loc":"../../data/DIST_REL_C_KER_RIDGE_01/test_set_labels.h5",
         "model_loc":"../../models/DIST_REL_C_KER_RIDGE_01/DIST_REL_C_KER_RIDGE_01.pkl",
         "bonds_lengths_loc":"/home/jleguy/data/stats/CC/CC_bonds_lengths_total_set.h5",
-        "plots_dir":"tests/DIST_REL_C_KER_RIDGE_01/"
+        "plots_dir":"../../figures/DIST_REL_C_KER_RIDGE_01/"
   },
   "tasks":[
     {
-      "prepare_model_data": {
+      "prepare_model_data_IGNORED": {
         "selected_mols": {
           "mol_min_size": "2",
           "mol_max_size": "60",
@@ -37,7 +37,7 @@
       }
     },
     {
-      "model_train_IGNORED":{
+      "model_train":{
         "model_name":"DIST_REL_C_KER_RIDGE_01",
         "model_type":"kernel_ridge",
         "params":{

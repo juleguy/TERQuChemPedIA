@@ -8,7 +8,7 @@
         "test_labels_loc":"../../data/DIST_REL_C_KER_RIDGE_02/test_set_labels.h5",
         "model_loc":"../../models/DIST_REL_C_KER_RIDGE_02/DIST_REL_C_KER_RIDGE_02.pkl",
         "bonds_lengths_loc":"/home/jleguy/data/stats/CC/CC_bonds_lengths_total_set.h5",
-        "plots_dir":"tests/DIST_REL_C_KER_RIDGE_02/"
+        "plots_dir":"../../figures/DIST_REL_C_KER_RIDGE_03/"
   },
   "tasks":[
     {

@@ -8,11 +8,11 @@
         "test_labels_loc":"../../data/DIST_REL_C_SVM_03/test_set_labels.h5",
         "model_loc":"../../models/DIST_REL_C_SVM_03/DIST_REL_C_SVM_03.pkl",
         "bonds_lengths_loc":"/home/jleguy/data/stats/CC/CC_bonds_lengths_total_set.h5",
-        "plots_dir":"tests/DIST_REL_C_SVM_03/"
+        "plots_dir":"../../figures/DIST_REL_C_SVM_03/"
   },
   "tasks":[
     {
-      "prepare_model_data": {
+      "prepare_model_data_IGNORED": {
         "selected_mols": {
           "mol_min_size": "2",
           "mol_max_size": "60",
@@ -38,7 +38,7 @@
       }
     },
     {
-      "model_train":{
+      "model_train_IGNORED":{
         "model_name":"DIST_REL_C_SVM_03",
         "model_type":"SVM",
         "params":{
