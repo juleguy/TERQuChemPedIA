@@ -24,7 +24,7 @@
           "bond_max_neighbours":"15"
         },
         "params": {
-          "wished_train_size": "25000",
+          "wished_train_size": "60000",
           "wished_test_size": "50000",
           "pos_class": "True",
           "one_hot_anums": "True",
@@ -37,7 +37,7 @@
       }
     },
     {
-      "model_train":{
+      "model_train_IGNORED":{
         "model_name":"DIST_REL_C_KER_RIDGE_01",
         "model_type":"kernel_ridge",
         "params":{
@@ -61,7 +61,7 @@
           "plot_targets_error_distrib": "True",
           "plot_targets_predictions": "True",
           "batch_size": "1060",
-          "display_plots":"True"
+          "display_plots":"False"
         }
       }
     }

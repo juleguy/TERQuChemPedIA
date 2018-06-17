@@ -25,7 +25,7 @@
           "hidden_act":"elu",
           "depth":"9",
           "outlayer_act":"linear",
-          "display_plots":"True"
+          "display_plots":"False"
 
         }
       }
@@ -55,7 +55,7 @@
           "depth":"9",
           "hidden_act":"elu",
           "outlayer_act":"linear",
-          "display_plots":"True"
+          "display_plots":"False"
 
         }
       }
@@ -85,7 +85,7 @@
           "depth":"9",
           "hidden_act":"elu",
           "outlayer_act":"linear",
-          "display_plots":"True"
+          "display_plots":"False"
         }
       }
     }

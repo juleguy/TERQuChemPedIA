@@ -1,19 +1,19 @@
 {
   "paths":{
-        "train_prepared_input_loc":"../../data/DIST_REL_C_02/train_set_prepared_input.h5",
-        "test_prepared_input_loc":"../../data/DIST_REL_C_02/test_set_prepared_input.h5",
-        "train_labels_loc":"../../data/DIST_REL_C_02/train_set_labels.h5",
-        "test_labels_loc":"../../data/DIST_REL_C_02/test_set_labels.h5",
-        "model_loc":"../../models/DIST_REL_C_02/DIST_REL_C_02.tflearn",
-        "logs_dir":"../../models/DIST_REL_C_02/logs/",
+        "train_prepared_input_loc":"../../data/DIST_REL_C_01/train_set_prepared_input.h5",
+        "test_prepared_input_loc":"../../data/DIST_REL_C_01/test_set_prepared_input.h5",
+        "train_labels_loc":"../../data/DIST_REL_C_01/train_set_labels.h5",
+        "test_labels_loc":"../../data/DIST_REL_C_01/test_set_labels.h5",
+        "model_loc":"../../models/DIST_REL_C_01/DIST_REL_C_01.tflearn",
+        "logs_dir":"../../models/DIST_REL_C_01/logs/",
         "bonds_lengths_loc":"/home/jleguy/data/stats/CC/CC_bonds_lengths_total_set.h5",
-        "plots_dir":"../../figures/DIST_REL_C_02/"
+        "plots_dir":"../../figures/DIST_REL_C_01/"
   },
   "tasks":[
     {
       "plot_predictions": {
         "params": {
-          "model_name": "DIST_REL_C_02",
+          "model_name": "DIST_REL_C_01",
           "model_type": "NN",
           "anum_1": "6",
           "anum_2": "6",
@@ -27,7 +27,7 @@
           "depth": "3",
           "hidden_act": "elu",
           "outlayer_act": "linear",
-          "display_plots":"False"
+          "display_plots":"False  "
         }
       }
     }

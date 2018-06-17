@@ -66,8 +66,6 @@ def _hist_bonds_lengths_representation(ax, targets, preds, bonds_lengths_loc):
     ax.set_xlim(xmin=min_x, xmax=max_x)
     ax.hist(bonds_lengths, floor(max_x-min_x)*10)
 
-    print("End hist")
-
     # cmap = mpl.cm.bwr_r
     #
     # ax.set_xticklabels([])

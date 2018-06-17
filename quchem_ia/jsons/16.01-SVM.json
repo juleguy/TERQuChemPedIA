@@ -33,7 +33,7 @@
           "distances": "True",
           "distances_cut_off": "2",
           "batch_size": "10000",
-          "distances_fun":"squareinv"
+          "distances_fun":"inv"
         }
       }
     },
@@ -42,13 +42,14 @@
         "model_name":"DIST_REL_C_SVM_02",
         "model_type":"SVM",
         "params":{
-          "kernel":"linear",
+          "kernel":"poly",
+          "degree":"2",
           "epsilon":"0.1",
           "gamma":"auto",
           "coef0":"0",
           "shrinking":"True",
           "tol":"0.001",
-          "cache_size":"200",
+          "cache_size":"500",
           "verbose":"True",
           "save_model": "True",
           "max_iter":"-1",

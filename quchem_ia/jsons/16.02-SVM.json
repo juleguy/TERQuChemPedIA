@@ -25,7 +25,7 @@
 
         },
         "params": {
-          "wished_train_size": "40000",
+          "wished_train_size": "60000",
           "wished_test_size": "50000",
           "pos_class": "True",
           "one_hot_anums": "True",
@@ -33,7 +33,7 @@
           "distances": "True",
           "distances_cut_off": "2",
           "batch_size": "10000",
-          "distances_fun":"squareinv"
+          "distances_fun":"inv"
         }
       }
     },
@@ -42,13 +42,14 @@
         "model_name":"DIST_REL_C_SVM_03",
         "model_type":"SVM",
         "params":{
-          "kernel":"linear",
+          "kernel":"poly",
+          "degree":"2",
           "epsilon":"0.1",
           "gamma":"auto",
           "coef0":"0",
           "shrinking":"True",
           "tol":"0.001",
-          "cache_size":"200",
+          "cache_size":"500",
           "verbose":"True",
           "save_model": "True",
           "max_iter":"-1",
