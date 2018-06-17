@@ -50,6 +50,8 @@ def _colorbar_bonds_lengths_representation(ax, targets, bonds_lengths_loc):
     """
     bonds_lengths_h5 = h5py.File(bonds_lengths_loc, "r")
     bonds_lengths = np.array(bonds_lengths_h5[distances_key])
+    bonds_lengths = np.where(bonds_lengths >= min(targets))
+    bonds_lengths = np.where(bonds_lengths <= max(targets))
 
     #hist_bonds = np.histogram(bonds_lengths * 100, np.arange(min(targets), max(targets), 0.001))[0]
 
@@ -73,7 +75,7 @@ def _print_typical_bond_length(ax_plot, ax_bonds, bond_type, val):
     #                   arrowprops=dict(facecolor='red', edgecolor="black", linewidth=0.6,
     #                                   arrowstyle="simple")
     #                   )
-    ax_bonds.text(x_axe_coord - 0.06, 2, bond_type + ' bonds', transform=ax_bonds.transAxes, fontsize=7)
+    ax_bonds.text(x_axe_coord - 0.06, 0.5, bond_type + ' bonds', transform=ax_bonds.transAxes, fontsize=7)
 
 
 def _print_typical_bonds_lengths(ax_plot, ax_bonds, anum_1, anum_2):
