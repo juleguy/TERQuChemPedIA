@@ -42,7 +42,7 @@ def plot_distrib_rmses_val(rmses, model_name, figures_loc, display_plot):
         plt.show()
 
 
-def _colorbar_bonds_lengths_representation(ax, targets, bonds_lengths_loc):
+def _colorbar_bonds_lengths_representation(ax, targets, preds, bonds_lengths_loc):
     """
     Plots the colorbar representing the bonds lengths representation
     :param ax:
@@ -53,14 +53,17 @@ def _colorbar_bonds_lengths_representation(ax, targets, bonds_lengths_loc):
     bonds_lengths_h5 = h5py.File(bonds_lengths_loc, "r")
     bonds_lengths = np.array(bonds_lengths_h5[distances_key])*100
 
+    min_x = min(min(targets), min(preds))
+    max_x = max(max(targets), max(preds))
+
     # Extracting values in the current range
-    bonds_lengths = np.extract(bonds_lengths >= min(targets), bonds_lengths)
-    bonds_lengths = np.extract(bonds_lengths <= max(targets), bonds_lengths)
+    bonds_lengths = np.extract(bonds_lengths >= min_x, bonds_lengths)
+    bonds_lengths = np.extract(bonds_lengths <= max_x, bonds_lengths)
 
     #hist_bonds = np.histogram(bonds_lengths * 100, np.arange(min(targets), max(targets), 0.001))[0]
 
-    ax.set_xlim(xmin=min(targets), xmax=max(targets))
-    ax.hist(bonds_lengths, floor(max(targets)-min(targets))*10)
+    ax.set_xlim(xmin=min_x, xmax=max_x)
+    ax.hist(bonds_lengths, floor(max_x-min_x)*10)
 
     # cmap = mpl.cm.bwr_r
     #
@@ -70,7 +73,7 @@ def _colorbar_bonds_lengths_representation(ax, targets, bonds_lengths_loc):
     #                                 orientation='horizontal')
 
     ax.set_xlabel('Bond lengths representation')
-    ax.set_xticks([])
+    #ax.set_xticks([])
     ax.set_yticks([])
 
 
@@ -87,7 +90,7 @@ def _print_typical_bond_length(ax_plot, ax_bonds, bond_type, val):
 def _print_typical_bonds_lengths(ax_plot, ax_bonds, anum_1, anum_2):
     if anum_1 == 6 and anum_2 == 6:
 
-        _print_typical_bond_length(ax_plot, ax_bonds, "double", 134)
+        _print_typical_bond_length(ax_plot, ax_bonds, "double", 133)
         _print_typical_bond_length(ax_plot, ax_bonds, "single", 154)
         _print_typical_bond_length(ax_plot, ax_bonds, "aromatic", 140)
         _print_typical_bond_length(ax_plot, ax_bonds, "triple", 120)
@@ -112,7 +115,7 @@ def _get_gridspec():
     return gs
 
 
-def plot_rmse_distrib_dist(rmses, targets, model_name, figures_loc, bonds_lengths_loc, display_plot, anum_1, anum_2):
+def plot_rmse_distrib_dist(rmses, targets, preds, model_name, figures_loc, bonds_lengths_loc, display_plot, anum_1, anum_2):
     # Generating the grispec object
     gs = _get_gridspec()
 
@@ -122,13 +125,13 @@ def plot_rmse_distrib_dist(rmses, targets, model_name, figures_loc, bonds_length
     ax_plot.set_title(model_name+"\nRelative error")
 
     ax_plot.set_xlabel("Target distance (pm)")
-    ax_plot.set_ylabel("Absolute error (pm)")
-    ax_plot.plot(targets, (rmses/targets)*100, ",", label="Relative error (%)", alpha=1)
-    ax_plot.set_xlim(xmin=min(targets), xmax=max(targets))
+    ax_plot.set_ylabel("Relative error (%)")
+    ax_plot.plot(targets, (rmses/targets)*100, ",", label="", alpha=1)
+    ax_plot.set_xlim(xmin=min(min(targets), min(preds)), xmax=max(max(targets), max(preds)))
 
     # Plotting the bond lengths representation
     ax_bonds = plt.subplot(gs[1])
-    _colorbar_bonds_lengths_representation(ax_bonds, targets, bonds_lengths_loc)
+    _colorbar_bonds_lengths_representation(ax_bonds, targets, preds, bonds_lengths_loc)
     _print_typical_bonds_lengths(ax_plot, ax_bonds, anum_1, anum_2)
 
     plt.tight_layout()
@@ -163,7 +166,7 @@ def plot_targets_pred(targets, preds, anum_1, anum_2, model_name, figures_loc, b
 
     # Distances representation plot
     ax_bonds = plt.subplot(gs[1])
-    _colorbar_bonds_lengths_representation(ax_bonds, targets, bonds_lengths_loc)
+    _colorbar_bonds_lengths_representation(ax_bonds, targets, preds, bonds_lengths_loc)
 
     _print_typical_bonds_lengths(ax_plot, ax_bonds, anum_1, anum_2)
 
@@ -201,7 +204,7 @@ def plot_model_results(errors, predictions, targets, model_name, anum_1, anum_2,
         plot_distrib_rmses_val(errors, model_name, plots_dir, display_plots)
 
     if plot_targets_error_distrib:
-        plot_rmse_distrib_dist(errors, targets, model_name, plots_dir, bonds_lengths_loc, display_plots, anum_1,
+        plot_rmse_distrib_dist(errors, targets, predictions, model_name, plots_dir, bonds_lengths_loc, display_plots, anum_1,
                                anum_2)
 
     if plot_targets_predictions:
