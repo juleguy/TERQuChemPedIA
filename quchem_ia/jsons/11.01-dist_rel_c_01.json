@@ -6,7 +6,8 @@
         "test_labels_loc":"../../data/DIST_REL_C_RNN/test_set_labels.h5",
         "model_loc":"../../models/DIST_REL_C_01/DIST_REL_C_01_basic.tflearn",
         "bonds_lengths_loc":"/home/jleguy/data/stats/CC/CC_bonds_lengths_total_set.h5",
-        "plots_dir":"../../figures/DIST_REL_C_01/"
+        "plots_dir":"../../figures/DIST_REL_C_01/",
+        "logs_dir":"../../models/DIST_REL_C_01/logs/"
   },
   "tasks":[
     {
