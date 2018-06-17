@@ -1,5 +1,7 @@
 {
   "paths":{
+      "train_set_loc":"../../data/train_set_riken_v2_reduced.h5",
+        "test_set_loc":"../../data/test_set_riken_v2_reduced.h5",
         "train_prepared_input_loc":"../../data/DIST_REL_C_01/train_set_prepared_input.h5",
         "test_prepared_input_loc":"../../data/DIST_REL_C_01/test_set_prepared_input.h5",
         "train_labels_loc":"../../data/DIST_REL_C_01/train_set_labels.h5",
