@@ -55,28 +55,25 @@ def _colorbar_bonds_lengths_representation(ax, targets, bonds_lengths_loc):
 
     hist_bonds = np.histogram(bonds_lengths * 100, np.arange(min(targets), max(targets), 0.001))[0]
 
-    # Applying exponential
-    #hist_bonds = np.exp(hist_bonds)
 
-    cmap = mpl.cm.bwr_r
+    # cmap = mpl.cm.bwr_r
+    #
+    # ax.set_xticklabels([])
+    #
+    # cb1 = mpl.colorbar.ColorbarBase(ax, cmap=cmap, values=hist_bonds,
+    #                                 orientation='horizontal')
+    ax.hist(bonds_lengths*100, floor(max(targets)-min(targets)))
 
-    norm = mpl.colors.Normalize()
-
-    ax.set_xticklabels([])
-
-    cb1 = mpl.colorbar.ColorbarBase(ax, cmap=cmap, values=hist_bonds,
-                                    orientation='horizontal')
-
-    cb1.set_label('Bond lengths representation')
+    ax.set_xlabel('Bond lengths representation')
 
 
 def _print_typical_bond_length(ax_plot, ax_bonds, bond_type, val):
     x_axe_coord = ax_plot.transAxes.inverted().transform(ax_plot.transData.transform((val, 0)))[0]
 
-    ax_bonds.annotate('', xy=(x_axe_coord, 1), xytext=(x_axe_coord, 1.9), xycoords=ax_bonds.transAxes,
-                      arrowprops=dict(facecolor='red', edgecolor="black", linewidth=0.6,
-                                      arrowstyle="simple")
-                      )
+    # ax_bonds.annotate('', xy=(x_axe_coord, 1), xytext=(x_axe_coord, 1.9), xycoords=ax_bonds.transAxes,
+    #                   arrowprops=dict(facecolor='red', edgecolor="black", linewidth=0.6,
+    #                                   arrowstyle="simple")
+    #                   )
     ax_bonds.text(x_axe_coord - 0.06, 2, bond_type + ' bonds', transform=ax_bonds.transAxes, fontsize=7)
 
 
@@ -114,7 +111,7 @@ def plot_rmse_distrib_dist(rmses, targets, model_name, figures_loc, bonds_length
 
     # Plotting the error data
     ax_plot = plt.subplot(gs[0])
-    ax_plot.set_title(model_name + " model " + "\nError distribution depending on target distances")
+    ax_plot.set_title(model_name + " model")
     ax_plot.set_xlabel("Target distance (pm)")
     ax_plot.set_ylabel("Absolute error (pm)")
     ax_plot.plot(targets, rmses, ",", label="Absolute error (pm)", alpha=1)
@@ -143,16 +140,16 @@ def plot_targets_pred(targets, preds, anum_1, anum_2, model_name, figures_loc, b
 
     # Predictions depending on target distances plot
     ax_plot = plt.subplot(gs[0])
-    ax_plot.set_title(model_name + " model\n Predictions depending on target distances")
+    ax_plot.set_title(model_name + " model")
     ax_plot.set_xlabel("Target distance (pm)")
     ax_plot.set_ylabel("Predicted distance (pm)")
     ax_plot.plot(targets, preds, ",")
-    ax_plot.set_xlim(xmin=min(targets), xmax=max(targets))
+    ax_plot.set_xlim(xmin=min(min(targets), min(preds)), xmax=max(max(targets), max(preds)))
+    ax_plot.set_ylim(ymin=min(min(targets), min(preds)), ymax=max(max(targets), max(preds)))
 
     # Perfect model plot
     x = np.linspace(min(targets), max(targets))
-    ax_plot.plot(x, fun_id(x), color='darkgreen', label="Theoretical perfect model", alpha=0.5)
-    ax_plot.legend(loc='upper center', shadow=False)
+    ax_plot.plot(x, fun_id(x), color='darkgreen', alpha=0.5)
 
     # Distances representation plot
     ax_bonds = plt.subplot(gs[1])
@@ -200,14 +197,3 @@ def plot_model_results(errors, predictions, targets, model_name, anum_1, anum_2,
     if plot_targets_predictions:
         plot_targets_pred(targets, predictions, anum_1, anum_2, model_name, plots_dir, bonds_lengths_loc, display_plots)
 
-
-def biggest_errors_CIDs(errors, test_prepared_input_loc, n):
-    """
-    Prints the CIDs the molecules causing the n biggest errors
-    :param errors:
-    :param predictions:
-    :param targets:
-    :return:
-    """
-
-    cids = np.array(h5py.File(test_prepared_input_loc, 'r')[h5_keys.pubchem_id_key])
