@@ -53,20 +53,13 @@ def _hist_bonds_lengths_representation(ax, targets, preds, bonds_lengths_loc):
     bonds_lengths_h5 = h5py.File(bonds_lengths_loc, "r")
     bonds_lengths = np.array(bonds_lengths_h5[distances_key])*100
 
-    print("Initial bonds extracted")
-
     min_x = min(min(targets), min(preds))
     max_x = max(max(targets), max(preds))
 
     # Extracting values in the current range
     bonds_lengths = np.extract(bonds_lengths >= min_x, bonds_lengths)
 
-    print("Too high bonds removed")
-
     bonds_lengths = np.extract(bonds_lengths <= max_x, bonds_lengths)
-
-    print("Too low bonds removed")
-
 
     #hist_bonds = np.histogram(bonds_lengths * 100, np.arange(min(targets), max(targets), 0.001))[0]
 
@@ -134,18 +127,11 @@ def plot_rmse_distrib_dist(rmses, targets, preds, model_name, figures_loc, bonds
     ax_plot.set_title(model_name + " model")
     ax_plot.set_title(model_name+"\nRelative error")
 
-    print(rmses.shape)
-    print(targets.shape)
-
-    rel_rmses = np.divide(rmses, targets)*100
+    rel_rmses = np.divide(rmses, targets.reshape((1,)))*100
 
     ax_plot.set_xlabel("Target distance (pm)")
     ax_plot.set_ylabel("Relative error (%)")
     ax_plot.plot(targets, rel_rmses, ",", label="", alpha=1)
-
-
-
-    print("end initial plot")
 
     ax_plot.set_xlim(xmin=min(min(targets), min(preds)), xmax=max(max(targets), max(preds)))
 
