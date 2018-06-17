@@ -79,7 +79,7 @@ def _print_typical_bond_length(ax_plot, ax_bonds, bond_type, val):
     #                   arrowprops=dict(facecolor='red', edgecolor="black", linewidth=0.6,
     #                                   arrowstyle="simple")
     #                   )
-    ax_bonds.text(x_axe_coord - 0.06, 0.5, bond_type + ' bonds', transform=ax_bonds.transAxes, fontsize=7)
+    ax_bonds.text(x_axe_coord - 0.06, 1.2, bond_type + ' bonds', transform=ax_bonds.transAxes, fontsize=7)
 
 
 def _print_typical_bonds_lengths(ax_plot, ax_bonds, anum_1, anum_2):
