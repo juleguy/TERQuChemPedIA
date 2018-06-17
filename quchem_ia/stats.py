@@ -76,8 +76,8 @@ def _hist_bonds_lengths_representation(ax, targets, preds, bonds_lengths_loc):
     #                                 orientation='horizontal')
 
     ax.set_xlabel('Bond lengths representation')
-    #ax.set_xticks([])
-    #ax.set_yticks([])
+    ax.set_xticks([])
+    ax.set_yticks([])
 
 
 def _print_typical_bond_length(ax_plot, ax_bonds, bond_type, val):
