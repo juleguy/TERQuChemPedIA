@@ -61,7 +61,7 @@
           "plot_targets_error_distrib": "True",
           "plot_targets_predictions": "True",
           "batch_size": "1060",
-          "display_plots":"True"
+          "display_plots":"False"
         }
       }
     }

@@ -1,11 +1,10 @@
 {
   "paths":{
-        "train_prepared_input_loc":"../../data/DIST_REL_C_01/train_set_prepared_input.h5",
-        "test_prepared_input_loc":"../../data/DIST_REL_C_01/test_set_prepared_input.h5",
-        "train_labels_loc":"../../data/DIST_REL_C_01/train_set_labels.h5",
-        "test_labels_loc":"../../data/DIST_REL_C_01/test_set_labels.h5",
-        "model_loc":"../../models/DIST_REL_C_01/DIST_REL_C_01.tflearn",
-        "logs_dir":"../../models/DIST_REL_C_01/logs/",
+        "train_prepared_input_loc":"../../data/DIST_REL_C_RNN/train_set_prepared_input.h5",
+        "test_prepared_input_loc":"../../data/DIST_REL_C_RNN/test_set_prepared_input.h5",
+        "train_labels_loc":"../../data/DIST_REL_C_RNN/train_set_labels.h5",
+        "test_labels_loc":"../data/DIST_REL_C_RNN/test_set_labels.h5",
+        "model_loc":"../../models/DIST_REL_C_01/11.0/DIST_REL_C_01_basic.tflearn",
         "bonds_lengths_loc":"/home/jleguy/data/stats/CC/CC_bonds_lengths_total_set.h5",
         "plots_dir":"../../figures/DIST_REL_C_01/"
   },
