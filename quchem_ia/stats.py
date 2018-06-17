@@ -127,7 +127,7 @@ def plot_rmse_distrib_dist(rmses, targets, preds, model_name, figures_loc, bonds
     ax_plot.set_title(model_name + " model")
     ax_plot.set_title(model_name+"\nRelative error")
 
-    rel_rmses = np.divide(rmses, targets.reshape((1,)))*100
+    rel_rmses = np.divide(rmses, targets.reshape((-1,)))*100
 
     ax_plot.set_xlabel("Target distance (pm)")
     ax_plot.set_ylabel("Relative error (%)")
