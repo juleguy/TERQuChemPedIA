@@ -49,14 +49,16 @@ def _colorbar_bonds_lengths_representation(ax, targets, bonds_lengths_loc):
     :return:
     """
     bonds_lengths_h5 = h5py.File(bonds_lengths_loc, "r")
-    bonds_lengths = np.array(bonds_lengths_h5[distances_key])
-    bonds_lengths = np.where(bonds_lengths >= min(targets))
-    bonds_lengths = np.where(bonds_lengths <= max(targets))
+    bonds_lengths = np.array(bonds_lengths_h5[distances_key])*100
+
+    # Extracting values in the current range
+    bonds_lengths = np.extract(bonds_lengths >= min(targets), bonds_lengths)
+    bonds_lengths = np.extract(bonds_lengths <= max(targets), bonds_lengths)
 
     #hist_bonds = np.histogram(bonds_lengths * 100, np.arange(min(targets), max(targets), 0.001))[0]
 
     ax.set_xlim(xmin=min(targets), xmax=max(targets))
-    ax.hist(bonds_lengths*100, floor(max(targets)-min(targets))*10)
+    ax.hist(bonds_lengths, floor(max(targets)-min(targets))*10)
 
     # cmap = mpl.cm.bwr_r
     #
@@ -66,6 +68,8 @@ def _colorbar_bonds_lengths_representation(ax, targets, bonds_lengths_loc):
     #                                 orientation='horizontal')
 
     ax.set_xlabel('Bond lengths representation')
+    ax.xticks([])
+    ax.yticks([])
 
 
 def _print_typical_bond_length(ax_plot, ax_bonds, bond_type, val):
@@ -101,7 +105,7 @@ def _get_gridspec():
     :return:
     """
 
-    gs = gridspec.GridSpec(2, 1, height_ratios=[8, 1])
+    gs = gridspec.GridSpec(2, 1, height_ratios=[6, 1])
     gs.update(hspace=0.55)
     return gs
 

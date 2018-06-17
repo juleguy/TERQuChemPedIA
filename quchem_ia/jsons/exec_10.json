@@ -37,7 +37,7 @@
       }
     },
     {
-      "model_train": {
+      "model_train_IGNORED": {
         "model_name": "DIST_REL_C_Ker_Ridge_01",
         "model_type": "kernel_ridge",
         "params": {
