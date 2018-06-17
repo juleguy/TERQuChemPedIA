@@ -42,7 +42,7 @@ def plot_distrib_rmses_val(rmses, model_name, figures_loc, display_plot):
         plt.show()
 
 
-def _colorbar_bonds_lengths_representation(ax, targets, preds, bonds_lengths_loc):
+def _hist_bonds_lengths_representation(ax, targets, preds, bonds_lengths_loc):
     """
     Plots the colorbar representing the bonds lengths representation
     :param ax:
@@ -53,17 +53,27 @@ def _colorbar_bonds_lengths_representation(ax, targets, preds, bonds_lengths_loc
     bonds_lengths_h5 = h5py.File(bonds_lengths_loc, "r")
     bonds_lengths = np.array(bonds_lengths_h5[distances_key])*100
 
+    print("Initial bonds extracted")
+
     min_x = min(min(targets), min(preds))
     max_x = max(max(targets), max(preds))
 
     # Extracting values in the current range
     bonds_lengths = np.extract(bonds_lengths >= min_x, bonds_lengths)
+
+    print("Too high bonds removed")
+
     bonds_lengths = np.extract(bonds_lengths <= max_x, bonds_lengths)
+
+    print("Too low bonds removed")
+
 
     #hist_bonds = np.histogram(bonds_lengths * 100, np.arange(min(targets), max(targets), 0.001))[0]
 
     ax.set_xlim(xmin=min_x, xmax=max_x)
     ax.hist(bonds_lengths, floor(max_x-min_x)*10)
+
+    print("End hist")
 
     # cmap = mpl.cm.bwr_r
     #
@@ -74,7 +84,7 @@ def _colorbar_bonds_lengths_representation(ax, targets, preds, bonds_lengths_loc
 
     ax.set_xlabel('Bond lengths representation')
     #ax.set_xticks([])
-    ax.set_yticks([])
+    #ax.set_yticks([])
 
 
 def _print_typical_bond_length(ax_plot, ax_bonds, bond_type, val):
@@ -131,7 +141,7 @@ def plot_rmse_distrib_dist(rmses, targets, preds, model_name, figures_loc, bonds
 
     # Plotting the bond lengths representation
     ax_bonds = plt.subplot(gs[1])
-    _colorbar_bonds_lengths_representation(ax_bonds, targets, preds, bonds_lengths_loc)
+    _hist_bonds_lengths_representation(ax_bonds, targets, preds, bonds_lengths_loc)
     _print_typical_bonds_lengths(ax_plot, ax_bonds, anum_1, anum_2)
 
     plt.tight_layout()
@@ -166,7 +176,7 @@ def plot_targets_pred(targets, preds, anum_1, anum_2, model_name, figures_loc, b
 
     # Distances representation plot
     ax_bonds = plt.subplot(gs[1])
-    _colorbar_bonds_lengths_representation(ax_bonds, targets, preds, bonds_lengths_loc)
+    _hist_bonds_lengths_representation(ax_bonds, targets, preds, bonds_lengths_loc)
 
     _print_typical_bonds_lengths(ax_plot, ax_bonds, anum_1, anum_2)
 
