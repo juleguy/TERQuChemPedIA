@@ -10,7 +10,7 @@ De plus, la connaissance précise des nuages électroniques d'un couple de molé
 \begin{figure}[!h]
 	\centering
 	\includegraphics[scale=0.25]{images/iso_niveaux.png}
-	\caption{Représentation des iso-niveaux de probabilité de présence électronique d'une molécule}
+	\caption{Représentation des iso-niveaux de probabilité de présence électronique d'une molécule (Projet QuChemPedia)}
 \end{figure}
 
 \par Le calcul de la géométrie (position des atomes) et des propriétés énergétiques d'une molécule dépendent des fonctions d'ondes. Dans le cadre de ce stage, nous nous intéressons uniquement à la prédiction de géométries moléculaires optimisées (convergées), c'est pourquoi les deux parties suivantes vont décrire les approches actuellement utilisées en chimie pour calculer ces géométries. L'objectif de ces deux méthodes est de calculer une géométrie optimisée à partir d'une géométrie issue de mesures expérimentales ou de résultats théoriques.
@@ -22,4 +22,4 @@ La mécanique moléculaire, à travers des outils comme OpenBabel\cite{openbabel
 \par L'approche communément utilisée en chimie pour optimiser la géométrie moléculaire s'appuie sur l'optimisation itérative de la densité électronique. Elle est basée sur la \emph{Density Functional Theory} (DFT), qui propose une méthode dans laquelle la densité électronique d'une molécule est optimisée itérativement par la résolution d'équations, jusqu'à atteindre un seuil de cohérence donné. La géométrie moléculaire est alors déduite de la fonction d'onde, elle-même déduite de la densité électronique. Cette méthode est implémentée dans de nombreux programmes de chimie computationnelle, dont notamment Gaussian et Gamess.\\
 
 \par L'inconvénient principal de cette approche est le temps de calcul nécessaire, qui limite la possibilité de l'appliquer à un grand nombre de molécules. Si l'on possédait une méthode plus rapide, on pourrait par exemple imaginer l'automatisation de la recherche de couples de molécules ayant un potentiel photovoltaïque élevé et dont la synthèse serait moins polluante que les couples utilisés actuellement, en associant à la recherche une fonction de coût qui représenterait le coût écologique de la synthèse.\\
-Afin de réduire le temps d'optimisation, nous tentons de développer une solution basée sur l'élaboration de modèles d'apprentissage automatique, qui remplaceraient partiellement ou en totalité le calcul itératif de la fonction d'ondes.
+Afin de réduire le temps d'optimisation, nous tentons de développer une solution basée sur l'élaboration de modèles d'apprentissage automatique, qui remplaceraient partiellement ou en totalité le calcul itératif de la fonction d'onde.

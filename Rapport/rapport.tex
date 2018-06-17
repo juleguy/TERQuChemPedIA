@@ -4,7 +4,7 @@
 \usepackage[francais]{babel}
 \usepackage{wrapfig}
 \usepackage{graphicx}
-\usepackage{listings,xcolor}
+\usepackage{xcolor}
 \usepackage{appendix}
 \usepackage{adjustbox}
 \usepackage{titling}
@@ -12,11 +12,11 @@
 \usepackage{pdfpages}
 \usepackage{caption}
 \usepackage{subcaption}
-\usepackage[hidelinks]{hyperref}
 \usepackage{arydshln}
 \usepackage{fixltx2e}
 \usepackage{amsmath}
 \usepackage{pdflscape}
+
 
 % Rotation de texte
 \newcommand*\rot{\rotatebox{90}}
@@ -30,52 +30,22 @@
 \newcommand{\colvect}[1]{\ensuremath{\begin{pmatrix}#1\end{pmatrix}}}
 
 
-\hypersetup{
-    colorlinks,
-    citecolor=black,
-    filecolor=black,
-    linkcolor=blue,
-    urlcolor=blue
-}
 
 %Géométrie des pages
 \usepackage{geometry}
 \geometry{hmargin=2.2cm,vmargin=2.2cm}
 
-%Définition des couleurs pour le code xml
-\definecolor{colorxmlnode}{rgb}{0.2, 0.2, 0.2} 
-\definecolor{maroon}{RGB}{178 34 34}
-
 
 %Profondeur des compteurs et de la tableofcontents
 \setcounter{secnumdepth}{3}
-\setcounter{tocdepth}{2}
+\setcounter{tocdepth}{3}
 
-
-%lst xml
-\lstdefinelanguage{XML}
-{
-  basicstyle=\ttfamily,
-  morestring=[s]{"}{"},
-  morecomment=[s]{?}{?},
-  morecomment=[s]{!--}{--},
-  commentstyle=\color{darkgreen},
-  moredelim=[s][\color{black}]{>}{<},
-  moredelim=[s][\color{red}]{\ }{=},
-  stringstyle=\color{blue},
-  identifierstyle=\color{maroon}
-}
 
 
 \addto\captionsfrench{%
   \renewcommand\appendixname{Annexe}
   \renewcommand\appendixpagename{Annexes}
 }
-
-%Définition des commandes \noeud et \classe
-\newcommand\classe[1]{\mbox{\textit{#1}}}
-\newcommand\noeud[1]{\textcolor{colorxmlnode}{<\mbox{#1}>}}
-
 
 
 
@@ -149,6 +119,15 @@
 \chapter{Données}
 
 \chapter{Prédiction de longueurs de liaisons convergées}
+	\section{Introduction}
+		\input{5-Prediction_de_longueurs_de_liaisons_convergees/introduction.tex}
+	\section{Prédiction de longueurs de liaisons carbone-carbone}
+		\input{5-Prediction_de_longueurs_de_liaisons_convergees/prediction_cc.tex}
+	\section{Généralisation de la méthode à d'autres liaisons}
+		\input{5-Prediction_de_longueurs_de_liaisons_convergees/generalisation.tex}
+	\section{Ouverture à d'autres modèles d'apprentissage automatique}
+		\input{5-Prediction_de_longueurs_de_liaisons_convergees/autres_modeles.tex}
+
 
 \chapter{Prédiction de géométries moléculaires convergées}
 

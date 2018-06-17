@@ -1,72 +1,90 @@
 \select@language {french}
-\contentsline {chapter}{\numberline {1}Introduction}{3}{chapter.1}
-\contentsline {chapter}{\numberline {2}Contexte et objectifs}{4}{chapter.2}
-\contentsline {section}{\numberline {2.1}Projet QuChemPedia}{4}{section.2.1}
-\contentsline {section}{\numberline {2.2}Enjeux en chimie}{4}{section.2.2}
-\contentsline {subsection}{\numberline {2.2.1}Calcul de propri\IeC {\'e}t\IeC {\'e}s mol\IeC {\'e}culaires}{4}{subsection.2.2.1}
-\contentsline {subsection}{\numberline {2.2.2}M\IeC {\'e}canique mol\IeC {\'e}culaire}{5}{subsection.2.2.2}
-\contentsline {subsection}{\numberline {2.2.3}Optimisation g\IeC {\'e}om\IeC {\'e}trique quantique}{5}{subsection.2.2.3}
-\contentsline {section}{\numberline {2.3}Utilisation de mod\IeC {\`e}les d'apprentissage automatique}{5}{section.2.3}
-\contentsline {chapter}{\numberline {3}Repr\IeC {\'e}sentations g\IeC {\'e}om\IeC {\'e}triques mol\IeC {\'e}culaires}{6}{chapter.3}
-\contentsline {section}{\numberline {3.1}Matrice des coordonn\IeC {\'e}es atomiques}{6}{section.3.1}
-\contentsline {section}{\numberline {3.2}Matrice r\IeC {\'e}duite des distances inter-atomiques}{6}{section.3.2}
-\contentsline {subsection}{\numberline {3.2.1}Motivation}{6}{subsection.3.2.1}
-\contentsline {subsection}{\numberline {3.2.2}Formalisation}{7}{subsection.3.2.2}
-\contentsline {subsection}{\numberline {3.2.3}Reconstruction des mol\IeC {\'e}cules}{8}{subsection.3.2.3}
-\contentsline {subsubsection}{\numberline {3.2.3.1}Formalisation de la m\IeC {\'e}thode de reconstruction}{8}{subsubsection.3.2.3.1}
-\contentsline {paragraph}{N\IeC {\'e}cessit\IeC {\'e} et limite de l'introduction d'un atome fictif}{8}{section*.7}
-\contentsline {paragraph}{Placement de l'atome fictif}{8}{section*.8}
-\contentsline {paragraph}{Placement de l'atome a\textsubscript {1}}{8}{section*.9}
-\contentsline {paragraph}{Placement de l'atome a\textsubscript {2}}{8}{section*.11}
-\contentsline {paragraph}{Placement de l'atome a\textsubscript {3}}{9}{section*.13}
-\contentsline {paragraph}{Placement de l'atome a\textsubscript {n}}{9}{section*.15}
-\contentsline {subsubsection}{\numberline {3.2.3.2}Reconstruction automatique des positions en utilisant un solveur}{10}{subsubsection.3.2.3.2}
-\contentsline {paragraph}{Limites de l'approche par solveur}{10}{section*.19}
-\contentsline {subsubsection}{\numberline {3.2.3.3}Reconstruction automatique des positions en utilisant des \IeC {\'e}quations de trilat\IeC {\'e}ration}{11}{subsubsection.3.2.3.3}
-\contentsline {paragraph}{Performances et limites (propagation des erreurs)}{12}{section*.20}
-\contentsline {paragraph}{Test de la reconstruction}{12}{section*.22}
-\contentsline {section}{\numberline {3.3}Matrice des distances \IeC {\`a} des points fixes}{13}{section.3.3}
-\contentsline {subsection}{\numberline {3.3.1}Motivation}{13}{subsection.3.3.1}
-\contentsline {subsection}{\numberline {3.3.2}Formalisation}{13}{subsection.3.3.2}
-\contentsline {subsection}{\numberline {3.3.3}Reconstruction des mol\IeC {\'e}cules}{14}{subsection.3.3.3}
-\contentsline {section}{\numberline {3.4}Repr\IeC {\'e}sentation locale des liaisons covalentes}{14}{section.3.4}
-\contentsline {subsection}{\numberline {3.4.1}Motivation}{14}{subsection.3.4.1}
-\contentsline {subsection}{\numberline {3.4.2}Classes positionnelles}{14}{subsection.3.4.2}
-\contentsline {subsection}{\numberline {3.4.3}Distances aux atomes de la liaison}{15}{subsection.3.4.3}
-\contentsline {subsection}{\numberline {3.4.4}Restriction au voisinage le plus proche}{15}{subsection.3.4.4}
-\contentsline {chapter}{\numberline {4}Donn\IeC {\'e}es}{17}{chapter.4}
-\contentsline {chapter}{\numberline {5}Pr\IeC {\'e}diction de longueurs de liaisons converg\IeC {\'e}es}{18}{chapter.5}
-\contentsline {chapter}{\numberline {6}Pr\IeC {\'e}diction de g\IeC {\'e}om\IeC {\'e}tries mol\IeC {\'e}culaires converg\IeC {\'e}es}{19}{chapter.6}
-\contentsline {section}{\numberline {6.1}Introduction}{19}{section.6.1}
-\contentsline {subsection}{\numberline {6.1.1}Motivation}{19}{subsection.6.1.1}
-\contentsline {subsection}{\numberline {6.1.2}M\IeC {\'e}thodologie}{19}{subsection.6.1.2}
-\contentsline {paragraph}{Introduction de bruit}{19}{section*.28}
-\contentsline {paragraph}{Mod\IeC {\`e}les}{20}{section*.29}
-\contentsline {subsection}{\numberline {6.1.3}Nomenclature}{20}{subsection.6.1.3}
-\contentsline {section}{\numberline {6.2}Donn\IeC {\'e}es et param\IeC {\`e}tres des mod\IeC {\`e}les}{20}{section.6.2}
-\contentsline {subsection}{\numberline {6.2.1}Donn\IeC {\'e}es}{20}{subsection.6.2.1}
-\contentsline {subsubsection}{\numberline {6.2.1.1}Repr\IeC {\'e}sentations g\IeC {\'e}om\IeC {\'e}triques}{20}{subsubsection.6.2.1.1}
-\contentsline {subsubsection}{\numberline {6.2.1.2}Propri\IeC {\'e}t\IeC {\'e}s atomiques}{20}{subsubsection.6.2.1.2}
-\contentsline {subsubsection}{\numberline {6.2.1.3}Bruit}{21}{subsubsection.6.2.1.3}
-\contentsline {paragraph}{Nature du bruit}{21}{section*.30}
-\contentsline {paragraph}{Donn\IeC {\'e}es bruit\IeC {\'e}es}{21}{section*.31}
-\contentsline {paragraph}{Intensit\IeC {\'e} du bruit}{21}{section*.32}
-\contentsline {subsubsection}{\numberline {6.2.1.4}Homog\IeC {\'e}n\IeC {\'e}isation des tailles de donn\IeC {\'e}es}{22}{subsubsection.6.2.1.4}
-\contentsline {subsubsection}{\numberline {6.2.1.5}Unit\IeC {\'e}s}{23}{subsubsection.6.2.1.5}
-\contentsline {subsubsection}{\numberline {6.2.1.6}Synth\IeC {\`e}se du flux de donn\IeC {\'e}es}{23}{subsubsection.6.2.1.6}
-\contentsline {subsection}{\numberline {6.2.2}Fonctions d'\IeC {\'e}valuation}{23}{subsection.6.2.2}
-\contentsline {subsubsection}{\numberline {6.2.2.1}Fonctions de co\IeC {\^u}t}{23}{subsubsection.6.2.2.1}
-\contentsline {subsubsection}{\numberline {6.2.2.2}Fonctions de validation}{24}{subsubsection.6.2.2.2}
-\contentsline {subsubsection}{\numberline {6.2.2.3}Erreur introduite par le bruit}{24}{subsubsection.6.2.2.3}
-\contentsline {subsection}{\numberline {6.2.3}Architectures}{24}{subsection.6.2.3}
-\contentsline {subsection}{\numberline {6.2.4}Optimisation des param\IeC {\`e}tres}{24}{subsection.6.2.4}
-\contentsline {section}{\numberline {6.3}R\IeC {\'e}sultats}{25}{section.6.3}
-\contentsline {subsection}{\numberline {6.3.1}Estimation des performances lors de l'entra\IeC {\^\i }nement}{25}{subsection.6.3.1}
-\contentsline {subsection}{\numberline {6.3.2}Analyse d\IeC {\'e}taill\IeC {\'e}e d'un mod\IeC {\`e}le}{25}{subsection.6.3.2}
-\contentsline {subsubsection}{\numberline {6.3.2.1}Analyse statistique}{25}{subsubsection.6.3.2.1}
-\contentsline {subsubsection}{\numberline {6.3.2.2}Distribution de l'erreur absolue}{26}{subsubsection.6.3.2.2}
-\contentsline {subsubsection}{\numberline {6.3.2.3}Distribution de l'erreur absolue en fonction des cibles}{26}{subsubsection.6.3.2.3}
-\contentsline {subsubsection}{\numberline {6.3.2.4}Distribution des pr\IeC {\'e}dictions en fonctions des cibles}{27}{subsubsection.6.3.2.4}
-\contentsline {subsection}{\numberline {6.3.3}Abandon de la m\IeC {\'e}thode}{28}{subsection.6.3.3}
-\contentsline {chapter}{\numberline {7}Conclusion}{30}{chapter.7}
-\contentsline {chapter}{Appendices}{31}{section*.45}
+\contentsline {chapter}{\numberline {1}Introduction}{3}
+\contentsline {chapter}{\numberline {2}Contexte et objectifs}{4}
+\contentsline {section}{\numberline {2.1}Projet QuChemPedia}{4}
+\contentsline {section}{\numberline {2.2}Enjeux en chimie}{4}
+\contentsline {subsection}{\numberline {2.2.1}Calcul de propri\IeC {\'e}t\IeC {\'e}s mol\IeC {\'e}culaires}{4}
+\contentsline {subsection}{\numberline {2.2.2}M\IeC {\'e}canique mol\IeC {\'e}culaire}{5}
+\contentsline {subsection}{\numberline {2.2.3}Optimisation g\IeC {\'e}om\IeC {\'e}trique quantique}{5}
+\contentsline {section}{\numberline {2.3}Utilisation de mod\IeC {\`e}les d'apprentissage automatique}{5}
+\contentsline {chapter}{\numberline {3}Repr\IeC {\'e}sentations g\IeC {\'e}om\IeC {\'e}triques mol\IeC {\'e}culaires}{6}
+\contentsline {section}{\numberline {3.1}Matrice des coordonn\IeC {\'e}es atomiques}{6}
+\contentsline {section}{\numberline {3.2}Matrice r\IeC {\'e}duite des distances inter-atomiques}{6}
+\contentsline {subsection}{\numberline {3.2.1}Motivation}{6}
+\contentsline {subsection}{\numberline {3.2.2}Formalisation}{7}
+\contentsline {subsection}{\numberline {3.2.3}Reconstruction des mol\IeC {\'e}cules}{8}
+\contentsline {subsubsection}{\numberline {3.2.3.1}Formalisation de la m\IeC {\'e}thode de reconstruction}{8}
+\contentsline {paragraph}{N\IeC {\'e}cessit\IeC {\'e} et limite de l'introduction d'un atome fictif}{8}
+\contentsline {paragraph}{Placement de l'atome fictif}{8}
+\contentsline {paragraph}{Placement de l'atome a\textsubscript {1}}{8}
+\contentsline {paragraph}{Placement de l'atome a\textsubscript {2}}{8}
+\contentsline {paragraph}{Placement de l'atome a\textsubscript {3}}{9}
+\contentsline {paragraph}{Placement de l'atome a\textsubscript {n}}{9}
+\contentsline {subsubsection}{\numberline {3.2.3.2}Reconstruction automatique des positions en utilisant un solveur}{10}
+\contentsline {paragraph}{Limites de l'approche par solveur}{10}
+\contentsline {subsubsection}{\numberline {3.2.3.3}Reconstruction automatique des positions en utilisant des \IeC {\'e}quations de trilat\IeC {\'e}ration}{11}
+\contentsline {paragraph}{Performances et limites (propagation des erreurs)}{12}
+\contentsline {paragraph}{Test de la reconstruction}{12}
+\contentsline {section}{\numberline {3.3}Matrice des distances \IeC {\`a} des points fixes}{13}
+\contentsline {subsection}{\numberline {3.3.1}Motivation}{13}
+\contentsline {subsection}{\numberline {3.3.2}Formalisation}{13}
+\contentsline {subsection}{\numberline {3.3.3}Reconstruction des mol\IeC {\'e}cules}{14}
+\contentsline {section}{\numberline {3.4}Repr\IeC {\'e}sentation locale des liaisons covalentes}{14}
+\contentsline {subsection}{\numberline {3.4.1}Motivation}{14}
+\contentsline {subsection}{\numberline {3.4.2}Classes positionnelles}{14}
+\contentsline {subsection}{\numberline {3.4.3}Distances aux atomes de la liaison}{15}
+\contentsline {subsection}{\numberline {3.4.4}Restriction au voisinage le plus proche}{16}
+\contentsline {chapter}{\numberline {4}Donn\IeC {\'e}es}{18}
+\contentsline {chapter}{\numberline {5}Pr\IeC {\'e}diction de longueurs de liaisons converg\IeC {\'e}es}{19}
+\contentsline {section}{\numberline {5.1}Introduction}{19}
+\contentsline {subsection}{\numberline {5.1.1}Motivation}{19}
+\contentsline {subsection}{\numberline {5.1.2}Repr\IeC {\'e}sentation des donn\IeC {\'e}es}{19}
+\contentsline {subsubsection}{\numberline {5.1.2.1}Donn\IeC {\'e}es en entr\IeC {\'e}e des mod\IeC {\`e}les}{19}
+\contentsline {subsubsection}{\numberline {5.1.2.2}Homog\IeC {\'e}n\IeC {\'e}isation de la taille des entr\IeC {\'e}es}{20}
+\contentsline {subsubsection}{\numberline {5.1.2.3}Repr\IeC {\'e}sentation d'une liaison en entr\IeC {\'e}e d'un mod\IeC {\`e}le}{20}
+\contentsline {subsection}{\numberline {5.1.3}M\IeC {\'e}thodologie}{20}
+\contentsline {subsubsection}{\numberline {5.1.3.1}Pr\IeC {\'e}cision requise}{20}
+\contentsline {subsubsection}{\numberline {5.1.3.2}Classes de mod\IeC {\`e}les}{21}
+\contentsline {subsection}{\numberline {5.1.4}Nomenclature}{21}
+\contentsline {section}{\numberline {5.2}Pr\IeC {\'e}diction de longueurs de liaisons carbone-carbone}{22}
+\contentsline {subsection}{\numberline {5.2.1}Mod\IeC {\`e}le na\IeC {\"\i }f}{22}
+\contentsline {subsection}{\numberline {5.2.2}Restriction au voisinage le plus proche}{22}
+\contentsline {subsection}{\numberline {5.2.3}Application de fonctions aux distances}{22}
+\contentsline {subsection}{\numberline {5.2.4}R\IeC {\'e}duction de la largeur du r\IeC {\'e}seau}{22}
+\contentsline {subsection}{\numberline {5.2.5}Recherche par quadrillage des param\IeC {\`e}tres du mod\IeC {\`e}le na\IeC {\"\i }f}{22}
+\contentsline {section}{\numberline {5.3}G\IeC {\'e}n\IeC {\'e}ralisation de la m\IeC {\'e}thode \IeC {\`a} d'autres liaisons}{22}
+\contentsline {section}{\numberline {5.4}Ouverture \IeC {\`a} d'autres mod\IeC {\`e}les d'apprentissage automatique}{22}
+\contentsline {chapter}{\numberline {6}Pr\IeC {\'e}diction de g\IeC {\'e}om\IeC {\'e}tries mol\IeC {\'e}culaires converg\IeC {\'e}es}{23}
+\contentsline {section}{\numberline {6.1}Introduction}{23}
+\contentsline {subsection}{\numberline {6.1.1}Motivation}{23}
+\contentsline {subsection}{\numberline {6.1.2}M\IeC {\'e}thodologie}{23}
+\contentsline {paragraph}{Introduction de bruit}{23}
+\contentsline {paragraph}{Mod\IeC {\`e}les}{24}
+\contentsline {subsection}{\numberline {6.1.3}Nomenclature}{24}
+\contentsline {section}{\numberline {6.2}Donn\IeC {\'e}es et param\IeC {\`e}tres des mod\IeC {\`e}les}{24}
+\contentsline {subsection}{\numberline {6.2.1}Donn\IeC {\'e}es}{24}
+\contentsline {subsubsection}{\numberline {6.2.1.1}Repr\IeC {\'e}sentations g\IeC {\'e}om\IeC {\'e}triques}{24}
+\contentsline {subsubsection}{\numberline {6.2.1.2}Propri\IeC {\'e}t\IeC {\'e}s atomiques}{24}
+\contentsline {subsubsection}{\numberline {6.2.1.3}Bruit}{25}
+\contentsline {paragraph}{Nature du bruit}{25}
+\contentsline {paragraph}{Donn\IeC {\'e}es bruit\IeC {\'e}es}{25}
+\contentsline {paragraph}{Intensit\IeC {\'e} du bruit}{25}
+\contentsline {subsubsection}{\numberline {6.2.1.4}Homog\IeC {\'e}n\IeC {\'e}isation des tailles de donn\IeC {\'e}es}{26}
+\contentsline {subsubsection}{\numberline {6.2.1.5}Unit\IeC {\'e}s}{27}
+\contentsline {subsubsection}{\numberline {6.2.1.6}Synth\IeC {\`e}se du flux de donn\IeC {\'e}es}{27}
+\contentsline {subsection}{\numberline {6.2.2}Fonctions d'\IeC {\'e}valuation}{27}
+\contentsline {subsubsection}{\numberline {6.2.2.1}Fonctions de co\IeC {\^u}t}{27}
+\contentsline {subsubsection}{\numberline {6.2.2.2}Fonctions de validation}{28}
+\contentsline {subsubsection}{\numberline {6.2.2.3}Erreur introduite par le bruit}{28}
+\contentsline {subsection}{\numberline {6.2.3}Architectures}{28}
+\contentsline {subsection}{\numberline {6.2.4}Optimisation des param\IeC {\`e}tres}{28}
+\contentsline {section}{\numberline {6.3}R\IeC {\'e}sultats}{29}
+\contentsline {subsection}{\numberline {6.3.1}Estimation des performances lors de l'entra\IeC {\^\i }nement}{29}
+\contentsline {subsection}{\numberline {6.3.2}Analyse d\IeC {\'e}taill\IeC {\'e}e d'un mod\IeC {\`e}le}{29}
+\contentsline {subsubsection}{\numberline {6.3.2.1}Analyse statistique}{29}
+\contentsline {subsubsection}{\numberline {6.3.2.2}Distribution de l'erreur absolue}{30}
+\contentsline {subsubsection}{\numberline {6.3.2.3}Distribution de l'erreur absolue en fonction des cibles}{30}
+\contentsline {subsubsection}{\numberline {6.3.2.4}Distribution des pr\IeC {\'e}dictions en fonctions des cibles}{31}
+\contentsline {subsection}{\numberline {6.3.3}Abandon de la m\IeC {\'e}thode}{32}
+\contentsline {chapter}{\numberline {7}Conclusion}{34}
+\contentsline {chapter}{Appendices}{35}

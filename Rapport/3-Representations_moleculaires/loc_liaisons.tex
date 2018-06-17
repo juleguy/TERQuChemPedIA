@@ -11,7 +11,7 @@ Formellement, on compare la position des atomes aux deux plans normaux à la lia
 
 \begin{figure}[!h]
 	\centering
-	\includegraphics[scale=0.3]{images/classes_pos.png}
+	\includegraphics[scale=0.27]{images/classes_pos.png}
 	\caption{Classes positionnelles au voisinage d'une liaison covalente}
 \end{figure}
 
@@ -22,11 +22,32 @@ En fonction des modèles qui l'utilisent, on va éventuellement appliquer une fo
 \begin{itemize}
 \item{Fonction identité : distance brute}
 \item{Fonction inverse : influence inversement proportionnelle à la distance, relation d'ordre identique à la réalité chimique.}
-\item{Fonction inverse du carré : influence inversement proportionnelle au carré de la distance, relation d'ordre identique à la réalité chimique et rend mieux compte de l'influence réelle des atomes qui suit la loi de Coulomb\footnote{\url{https://fr.wikipedia.org/wiki/Loi_de_Coulomb_(électrostatique)}} en $\frac{1}{d^2}$.}
+\item{Fonction inverse du carré : influence inversement proportionnelle au carré de la distance, relation d'ordre identique à la réalité chimique et rend mieux compte de l'influence réelle des atomes qui est liée à la loi de Coulomb\footnote{https://fr.wikipedia.org/wiki/Loi\_de\_Coulomb\_(électrostatique)} en $\frac{1}{d^2}$.}
 \end{itemize}
 
+\vspace{0.4cm}
+
+\par Notons qu'aucune de ces fonctions ne représente parfaitement l'influence des atomes en fonction de leur distance, elles permettent cependant de s'approcher de la réalité.
+
+\vspace{1cm}
+
+\begin{figure}[!h]
+	\centering
+	\includegraphics[scale=0.28]{images/classes_pos_2.png}
+	\caption{Distances des atomes à chacun des atomes de la liaison covalente}
+\end{figure}
+
+
 \subsection{Restriction au voisinage le plus proche}
-\par L'influence des atomes au voisinage de la liaison étant proportionnelle à l'inverse du carré de leurs distances aux atomes de la liaison, elle décroît rapidement lorsque l'on s'éloigne de la liaison. L'influence des atomes n'étant pas au voisinage direct est ainsi négligeable. Dans le but de ne pas saturer l'entrée des modèles d'information inutile, nous n'enregistrons alors que les informations (classes positionnelles, distances et autres informations non géométriques spécifiques aux différents modèles) concernant les atomes au voisinage proche de la liaison. Formellement, nous enregistrons ces informations pour les atomes dont la distance à au moins un des atomes de la liaison est inférieure à un seuil $\epsilon$  donné.\\
+\par L'influence des atomes au voisinage de la liaison étant inversement proportionnelle à leur distances aux atomes de la liaison, elle décroît rapidement lorsque l'on s'éloigne de la liaison. L'influence des atomes n'étant pas au voisinage direct est ainsi négligeable. Dans le but de ne pas saturer l'entrée des modèles d'information inutile, nous n'enregistrons alors que les informations (classes positionnelles, distances et autres informations non géométriques spécifiques aux différents modèles) concernant les atomes au voisinage proche de la liaison. Formellement, nous enregistrons ces informations pour les atomes dont la distance à au moins un des atomes de la liaison est inférieure à un seuil $\epsilon$  donné.\\
+
+\vspace{1cm}
+
+\begin{figure}[!h]
+	\centering
+	\includegraphics[scale=0.28]{images/classes_pos_3.png}
+	\caption{Sélection des atomes au voisinage le plus proche}
+\end{figure}
 
 \par Un autre avantage de cette sélection est qu'il existe des molécules aux géométries particulières (repliées) telles que des atomes au voisinage d'une liaison ont très peu d'influence sur sa longueur (ne forment aucune liaison covalente avec les deux atomes de la liaison), et dont la proximité va induire les modèles en erreur. La sélection des atomes au voisinage le plus proche de la liaison avec un seuil $\epsilon$ bien choisi va permettre de résoudre ces problèmes.
 
