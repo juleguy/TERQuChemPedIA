@@ -1,10 +1,10 @@
 {
   "tasks":[
     {
-      "plot_predictions_IGNORED":{
+      "plot_predictions":{
         "paths":{
-          "test_prepared_input_loc":"../../data/DIST_REL_OH_02/test_prepared_input.h5",
-          "test_labels_loc":"../../data/DIST_REL_OH_02/test_labels.h5",
+          "test_prepared_input_loc":"../../data/DIST_REL_OH_05/test_prepared_input.h5",
+          "test_labels_loc":"../../data/DIST_REL_OH_05/test_labels.h5",
           "plots_dir":"../../figures/DIST_REL_OH_05/",
           "logs_dir":"../../models/DIST_REL_OH_05/logs/",
           "bonds_lengths_loc":"/home/jleguy/data/stats/OH/OH_bonds_lengths_total_set.h5",
@@ -21,7 +21,7 @@
           "asymb_1":"O",
           "asymb_2":"H",
           "batch_size":"2000",
-          "last_layer_width":"870",
+          "last_layer_width":"15",
           "hidden_act":"elu",
           "depth":"9",
           "outlayer_act":"linear",
@@ -33,8 +33,8 @@
     {
       "plot_predictions":{
         "paths":{
-          "test_prepared_input_loc":"../../data/DIST_REL_CH_02/test_prepared_input.h5",
-          "test_labels_loc":"../../data/DIST_REL_CH_02/test_labels.h5",
+          "test_prepared_input_loc":"../../data/DIST_REL_CH_05/test_prepared_input.h5",
+          "test_labels_loc":"../../data/DIST_REL_CH_05/test_labels.h5",
           "plots_dir":"../../figures/DIST_REL_CH_05/",
           "logs_dir":"../../models/DIST_REL_CH_05/logs/",
           "bonds_lengths_loc":"/home/jleguy/data/stats/CH/CH_bonds_lengths_total_set.h5",
@@ -51,7 +51,7 @@
           "asymb_1":"C",
           "asymb_2":"H",
           "batch_size":"2000",
-          "last_layer_width":"870",
+          "last_layer_width":"15",
           "depth":"9",
           "hidden_act":"elu",
           "outlayer_act":"linear",
@@ -63,8 +63,8 @@
     {
       "plot_predictions_IGNORED":{
         "paths":{
-          "test_prepared_input_loc":"../../data/DIST_REL_CC_02/test_prepared_input.h5",
-          "test_labels_loc":"../../data/DIST_REL_CC_02/test_labels.h5",
+          "test_prepared_input_loc":"../../data/DIST_REL_CC_05/test_prepared_input.h5",
+          "test_labels_loc":"../../data/DIST_REL_CC_05/test_labels.h5",
           "plots_dir":"../../figures/DIST_REL_OH_05/",
           "logs_dir":"../../models/DIST_REL_CC_05/logs/",
           "bonds_lengths_loc":"/home/jleguy/data/stats/CC/CC_bonds_lengths_total_set.h5",
@@ -81,7 +81,7 @@
           "asymb_1":"C",
           "asymb_2":"C",
           "batch_size":"2000",
-          "last_layer_width":"870",
+          "last_layer_width":"15",
           "depth":"9",
           "hidden_act":"elu",
           "outlayer_act":"linear",
