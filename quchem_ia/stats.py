@@ -20,7 +20,6 @@ def plot_distrib_rmses_val(rmses, model_name, figures_loc, display_plot):
 
     # Linear Y scale
     ax1 = fig.add_subplot(121)
-    ax1.set_title(model_name + " model\n Errors distribution")
     ax1.set_xlabel("Absolute error (pm)")
     ax1.set_ylabel("Test set occurrences (linear scale)")
     ax1.hist(rmses, floor(max(rmses) - min(rmses)) * 10)
@@ -28,7 +27,6 @@ def plot_distrib_rmses_val(rmses, model_name, figures_loc, display_plot):
     # Logarithmic Y scale
     ax2 = fig.add_subplot(122)
     ax2.set_yscale("log")
-    ax2.set_title(model_name + " model\n Errors distribution")
     ax2.set_xlabel("Absolute error (pm)")
     ax2.set_ylabel("Test set occurrences (logarithmic scale)")
 
@@ -53,7 +51,9 @@ def _colorbar_bonds_lengths_representation(ax, targets, bonds_lengths_loc):
     bonds_lengths_h5 = h5py.File(bonds_lengths_loc, "r")
     bonds_lengths = np.array(bonds_lengths_h5[distances_key])
 
-    hist_bonds = np.histogram(bonds_lengths * 100, np.arange(min(targets), max(targets), 0.001))[0]
+    #hist_bonds = np.histogram(bonds_lengths * 100, np.arange(min(targets), max(targets), 0.001))[0]
+
+    ax.hist(bonds_lengths*100, floor(max(targets)-min(targets))*10)
 
 
     # cmap = mpl.cm.bwr_r
@@ -62,7 +62,6 @@ def _colorbar_bonds_lengths_representation(ax, targets, bonds_lengths_loc):
     #
     # cb1 = mpl.colorbar.ColorbarBase(ax, cmap=cmap, values=hist_bonds,
     #                                 orientation='horizontal')
-    ax.hist(bonds_lengths*100, floor(max(targets)-min(targets)))
 
     ax.set_xlabel('Bond lengths representation')
 
@@ -100,7 +99,7 @@ def _get_gridspec():
     :return:
     """
 
-    gs = gridspec.GridSpec(2, 1, height_ratios=[15, 1])
+    gs = gridspec.GridSpec(2, 1, height_ratios=[8, 1])
     gs.update(hspace=0.55)
     return gs
 
