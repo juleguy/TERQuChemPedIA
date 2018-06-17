@@ -134,9 +134,14 @@ def plot_rmse_distrib_dist(rmses, targets, preds, model_name, figures_loc, bonds
     ax_plot.set_title(model_name + " model")
     ax_plot.set_title(model_name+"\nRelative error")
 
+    rel_rmses = np.divide(rmses, targets)*100
+
     ax_plot.set_xlabel("Target distance (pm)")
     ax_plot.set_ylabel("Relative error (%)")
-    ax_plot.plot(targets, (rmses/targets)*100, ",", label="", alpha=1)
+    ax_plot.plot(targets, rel_rmses, ",", label="", alpha=1)
+
+    print("end initial plot")
+
     ax_plot.set_xlim(xmin=min(min(targets), min(preds)), xmax=max(max(targets), max(preds)))
 
     # Plotting the bond lengths representation
