@@ -68,8 +68,8 @@ def _colorbar_bonds_lengths_representation(ax, targets, bonds_lengths_loc):
     #                                 orientation='horizontal')
 
     ax.set_xlabel('Bond lengths representation')
-    ax.xticks([])
-    ax.yticks([])
+    ax.set_xticks([])
+    ax.set_yticks([])
 
 
 def _print_typical_bond_length(ax_plot, ax_bonds, bond_type, val):
