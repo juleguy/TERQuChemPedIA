@@ -20,12 +20,14 @@ def plot_distrib_rmses_val(rmses, model_name, figures_loc, display_plot):
 
     # Linear Y scale
     ax1 = fig.add_subplot(121)
+    ax1.set_title(model_name+"\nError distribution (linear)")
     ax1.set_xlabel("Absolute error (pm)")
     ax1.set_ylabel("Test set occurrences (linear scale)")
     ax1.hist(rmses, floor(max(rmses) - min(rmses)) * 10)
 
     # Logarithmic Y scale
     ax2 = fig.add_subplot(122)
+    ax2.set_title(model_name+"\nError distribution (logarithmic)")
     ax2.set_yscale("log")
     ax2.set_xlabel("Absolute error (pm)")
     ax2.set_ylabel("Test set occurrences (logarithmic scale)")
@@ -117,9 +119,11 @@ def plot_rmse_distrib_dist(rmses, targets, model_name, figures_loc, bonds_length
     # Plotting the error data
     ax_plot = plt.subplot(gs[0])
     ax_plot.set_title(model_name + " model")
+    ax_plot.set_title(model_name+"\nRelative error")
+
     ax_plot.set_xlabel("Target distance (pm)")
     ax_plot.set_ylabel("Absolute error (pm)")
-    ax_plot.plot(targets, rmses, ",", label="Absolute error (pm)", alpha=1)
+    ax_plot.plot(targets, (rmses/targets)*100, ",", label="Relative error (%)", alpha=1)
     ax_plot.set_xlim(xmin=min(targets), xmax=max(targets))
 
     # Plotting the bond lengths representation
@@ -146,6 +150,7 @@ def plot_targets_pred(targets, preds, anum_1, anum_2, model_name, figures_loc, b
     # Predictions depending on target distances plot
     ax_plot = plt.subplot(gs[0])
     ax_plot.set_title(model_name + " model")
+    ax_plot.set_title(model_name+"\nPredictions")
     ax_plot.set_xlabel("Target distance (pm)")
     ax_plot.set_ylabel("Predicted distance (pm)")
     ax_plot.plot(targets, preds, ",")
