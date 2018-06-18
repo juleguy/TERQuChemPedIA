@@ -31,7 +31,7 @@
           "distances": "True",
           "distances_cut_off": "2",
           "batch_size": "100000",
-          "distances_fun":"squareinv"
+          "distances_fun":"identity"
         }
       }
     },
@@ -41,7 +41,7 @@
         "model_type":"NN",
         "params":{
           "epochs":"150",
-          "last_layer_width":"225",
+          "last_layer_width":"15",
           "batch_size":"5000",
           "learning_rate":"0.01",
           "epsilon":"0.001",
