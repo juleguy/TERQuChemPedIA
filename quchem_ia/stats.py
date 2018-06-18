@@ -53,7 +53,7 @@ def _hist_bonds_lengths_representation(ax, targets, preds, bonds_lengths_loc):
     bonds_lengths_h5 = h5py.File(bonds_lengths_loc, "r")
     bonds_lengths = np.array(bonds_lengths_h5[distances_key])*100
 
-    min_x = min(min(targets), min(preds))
+    min_x = min(min(targets), min(np.extract(preds>60, preds)))
     max_x = max(max(targets), max(preds))
 
     # Extracting values in the current range
@@ -134,7 +134,7 @@ def plot_rmse_distrib_dist(rmses, targets, preds, model_name, figures_loc, bonds
     print("min targets : "+str(min(targets)))
     print("min preds : "+str(min(preds)))
 
-    ax_plot.set_xlim(xmin=min(min(targets), min(preds)), xmax=max(max(targets), max(preds)))
+    ax_plot.set_xlim(xmin=min(min(targets), min(np.extract(preds>60, preds))), xmax=max(max(targets), max(preds)))
 
     # Plotting the bond lengths representation
     ax_bonds = plt.subplot(gs[1])
@@ -164,7 +164,7 @@ def plot_targets_pred(targets, preds, anum_1, anum_2, model_name, figures_loc, b
     ax_plot.set_xlabel("Target distance (pm)")
     ax_plot.set_ylabel("Predicted distance (pm)")
     ax_plot.plot(targets, preds, ",")
-    ax_plot.set_xlim(xmin=min(min(targets), min(preds)), xmax=max(max(targets), max(preds)))
+    ax_plot.set_xlim(xmin=min(min(targets), min(np.extract(preds>60, preds))), xmax=max(max(targets), max(preds)))
     ax_plot.set_ylim(ymin=min(min(targets), min(preds)), ymax=max(max(targets), max(preds)))
 
     # Perfect model plot
