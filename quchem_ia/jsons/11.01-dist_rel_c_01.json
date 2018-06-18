@@ -31,7 +31,7 @@
           "one_hot_anums": "True",
           "amasses": "True",
           "distances": "True",
-          "distances_cut_off": "999999999",
+          "distances_cut_off": "None",
           "batch_size": "10000",
           "distances_fun":"identity"
         }
