@@ -21,7 +21,7 @@
           "plot_targets_error_distrib": "True",
           "plot_targets_predictions": "True",
           "batch_size": "10000",
-          "last_layer_width": "225",
+          "last_layer_width": "15",
           "depth": "3",
           "hidden_act": "elu",
           "outlayer_act": "linear",
