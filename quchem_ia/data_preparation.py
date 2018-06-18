@@ -275,6 +275,9 @@ def _prepare_mol_data(coords_mol, anums_mol, amasses_mol, anum_1, anum_2, pubche
                                 if input_rn_idx == bond_max_neighbours - 1:
                                     valid_example = False
                                     print("Too many atoms around the bond")
+                                    print("Mol size : "+str(mol_size))
+                                    print("Current input_rn_idx : "+str(input_rn_idx))
+                                    print("Bond max neighbours : "+str(bond_max_neighbours))
                                     break
 
                                 last_input_id = 0
