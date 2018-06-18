@@ -272,7 +272,7 @@ def _prepare_mol_data(coords_mol, anums_mol, amasses_mol, anum_1, anum_2, pubche
 
                                 # If the number of neighbours is above the max, canceling the recording of the current
                                 # bond
-                                if input_rn_idx == bond_max_neighbours - 1:
+                                if input_rn_idx == bond_max_neighbours:
                                     valid_example = False
                                     print("Too many atoms around the bond")
                                     print("Mol size : "+str(mol_size))
