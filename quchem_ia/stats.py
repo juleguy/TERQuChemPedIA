@@ -157,6 +157,9 @@ def plot_targets_pred(targets, preds, anum_1, anum_2, model_name, figures_loc, b
     # Generating the grispec object
     gs = _get_gridspec()
 
+    x_min = min(min(targets), min(preds))
+    x_max = max(max(targets), max(preds))
+
     # Predictions depending on target distances plot
     ax_plot = plt.subplot(gs[0])
     ax_plot.set_title(model_name + " model")
@@ -164,11 +167,11 @@ def plot_targets_pred(targets, preds, anum_1, anum_2, model_name, figures_loc, b
     ax_plot.set_xlabel("Target distance (pm)")
     ax_plot.set_ylabel("Predicted distance (pm)")
     ax_plot.plot(targets, preds, ",")
-    ax_plot.set_xlim(xmin=min(min(targets), min(preds)), xmax=max(max(targets), max(preds)))
+    ax_plot.set_xlim(xmin=x_min, xmax=x_max)
     ax_plot.set_ylim(ymin=min(min(targets), min(preds)), ymax=max(max(targets), max(preds)))
 
     # Perfect model plot
-    x = np.linspace(min(targets), max(targets))
+    x = np.linspace(x_min, x_max)
     ax_plot.plot(x, fun_id(x), color='darkgreen', alpha=0.5)
 
     # Distances representation plot
