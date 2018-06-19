@@ -30,92 +30,92 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="19.1_stats_dist_rel_xy_05.json" pinned="false" current-in-tab="true">
+      <file leaf-file-name="19.1_stats_dist_rel_xy_05.json" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/jsons/19.1_stats_dist_rel_xy_05.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="486">
-              <caret line="27" column="32" selection-start-line="27" selection-start-column="32" selection-end-line="27" selection-end-column="32" />
+            <state relative-caret-position="1494">
+              <caret line="83" column="32" selection-end-line="92" selection-end-column="1" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="18.0-quadri_ridge_ker.json" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/jsons/18.0-quadri_ridge_ker.json">
+      <file leaf-file-name="12.1-stats_dist_rel_xy_01.json" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/jsons/12.1-stats_dist_rel_xy_01.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="342">
-              <caret line="19" column="33" selection-start-line="19" selection-start-column="33" selection-end-line="19" selection-end-column="33" />
+            <state relative-caret-position="-90">
+              <caret line="25" column="20" selection-start-line="25" selection-start-column="20" selection-end-line="25" selection-end-column="20" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="18.1-DIST_REL_C_01_KER_RIDGE.json" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/jsons/18.1-DIST_REL_C_01_KER_RIDGE.json">
+      <file leaf-file-name="model_nn.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/model_nn.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-308">
-              <caret line="26" column="33" selection-start-line="26" selection-start-column="33" selection-end-line="26" selection-end-column="33" />
+            <state relative-caret-position="144">
+              <caret line="181" column="64" lean-forward="true" selection-start-line="181" selection-start-column="64" selection-end-line="181" selection-end-column="64" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="16.02-SVM.json" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/jsons/16.02-SVM.json">
+      <file leaf-file-name="19.01-train_dist_rel_cc_05.json" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/jsons/19.01-train_dist_rel_cc_05.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="288">
-              <caret line="31" column="28" lean-forward="true" selection-start-line="31" selection-start-column="28" selection-end-line="31" selection-end-column="28" />
+            <state relative-caret-position="295">
+              <caret line="45" column="33" selection-start-line="45" selection-start-column="33" selection-end-line="45" selection-end-column="33" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="16.00-SVM.json" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/jsons/16.00-SVM.json">
+      <file leaf-file-name="19.02-train_dist_rel_ch_05.json" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/jsons/19.02-train_dist_rel_ch_05.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="16">
-              <caret line="10" column="46" lean-forward="true" selection-start-line="10" selection-start-column="46" selection-end-line="10" selection-end-column="46" />
+            <state relative-caret-position="414">
+              <caret line="45" column="33" selection-start-line="45" selection-start-column="33" selection-end-line="45" selection-end-column="33" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="16.12-KER_RIDGE.json" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/jsons/16.12-KER_RIDGE.json">
+      <file leaf-file-name="19.03-train_dist_rel_oh_05.json" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/jsons/19.03-train_dist_rel_oh_05.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="792">
-              <caret line="44" column="26" selection-start-line="44" selection-start-column="26" selection-end-line="44" selection-end-column="26" />
+            <state relative-caret-position="432">
+              <caret line="45" column="33" selection-start-line="45" selection-start-column="33" selection-end-line="45" selection-end-column="33" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="16.01-SVM.json" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/jsons/16.01-SVM.json">
+      <file leaf-file-name="exec_4.json" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/jsons/exec_4.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="630">
-              <caret line="35" column="27" selection-end-line="77" selection-end-column="1" />
+            <state relative-caret-position="450">
+              <caret line="25" column="33" selection-start-line="25" selection-start-column="33" selection-end-line="25" selection-end-column="33" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="14.7-stats_dist_rel_xy_03.json" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/jsons/14.7-stats_dist_rel_xy_03.json">
+      <file leaf-file-name="exec_2.json" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/jsons/exec_2.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="358">
-              <caret line="77" column="32" selection-start-line="77" selection-start-column="32" selection-end-line="77" selection-end-column="32" />
+            <state relative-caret-position="412">
+              <caret line="37" column="5" selection-end-line="39" selection-end-column="1" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="14.9-stats_dist_rel_xy_04.json" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/jsons/14.9-stats_dist_rel_xy_04.json">
+      <file leaf-file-name="exec_11.json" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/jsons/exec_11.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="268">
-              <caret line="50" column="32" selection-start-line="50" selection-start-column="32" selection-end-line="50" selection-end-column="32" />
+            <state relative-caret-position="124">
+              <caret line="22" column="31" selection-start-line="22" selection-start-column="31" selection-end-line="22" selection-end-column="31" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="17.01-stats_dist_rel_c_05.json" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/jsons/17.01-stats_dist_rel_c_05.json">
+      <file leaf-file-name="exec_2bis.json" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/jsons/exec_2bis.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="457">
-              <caret line="27" column="33" selection-start-line="27" selection-start-column="33" selection-end-line="27" selection-end-column="33" />
+            <state relative-caret-position="504">
+              <caret line="34" column="5" selection-start-line="14" selection-start-column="4" selection-end-line="34" selection-end-column="5" />
             </state>
           </provider>
         </entry>
@@ -131,9 +131,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>dists</find>
-      <find>linear</find>
-      <find>ch</find>
       <find>fit</find>
       <find>gp</find>
       <find>batch_</find>
@@ -161,6 +158,9 @@
       <find>too man</find>
       <find>hist</find>
       <find>off</find>
+      <find>cut_off</find>
+      <find>preds&gt;</find>
+      <find>min ta</find>
     </findStrings>
     <replaceStrings>
       <replace>C</replace>
@@ -169,15 +169,10 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/jsons/14.4-train_dist_rel_cc_02.json" />
-        <option value="$PROJECT_DIR$/jsons/15.6-train_dist_rel_oh_03.json" />
-        <option value="$PROJECT_DIR$/jsons/15.0-SVM_test.json" />
-        <option value="$PROJECT_DIR$/jsons/exec_2.json" />
         <option value="$PROJECT_DIR$/jsons/exec_2bis.json" />
         <option value="$PROJECT_DIR$/jsons/15.1-SVM_test_linear.json" />
         <option value="$PROJECT_DIR$/jsons/14-7-stats_dist_rel_c_oh_04.json.py" />
         <option value="$PROJECT_DIR$/jsons/14-7-stats_dist_rel_c_oh_04.json" />
-        <option value="$PROJECT_DIR$/data_preparation.py" />
         <option value="$PROJECT_DIR$/model_svm.py" />
         <option value="$PROJECT_DIR$/json_keys.py" />
         <option value="$PROJECT_DIR$/grid_search.py" />
@@ -186,40 +181,45 @@
         <option value="$PROJECT_DIR$/model_kernel_ridge.py" />
         <option value="$PROJECT_DIR$/model_ridge.py" />
         <option value="$PROJECT_DIR$/jsons/exec_6.json" />
-        <option value="$PROJECT_DIR$/model_nn.py" />
         <option value="$PROJECT_DIR$/jsons/14.4-train_dist_rel_cc_03.json" />
         <option value="$PROJECT_DIR$/jsons/14.5-train_dist_rel_ch_03.json" />
         <option value="$PROJECT_DIR$/jsons/14.6-train_dist_rel_oh_03.json" />
-        <option value="$PROJECT_DIR$/jsons/16.11-KERNEL_RIDGE.json" />
         <option value="$PROJECT_DIR$/jsons/14-7-stats_dist_rel_c_oh_03.json" />
         <option value="$PROJECT_DIR$/16.2-quadri_svm.json" />
         <option value="$PROJECT_DIR$/jsons/14-7-stats_dist_rel_xy_03.json" />
-        <option value="$PROJECT_DIR$/jsons/17.0-train_dist_rel_c_05.json" />
         <option value="$PROJECT_DIR$/jsons/14.80-train_dist_rel_cc_04.json" />
         <option value="$PROJECT_DIR$/jsons/14.81-train_dist_rel_ch_04.json" />
         <option value="$PROJECT_DIR$/jsons/16.2-quadri_svm.json" />
-        <option value="$PROJECT_DIR$/jsons/16.12-KER_RIDGE.json" />
         <option value="$PROJECT_DIR$/jsons/16.10-KERNEL_RIDGE.json" />
         <option value="$PROJECT_DIR$/jsons/18.0-quadri_ridge_ker.json" />
         <option value="$PROJECT_DIR$/jsons/14.82-train_dist_rel_oh_04.json" />
-        <option value="$PROJECT_DIR$/jsons/19.01-train_dist_rel_cc_05.json" />
-        <option value="$PROJECT_DIR$/jsons/19.02-train_dist_rel_ch_05.json" />
-        <option value="$PROJECT_DIR$/jsons/19.03-train_dist_rel_oh_05.json" />
         <option value="$PROJECT_DIR$/jsons/exec_10.json" />
         <option value="$PROJECT_DIR$/quchem_ia.py" />
-        <option value="$PROJECT_DIR$/stats.py" />
         <option value="$PROJECT_DIR$/jsons/13.3-DIST_REL_C_03&amp;DIST_REL_C_04_stats.json" />
         <option value="$PROJECT_DIR$/jsons/13.1-dist_rel_c_02_stats.json" />
         <option value="$PROJECT_DIR$/jsons/11.1-stats_dist_rel_c_01.json" />
         <option value="$PROJECT_DIR$/jsons/14.3-stats_dist_rel_xy_2.json" />
         <option value="$PROJECT_DIR$/jsons/14.7-stats_dist_rel_xy_03.json" />
         <option value="$PROJECT_DIR$/jsons/14.9-stats_dist_rel_xy_04.json" />
-        <option value="$PROJECT_DIR$/jsons/17.01-stats_dist_rel_c_05.json" />
-        <option value="$PROJECT_DIR$/jsons/19.1_stats_dist_rel_xy_05.json" />
         <option value="$PROJECT_DIR$/jsons/16.00-SVM.json" />
         <option value="$PROJECT_DIR$/jsons/16.01-SVM.json" />
-        <option value="$PROJECT_DIR$/jsons/16.02-SVM.json" />
+        <option value="$PROJECT_DIR$/jsons/11.01-stats_dist_rel_c_01.json" />
+        <option value="$PROJECT_DIR$/jsons/19.1_stats_dist_rel_xy_05.json" />
+        <option value="$PROJECT_DIR$/jsons/16.11-KERNEL_RIDGE.json" />
+        <option value="$PROJECT_DIR$/jsons/16.12-KER_RIDGE.json" />
         <option value="$PROJECT_DIR$/jsons/18.1-DIST_REL_C_01_KER_RIDGE.json" />
+        <option value="$PROJECT_DIR$/jsons/16.02-SVM.json" />
+        <option value="$PROJECT_DIR$/jsons/11.01-dist_rel_c_01.json" />
+        <option value="$PROJECT_DIR$/data_preparation.py" />
+        <option value="$PROJECT_DIR$/jsons/17.01-stats_dist_rel_c_05.json" />
+        <option value="$PROJECT_DIR$/jsons/17.0-train_dist_rel_c_05.json" />
+        <option value="$PROJECT_DIR$/stats.py" />
+        <option value="$PROJECT_DIR$/jsons/exec_11.json" />
+        <option value="$PROJECT_DIR$/jsons/19.01-train_dist_rel_cc_05.json" />
+        <option value="$PROJECT_DIR$/jsons/19.02-train_dist_rel_ch_05.json" />
+        <option value="$PROJECT_DIR$/jsons/19.03-train_dist_rel_oh_05.json" />
+        <option value="$PROJECT_DIR$/jsons/12.1-stats_dist_rel_xy_01.json" />
+        <option value="$PROJECT_DIR$/model_nn.py" />
       </list>
     </option>
   </component>
@@ -402,57 +402,58 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="27" width="1920" height="1053" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info anchor="bottom" id="TODO" order="7" weight="0.32894737" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.14102565" side_tool="true" weight="0.32894737" />
-      <window_info anchor="right" x="0" y="0" width="430" height="853" id="Documentation" order="6" sideWeight="0.3872549" side_tool="true" visible="true" weight="0.17788461" />
+      <window_info anchor="right" x="0" y="0" width="430" height="853" id="Documentation" order="6" sideWeight="0.39215687" side_tool="true" visible="true" weight="0.17788461" />
       <window_info anchor="bottom" id="Database Changes" order="13" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="9" show_stripe_button="false" />
       <window_info anchor="bottom" id="Python Console" order="12" sideWeight="0.9166667" weight="0.4232456" />
       <window_info anchor="bottom" id="Run" order="3" sideWeight="0.86004275" weight="0.32894737" />
-      <window_info anchor="bottom" id="Terminal" order="11" sideWeight="0.85897434" visible="true" weight="0.32894737" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.499187" visible="true" weight="0.1923077" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="11" sideWeight="0.85897434" visible="true" weight="0.32894737" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.499187" visible="true" weight="0.19871795" />
       <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
       <window_info anchor="right" id="Database" order="3" weight="0.32959402" />
-      <window_info anchor="bottom" id="Find" order="2" sideWeight="0.49786323" weight="0.32894737" />
-      <window_info anchor="right" id="SciView" order="4" sideWeight="0.6127451" visible="true" weight="0.17788461" />
+      <window_info anchor="right" id="SciView" order="4" sideWeight="0.60784316" visible="true" weight="0.17788461" />
       <window_info id="Structure" order="1" sideWeight="0.500813" side_tool="true" weight="0.16025642" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Debug" order="4" sideWeight="0.49839744" weight="0.3991228" />
+      <window_info anchor="bottom" id="Concurrent Activities Diagram" order="0" sideWeight="0.49946582" weight="0.32894737" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="Coverage" order="5" side_tool="true" />
       <window_info anchor="bottom" id="Inspection" order="6" weight="0.4" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="bottom" id="Message" order="1" />
       <window_info anchor="bottom" id="Cvs" order="5" weight="0.25" />
-      <window_info anchor="bottom" id="Concurrent Activities Diagram" order="0" sideWeight="0.49946582" weight="0.32894737" />
+      <window_info anchor="bottom" id="Find" order="2" sideWeight="0.49786323" weight="0.32894737" />
+      <window_info anchor="right" id="Coverage" order="5" side_tool="true" />
     </layout>
     <layout-to-restore>
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Inspection" order="6" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="5" weight="0.25" />
+      <window_info id="Favorites" order="2" side_tool="true" />
       <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.499187" visible="true" weight="0.16666667" />
       <window_info id="Structure" order="1" sideWeight="0.500813" side_tool="true" weight="0.16025642" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="bottom" id="TODO" order="7" />
-      <window_info anchor="bottom" id="Version Control" order="9" show_stripe_button="false" />
       <window_info anchor="bottom" id="Run" order="3" sideWeight="0.8627137" weight="0.2752193" />
-      <window_info anchor="bottom" id="Find" order="2" sideWeight="0.49839744" weight="0.32894737" />
-      <window_info anchor="bottom" id="Python Console" order="12" sideWeight="0.9166667" weight="0.4232456" />
+      <window_info anchor="bottom" id="Message" order="1" />
       <window_info anchor="bottom" id="Debug" order="4" sideWeight="0.49893162" weight="0.3991228" />
       <window_info anchor="right" x="0" y="0" width="430" height="853" id="Documentation" order="6" sideWeight="0.5185185" side_tool="true" weight="0.36842105" />
       <window_info anchor="right" id="Database" order="3" weight="0.32959402" />
       <window_info anchor="right" id="Coverage" order="5" side_tool="true" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.13782051" side_tool="true" weight="0.39254385" />
       <window_info anchor="bottom" id="Database Changes" order="13" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Cvs" order="5" weight="0.25" />
+      <window_info anchor="bottom" id="Version Control" order="9" show_stripe_button="false" />
       <window_info anchor="right" id="SciView" order="4" sideWeight="0.4814815" weight="0.36842105" />
-      <window_info anchor="bottom" id="Message" order="1" />
+      <window_info anchor="bottom" id="Find" order="2" sideWeight="0.49839744" weight="0.32894737" />
       <window_info anchor="bottom" id="Terminal" order="11" sideWeight="0.8712607" visible="true" weight="0.4375" />
       <window_info anchor="bottom" id="Concurrent Activities Diagram" order="0" sideWeight="0.49946582" weight="0.32894737" />
-      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Python Console" order="12" sideWeight="0.9166667" weight="0.4232456" />
     </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -474,48 +475,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="594">
-          <caret line="33" selection-start-line="33" selection-end-line="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/model_ridge.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="54">
-          <caret line="9" column="82" selection-start-line="9" selection-start-column="82" selection-end-line="9" selection-end-column="82" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/paths.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="14" selection-start-line="14" selection-end-line="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/jsons/exec_6.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="954">
-          <caret line="53" column="26" selection-start-line="53" selection-start-column="26" selection-end-line="53" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/model_kernel_ridge.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="324">
-          <caret line="24" column="24" selection-start-line="24" selection-start-column="24" selection-end-line="24" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/model_nn.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="489">
-          <caret line="87" column="97" selection-start-line="87" selection-start-column="97" selection-end-line="87" selection-end-column="97" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/jsons/15.0-SVM_test_rbf.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
@@ -527,27 +486,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="358">
           <caret line="85" column="17" lean-forward="true" selection-start-line="85" selection-start-column="17" selection-end-line="85" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/jsons/16.11-KERNEL_RIDGE.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="979">
-          <caret line="56" column="24" lean-forward="true" selection-start-line="56" selection-start-column="24" selection-end-line="56" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/jsons/exec_3.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="10" column="50" selection-start-line="10" selection-start-column="50" selection-end-line="10" selection-end-column="50" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/jsons/exec_4.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
-          <caret line="8" column="50" selection-start-line="8" selection-start-column="50" selection-end-line="8" selection-end-column="50" />
         </state>
       </provider>
     </entry>
@@ -583,13 +521,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="360">
           <caret line="20" column="31" lean-forward="true" selection-end-line="58" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/jsons/17.0-train_dist_rel_c_05.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="576">
-          <caret line="32" column="33" selection-start-line="32" selection-start-column="33" selection-end-line="32" selection-end-column="33" />
         </state>
       </provider>
     </entry>
@@ -649,20 +580,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/jsons/14.80-train_dist_rel_cc_04.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="14" column="4" selection-start-line="14" selection-start-column="4" selection-end-line="38" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/jsons/14.5-train_dist_rel_ch_03.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="32" column="35" lean-forward="true" selection-start-line="32" selection-start-column="35" selection-end-line="32" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/jsons/14.82-train_dist_rel_oh_04.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="468">
@@ -680,52 +597,10 @@
     <entry file="file://$PROJECT_DIR$/jsons/exec_1.json">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/jsons/19.01-train_dist_rel_cc_05.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="196">
-          <caret line="47" column="35" lean-forward="true" selection-start-line="47" selection-start-column="35" selection-end-line="47" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/jsons/19.02-train_dist_rel_ch_05.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="36">
-          <caret line="15" column="33" selection-start-line="15" selection-start-column="33" selection-end-line="15" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/jsons/19.03-train_dist_rel_oh_05.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="15" column="33" selection-start-line="15" selection-start-column="33" selection-end-line="15" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/jsons/exec_10.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="702">
           <caret line="39" column="26" selection-start-line="39" selection-start-column="26" selection-end-line="39" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/quchem_ia.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="344">
-          <caret line="657" lean-forward="true" selection-start-line="657" selection-end-line="657" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/jsons/13.0-dist_rel_c_02.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="394">
-          <caret line="36" column="21" lean-forward="true" selection-start-line="36" selection-start-column="21" selection-end-line="36" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/stats.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-880">
-          <caret line="67" lean-forward="true" selection-start-line="67" selection-end-line="67" />
         </state>
       </provider>
     </entry>
@@ -740,13 +615,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="468">
           <caret line="29" column="32" selection-start-line="29" selection-start-column="32" selection-end-line="29" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/jsons/11.1-stats_dist_rel_c_01.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="358">
-          <caret line="29" column="34" selection-start-line="29" selection-start-column="34" selection-end-line="29" selection-end-column="34" />
         </state>
       </provider>
     </entry>
@@ -771,24 +639,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/jsons/17.01-stats_dist_rel_c_05.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="457">
-          <caret line="27" column="33" selection-start-line="27" selection-start-column="33" selection-end-line="27" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/jsons/16.01-SVM.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="630">
           <caret line="35" column="27" selection-end-line="77" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/jsons/16.12-KER_RIDGE.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="792">
-          <caret line="44" column="26" selection-start-line="44" selection-start-column="26" selection-end-line="44" selection-end-column="26" />
         </state>
       </provider>
     </entry>
@@ -799,13 +653,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/jsons/16.02-SVM.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="288">
-          <caret line="31" column="28" lean-forward="true" selection-start-line="31" selection-start-column="28" selection-end-line="31" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/jsons/18.0-quadri_ridge_ker.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="342">
@@ -813,17 +660,174 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/jsons/14.5-train_dist_rel_ch_03.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="576">
+          <caret line="32" column="35" selection-start-line="32" selection-start-column="35" selection-end-line="32" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jsons/14.80-train_dist_rel_cc_04.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="432">
+          <caret line="24" column="38" selection-start-line="24" selection-end-line="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jsons/13.0-dist_rel_c_02.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="72">
+          <caret line="4" column="90" selection-start-line="4" selection-start-column="90" selection-end-line="4" selection-end-column="90" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/jsons/18.1-DIST_REL_C_01_KER_RIDGE.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-308">
-          <caret line="26" column="33" selection-start-line="26" selection-start-column="33" selection-end-line="26" selection-end-column="33" />
+        <state relative-caret-position="702">
+          <caret line="39" column="18" selection-start-line="39" selection-start-column="18" selection-end-line="39" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/quchem_ia.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="175">
+          <caret line="140" column="45" selection-start-line="140" selection-start-column="38" selection-end-line="140" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jsons/16.11-KERNEL_RIDGE.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="11" selection-start-line="11" selection-end-line="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jsons/16.12-KER_RIDGE.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="10" column="21" selection-start-line="10" selection-start-column="21" selection-end-line="10" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jsons/16.02-SVM.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="520">
+          <caret line="40" column="26" selection-start-line="40" selection-start-column="26" selection-end-line="40" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data_preparation.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="378">
+          <caret line="282" column="49" lean-forward="true" selection-start-line="282" selection-start-column="49" selection-end-line="282" selection-end-column="49" />
+          <folding>
+            <element signature="e#0#11#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jsons/11.01-dist_rel_c_01.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="486">
+          <caret line="33" column="36" selection-start-line="33" selection-start-column="32" selection-end-line="33" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jsons/17.01-stats_dist_rel_c_05.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="1" selection-start-column="1" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jsons/17.0-train_dist_rel_c_05.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-36">
+          <caret line="21" column="33" selection-start-line="21" selection-start-column="33" selection-end-line="21" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/stats.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="157">
+          <caret line="132" selection-start-line="132" selection-end-line="132" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jsons/exec_3.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="10" column="50" selection-start-line="10" selection-start-column="50" selection-end-line="10" selection-end-column="50" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jsons/exec_4.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="450">
+          <caret line="25" column="33" selection-start-line="25" selection-start-column="33" selection-end-line="25" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jsons/exec_2.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="412">
+          <caret line="37" column="5" selection-end-line="39" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jsons/exec_2bis.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="504">
+          <caret line="34" column="5" selection-start-line="14" selection-start-column="4" selection-end-line="34" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jsons/exec_11.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="124">
+          <caret line="22" column="31" selection-start-line="22" selection-start-column="31" selection-end-line="22" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jsons/19.01-train_dist_rel_cc_05.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="295">
+          <caret line="45" column="33" selection-start-line="45" selection-start-column="33" selection-end-line="45" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jsons/19.03-train_dist_rel_oh_05.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="432">
+          <caret line="45" column="33" selection-start-line="45" selection-start-column="33" selection-end-line="45" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jsons/19.02-train_dist_rel_ch_05.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="414">
+          <caret line="45" column="33" selection-start-line="45" selection-start-column="33" selection-end-line="45" selection-end-column="33" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/jsons/19.1_stats_dist_rel_xy_05.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="486">
-          <caret line="27" column="32" selection-start-line="27" selection-start-column="32" selection-end-line="27" selection-end-column="32" />
+        <state relative-caret-position="1494">
+          <caret line="83" column="32" selection-end-line="92" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jsons/12.1-stats_dist_rel_xy_01.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-90">
+          <caret line="25" column="20" selection-start-line="25" selection-start-column="20" selection-end-line="25" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/model_nn.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="181" column="64" lean-forward="true" selection-start-line="181" selection-start-column="64" selection-end-line="181" selection-end-column="64" />
         </state>
       </provider>
     </entry>

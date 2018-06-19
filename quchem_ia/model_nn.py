@@ -1,6 +1,4 @@
 import uuid
-
-from tflearn.data_utils import pad_sequences
 from tflearn.layers.core import input_data, dropout, fully_connected
 from tflearn.layers.estimator import regression
 from tflearn.optimizers import Adam
@@ -181,12 +179,7 @@ def predict(model_loc, test_prepared_input_loc, test_labels_loc, batch_size, las
 
     # Loading inputs and targets
     input_X = np.array(h5py.File(test_prepared_input_loc)[inputs_key])
-    labels_y = np.array(h5py.File(test_labels_loc)[targets_key])
-
-    input_X = pad_sequences(input_X, dtype="float32", maxlen=870)
-
-    input_X = input_X.reshape((-1, 870))
-    labels_y = labels_y.reshape((-1,1))
+    labels_y = np.array(h5py.File(test_labels_loc)[targets_key])cd
 
     # Computing first layer width (all the examples of the dataset must have the same width)
     first_layer_width = len(input_X[0])
