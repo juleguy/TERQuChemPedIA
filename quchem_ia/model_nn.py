@@ -181,6 +181,9 @@ def predict(model_loc, test_prepared_input_loc, test_labels_loc, batch_size, las
     input_X = np.array(h5py.File(test_prepared_input_loc)[inputs_key])
     labels_y = np.array(h5py.File(test_labels_loc)[targets_key])
 
+    input_X = input_X.reshape((-1, 870))
+    labels_y = labels_y.reshape((-1,))
+
     # Computing first layer width (all the examples of the dataset must have the same width)
     first_layer_width = len(input_X[0])
 
