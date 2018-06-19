@@ -43,7 +43,7 @@
         "model_type": "NN",
         "params": {
           "epochs": "600",
-          "last_layer_width": "225",
+          "last_layer_width": "15",
           "batch_size": "5000",
           "learning_rate": "0.001",
           "epsilon": "0.001",

@@ -131,9 +131,6 @@ def plot_rmse_distrib_dist(rmses, targets, preds, model_name, figures_loc, bonds
     ax_plot.set_ylabel("Relative error (%)")
     ax_plot.plot(targets, rel_rmses, ",", label="", alpha=1)
 
-    print("min targets : "+str(min(targets)))
-    print("min preds : "+str(min(preds)))
-
     ax_plot.set_xlim(xmin=min(min(targets), min(preds)), xmax=max(max(targets), max(preds)))
 
     # Plotting the bond lengths representation
