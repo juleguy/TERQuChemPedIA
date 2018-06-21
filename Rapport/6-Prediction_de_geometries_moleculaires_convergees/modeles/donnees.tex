@@ -95,7 +95,7 @@ La représentation géométrique par matrice des distances à des points fixes (
 \end{figure}
 
 \subsubsection{Unités}
-\par De même que pour les modèles prédisant les longueurs de liaisons (REF UNITES DIST\_REL), les modèles décrits ici effectuent leurs prédictions en mÅ, afin d'évaluer des prédictions dans un ordre de grandeur de $10^2$ et d'éviter que la fonction d'évaluation (REF EVALUATION) contenant un carré ne soit influencée par la présence de valeurs proches de zéro.
+\par De même que pour les modèles prédisant les longueurs de liaisons (REF UNITES DIST\_REL), les modèles décrits ici effectuent leurs prédictions en mÅ, afin d'évaluer des prédictions dans un ordre de grandeur de $10^2$ et d'éviter que la fonction d'évaluation (REF EVALUATION) ne soit influencée par la présence de valeurs proches de zéro, qui les minimiserait du fait de la présence d'un carré.
 
 \subsubsection{Synthèse du flux de données}
 \par Le flux de données général des modèles est donc le suivant. On extrait les caractéristiques d'une molécule (géométrie et différentes propriétés atomiques des atomes), on ajoute du bruit à la géométrie puis on tente de prédire le vecteur bruit. La différence entre la géométrie bruitée et le vecteur bruit donne enfin la géométrie convergée prédite par le modèle. Ce flux est synthétisé dans le schéma suivant.

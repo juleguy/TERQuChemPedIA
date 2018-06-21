@@ -54,13 +54,55 @@ Le premier modèle entraîné utilise la représentation locale des liaisons cov
 \end{figure}
 
 \subsubsection{Analyse statistique des erreurs}
+\par Dans la figure suivante, nous présentons les valeurs d'un certain nombre de métriques statistiques permettant d'évaluer les erreurs du modèle. On remarque que les prédictions du modèle sont assez bonnes, la médiane des erreurs étant de l'ordre du demi picomètre. L'erreur moyenne est toutefois au dessus de la barre du picomètre et l'erreur maximale est élevée.
 
-\subsubsection{Distribution de l'erreur}
+\begin{figure}[!h]
+	\centering
+	\begin{tabular}{|l|r|}
+		\hline
+		\textbf{Métrique} & \textbf{Valeur} \\ \hline
+		Moyenne & 1,3301 \\ \hline
+		Médiane & 0,6881 \\ \hline
+		Écart-type & 1,9810 \\ \hline
+		Minimum & 0,0000 \\ \hline
+		Maximum & 28,7268\\ \hline
+		Erreur relative moyenne & 0,9126\% \\ \hline
+	\end{tabular}
+	
+	\caption{Analyse statistique des erreurs du modèle \emph{DIST\_REL\_C\_01} (en pm)}
+\end{figure}
 
-\subsubsection{Distribution de l'erreur en fonction des cibles}
+\subsubsection{Représentation graphique des résultats}
+\par La représentation graphique de la distribution des erreurs montre qu'un grand nombre d'erreurs ont des valeurs au delà du seuil du picomètre de précision nécessaire.
 
-\subsubsection{Distribution des prédictions en fonction des cibles}
+\begin{figure}[!h]
+	\centering
+	
+	\includegraphics[scale=0.7]{../figures/DIST_REL_C_01/DIST_REL_C_01_distrib_rmse_val.png}	
+	
+	\caption{Distribution des erreurs du modèle \emph{DIST\_REL\_C\_01}}
+\end{figure}
 
+\par La représentation de l'erreur relative à la distance devant être prédite, exprimée en fonction des distances cibles montre que les plus grosses erreurs sont effectuées lors de la prédiction des longueurs de liaisons les moins représentées dans les données, mais que les longueurs de liaisons les plus représentées sont en revanche très bien prédites. L'histogramme de la représentation des liaisons situé dans la partie inférieure permet de s'en rendre compte.
+
+\begin{figure}[!h]
+	\centering
+	
+	\includegraphics[scale=0.7]{../figures/DIST_REL_C_01/DIST_REL_C_01_distrib_rmse_dist.png}	
+	
+	\caption{Erreur en fonction des cibles pour le modèle \emph{DIST\_REL\_C\_01}}
+\end{figure}
+
+\par Enfin, la représentation des prédictions en fonction des distances cibles permet de préciser quels types d'erreurs sont commises en fonction des différentes classes de liaisons à prédire. Les liaisons doubles et triples sont très largement surestimées, même si une partie non négligeable de ces liaisons est correctement prédite. La grande majorité des liaisons simples et aromatiques sont très bien prédites, même si une partie des liaisons aromatiques est légèrement sur-estimée et une partie des liaisons simples est légèrement sous-estimée.\\
+
+\begin{figure}[!h]
+	\centering
+	
+	\includegraphics[scale=0.7]{../figures/DIST_REL_C_01/DIST_REL_C_01_preds_targets.png}	
+	
+	\caption{Prédictions en fonction des cibles pour le modèle \emph{DIST\_REL\_C\_01}}
+	
+\end{figure}
 
 \subsection{Restriction au voisinage le plus proche}
 
@@ -205,7 +247,7 @@ Les représentations graphiques étant très similaires à celles du modèle \em
 
 \subsection{Recherche par quadrillage des paramètres du modèle naïf}
 
-\par Afin d'en optimiser les performances, nous effectuons une recherche par quadrillage des paramètres du modèle \emph{DIST\_REL\_C\_01} (REF MODELE NAIF). L'entraînement de chaque modèle prenant plusieurs heures, relativement peu de paramètres différents sont testés. Les paramètres qui varient sont limités à la profondeur du réseau de neurones et au taux d'apprentissage. Chaque entraînement est effectué deux fois dans le cadre d'une validation croisée des résultats. Une validation croisée à deux entraînement ne permet pas de s'assurer de la constance des résultats, mais limite le nombre d'entraînements nécessaires et augmente donc le nombre d'ensembles de paramètres différents pouvant être testés. La performance relative des différents paramètres est évaluée à l'aide de la sortie de tensorboard (REF Tensorboard).\\
+\par Afin d'en optimiser les performances, nous effectuons une recherche par quadrillage des paramètres du modèle \emph{DIST\_REL\_C\_01} (REF MODELE NAIF). L'entraînement de chaque modèle prenant plusieurs heures, relativement peu de paramètres différents sont testés. Les paramètres qui varient sont limités à la profondeur du réseau de neurones et au taux d'apprentissage. Chaque entraînement est effectué deux fois dans le cadre d'une validation croisée des résultats. Une validation croisée à deux entraînements ne permet pas de s'assurer de la constance des résultats, mais limite le nombre d'entraînements nécessaires et augmente donc le nombre d'ensembles de paramètres différents pouvant être testés. La performance relative des différents paramètres est évaluée à l'aide de la sortie de tensorboard (REF Tensorboard).\\
 
 \par La recherche par quadrillage est en réalité constituée de trois sous-recherches. La grille de la première recherche est choisie arbitrairement, tandis que les grilles des autres recherches dépendent des meilleurs paramètres des recherches précédentes.
 
@@ -222,7 +264,7 @@ Les représentations graphiques étant très similaires à celles du modèle \em
 	\caption{Première grille de recherche par quadrillage pour le modèle \emph{DIST\_REL\_C\_01}}
 \end{figure}
 
-\par La sortie de tensorboard associée à la première recherche est donnée dans la figure suivante. Elle représente l'erreur moyenne de tous les modèles sur les données de validation au fil de l'entraînement. Les données d'entraînement et de validation forment deux ensembles disjoints. Pour donner un ordre de grandeur des résultats, la différence entre les performances des deux premiers modèles est de l'ordre de 0.3 pm, et la différence entre le meilleur et le pire modèle est de l'ordre de 4 pm. Les meilleurs résultats étant obtenus avec taux d'apprentissage le plus faible et le réseau le plus profond, on définit une nouvelle grille à partir de cette nouvelle connaissance. À l'issue de la seconde recherche, on utilise la même méthode pour définir une troisième grille de recherche.
+\par La sortie de tensorboard associée à la première recherche est donnée dans la figure suivante. Elle représente l'erreur moyenne de tous les modèles sur les données de validation au fil de l'entraînement. Les données d'entraînement et de validation forment deux ensembles disjoints. Pour donner un ordre de grandeur des résultats, la différence entre les performances des deux premiers modèles est de l'ordre de 0.3 pm, et la différence entre le meilleur et le pire modèle est de l'ordre de 4 pm. Les meilleurs résultats étant obtenus avec le taux d'apprentissage le plus faible et le réseau le plus profond, on définit une nouvelle grille à partir de cette nouvelle connaissance. À l'issue de la seconde recherche, on utilise la même méthode pour définir une troisième grille de recherche.
 \par Notons les résultats des modèles sur les jeux de test sont meilleurs que pendant l'entraînement, à cause de de la désactivation de certains neurones à chaque époque d'entraînement (REF DROPOUT).
 
 \vspace{0.5cm}
