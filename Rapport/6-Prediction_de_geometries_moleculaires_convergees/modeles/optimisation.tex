@@ -1,9 +1,11 @@
 
-\par En plus du choix des données d'entrée, la performance des réseaux de neurones dépend de nombreux paramètres (REF PARAMS RN). Les résultats des modèles décrits dans ce chapitre étant peu probants (REF RESULTATS), j'ai effectué une recherche par quadrillage (REF RECHERCHE QUADRI) large des différents paramètres pour le modèle \emph{DELTA\_DIST\_+H\_05}, avec l'objectif de trouver un ensemble de paramètres menant à de meilleures performances. De même que pour les modèles décrits dans le chapitre précédent (REF QUADRI DIST REL), le temps d'exécution de l'entraînement d'un modèle limite grandement la possibilité d'entraîner des modèles avec des jeux de paramètres variés et un nombre élevé de validations croisées (REF VALID CROISEE) en un temps raisonnable. Il faut donc effectuer un compromis entre la quantité de modèles différents entraînés et le nombre d'entraînements de chacun de ces modèles. L'objectif ici étant de trouver un jeu de paramètres menant à de bonnes performances, dans l'idée de le perfectionner et de le valider par la suite s'il existe, la priorité est donnée au nombre de jeux de paramètres différents plutôt qu'au nombre de validations de chacun de ces jeux.
+\label{delta_dist_quadri}
 
-\par Cette recherche par quadrillage est toutefois relativement large car elle est composée d'une grille décrivant les paramètres de 576 modèles différents avec deux validations croisées, soit un total de 1152 entraînements pendant environ cinq jours. La grille se veut également large car elle fait varier la plupart des paramètres avec des amplitudes élevées.
+\par En plus du choix des données d'entrée, la performance des réseaux de neurones dépend de nombreux paramètres (\ref{apprentissage_automatique_parametres_nn}). Les résultats des modèles décrits dans ce chapitre étant peu probants (\ref{delta_dist_resultats}), j'ai effectué une recherche par quadrillage (\ref{apprentissage_automatique_quadri}) large des différents paramètres pour le modèle \emph{DELTA\_DIST\_+H\_05}, avec l'objectif de trouver un ensemble de paramètres menant à de meilleures performances. De même que pour les modèles décrits dans le chapitre précédent (\ref{dist_rel_quadri}), le temps d'exécution de l'entraînement d'un modèle limite grandement la possibilité d'entraîner des modèles avec des jeux de paramètres variés et un nombre élevé de validations croisées en un temps raisonnable. Il faut donc effectuer un compromis entre la quantité de modèles différents entraînés et le nombre d'entraînements de chacun de ces modèles. L'objectif ici est de trouver un jeu de paramètres menant à de bonnes performances, dans l'idée de le perfectionner et de le valider par la suite s'il existe. C'est pourquoi la priorité est donnée au nombre de jeux de paramètres différents plutôt qu'au nombre de validations de chacun de ces jeux.
 
-\begin{figure}
+\par Cette recherche par quadrillage est toutefois relativement large car elle est composée d'une grille (tableau \ref{t_grille_delta_dist}) décrivant les paramètres de 576 modèles différents avec deux validations croisées, soit un total de 1152 entraînement. La grille se veut également large car elle fait varier la plupart des paramètres avec des amplitudes élevées.
+
+\begin{table}
 	\centering
 	
 	\begin{tabular}{|l|l|}
@@ -23,6 +25,7 @@
 	\end{tabular}		
 	
 	\caption{Grille de recherche par quadrillage pour le modèle \emph{DELTA\_DIST\_+H\_05}}
-\end{figure}
+	\label{t_grille_delta_dist}
+\end{table}
 
 \par À l'issue de la recherche, aucun ensemble de paramètres n'a mené à de meilleures performances que les modèles précédemment entraînés.

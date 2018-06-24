@@ -17,7 +17,6 @@
 \usepackage{amsmath}
 \usepackage{pdflscape}
 
-
 % Rotation de texte
 \newcommand*\rot{\rotatebox{90}}
 
@@ -38,7 +37,7 @@
 
 %Profondeur des compteurs et de la tableofcontents
 \setcounter{secnumdepth}{3}
-\setcounter{tocdepth}{3}
+\setcounter{tocdepth}{2}
 
 
 
@@ -47,6 +46,20 @@
   \renewcommand\appendixpagename{Annexes}
 }
 
+%%%% debut macro %%%%
+\newenvironment{changemargin}[2]{\begin{list}{}{%
+\setlength{\topsep}{0pt}%
+\setlength{\leftmargin}{0pt}%
+\setlength{\rightmargin}{0pt}%
+\setlength{\listparindent}{\parindent}%
+\setlength{\itemindent}{\parindent}%
+\setlength{\parsep}{0pt plus 1pt}%
+\addtolength{\leftmargin}{#1}%
+\addtolength{\rightmargin}{#2}%
+}\item }{\end{list}}
+%%%% fin macro %%%%
+
+
 
 
 \begin{document}
@@ -54,18 +67,22 @@
 \begin{titlepage}
 	\centering
 	
-    \vspace*{1.2 cm}
+    \vspace*{0.7 cm}
     
-   	\textsc{\LARGE Master i informatique\\Travail Encadré de Recherche\\[0.3cm]\large Juin 2018}
+   	\textsc{\LARGE Master i informatique\\Travail Encadré de Recherche\\[0.3cm]\large 26 Juin 2018}
 
-	\vspace{2.2cm}
+	\vspace*{1.5cm}
     
+	\includegraphics[scale=0.20]{images/iso_niveaux.png}
+
+	\vspace*{0.5cm}
+
     
-	\rule{\linewidth }{0.2 mm} \\[0.15 cm]
-    {\LARGE \textbf{Rapport QuChemPedia}\\[0.2cm] \large
-		\textbf{Sous titre}}\\
+	\rule{\linewidth }{0.2 mm} 
+    {\LARGE \textbf{Modèles prédictifs pour des calculs en chimie\\ quantique moléculaire}}
 	\rule{\linewidth}{0.2 mm}
-       \vspace*{0.1 cm}
+    
+    \vspace*{1 cm}
 	
 	\begin{center}
 	\vspace{0.3cm}
@@ -76,19 +93,27 @@
 	
 	
 	\vspace{0.5cm}
-	\emph{Encadrants}\\
+	\emph{Encadrant}\\
 	\vspace{0.1cm}
 	Benoit \bsc{Da Mota}\\
-	Thomas \bsc{Cauchy}
+	
+	\vspace{0.5cm}
+	\emph{Co-encadrant}\\
+	Thomas \bsc{Cauchy}\\
+
 	\end{center}		
 	
-	\vspace{1.0cm}
+	\vspace{3.09cm}
+	
+	\hspace{14.4cm} \includegraphics[scale = 0.07]{images/ua.png}
+
 
 
     
     
 \end{titlepage}
 
+\input{remerciements.tex}
 
 \tableofcontents
 
@@ -104,6 +129,7 @@
 		\input{2-Contexte/machine_learning.tex}
 		
 \chapter{Représentations géométriques moléculaires}
+	\input{3-Representations_moleculaires/intro.tex}
 	\section{Matrice des coordonnées atomiques}
 		\input{3-Representations_moleculaires/coordonnees.tex}
 
@@ -120,6 +146,8 @@
 	\input{4-Donnees/donnees.tex}
 
 \chapter{Prédiction de longueurs de liaisons convergées}
+	\label{dist_rel_chap}
+
 	\section{Introduction}
 		\input{5-Prediction_de_longueurs_de_liaisons_convergees/introduction.tex}
 	\section{Prédiction de longueurs de liaisons carbone-carbone}
@@ -134,6 +162,7 @@
 
 
 \chapter{Prédiction de géométries moléculaires convergées}
+	\label{delta_dist_chap}
 
 	\section{Introduction}
 		\subsection{Motivation}

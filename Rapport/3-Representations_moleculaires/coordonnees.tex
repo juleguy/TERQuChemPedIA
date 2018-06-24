@@ -1,8 +1,10 @@
-\par La matrice des coordonnées atomiques est la façon la plus simple de représenter la géométrie d'une molécule. L'intérêt de cette représentation est qu'elle est utilisée par les chimistes (fichiers .mol, .xyz + utilisation dans les logiciels de calcul ?). Il s'agit donc pour nous d'une représentation d'entrée et de sortie. Nos données d'apprentissage contiennent pour chaque molécule une matrice des positions, en plus des numéros et masses atomiques, et nous devons être capables de fournir cette représentation en sortie de nos prédictions, pour que nos résultats soient utilisables par les chimistes.\\
+\label{repr_mat_coords}
 
-\par Formellement, la matrice des coordonnées atomiques d'une molécule contient les coordonnées de chaque atome dans un repère cartésien orthonormé à trois dimensions.
+\par La matrice des coordonnées atomiques est la façon la plus simple de représenter la géométrie d'une molécule. L'intérêt de cette représentation est qu'elle est utilisée par les chimistes dans les différents logiciels de calcul. Il s'agit donc pour nous d'une représentation d'entrée et de sortie. Nos données d'apprentissage contiennent pour chaque molécule une matrice des positions, et nous devons être capables de fournir cette représentation en sortie de nos prédictions, pour que nos résultats soient utilisables par les chimistes.\\
 
-\begin{figure}[!h]
+\par Formellement, la matrice des coordonnées atomiques d'une molécule contient les coordonnées de chaque atome dans un repère cartésien orthonormé à trois dimensions. La représentation générale d'une matrice des coordonnées atomiques est visible dans le tableau \ref{table_matr_coords}.\\
+
+\begin{table}
 	\centering
 	
 	\begin{tabular}{|c|c|c|}
@@ -12,8 +14,9 @@
 		\textbf{\rot{... }} & \textbf{\rot{... }} & \textbf{\rot{... }}\\ \hline 	
 		$\boldsymbol{x_n}$ & $\boldsymbol{y_n}$ & $\boldsymbol{z_n}$ \\ \hline	
 	\end{tabular}
-
+	
 	\caption{Matrice des coordonnées atomiques (molécule de taille $n$)}
-\end{figure}
+	\label{table_matr_coords}
+\end{table}
 
-\par Si cette représentation de la géométrie des molécules est très commode pour les chimistes, elle n'est pas utilisable telle quelle dans nos modèles prédictifs. Nous cherchons en effet à prédire des distances (ou des différences de distances, voir REF DELTA\_DIST...) entre des points. Donner les coordonnées brutes aux modèles implique qu'ils devraient \emph{apprendre} les outils mathématiques permettant de calculer des distances entre des points, ce qui constitue en soi une tâche complexe. C'est pourquoi nous allons définir un ensemble de représentations géométriques, toutes basées sur les distances plutôt que les positions, et adaptées aux différentes prédictions que nous souhaitons effectuer.
+\par Si cette représentation de la géométrie des molécules est très commode pour les chimistes, elle n'est pas utilisable telle quelle dans nos modèles prédictifs. Nous cherchons en effet à prédire des distances entre des points. Donner les coordonnées brutes aux modèles implique qu'ils devraient \emph{apprendre} les outils mathématiques permettant de calculer des distances entre des points, ce qui constitue en soi une tâche complexe. C'est pourquoi nous allons définir un ensemble de représentations géométriques, toutes basées sur les distances plutôt que les positions, et adaptées aux différentes prédictions que nous souhaitons effectuer.

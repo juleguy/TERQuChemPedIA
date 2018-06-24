@@ -1,6 +1,8 @@
-\par Les modèles décrits dans cette section appartiennent à la première classe (REF CLASSES), et ont pour objectif de prédire les longueurs de liaisons entre des atomes de carbone. Ils sont tous des réseaux de neurones artificiels entraînés avec les paramètres suivants. Le rôle de chaque paramètre est décrit en REF NN PARAMS.
+\label{dist_rel_classe1}
 
-\begin{figure}[!h]
+\par Les modèles décrits dans cette section appartiennent à la première classe (\ref{dist_rel_classes_explication}), et ont pour objectif de prédire les longueurs de liaisons entre des atomes de carbone. Ils sont tous des réseaux de neurones artificiels entraînés avec les paramètres décrits dans le tableau \ref{table_params_dist_rel_c}. Le rôle de chaque paramètre est décrit en \ref{apprentissage_automatique_parametres_nn}.
+
+\begin{table}
 	\centering
 	\begin{tabular}{|l|l|}
 		\hline
@@ -12,14 +14,17 @@
 		Fonction d'activation couche de sortie & linéaire \\ \hline
 		Abandon (\emph{dropout}) & 0.98 \\ \hline
 		Dégradation des coefficients (\emph{weight decay}) & 0.001 \\ \hline
+
 	\end{tabular}
 
 	\caption{Paramètres d'entraînement des modèles \emph{DIST\_REL\_C}}
-\end{figure}
+	\label{table_params_dist_rel_c}
 
-\par Les tailles des jeux de données utilisés par les modèles sont donnés dans le tableau suivant. Notons que tous les modèles apprennent sur les mêmes molécules et sont testés sur les mêmes molécules, même si la préparation des données diffère.
+\end{table}
 
-\begin{figure}[!h]
+\par Les tailles des jeux de données utilisés par les modèles sont donnés dans le tableau \ref{table_tailles_data_dist_rel_c}. Notons que tous les modèles apprennent sur les mêmes molécules et sont testés sur les mêmes molécules, même si la préparation des données diffère.
+
+\begin{table}
 	\centering
 	\begin{tabular}{|l|l|}
 		\hline
@@ -27,17 +32,21 @@
 		Entraînement & 2770924 \\ \hline
 		Test & 554434 \\ \hline
 	\end{tabular}
-	\caption{Taille des jeux de données pour les modèles \emph{DIST\_REL\_C}}
-\end{figure}
+	\caption{Taille des jeux de données pour les modèles \emph{DIST\_REL\_C}}	
+	\label{table_tailles_data_dist_rel_c}
+\end{table}
+
+
 
 
 \subsection{Modèle naïf}
 
+\label{dist_rel_c_naif}
+
 \subsubsection{Préparation des données et paramètres}
-Le premier modèle entraîné utilise la représentation locale des liaisons covalentes (REF REPR LOCALE + REF REPR DONNEES) simple, c'est à dire que l'on ne restreint pas la représentation aux atomes au voisinage le plus proche, et que l'on n'applique pas de fonction inversant l'ordre des distances. Les paramètres spécifiques d'entraînement et de préparation des données sont donnés dans le tableau suivant.
+Le premier modèle entraîné utilise la représentation locale des liaisons covalentes (voir \ref{repr_locale_liaisons_cov} et \ref{dist_rel_repr_entree}) simple, c'est à dire que l'on ne restreint pas la représentation aux atomes au voisinage le plus proche, et que l'on n'applique pas de fonction inversant l'ordre des distances. Les paramètres spécifiques d'entraînement et de préparation des données sont donnés dans le tableau \ref{table_params_dist_rel_c_01}.
 
-
-\begin{figure}[!h]
+\begin{table}
 	\centering
 	\begin{tabular}{|l|l|}
 		\hline
@@ -51,12 +60,13 @@ Le premier modèle entraîné utilise la représentation locale des liaisons cov
 	\end{tabular}
 
 	\caption{Paramètres d'entraînement et de préparation des données spécifiques au modèle \emph{DIST\_REL\_C\_01}}
-\end{figure}
+	\label{table_params_dist_rel_c_01}
+\end{table}
 
 \subsubsection{Analyse statistique des erreurs}
-\par Dans la figure suivante, nous présentons les valeurs d'un certain nombre de métriques statistiques permettant d'évaluer les erreurs du modèle. On remarque que les prédictions du modèle sont assez bonnes, la médiane des erreurs étant de l'ordre du demi picomètre. L'erreur moyenne est toutefois au dessus de la barre du picomètre et l'erreur maximale est élevée.
+\par Dans le tableau \ref{table_analyse_dist_rel_c_01}, nous présentons les valeurs d'un certain nombre de métriques statistiques permettant d'évaluer les erreurs du modèle. On remarque que les prédictions du modèle sont assez bonnes, la médiane des erreurs étant de l'ordre du demi picomètre. L'erreur moyenne est toutefois au dessus de la barre du picomètre et l'erreur maximale est élevée.
 
-\begin{figure}[!h]
+\begin{table}
 	\centering
 	\begin{tabular}{|l|r|}
 		\hline
@@ -70,46 +80,50 @@ Le premier modèle entraîné utilise la représentation locale des liaisons cov
 	\end{tabular}
 	
 	\caption{Analyse statistique des erreurs du modèle \emph{DIST\_REL\_C\_01} (en pm)}
-\end{figure}
+	\label{table_analyse_dist_rel_c_01}
+\end{table}
 
 \subsubsection{Représentation graphique des résultats}
-\par La représentation graphique de la distribution des erreurs montre qu'un grand nombre d'erreurs ont des valeurs au delà du seuil du picomètre de précision nécessaire.
+\par La représentation graphique de la distribution des erreurs (figure \ref{fdistrib_err_dist_rel_c_01}) montre qu'un grand nombre d'erreurs ont des valeurs au delà du seuil du picomètre de précision nécessaire.
 
-\begin{figure}[!h]
+\begin{figure}
 	\centering
-	
 	\includegraphics[scale=0.7]{../figures/DIST_REL_C_01/DIST_REL_C_01_distrib_rmse_val.png}	
-	
 	\caption{Distribution des erreurs du modèle \emph{DIST\_REL\_C\_01}}
+	\label{fdistrib_err_dist_rel_c_01}
 \end{figure}
 
-\par La représentation de l'erreur relative à la distance devant être prédite, exprimée en fonction des distances cibles montre que les plus grosses erreurs sont effectuées lors de la prédiction des longueurs de liaisons les moins représentées dans les données, mais que les longueurs de liaisons les plus représentées sont en revanche très bien prédites. L'histogramme de la représentation des liaisons situé dans la partie inférieure permet de s'en rendre compte.
+\par La représentation de l'erreur relative à la distance devant être prédite, exprimée en fonction des distances cibles (figure \ref{fdistrib_err_rel_dist_rel_c_01}) montre que les plus grosses erreurs sont effectuées lors de la prédiction des longueurs de liaisons les moins représentées dans les données. Les longueurs de liaisons les plus représentées sont en revanche très bien prédites. L'histogramme de la représentation des liaisons situé dans la partie inférieure permet de s'en rendre compte.
 
-\begin{figure}[!h]
+\begin{figure}
 	\centering
 	
 	\includegraphics[scale=0.7]{../figures/DIST_REL_C_01/DIST_REL_C_01_distrib_rmse_dist.png}	
 	
 	\caption{Erreur en fonction des cibles pour le modèle \emph{DIST\_REL\_C\_01}}
+	\label{fdistrib_err_rel_dist_rel_c_01}
 \end{figure}
 
-\par Enfin, la représentation des prédictions en fonction des distances cibles permet de préciser quels types d'erreurs sont commises en fonction des différentes classes de liaisons à prédire. Les liaisons doubles et triples sont très largement surestimées, même si une partie non négligeable de ces liaisons est correctement prédite. La grande majorité des liaisons simples et aromatiques sont très bien prédites, même si une partie des liaisons aromatiques est légèrement sur-estimée et une partie des liaisons simples est légèrement sous-estimée.\\
+\par Enfin, la représentation des prédictions en fonction des distances cibles (figure \ref{fpreds_targets_dist_rel_c_01}) permet de préciser quels types d'erreurs sont commises en fonction des différentes classes de liaisons à prédire. Les liaisons doubles et triples sont très largement surestimées, même si une partie non négligeable de ces liaisons est correctement prédite. La grande majorité des liaisons simples et aromatiques sont très bien prédites, même si une partie des liaisons aromatiques est légèrement sur-estimée et une partie des liaisons simples est légèrement sous-estimée.\\
 
-\begin{figure}[!h]
+\begin{figure}
 	\centering
 	
 	\includegraphics[scale=0.7]{../figures/DIST_REL_C_01/DIST_REL_C_01_preds_targets.png}	
 	
 	\caption{Prédictions en fonction des cibles pour le modèle \emph{DIST\_REL\_C\_01}}
-	
+	\label{fpreds_targets_dist_rel_c_01}
 \end{figure}
 
 \subsection{Restriction au voisinage le plus proche}
 
-\subsubsection{Préparation des données et paramètres}
-À la différence du modèle naïf qui a en entrée tous les atomes d'une molécule (à l'exception des deux atomes formant la liaison étudiée), nous limitons l'entrée de ce modèle aux atomes au voisinage proche de la liaison (REF RESTRICTION VOISINAGE). Cela a pour objectif de donner uniquement l'information la plus pertinente, et donc de guider le modèle vers de meilleures solutions. Les paramètres spécifiques de préparation des données et d'entraînement sont donnés dans le tableau suivant.
+\label{dist_rel_c_restriction}
 
-\begin{figure}[!h]
+
+\subsubsection{Préparation des données et paramètres}
+À la différence du modèle naïf qui a en entrée tous les atomes d'une molécule (à l'exception des deux atomes formant la liaison étudiée), nous limitons l'entrée de ce modèle aux atomes au voisinage proche de la liaison (\ref{repr_locale_liaisons_cov_restrict}). Cela a pour objectif de donner uniquement l'information la plus pertinente, et donc de guider le modèle vers de meilleures solutions. Les paramètres spécifiques de préparation des données et d'entraînement sont donnés dans le tableau \ref{table_params_dist_rel_c_02}.
+
+\begin{table}
 	\centering
 	\begin{tabular}{|l|l|}
 		\hline
@@ -122,13 +136,14 @@ Le premier modèle entraîné utilise la représentation locale des liaisons cov
 		Restriction du voisinage ($\epsilon$) & 200 pm \\ \hline
 	\end{tabular}
 
-	\caption{Paramètres d'entraînement et de préparation des données spécifiques au modèle \emph{DIST\_REL\_C\_01}}
-\end{figure}
+	\caption{Paramètres d'entraînement et de préparation des données spécifiques au modèle \emph{DIST\_REL\_C\_02}}
+	\label{table_params_dist_rel_c_02}
+\end{table}
 
 \subsubsection{Analyse statistique des erreurs}
-\par Le tableau suivant présente les différentes valeurs des métriques statistiques utilisées pour évaluer les erreurs des modèles. Ses performances sont très intéressantes puisque la moyenne comme la médiane sont en dessous du picomètre. Le modèle semble toutefois toujours faire de grosses erreurs, même si l'erreur maximale a diminué de moitié.
+\par Le tableau \ref{table_analyse_dist_rel_c_02} présente les différentes valeurs des métriques statistiques utilisées pour évaluer les erreurs des modèles. Ses performances sont très intéressantes puisque la moyenne comme la médiane sont en dessous du picomètre. Le modèle semble toutefois toujours faire de grosses erreurs, même si l'erreur maximale a diminué de moitié.
 
-\begin{figure}[!h]
+\begin{table}
 	\centering
 	\begin{tabular}{|l|r|}
 		\hline
@@ -142,46 +157,53 @@ Le premier modèle entraîné utilise la représentation locale des liaisons cov
 	\end{tabular}
 	
 	\caption{Analyse statistique des erreurs du modèle \emph{DIST\_REL\_C\_02} (en pm)}
-\end{figure}
+	\label{table_analyse_dist_rel_c_02}
+\end{table}
 
 \subsubsection{Représentation graphique des résultats}
-\par La représentation graphique de la distribution des erreurs montre que le modèle est très intéressant, les erreurs au-delà de 10 pm étant marginales. \\
+\par La représentation graphique de la distribution des erreurs (figure \ref{fdistrib_err_dist_rel_c_02}) montre que le modèle est très intéressant, les erreurs au-delà de 10 pm étant marginales. \\
 
-\begin{figure}[!h]
+\begin{figure}
 	\centering
 	
 	\includegraphics[scale=0.7]{../figures/DIST_REL_C_02/DIST_REL_C_02_distrib_rmse_val.png}	
-	
+
 	\caption{Distribution des erreurs du modèle \emph{DIST\_REL\_C\_02}}
+	\label{fdistrib_err_dist_rel_c_02}
 \end{figure}
 
-\par La représentation graphique de l'erreur en fonction des cibles montre également nettement l'intérêt du modèle. En effet, il ne fait plus d'erreurs importantes sur les liaisons aux tailles limites entre les liaisons aromatiques et simples. \\
+\par La représentation graphique de l'erreur en fonction des cibles (figure \ref{fdistrib_err_rel_dist_rel_c_02}) montre également nettement l'intérêt du modèle. En effet, il ne fait plus d'erreurs importantes sur les liaisons aux tailles limites entre les liaisons aromatiques et simples. \\
 
-\begin{figure}[!h]
+\begin{figure}
 	\centering
 	
 	\includegraphics[scale=0.7]{../figures/DIST_REL_C_02/DIST_REL_C_02_distrib_rmse_dist.png}	
 	
 	\caption{Erreur en fonction des cibles pour le modèle \emph{DIST\_REL\_C\_02}}
+	\label{fdistrib_err_rel_dist_rel_c_02}
 	\end{figure}
 
-\par Enfin, la représentation des prédictions en fonction des cibles confirme la continuité des prédictions du modèle entre les différents types de liaisons, ce qui confirme qu'il effectue des prédictions de l'ordre de la chimie quantique, et qu'il ne se contente pas de faire des prédictions basées sur des longueurs de liaisons types.
-\begin{figure}[!h]
+\par Enfin, la représentation des prédictions en fonction des cibles (figure \ref{fpred_targets_dist_rel_c_02} confirme la continuité des prédictions du modèle entre les différents types de liaisons, ce qui confirme qu'il effectue des prédictions de l'ordre de la chimie quantique, et qu'il ne se contente pas de faire des prédictions basées sur des longueurs de liaisons typiques.
+
+\begin{figure}
 	\centering
 	
 	\includegraphics[scale=0.7]{../figures/DIST_REL_C_02/DIST_REL_C_02_preds_targets.png}	
 	
 	\caption{Prédictions en fonction des cibles pour le modèle \emph{DIST\_REL\_C\_02}}
+	\label{fpred_targets_dist_rel_c_02}
 	
 \end{figure}
 
 \subsection{Application de fonctions aux distances}
 
-\subsubsection{Préparation des données et paramètres}
-Les deux modèles décrits dans cette section sont identiques à \emph{DIST\_REL\_C\_02}, à la différence qu'une fonction inversant l'ordre des distances aux atomes de la liaison est appliquée aux données d'entrée (REF FONCT). Cette fonction a pour objectif de guider les modèles vers de meilleures solutions, l'influence des atomes sur la longueur de la liaison étant inversement proportionnelle à leur distance à la liaison. Les résultats des modèles s'en voient améliorés, mais nous montrons en REF XY FONCTIONS que les modèles s'entraînant sur plus d'exemples sont en général plus performants lorsque aucune fonction n'est appliquée aux distances.\\
-Les paramètres d'entraînement spécifiques des deux modèles sont donnés dans la figure suivante.
+\label{dist_rel_c_fun}
 
-\begin{figure}[!h]
+\subsubsection{Préparation des données et paramètres}
+Les deux modèles décrits dans cette section sont identiques au modèle décrit en \ref{dist_rel_c_restriction}), à la différence qu'une fonction inversant l'ordre des distances aux atomes de la liaison est appliquée aux données d'entrée (\ref{repr_locale_liaisons_cov_distances}). Cette fonction a pour objectif de guider les modèles vers de meilleures solutions, l'influence des atomes sur la longueur de la liaison étant inversement proportionnelle à leur distance à la liaison. Les résultats des modèles s'en voient améliorés, mais nous montrons en \ref{dist_rel_generalisation_fonctions} que les modèles s'entraînant sur plus d'exemples sont en général plus performants lorsque aucune fonction n'est appliquée aux distances.\\
+Les paramètres d'entraînement spécifiques des deux modèles sont donnés dans le tableau \ref{tparams_dist_rel_c_023}.
+
+\begin{table}
 
 	\centering
 	\begin{tabular}{|l|l|l|}
@@ -197,15 +219,16 @@ Les paramètres d'entraînement spécifiques des deux modèles sont donnés dans
 	\end{tabular}
 	
 	\caption{Paramètres d'entraînement et de préparation des données spécifiques aux modèles}
-\end{figure}
+	\label{tparams_dist_rel_c_023}
+\end{table}
 
 \subsubsection{Analyse statistique des erreurs}
 
-Le tableau suivant présente les valeurs des métriques statistiques permettant d'évaluer les erreurs pour les deux modèles. En comparaison au modèle \emph{DIST\_REL\_C\_02}, les deux modèles ont des erreurs maximales largement inférieures. L'utilisation de la fonction inverse fait en revanche augmenter la valeur de toutes les autres métriques. La fonction inverse du carré semble plus prometteuse, car elle fait baisser la moyenne et la médiane. L'écart-type est en revanche légèrement supérieur. Ces différences statistiques étant subtiles, elles sont à prendre avec le recul nécessaire lié au fait que l'on compare des exécutions uniques. Pour s'assurer que ces différences sont constantes, il faudrait entraîner chaque modèle une dizaine de fois et étudier les différentes valeurs de chaque métrique, ce qui représenterait quelques jours d'exécution.\\
+Le tableau \ref{tstats_dist_rel_c_023} présente les valeurs des métriques statistiques permettant d'évaluer les erreurs pour les deux modèles. En comparaison au modèle appliquant uniquement la restriction au voisinage le plus proche (\ref{dist_rel_c_restriction}), les deux modèles ont des erreurs maximales largement inférieures. L'utilisation de la fonction inverse fait en revanche augmenter la valeur de toutes les autres métriques. La fonction inverse du carré semble plus prometteuse, car elle fait baisser la moyenne et la médiane. L'écart-type est en revanche légèrement supérieur. Ces différences statistiques étant subtiles, elles sont à prendre avec le recul nécessaire lié au fait que l'on compare des exécutions uniques. Pour s'assurer que ces différences sont constantes, il faudrait entraîner chaque modèle une dizaine de fois et étudier les différentes valeurs de chaque métrique, ce qui représenterait quelques jours d'exécution.\\
 
-Les représentations graphiques étant très similaires à celles du modèle \emph{DIST\_REL\_C\_02}, nous ne les affichons pas ici. Elles sont néanmoins disponibles en annexes (REF ANNEXES DIST\_REL\_C\_034).
+Les représentations graphiques étant très similaires à celles du modèle précédent (\ref{dist_rel_c_restriction}), nous ne les présentons pas ici. Elles sont néanmoins disponibles en annexe \ref{annexes_plots_dist_rel_c}.
 
-\begin{figure}[!h]
+\begin{table}
 	\centering
 	\begin{tabular}{|l|r|r|}
 		\hline
@@ -219,14 +242,17 @@ Les représentations graphiques étant très similaires à celles du modèle \em
 	\end{tabular}
 	
 	\caption{Analyse statistique des erreurs des modèles (en pm)}
-\end{figure}
+	\label{tstats_dist_rel_c_023}
+\end{table}
 
 \subsection{Réduction de la largeur du réseau et des entrées}
-\par Les modèles précédents sont très performants, mais ont l'inconvénient de nécessiter un temps d'entraînement élevé. C'est d'autant plus vrai pour les modèles de la seconde classe équivalents (REF INTRO CLASSES ET REF GENERALISATION). Pour tenter d'accélérer les processus d'entraînement, nous modifions la topologie des réseaux de neurones et nous réduisons la taille des entrées.
-\par Dans les modèles précédents, l'entrée est composée de 58 blocs représentant chacun un atome au voisinage de la liaison (REF REPR DONNEES INTRO). Or depuis le modèle \emph{DIST\_REL\_C\_02}, les entrées ne sont plus composées que des atomes au voisinage le plus proche, tous les blocs ne sont donc plus nécessaires. Une recherche rapide par dichotomie du nombre de blocs tel que tous les exemples des jeux de données ont un nombre d'atomes au voisinage proche qui lui est inférieur ou égal donne une valeur de 15. L'entrée du modèle a alors une nouvelle taille de 15 blocs par 15 attributs, soit 225 attributs contre 870 auparavant.
-\par La topologie des modèles précédents est simple : ils sont composés de trois couches cachées de 870 neurones artificiels. Le modèle que l'on entraîne ici est composé de trois couches cachées de tailles décroissantes. La taille des couches de l'entrée à la dernière couche décroît linéairement de 225 à 15 neurones. La valeur de la taille de cette dernière couche est choisie pour correspondre au nombre maximum d'atomes donnés en entrée, dans l'idée que les modèles pourront extraire couche par couche l'influence de chaque atome. La comparaison entre les deux topologies est donnée dans le tableau suivant.
 
-\begin{figure}[!h]
+\label{dist_rel_c_reduc_largeur}
+\par Les modèles précédents sont très performants, mais ont l'inconvénient de nécessiter un temps d'entraînement élevé. C'est d'autant plus vrai pour les modèles de la seconde classe équivalents (voir \ref{dist_rel_classes_explication} et \ref{dist_rel_generalisation}). Pour tenter d'accélérer les processus d'entraînement, nous modifions la topologie des réseaux de neurones et nous réduisons la taille des entrées.
+\par Dans les modèles précédents, l'entrée est composée de 58 blocs représentant chacun un atome au voisinage de la liaison (\ref{dist_rel_repr_donnees}). Or depuis le modèle décrit en partie \ref{dist_rel_c_restriction}, les entrées ne sont plus composées que des atomes au voisinage le plus proche, tous les blocs ne sont donc plus nécessaires. Une recherche rapide par dichotomie du nombre de blocs tel que tous les exemples des jeux de données ont un nombre d'atomes au voisinage proche qui lui est inférieur ou égal donne une valeur de 15. L'entrée du modèle a alors une nouvelle taille de 15 blocs contenant 15 attributs, soit 225 attributs contre 870 auparavant.
+\par La topologie des modèles précédents est simple : ils sont composés de trois couches cachées de 870 neurones artificiels. Le modèle que l'on entraîne ici est composé de trois couches cachées de tailles décroissantes. La taille des couches de l'entrée à la dernière couche décroît linéairement de 225 à 15 neurones. La valeur de la taille de cette dernière couche est choisie pour correspondre au nombre maximum d'atomes donnés en entrée, dans l'idée que les modèles pourront extraire couche par couche l'influence de chaque atome. La comparaison entre les deux topologies est donnée dans le tableau \ref{tparams_dist_rel_c_05}.
+
+\begin{table}
 	\centering
 	\begin{tabular}{|c|r|r|}
 		\hline
@@ -241,17 +267,39 @@ Les représentations graphiques étant très similaires à celles du modèle \em
 	\end{tabular}
 	
 	\caption{Comparaison de la topologie du modèle \emph{DIST\_REL\_C\_05} avec celle des modèles précédents}
-\end{figure}
+	\label{tparams_dist_rel_c_05}
+\end{table}
 
-\par En dehors de la topologie, les paramètres d'entraînement sont identiques à ceux de \emph{DIST\_REL\_C\_02} (REF MODELE RESTRICTION).
+\par En dehors de la topologie, les paramètres d'entraînement sont identiques à ceux de \emph{DIST\_REL\_C\_02} (\ref{dist_rel_c_restriction}).\\
+
+\par On présente dans le tableau \ref{tstats_dist_rel_c_05} les valeurs des métriques évaluant les erreurs du modèle. On constate une dégradation nette des performances comparativement aux modèles possédant plus de neurones. Les prédictions sont toutefois de bonne qualité, puisque que les métriques ont des valeurs inférieures au picomètre. Ce modèle présente donc un intérêt. Son entraînement est en effet environ trois fois plus rapide que celui des modèles précédents.
+
+\begin{table}
+	\centering
+	\begin{tabular}{|l|r|r|}
+		\hline
+		\textbf{Métrique}& \textbf{\emph{DIST\_REL\_C\_05}} \\ \hline
+		Moyenne & 0,7683\\ \hline
+		Médiane & 0,6100 \\ \hline
+		Écart-type  & 0.6973 \\ \hline
+		Minimum & 0,0000\\ \hline
+		Maximum & 29.7459\\ \hline
+		Erreur relative moyenne & 0.5196\%\\ \hline
+	\end{tabular}
+	
+	\caption{Analyse statistique des erreurs du modèle DIST\_REL\_C\_05 (en pm)}
+	\label{tstats_dist_rel_c_05}
+\end{table}
 
 \subsection{Recherche par quadrillage des paramètres du modèle naïf}
 
-\par Afin d'en optimiser les performances, nous effectuons une recherche par quadrillage des paramètres du modèle \emph{DIST\_REL\_C\_01} (REF MODELE NAIF). L'entraînement de chaque modèle prenant plusieurs heures, relativement peu de paramètres différents sont testés. Les paramètres qui varient sont limités à la profondeur du réseau de neurones et au taux d'apprentissage. Chaque entraînement est effectué deux fois dans le cadre d'une validation croisée des résultats. Une validation croisée à deux entraînements ne permet pas de s'assurer de la constance des résultats, mais limite le nombre d'entraînements nécessaires et augmente donc le nombre d'ensembles de paramètres différents pouvant être testés. La performance relative des différents paramètres est évaluée à l'aide de la sortie de tensorboard (REF Tensorboard).\\
+\label{dist_rel_quadri}
 
-\par La recherche par quadrillage est en réalité constituée de trois sous-recherches. La grille de la première recherche est choisie arbitrairement, tandis que les grilles des autres recherches dépendent des meilleurs paramètres des recherches précédentes.
+\par Afin d'en optimiser les performances, nous effectuons une recherche par quadrillage (\ref{apprentissage_automatique_quadri}) des paramètres du modèle \emph{DIST\_REL\_C\_01} (\ref{dist_rel_c_naif}). L'entraînement de chaque modèle prenant plusieurs heures, relativement peu de paramètres différents sont testés. Les paramètres qui varient sont limités à la profondeur du réseau de neurones et au taux d'apprentissage. Chaque entraînement est effectué deux fois dans le cadre d'une validation croisée des résultats. Une validation croisée à deux entraînements ne permet pas de s'assurer de la constance des résultats, mais limite le nombre d'entraînements nécessaires et augmente donc le nombre d'ensembles de paramètres différents pouvant être testés. La performance relative des différents paramètres est évaluée à l'aide de la sortie de tensorboard (\ref{apprentissage_automatique_bibli_log}).\\
 
-\begin{figure}[!h]
+\par La recherche par quadrillage est en réalité constituée de trois sous-recherches. La grille de la première recherche (table \ref{t_grille1_quadri_dist_rel_c_01}) est choisie arbitrairement, tandis que les grilles des autres recherches (tables \ref{t_grille_quadri2_dist_rel_c_01} et \ref{t_grille_quadri3_dist_rel_c_01}) dépendent des meilleurs paramètres des recherches précédentes.
+
+\begin{table}
 	\centering
 	
 	\begin{tabular}{|l|l|}
@@ -262,20 +310,21 @@ Les représentations graphiques étant très similaires à celles du modèle \em
 	\end{tabular}		
 	
 	\caption{Première grille de recherche par quadrillage pour le modèle \emph{DIST\_REL\_C\_01}}
-\end{figure}
+	\label{t_grille1_quadri_dist_rel_c_01}
+\end{table}
 
-\par La sortie de tensorboard associée à la première recherche est donnée dans la figure suivante. Elle représente l'erreur moyenne de tous les modèles sur les données de validation au fil de l'entraînement. Les données d'entraînement et de validation forment deux ensembles disjoints. Pour donner un ordre de grandeur des résultats, la différence entre les performances des deux premiers modèles est de l'ordre de 0.3 pm, et la différence entre le meilleur et le pire modèle est de l'ordre de 4 pm. Les meilleurs résultats étant obtenus avec le taux d'apprentissage le plus faible et le réseau le plus profond, on définit une nouvelle grille à partir de cette nouvelle connaissance. À l'issue de la seconde recherche, on utilise la même méthode pour définir une troisième grille de recherche.
-\par Notons les résultats des modèles sur les jeux de test sont meilleurs que pendant l'entraînement, à cause de de la désactivation de certains neurones à chaque époque d'entraînement (REF DROPOUT).
+\par La sortie de tensorboard associée à la première recherche est donnée dans la figure \ref{fig_sortie_tfb}. Elle représente l'erreur moyenne de tous les modèles sur les données de validation au fil de l'entraînement. Les données d'entraînement et de validation forment deux ensembles disjoints. Pour donner un ordre de grandeur des résultats, la différence entre les performances des deux premiers modèles est de l'ordre de 0.3 pm, et la différence entre le meilleur et le pire modèle est de l'ordre de 4 pm. Les meilleurs résultats étant obtenus avec le taux d'apprentissage le plus faible et le réseau le plus profond, on définit une nouvelle grille à partir de cette nouvelle connaissance. À l'issue de la seconde recherche, on utilise la même méthode pour définir une troisième grille de recherche.
+\par Notons les résultats des modèles sur les jeux de test sont meilleurs que pendant l'entraînement, à cause de de la désactivation de certains neurones à chaque époque d'entraînement (\ref{apprentissage_automatique_parametres_nn}).
 
-\vspace{0.5cm}
 
-\begin{figure}[!h]
+\begin{figure}
 	\centering
 	\includegraphics[scale=0.35]{images/tboard.png}
 	\caption{Sortie de tensorboard pour la première recherche par quadrillage du modèle \emph{DIST\_REL\_C\_01}}
+	\label{fig_sortie_tfb}
 \end{figure}
 
-\begin{figure}[!h]
+\begin{table}
 	\centering
 	
 	\begin{tabular}{|l|l|}
@@ -303,9 +352,10 @@ Les représentations graphiques étant très similaires à celles du modèle \em
 		Profondeur & 4, 5, 6 \\ \hline
 	\end{tabular}		
 	\caption{Seconde grille de recherche par quadrillage pour le modèle \emph{DIST\_REL\_C\_01}}
-\end{figure}
+	\label{t_grille_quadri2_dist_rel_c_01}
+\end{table}
               
-\begin{figure}[!h]
+\begin{table}
 	\centering
 	\begin{tabular}{|l|l|}
 		\hline
@@ -315,7 +365,9 @@ Les représentations graphiques étant très similaires à celles du modèle \em
 	\end{tabular}	
 	
 	\caption{Troisième grille de recherche par quadrillage pour le modèle \emph{DIST\_REL\_C\_01}}
-\end{figure}
+	\label{t_grille_quadri3_dist_rel_c_01}
+
+\end{table}
 
 \par La dernière recherche par quadrillage montre que les meilleures performances sont obtenues par le modèle ayant un taux d'apprentissage de 0.001 et une profondeur de 9. Pour donner un ordre de grandeur, la différence entre les performances du meilleur modèle de la première recherche par quadrillage et de la dernière est de 0,5 pm.
 

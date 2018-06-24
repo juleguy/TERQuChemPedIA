@@ -1,24 +1,22 @@
+\label{repr_mat_pts_fixes}
 
 \subsection{Motivation}
-\par La matrice des distances à des points fixes a pour objectif de corriger les défauts de la représentation géométrique moléculaire par matrice réduite des distances inter-atomiques (REF MATR RED DIST REL). Cette dernière possédait en effet le défaut majeur de ne pas être systématiquement réversible en matrice des coordonnées atomiques (REF REPR MAT COORDS). Ce défaut était dû à la propagation des erreurs induite par le fait que les positions des atomes étaient calculées à partir du calcul de la position des atomes précédents (REF REPR DIST REL RECONSTRUCT). Pour parer cela, nous définissons une représentation telle que la position de chaque atome est définie à partir de distances à quatre points fixes du repère. Les erreurs, même si elles existent toujours à des valeurs minimes (autour de $10^{-25}$ m), ne se propagent donc plus lors de la reconstruction des positions des atomes.\\
-Un autre problème résolu par cette nouvelle représentation est qu'il n'existe plus de molécule dont on ne peut pas reconstruire les positions à cause d'une géométrie plane ou linéaire (REF AT FICTIF), le calcul de la position de chaque atome dépendant désormais de la distance à quatre points de l'espace que l'on choisit tels qu'ils n'appartiennent pas à un même plan.\\
-
+\par La matrice des distances à des points fixes a pour objectif de corriger les défauts de la représentation géométrique moléculaire par matrice réduite des distances inter-atomiques (\ref{repr_mat_red_dist_interat}). Cette dernière possédait en effet le défaut majeur de ne pas être systématiquement réversible en matrice des coordonnées atomiques (\ref{repr_mat_coords}). Ce défaut est dû à la propagation des erreurs induite par le fait que les positions des atomes sont calculées à partir du calcul de la position des atomes précédents (\ref{repr_mat_dist_rel_interat_trilat}). Pour pallier cela, nous définissons une représentation telle que la position de chaque atome est définie à partir de distances à quatre points fixes du repère. Les erreurs, même si elles existent toujours à des valeurs minimes (autour de $10^{-25}$ m), ne se propagent donc plus lors de la reconstruction des positions des atomes.\\
+Un autre problème résolu par cette nouvelle représentation est qu'il n'existe plus de molécule dont on ne peut pas reconstruire les positions à cause d'une géométrie plane ou linéaire (\ref{repr_mat_dist_rel_interat_form_reconstruct}), le calcul de la position de chaque atome dépendant désormais de la distance à quatre points de l'espace que l'on choisit tels qu'ils n'appartiennent pas à un même plan.\\
+\par Cependant, cette représentation perd la propriété intéressante d'être insensible aux translations de repère (\ref{repr_mat_red_dist_interat_motiv}).
 \subsection{Formalisation}
-\par Formellement, la matrice contient donc les distances de chaque atome d'une molécule à quatre points fixes du repère. Nous choisissons arbitrairement comme points l'origine du repère, et le point sur chaque axe de distance 1 à l'origine. Ce choix est justifié par le fait que les points ont une distance à l'origine du même ordre de grandeur que les coordonnées des atomes dans les données ($10^0$ à $10^1$). Cela permet donc d'avoir suffisamment d'information pour calculer la position des atomes avec une précision suffisante lors de la reconstruction de la matrice des coordonnées atomiques.
+\par Formellement, la matrice contient les distances de chaque atome d'une molécule à quatre points fixes du repère orthonormé. Nous choisissons arbitrairement comme points l'origine du repère, et le point sur chaque axe de distance 1 à l'origine (eq. \ref{eq_pts_fixes}). Ce choix est justifié par le fait que les points ont une distance à l'origine du même ordre de grandeur que les coordonnées des atomes dans les données ($10^0$ à $10^1$). Cela permet donc d'avoir suffisamment d'information pour calculer la position des atomes avec une précision suffisante lors de la reconstruction de la matrice des coordonnées atomiques.\\
+La matrice générale des distances à des points fixes est exprimée dans le tableau \ref{table_mat_pts_fixes}.
 
-\begin{figure}[!h]
-	
-	\[
+\begin{equation}
 		p_0(0, 0, 0) \; \; \; \; \; 
 		p_1(1, 0, 0) \; \; \; \; \; 
 		p_2(0, 1, 0) \: \; \; \; \; 
 		p_3(0, 0, 1)
-	\]
+		\label{eq_pts_fixes}
+\end{equation}
 
-	\caption{Points fixes}
-\end{figure}
-
-\begin{figure}[h!]
+\begin{table}
 	\centering
 	
 	\begin{tabular}{|c|c|c|c|}
@@ -30,18 +28,21 @@ Un autre problème résolu par cette nouvelle représentation est qu'il n'existe
 	\end{tabular}
 	
 	\caption{Matrice des distances à des points fixes (molécule de taille n)}
-\end{figure}
+	\label{table_mat_pts_fixes}
+\end{table}
 
 
 \subsection{Reconstruction des molécules}
-\par De même que pour la représentation par matrice réduite des distances inter-atomiques (REF MAT DIST REL), nous devons être capables de passer d'une matrice des distances à des points fixes à une matrice des coordonnées atomiques, afin que les résultats des modèles prédictifs puissent être utilisés par des chimistes.\\
 
-\par La méthode de reconstruction des positions atomiques est très similaire pour les deux représentations. Nous utilisons également les équations de trilatération d'un point à partir des distances à trois points dont les positions sont connues, en utilisant la dernière distance comme un moyen de choisir la bonne solution (voir REF RECONSTRUCT MAT DIST REL). Du fait que la position des quatre points de référence soit fixe et qu'ils suivent les contraintes que nous imposions lors de la translation dans un système de coordonnées plus simple, les équations se trouvent néanmoins simplifiées. En effet, $p_0$ est à l'origine du repère, $p_1$ est sur l'axe $x$ et $p_2$ est sur le plan tel que $z=0$. Pour rappel, nous résolvons le problème de placement de point dans le système de coordonnées simplifié, puis nous effectuons une translation des solutions dans le système de coordonnées original. Or, nos points de référence se trouvent être les vecteurs unitaires dans chaque direction des deux systèmes de coordonnées. Nous obtenons donc directement les solutions dans le système de coordonnées original. \\
-La méthode complète est décrite sur Wikipedia\footnote{https://en.wikipedia.org/wiki/Trilateration}. Nous en extrayons les équations suivantes pour le placement général d'un atome d'une molécule.
+\label{repr_mat_pts_fixes_reconstruct}
 
-\vspace{0.4cm}
+\par De même que pour la représentation par matrice réduite des distances inter-atomiques (\ref{repr_mat_red_dist_interat}), nous devons être capables de passer d'une matrice des distances à des points fixes à une matrice des coordonnées atomiques, afin que les résultats des modèles prédictifs puissent être utilisés par des chimistes.\\
 
-\[
+\par La méthode de reconstruction des positions atomiques est très similaire pour les deux représentations. Nous utilisons également les équations de trilatération d'un point à partir des distances à trois points dont les positions sont connues, en utilisant la dernière distance comme un moyen de choisir la bonne solution (\ref{repr_mat_dist_rel_interat_form_reconstruct}). Du fait que la position des quatre points de référence soit fixe et qu'ils suivent les contraintes que nous imposions lors de la translation dans un système de coordonnées plus simple, les équations se trouvent néanmoins simplifiées. En effet, $p_0$ est à l'origine du repère, $p_1$ est sur l'axe $x$ et $p_2$ est sur le plan tel que $z=0$. Pour rappel, nous résolvons le problème de placement de point dans le système de coordonnées simplifié, puis nous effectuons une translation des solutions dans le système de coordonnées original. Or, nos points de référence se trouvent être les vecteurs unitaires dans chaque direction des deux systèmes de coordonnées. Nous obtenons donc directement les solutions dans le système de coordonnées original. \\
+La méthode complète est décrite sur Wikipedia\footnote{https://en.wikipedia.org/wiki/Trilateration}. Nous en extrayons les équations \eqref{eq_pos_pts_fixes} pour le placement général d'un atome d'une molécule.
+
+
+\begin{equation}
 a_{n}\left \{
    	\begin{array}{l}
       x_{n}= \frac{d_{a_{n},p_{0}}^2 - d_{a_{n},p_{1}}^2 + 1}{2}\\
@@ -50,7 +51,8 @@ a_{n}\left \{
    	\end{array}
    	\right .
    	\:
-\]
+   	\label{eq_pos_pts_fixes}
+\end{equation}
 
 \vspace{0.4cm}
 
