@@ -88,7 +88,7 @@ Les trois modèles naïfs sont entraînés avec les mêmes paramètres et le mê
 
 \end{figure}
 
-\par La représentation graphique des erreurs relatives (figure \ref{fdistrib_err_dist_rel_oh_01} et des prédictions en fonction des cibles (figure \ref{fpreds_targets_dist_rel_oh_01}) montre un phénomène intéressant pour le modèle prédisant les longueurs de liaisons entre les atomes d'oxygène et d'hydrogène. La représentation des longueurs de liaisons OH chutant brusquement en deçà de 97 pm, le modèle s'adapte à cette particularité en ne prédisant jamais des valeurs inférieures à 97 pm.
+\par La représentation graphique des erreurs relatives (figure \ref{fdistrib_err_rel_dist_rel_oh_01}) et des prédictions en fonction des cibles (figure \ref{fpreds_targets_dist_rel_oh_01}) montre un phénomène intéressant pour le modèle prédisant les longueurs de liaisons entre les atomes d'oxygène et d'hydrogène. La représentation des longueurs de liaisons OH chutant brusquement en deçà de 97 pm, le modèle s'adapte à cette particularité en ne prédisant jamais des valeurs inférieures à 97 pm.
 
 \begin{figure}
 	\centering
@@ -160,7 +160,7 @@ Les représentations graphiques concernant le modèle prédisant les liaisons ca
 
 \subsubsection{Analyse graphique des résultats}
 
-\par La représentation graphique des erreurs (figures \ref{fdistrib_err_dist_rel_cc_02} et \ref{fdistrib_err_rel_dist_rel_cc_02}) et des prédictions \ref{fpreds_targets_dist_rel_cc_02} du modèle prédisant les longueurs de liaisons entre des atomes de carbone font nettement apparaître la diminution des erreurs importantes et la continuité des prédictions entre les différents types de liaisons.
+\par Les représentations graphiques des erreurs (figures \ref{fdistrib_err_dist_rel_cc_02} et \ref{fdistrib_err_rel_dist_rel_cc_02}) et des prédictions (figure \ref{fpreds_targets_dist_rel_cc_02}) du modèle prédisant les longueurs de liaisons entre des atomes de carbone font nettement apparaître la diminution des erreurs importantes et la continuité des prédictions entre les différents types de liaisons.
 
 
 \begin{figure}
@@ -201,7 +201,7 @@ Les représentations graphiques concernant le modèle prédisant les liaisons ca
 \label{dist_rel_generalisation_fonctions}
 
 \par L'application de fonctions aux distances en entrée des modèles (\ref{dist_rel_c_fun}) donne des résultats mitigés lorsqu'on tente de généraliser la méthode à plusieurs liaisons différentes sur des jeux d'entraînement plus grands. Les tableaux \ref{tstats_dist_rel_xy_03} et \ref{tstats_dist_rel_xy_04} présentent les valeurs des métriques évaluant les erreurs des modèles lorsqu'on applique la fonction inverse et carré de l'inverse aux distances en entrée. Les représentations graphiques des résultats sont disponibles en annexe \ref{annexes_plot_dist_rel_xy}. Notons que contrairement aux modèles de la première classe, le modèle \emph{DIST\_REL\_X\_03} (resp. \emph{DIST\_REL\_X\_04}) correspond à l'application de la fonction carré de l'inverse (resp. fonction inverse). Cela est dû au fait que seule la fonction carré de l'inverse devait être initialement appliquée, au vu de ses meilleurs résultats sur le modèle de la première classe. Ses résultats mitigés lors de la généralisation à d'autres liaisons nous ont cependant poussé à tester également la fonction inverse.\\
-Notons enfin que les modèles décrits ici appliquent la restriction aux atomes au voisinage le plus proche (\ref{repr_locale_liaisons_cov_restrict}).\\
+Notons enfin que les modèles décrits ici appliquent la restriction aux atomes au voisinage le plus proche (\ref{repr_locale_liaisons_cov_restrict}), avec une valeur $\epsilon$ de 200 pm.\\
 
 \begin{table}
 	\centering
@@ -238,7 +238,7 @@ Notons enfin que les modèles décrits ici appliquent la restriction aux atomes 
 \end{table}
 
 \par On peut déjà remarquer que la relation d'ordre de la qualité des performances pour les deux fonctions est identique pour les deux classes de modèles, la fonction inverse du carré étant la plus efficace dans les deux cas. Lorsque l'on compare les prédictions des modèles prédisant les longueurs de liaisons carbone-carbone et hydrogène-oxygène, on s'aperçoit que l'application des deux fonctions détériore la qualité générale des résultats, même si elle permet de diminuer les erreurs maximales. On peut raisonnablement en déduire que ces fonctions ne sont pas optimales pour décrire l'intensité de l'influence des atomes au voisinage d'une liaison en fonction de leur distance aux atomes de la liaison, et qu'il est plus simple pour les réseaux de neurones d'approximer la fonction optimale à partir des distances brutes que des distances transformées.
-\par Les résultats des prédictions pour les distances entre les atomes de carbone et d'hydrogène sont toutefois très surprenants. En effet, l'application du carré de l'inverse sur les distance les améliore d'un facteur deux. \\
-La disparité de ces résultats les rend toutefois difficiles à interpréter. Il faudrait entraîner tous les modèles plusieurs fois sur des données différentes afin d'évaluer la dispersion de leurs résultats. Nous ne pouvons en effet pas affirmer que les différences entre les résultats que nous observons ici ne sont pas dues au hasard des différentes exécutions, même si le fait que la relation d'ordre entre les performances des deux fonctions soit constante sur les différents modèles laisse  penser que l'application des fonctions améliore la prédiction des liaisons CC et OH et détériore la prédiction des liaisons CH.\\
+\par Les résultats des prédictions pour les distances entre les atomes de carbone et d'hydrogène sont toutefois très surprenants. En effet, l'application du carré de l'inverse sur les distances les améliore d'un facteur deux. \\
+La disparité de ces résultats les rend toutefois difficiles à interpréter. Il faudrait entraîner tous les modèles plusieurs fois sur des données différentes afin d'évaluer la dispersion de leurs résultats. Nous ne pouvons en effet pas affirmer que les différences entre les résultats que nous observons ici ne sont pas dues au hasard des différentes exécutions, même si le fait que la relation d'ordre entre les performances des deux fonctions soit constante sur les différents modèles laisse  penser que l'application des fonctions améliore la prédiction des liaisons CC et OH, et détériore la prédiction des liaisons CH.\\
 \par Il semble que nous soyons face à un problème complexe, et qu'il n'existe pas un type de modèle et une représentation des données uniques permettant de prédire de façon optimale tous les types de liaisons au sein des molécules.
 

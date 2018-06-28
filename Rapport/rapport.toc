@@ -91,12 +91,12 @@
 \contentsline {subsection}{\numberline {4.3.3}Application de fonctions aux distances}{45}
 \contentsline {section}{\numberline {4.4}Ouverture \IeC {\`a} d'autres mod\IeC {\`e}les d'apprentissage automatique}{48}
 \contentsline {subsection}{\numberline {4.4.1}Donn\IeC {\'e}es d'entr\IeC {\'e}e et complexit\IeC {\'e} algorithmique}{48}
-\contentsline {subsection}{\numberline {4.4.2}Entra\IeC {\^\i }nement de mod\IeC {\`e}les KRR}{48}
-\contentsline {subsubsection}{\numberline {4.4.2.1}Recherche par quadrillage des param\IeC {\`e}tres}{48}
+\contentsline {subsection}{\numberline {4.4.2}Entra\IeC {\^\i }nement de mod\IeC {\`e}les KRR}{49}
+\contentsline {subsubsection}{\numberline {4.4.2.1}Recherche par quadrillage des param\IeC {\`e}tres}{49}
 \contentsline {subsubsection}{\numberline {4.4.2.2}Entra\IeC {\^\i }nement d'un mod\IeC {\`e}le et analyse des pr\IeC {\'e}dictions}{49}
-\contentsline {subsection}{\numberline {4.4.3}Entra\IeC {\^\i }nement de mod\IeC {\`e}les SVM}{51}
-\contentsline {subsubsection}{\numberline {4.4.3.1}Recherche par quadrillage des param\IeC {\`e}tres (non aboutie)}{51}
-\contentsline {subsubsection}{\numberline {4.4.3.2}Entra\IeC {\^\i }nement d'un mod\IeC {\`e}le et analyse des pr\IeC {\'e}dictions}{51}
+\contentsline {subsection}{\numberline {4.4.3}Entra\IeC {\^\i }nement de mod\IeC {\`e}les SVM}{50}
+\contentsline {subsubsection}{\numberline {4.4.3.1}Recherche par quadrillage des param\IeC {\`e}tres (non aboutie)}{50}
+\contentsline {subsubsection}{\numberline {4.4.3.2}Entra\IeC {\^\i }nement d'un mod\IeC {\`e}le et analyse des pr\IeC {\'e}dictions}{50}
 \contentsline {section}{\numberline {4.5}Automatisation des traitements}{53}
 \contentsline {subsection}{\numberline {4.5.1}Pr\IeC {\'e}sentation}{53}
 \contentsline {subsection}{\numberline {4.5.2}Traitements disponibles}{53}

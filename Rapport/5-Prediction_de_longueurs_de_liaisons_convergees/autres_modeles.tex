@@ -76,7 +76,7 @@ Afin d'entraîner un modèle fournissant de bons résultats, nous commençons pa
 \end{table}
 
 \par La représentation graphique de la distribution des erreurs (figures \ref{fdistrib_err_dist_rel_c_ker_ridge_01} et \ref{fdistrib_err_rel_dist_rel_c_ker_ridge_01}) et des prédictions (figure \ref{fpreds_targets_dist_rel_c_ker_ridge_01}) montre que les erreurs au delà de 10 pm sont très minoritaires, mais montre également que le modèle prédit difficilement les distances peu représentées, à la limite entre les différents types de liaisons.
-\par Pour résumer, les modèles prédictifs de type KRR semblent permettent d'obtenir des prédictions proches de la précision requise et pourraient donc être utilisés pour prédire la géométrie convergée complète d'une molécule (\ref{perspectives_geom_complete}).On pourrait notamment les utiliser dans le cas des liaisons qui sont peu représentées dans les données, et pour lesquelles les modèles prédictifs basés sur des réseaux de neurones artificiels seront probablement moins efficaces.
+\par Pour résumer, les modèles prédictifs de type KRR semblent permettent d'obtenir des prédictions proches de la précision requise et pourraient donc être utilisés pour prédire la géométrie convergée complète d'une molécule (\ref{perspectives_geom_complete}). On pourrait notamment les utiliser dans le cas des liaisons qui sont peu représentées dans les données, et pour lesquelles les modèles prédictifs basés sur des réseaux de neurones artificiels seront probablement moins efficaces.
 
 \begin{figure}
 	\centering
@@ -118,7 +118,7 @@ Dans l'idée d'appliquer la même méthodologie que pour le modèle de type KRR,
 		Noyau (\emph{kernel}) & linéaire\\ \hline
 		$\epsilon$ (fonction de coût) & 0.1, 0.001 \\ \hline
 		Coef0 & 0, 0.1, 0.5, 1 \\ \hline
-		Heuristique de rétrécissement (\emph{Shrinking}) & True, False \\ \hline
+		Heuristique de rétrécissement (\emph{shrinking}) & True, False \\ \hline
 		Tolérance de l'arrêt de l'optimisation & 0.001, 0.01 \\ \hline
 		Pénalité sur le terme d'erreur (C) & 1, 0.01\\ \hline
 	\end{tabular}
@@ -132,7 +132,7 @@ Dans l'idée d'appliquer la même méthodologie que pour le modèle de type KRR,
 		$\epsilon$ (fonction de coût) & 0.1, 0.001 \\ \hline
 		Gamma (coefficient utilisé par le noyau) & auto, 0.001, 0.01 \\ \hline
 		Coef0 & 0, 0.1, 0.5, 1 \\ \hline
-		Heuristique de rétrécissement (\emph{Shrinking}) & True, False \\ \hline
+		Heuristique de rétrécissement (\emph{shrinking}) & True, False \\ \hline
 		Tolérance de l'arrêt de l'optimisation & 0.001, 0.01 \\ \hline
 		Pénalité sur le terme d'erreur (C) & 1, 0.01\\ \hline
 	\end{tabular}		

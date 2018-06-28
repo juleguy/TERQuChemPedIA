@@ -183,7 +183,7 @@ Le premier modèle entraîné utilise la représentation locale des liaisons cov
 	\label{fdistrib_err_rel_dist_rel_c_02}
 	\end{figure}
 
-\par Enfin, la représentation des prédictions en fonction des cibles (figure \ref{fpred_targets_dist_rel_c_02} confirme la continuité des prédictions du modèle entre les différents types de liaisons, ce qui confirme qu'il effectue des prédictions de l'ordre de la chimie quantique, et qu'il ne se contente pas de faire des prédictions basées sur des longueurs de liaisons typiques.
+\par Enfin, la représentation des prédictions en fonction des cibles (figure \ref{fpred_targets_dist_rel_c_02}) confirme la continuité des prédictions du modèle entre les différents types de liaisons, ce qui confirme qu'il effectue des prédictions de l'ordre de la chimie quantique, et qu'il ne se contente pas de faire des prédictions basées sur des longueurs de liaisons typiques.
 
 \begin{figure}
 	\centering
@@ -200,7 +200,7 @@ Le premier modèle entraîné utilise la représentation locale des liaisons cov
 \label{dist_rel_c_fun}
 
 \subsubsection{Préparation des données et paramètres}
-Les deux modèles décrits dans cette section sont identiques au modèle décrit en \ref{dist_rel_c_restriction}), à la différence qu'une fonction inversant l'ordre des distances aux atomes de la liaison est appliquée aux données d'entrée (\ref{repr_locale_liaisons_cov_distances}). Cette fonction a pour objectif de guider les modèles vers de meilleures solutions, l'influence des atomes sur la longueur de la liaison étant inversement proportionnelle à leur distance à la liaison. Les résultats des modèles s'en voient améliorés, mais nous montrons en \ref{dist_rel_generalisation_fonctions} que les modèles s'entraînant sur plus d'exemples sont en général plus performants lorsque aucune fonction n'est appliquée aux distances.\\
+Les deux modèles décrits dans cette section sont identiques au modèle décrit en ( \ref{dist_rel_c_restriction}), à la différence qu'une fonction inversant l'ordre des distances aux atomes de la liaison est appliquée aux données d'entrée (\ref{repr_locale_liaisons_cov_distances}). Cette fonction a pour objectif de guider les modèles vers de meilleures solutions, l'influence des atomes sur la longueur de la liaison étant inversement proportionnelle à leur distance à la liaison. Les résultats des modèles s'en voient améliorés, mais nous montrons en \ref{dist_rel_generalisation_fonctions} que les modèles s'entraînant sur plus d'exemples sont en général plus performants lorsque aucune fonction n'est appliquée aux distances.\\
 Les paramètres d'entraînement spécifiques des deux modèles sont donnés dans le tableau \ref{tparams_dist_rel_c_023}.
 
 \begin{table}
@@ -215,7 +215,7 @@ Les paramètres d'entraînement spécifiques des deux modèles sont donnés dans
 		Taille de la dernière couche cachée & 870 & 870\\ \hline
 		Profondeur & 3 & 3\\ \hline
 		Fonction appliquée aux distances & inverse & inverse du carré\\ \hline
-		Restriction du voisinage ($\epsilon$) & 2 pm & 2 pm\\ \hline
+		Restriction du voisinage ($\epsilon$) & 200 pm & 200 pm\\ \hline
 	\end{tabular}
 	
 	\caption{Paramètres d'entraînement et de préparation des données spécifiques aux modèles}
@@ -262,8 +262,8 @@ Les représentations graphiques étant très similaires à celles du modèle pr�
 		\textbf{Taille seconde couche cachée} & 870 & 67\\ \hline
 		\textbf{Taille troisième couche cachée} & 870 & 15\\ \hline
 		\textbf{Taille couche sortie} & 1 & 1\\ \hline
-		\textbf{Nombre de neurones artificiels} & 901 & 428\\ \hline
-		\textbf{Nombre de connexions} & 152100 & 36060 \\ \hline
+		\textbf{Nombre de neurones artificiels} & 2611 & 428\\ \hline
+		\textbf{Nombre de connexions} & 2271570 & 36060 \\ \hline
 	\end{tabular}
 	
 	\caption{Comparaison de la topologie du modèle \emph{DIST\_REL\_C\_05} avec celle des modèles précédents}
@@ -272,7 +272,7 @@ Les représentations graphiques étant très similaires à celles du modèle pr�
 
 \par En dehors de la topologie, les paramètres d'entraînement sont identiques à ceux de \emph{DIST\_REL\_C\_02} (\ref{dist_rel_c_restriction}).\\
 
-\par On présente dans le tableau \ref{tstats_dist_rel_c_05} les valeurs des métriques évaluant les erreurs du modèle. On constate une dégradation nette des performances comparativement aux modèles possédant plus de neurones. Les prédictions sont toutefois de bonne qualité, puisque que les métriques ont des valeurs inférieures au picomètre. Ce modèle présente donc un intérêt. Son entraînement est en effet environ trois fois plus rapide que celui des modèles précédents.
+\par On présente dans le tableau \ref{tstats_dist_rel_c_05} les valeurs des métriques évaluant les erreurs du modèle. On constate une dégradation nette des performances comparativement aux modèles possédant plus de neurones. Les prédictions sont toutefois de bonne qualité, puisque les métriques ont des valeurs inférieures au picomètre. Ce modèle présente donc un intérêt, du fait que son entraînement est environ trois fois plus rapide que celui des modèles précédents.
 
 \begin{table}
 	\centering

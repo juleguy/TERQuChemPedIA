@@ -1,11 +1,11 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2018.4.26)  25 JUN 2018 11:00
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2017.9.8)  28 JUN 2018 18:25
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
 **rapport.tex
 (./rapport.tex
 LaTeX2e <2016/02/01>
-Babel <3.9q> and hyphenation patterns for 16 language(s) loaded.
+Babel <3.9q> and hyphenation patterns for 81 language(s) loaded.
 (/usr/share/texlive/texmf-dist/tex/latex/base/report.cls
 Document Class: report 2014/09/29 v1.4h Standard LaTeX document class
 (/usr/share/texlive/texmf-dist/tex/latex/base/size10.clo
@@ -804,12 +804,13 @@ Package pdftex.def Info: images/iso_niveaux.png used on input line 76.
 File: images/ua.png Graphic file (type png)
 
 <use images/ua.png>
-Package pdftex.def Info: images/ua.png used on input line 108.
+Package pdftex.def Info: images/ua.png used on input line 110.
 (pdftex.def)             Requested size: 73.64262pt x 71.95615pt.
  [1
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map} <./images/iso_niveaux.png (
-PNG copy)> <./images/ua.png>] [1] (./remerciements.tex
+PNG copy)>] [2 <./images/ua.png>] [1]
+(./remerciements.tex
 Overfull \hbox (6.81197pt too wide) in paragraph at lines 8--10
 \T1/cmr/m/n/10 Je re-mer-cie éga-le-ment Jean-Mathieu Chan-trein pour le temps
  []
@@ -846,7 +847,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 3--4
 
  []
 
-<images/part_proj.png, id=41, 393.3897pt x 216.0873pt>
+<images/part_proj.png, id=44, 393.3897pt x 216.0873pt>
 File: images/part_proj.png Graphic file (type png)
 
 <use images/part_proj.png>
@@ -903,7 +904,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 45--48
 
  []
 
-<images/neurone.png, id=59, 1027.84pt x 487.8225pt>
+<images/neurone.png, id=62, 1027.84pt x 487.8225pt>
 File: images/neurone.png Graphic file (type png)
  <use images/neurone.png>
 Package pdftex.def Info: images/neurone.png used on input line 51.
@@ -959,27 +960,27 @@ Underfull \hbox (badness 10000) in paragraph at lines 115--115
 per-po-sable à son image dans un mi-roir.
  []
 
-<images/1_sphere.png, id=85, 1742.51pt x 431.6125pt>
+<images/1_sphere.png, id=88, 1742.51pt x 431.6125pt>
 File: images/1_sphere.png Graphic file (type png)
  <use images/1_sphere.png>
 Package pdftex.def Info: images/1_sphere.png used on input line 125.
 (pdftex.def)             Requested size: 470.484pt x 116.53693pt.
 
-<images/2_spheres.png, id=86, 1577.895pt x 482.80376pt>
+<images/2_spheres.png, id=89, 1577.895pt x 482.80376pt>
 File: images/2_spheres.png Graphic file (type png)
 
 <use images/2_spheres.png>
 Package pdftex.def Info: images/2_spheres.png used on input line 134.
 (pdftex.def)             Requested size: 473.37216pt x 144.84224pt.
  [16 <./images/1_sphere.png>]
-<images/3_spheres.png, id=91, 1613.02625pt x 437.635pt>
+<images/3_spheres.png, id=94, 1613.02625pt x 437.635pt>
 File: images/3_spheres.png Graphic file (type png)
 
 <use images/3_spheres.png>
 Package pdftex.def Info: images/3_spheres.png used on input line 145.
 (pdftex.def)             Requested size: 483.9116pt x 131.2915pt.
 
-<images/3_spheres_gen.png, id=92, 1601.985pt x 464.73625pt>
+<images/3_spheres_gen.png, id=95, 1601.985pt x 464.73625pt>
 File: images/3_spheres_gen.png Graphic file (type png)
 
 <use images/3_spheres_gen.png>
@@ -1030,7 +1031,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 19--21
 
  []
 
-<images/classes_pos_2.png, id=117, 1370.11874pt x 801.99625pt>
+<images/classes_pos_2.png, id=120, 1370.11874pt x 801.99625pt>
 File: images/classes_pos_2.png Graphic file (type png)
 
 <use images/classes_pos_2.png>
@@ -1041,14 +1042,14 @@ Underfull \hbox (badness 10000) in paragraph at lines 46--47
 
  []
 
-[22] <images/classes_pos_3.png, id=121, 1342.01375pt x 813.0375pt>
+[22] <images/classes_pos_3.png, id=124, 1342.01375pt x 813.0375pt>
 File: images/classes_pos_3.png Graphic file (type png)
 
 <use images/classes_pos_3.png>
 Package pdftex.def Info: images/classes_pos_3.png used on input line 50.
 (pdftex.def)             Requested size: 469.71185pt x 284.56738pt.
 
-<images/mol_repliee.png, id=122, 760.8425pt x 669.50125pt>
+<images/mol_repliee.png, id=125, 760.8425pt x 669.50125pt>
 File: images/mol_repliee.png Graphic file (type png)
 
 <use images/mol_repliee.png>
@@ -1071,7 +1072,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 7--8
 
  []
 
-<../figures/80_distribution_molecules.png, id=136, 433.62pt x 289.08pt>
+<../figures/80_distribution_molecules.png, id=139, 433.62pt x 289.08pt>
 File: ../figures/80_distribution_molecules.png Graphic file (type png)
 
 <use ../figures/80_distribution_molecules.png>
@@ -1081,21 +1082,21 @@ Package pdftex.def Info: ../figures/80_distribution_molecules.png used on input
  [26
 
 ]
-<../figures/distribCC.png, id=140, 462.528pt x 346.896pt>
+<../figures/distribCC.png, id=143, 462.528pt x 346.896pt>
 File: ../figures/distribCC.png Graphic file (type png)
 
 <use ../figures/distribCC.png>
 Package pdftex.def Info: ../figures/distribCC.png used on input line 52.
 (pdftex.def)             Requested size: 370.02289pt x 277.51717pt.
 
-<../figures/distribCH.png, id=141, 462.528pt x 346.896pt>
+<../figures/distribCH.png, id=144, 462.528pt x 346.896pt>
 File: ../figures/distribCH.png Graphic file (type png)
 
 <use ../figures/distribCH.png>
 Package pdftex.def Info: ../figures/distribCH.png used on input line 59.
 (pdftex.def)             Requested size: 370.02289pt x 277.51717pt.
 
-<../figures/distribOH.png, id=142, 462.528pt x 346.896pt>
+<../figures/distribOH.png, id=145, 462.528pt x 346.896pt>
 File: ../figures/distribOH.png Graphic file (type png)
 
 <use ../figures/distribOH.png>
@@ -1138,7 +1139,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 78--79
 
 ) (./5-Prediction_de_longueurs_de_liaisons_convergees/prediction_cc.tex
 [32]
-<../figures/DIST_REL_C_01/DIST_REL_C_01_distrib_rmse_val.png, id=166, 462.528pt
+<../figures/DIST_REL_C_01/DIST_REL_C_01_distrib_rmse_val.png, id=169, 462.528pt
  x 346.896pt>
 File: ../figures/DIST_REL_C_01/DIST_REL_C_01_distrib_rmse_val.png Graphic file 
 (type png)
@@ -1148,7 +1149,7 @@ Package pdftex.def Info: ../figures/DIST_REL_C_01/DIST_REL_C_01_distrib_rmse_va
 l.png used on input line 91.
 (pdftex.def)             Requested size: 323.76738pt x 242.82553pt.
 
-<../figures/DIST_REL_C_01/DIST_REL_C_01_distrib_rmse_dist.png, id=167, 462.528p
+<../figures/DIST_REL_C_01/DIST_REL_C_01_distrib_rmse_dist.png, id=170, 462.528p
 t x 346.896pt>
 File: ../figures/DIST_REL_C_01/DIST_REL_C_01_distrib_rmse_dist.png Graphic file
  (type png)
@@ -1163,7 +1164,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 107--108
  []
 
 
-<../figures/DIST_REL_C_01/DIST_REL_C_01_preds_targets.png, id=168, 462.528pt x 
+<../figures/DIST_REL_C_01/DIST_REL_C_01_preds_targets.png, id=171, 462.528pt x 
 346.896pt>
 File: ../figures/DIST_REL_C_01/DIST_REL_C_01_preds_targets.png Graphic file (ty
 pe png)
@@ -1179,7 +1180,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 164--165
  []
 
 
-<../figures/DIST_REL_C_02/DIST_REL_C_02_distrib_rmse_val.png, id=177, 462.528pt
+<../figures/DIST_REL_C_02/DIST_REL_C_02_distrib_rmse_val.png, id=180, 462.528pt
  x 346.896pt>
 File: ../figures/DIST_REL_C_02/DIST_REL_C_02_distrib_rmse_val.png Graphic file 
 (type png)
@@ -1195,7 +1196,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 175--176
 
 [35 <../figures/DIST_REL_C_01/DIST_REL_C_01_preds_targets.png>] [36 <../figures
 /DIST_REL_C_02/DIST_REL_C_02_distrib_rmse_val.png>]
-<../figures/DIST_REL_C_02/DIST_REL_C_02_distrib_rmse_dist.png, id=187, 462.528p
+<../figures/DIST_REL_C_02/DIST_REL_C_02_distrib_rmse_dist.png, id=190, 462.528p
 t x 346.896pt>
 File: ../figures/DIST_REL_C_02/DIST_REL_C_02_distrib_rmse_dist.png Graphic file
  (type png)
@@ -1205,7 +1206,7 @@ Package pdftex.def Info: ../figures/DIST_REL_C_02/DIST_REL_C_02_distrib_rmse_di
 st.png used on input line 180.
 (pdftex.def)             Requested size: 323.76738pt x 242.82553pt.
 
-<../figures/DIST_REL_C_02/DIST_REL_C_02_preds_targets.png, id=188, 462.528pt x 
+<../figures/DIST_REL_C_02/DIST_REL_C_02_preds_targets.png, id=191, 462.528pt x 
 346.896pt>
 File: ../figures/DIST_REL_C_02/DIST_REL_C_02_preds_targets.png Graphic file (ty
 pe png)
@@ -1229,7 +1230,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 298--299
 
  []
 
-[39] <images/tboard.png, id=200, 1330.9725pt x 354.32375pt>
+[39] <images/tboard.png, id=203, 1330.9725pt x 354.32375pt>
 File: images/tboard.png Graphic file (type png)
 
 <use images/tboard.png>
@@ -1254,7 +1255,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 69--70
 
  []
 
-[41]
+
 <../figures/DIST_REL_CH_01/DIST_REL_CH_01_distrib_rmse_val.png, id=208, 462.528
 pt x 346.896pt>
 File: ../figures/DIST_REL_CH_01/DIST_REL_CH_01_distrib_rmse_val.png Graphic fil
@@ -1264,8 +1265,8 @@ e (type png)
 Package pdftex.def Info: ../figures/DIST_REL_CH_01/DIST_REL_CH_01_distrib_rmse_
 val.png used on input line 75.
 (pdftex.def)             Requested size: 323.76738pt x 242.82553pt.
-
-<../figures/DIST_REL_OH_01/DIST_REL_OH_01_distrib_rmse_val.png, id=209, 462.528
+ [41]
+<../figures/DIST_REL_OH_01/DIST_REL_OH_01_distrib_rmse_val.png, id=213, 462.528
 pt x 346.896pt>
 File: ../figures/DIST_REL_OH_01/DIST_REL_OH_01_distrib_rmse_val.png Graphic fil
 e (type png)
@@ -1275,7 +1276,7 @@ Package pdftex.def Info: ../figures/DIST_REL_OH_01/DIST_REL_OH_01_distrib_rmse_
 val.png used on input line 84.
 (pdftex.def)             Requested size: 323.76738pt x 242.82553pt.
 
-<../figures/DIST_REL_OH_01/DIST_REL_OH_01_distrib_rmse_dist.png, id=210, 462.52
+<../figures/DIST_REL_OH_01/DIST_REL_OH_01_distrib_rmse_dist.png, id=214, 462.52
 8pt x 346.896pt>
 File: ../figures/DIST_REL_OH_01/DIST_REL_OH_01_distrib_rmse_dist.png Graphic fi
 le (type png)
@@ -1285,7 +1286,7 @@ Package pdftex.def Info: ../figures/DIST_REL_OH_01/DIST_REL_OH_01_distrib_rmse_
 dist.png used on input line 96.
 (pdftex.def)             Requested size: 323.76738pt x 242.82553pt.
 
-<../figures/DIST_REL_OH_01/DIST_REL_OH_01_preds_targets.png, id=211, 462.528pt 
+<../figures/DIST_REL_OH_01/DIST_REL_OH_01_preds_targets.png, id=215, 462.528pt 
 x 346.896pt>
 File: ../figures/DIST_REL_OH_01/DIST_REL_OH_01_preds_targets.png Graphic file (
 type png)
@@ -1294,7 +1295,7 @@ Package pdftex.def Info: ../figures/DIST_REL_OH_01/DIST_REL_OH_01_preds_targets
 .png used on input line 105.
 (pdftex.def)             Requested size: 323.76738pt x 242.82553pt.
 
-<../figures/DIST_REL_CH_01/DIST_REL_CH_01_distrib_rmse_dist.png, id=212, 462.52
+<../figures/DIST_REL_CH_01/DIST_REL_CH_01_distrib_rmse_dist.png, id=216, 462.52
 8pt x 346.896pt>
 File: ../figures/DIST_REL_CH_01/DIST_REL_CH_01_distrib_rmse_dist.png Graphic fi
 le (type png)
@@ -1304,7 +1305,7 @@ Package pdftex.def Info: ../figures/DIST_REL_CH_01/DIST_REL_CH_01_distrib_rmse_
 dist.png used on input line 118.
 (pdftex.def)             Requested size: 323.76738pt x 242.82553pt.
 
-<../figures/DIST_REL_CH_01/DIST_REL_CH_01_preds_targets.png, id=213, 462.528pt 
+<../figures/DIST_REL_CH_01/DIST_REL_CH_01_preds_targets.png, id=217, 462.528pt 
 x 346.896pt>
 File: ../figures/DIST_REL_CH_01/DIST_REL_CH_01_preds_targets.png Graphic file (
 type png)
@@ -1318,7 +1319,7 @@ gures/DIST_REL_OH_01/DIST_REL_OH_01_distrib_rmse_val.png> <../figures/DIST_REL_
 OH_01/DIST_REL_OH_01_distrib_rmse_dist.png>] [44 <../figures/DIST_REL_OH_01/DIS
 T_REL_OH_01_preds_targets.png> <../figures/DIST_REL_CH_01/DIST_REL_CH_01_distri
 b_rmse_dist.png>]
-<../figures/DIST_REL_CC_02/DIST_REL_CC_02_distrib_rmse_val.png, id=229, 462.528
+<../figures/DIST_REL_CC_02/DIST_REL_CC_02_distrib_rmse_val.png, id=232, 462.528
 pt x 346.896pt>
 File: ../figures/DIST_REL_CC_02/DIST_REL_CC_02_distrib_rmse_val.png Graphic fil
 e (type png)
@@ -1328,7 +1329,7 @@ Package pdftex.def Info: ../figures/DIST_REL_CC_02/DIST_REL_CC_02_distrib_rmse_
 val.png used on input line 169.
 (pdftex.def)             Requested size: 370.02289pt x 277.51717pt.
 
-<../figures/DIST_REL_CC_02/DIST_REL_CC_02_distrib_rmse_dist.png, id=230, 462.52
+<../figures/DIST_REL_CC_02/DIST_REL_CC_02_distrib_rmse_dist.png, id=233, 462.52
 8pt x 346.896pt>
 File: ../figures/DIST_REL_CC_02/DIST_REL_CC_02_distrib_rmse_dist.png Graphic fi
 le (type png)
@@ -1338,7 +1339,7 @@ Package pdftex.def Info: ../figures/DIST_REL_CC_02/DIST_REL_CC_02_distrib_rmse_
 dist.png used on input line 177.
 (pdftex.def)             Requested size: 370.02289pt x 277.51717pt.
 
-<../figures/DIST_REL_CC_02/DIST_REL_CC_02_preds_targets.png, id=231, 462.528pt 
+<../figures/DIST_REL_CC_02/DIST_REL_CC_02_preds_targets.png, id=234, 462.528pt 
 x 346.896pt>
 File: ../figures/DIST_REL_CC_02/DIST_REL_CC_02_preds_targets.png Graphic file (
 type png)
@@ -1366,7 +1367,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 1--3
 
 [48]
 <../figures/DIST_REL_C_KER_RIDGE_01/DIST_REL_C_KER_RIDGE_01_distrib_rmse_val.pn
-g, id=249, 462.528pt x 346.896pt>
+g, id=253, 462.528pt x 346.896pt>
 File: ../figures/DIST_REL_C_KER_RIDGE_01/DIST_REL_C_KER_RIDGE_01_distrib_rmse_v
 al.png Graphic file (type png)
 
@@ -1375,9 +1376,9 @@ l.png>
 Package pdftex.def Info: ../figures/DIST_REL_C_KER_RIDGE_01/DIST_REL_C_KER_RIDG
 E_01_distrib_rmse_val.png used on input line 84.
 (pdftex.def)             Requested size: 370.02289pt x 277.51717pt.
-
+ [49]
 <../figures/DIST_REL_C_KER_RIDGE_01/DIST_REL_C_KER_RIDGE_01_distrib_rmse_dist.p
-ng, id=250, 462.528pt x 346.896pt>
+ng, id=257, 462.528pt x 346.896pt>
 File: ../figures/DIST_REL_C_KER_RIDGE_01/DIST_REL_C_KER_RIDGE_01_distrib_rmse_d
 ist.png Graphic file (type png)
 
@@ -1388,7 +1389,7 @@ E_01_distrib_rmse_dist.png used on input line 92.
 (pdftex.def)             Requested size: 370.02289pt x 277.51717pt.
 
 <../figures/DIST_REL_C_KER_RIDGE_01/DIST_REL_C_KER_RIDGE_01_preds_targets.png, 
-id=251, 462.528pt x 346.896pt>
+id=258, 462.528pt x 346.896pt>
 File: ../figures/DIST_REL_C_KER_RIDGE_01/DIST_REL_C_KER_RIDGE_01_preds_targets.
 png Graphic file (type png)
 
@@ -1397,9 +1398,7 @@ ng>
 Package pdftex.def Info: ../figures/DIST_REL_C_KER_RIDGE_01/DIST_REL_C_KER_RIDG
 E_01_preds_targets.png used on input line 101.
 (pdftex.def)             Requested size: 370.02289pt x 277.51717pt.
- [49] [50 <../figures/DIST_REL_C_KER_RIDGE_01/DIST_REL_C_KER_RIDGE_01_distrib_r
-mse_val.png> <../figures/DIST_REL_C_KER_RIDGE_01/DIST_REL_C_KER_RIDGE_01_distri
-b_rmse_dist.png>]
+
 Underfull \hbox (badness 10000) in paragraph at lines 145--146
 
  []
@@ -1410,7 +1409,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 164--165
  []
 
 
-<../figures/DIST_REL_C_SVM_03/DIST_REL_C_SVM_03_distrib_rmse_val.png, id=261, 4
+<../figures/DIST_REL_C_SVM_03/DIST_REL_C_SVM_03_distrib_rmse_val.png, id=259, 4
 62.528pt x 346.896pt>
 File: ../figures/DIST_REL_C_SVM_03/DIST_REL_C_SVM_03_distrib_rmse_val.png Graph
 ic file (type png)
@@ -1420,7 +1419,7 @@ Package pdftex.def Info: ../figures/DIST_REL_C_SVM_03/DIST_REL_C_SVM_03_distrib
 _rmse_val.png used on input line 170.
 (pdftex.def)             Requested size: 370.02289pt x 277.51717pt.
 
-<../figures/DIST_REL_C_SVM_03/DIST_REL_C_SVM_03_distrib_rmse_dist.png, id=262, 
+<../figures/DIST_REL_C_SVM_03/DIST_REL_C_SVM_03_distrib_rmse_dist.png, id=260, 
 462.528pt x 346.896pt>
 File: ../figures/DIST_REL_C_SVM_03/DIST_REL_C_SVM_03_distrib_rmse_dist.png Grap
 hic file (type png)
@@ -1434,7 +1433,7 @@ _rmse_dist.png used on input line 178.
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 
-<../figures/DIST_REL_C_SVM_03/DIST_REL_C_SVM_03_preds_targets.png, id=263, 462.
+<../figures/DIST_REL_C_SVM_03/DIST_REL_C_SVM_03_preds_targets.png, id=261, 462.
 528pt x 346.896pt>
 File: ../figures/DIST_REL_C_SVM_03/DIST_REL_C_SVM_03_preds_targets.png Graphic 
 file (type png)
@@ -1449,9 +1448,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 2--3
 
  []
 
-[51 <../figures/DIST_REL_C_KER_RIDGE_01/DIST_REL_C_KER_RIDGE_01_preds_targets.p
-ng>] [52 <../figures/DIST_REL_C_SVM_03/DIST_REL_C_SVM_03_distrib_rmse_val.png>]
-[53 <../figures/DIST_REL_C_SVM_03/DIST_REL_C_SVM_03_distrib_rmse_dist.png>]
+[50 <../figures/DIST_REL_C_KER_RIDGE_01/DIST_REL_C_KER_RIDGE_01_distrib_rmse_va
+l.png>] [51 <../figures/DIST_REL_C_KER_RIDGE_01/DIST_REL_C_KER_RIDGE_01_distrib
+_rmse_dist.png> <../figures/DIST_REL_C_KER_RIDGE_01/DIST_REL_C_KER_RIDGE_01_pre
+ds_targets.png>] [52 <../figures/DIST_REL_C_SVM_03/DIST_REL_C_SVM_03_distrib_rm
+se_val.png>] [53 <../figures/DIST_REL_C_SVM_03/DIST_REL_C_SVM_03_distrib_rmse_d
+ist.png>]
 Overfull \hbox (1.81177pt too wide) in paragraph at lines 17--18
  \T1/cmr/bx/n/10 Re-cherche par qua-drillage[] \T1/cmr/m/n/10 Cette tâche per-m
 et d'ef-fec-tuer une re-cherche par qua-drillage des hyper-paramètres
@@ -1504,7 +1506,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 21--22
 
  []
 
-[58] <images/flux_donnees.png, id=293, 1117.17375pt x 614.295pt>
+[58] <images/flux_donnees.png, id=296, 1117.17375pt x 614.295pt>
 File: images/flux_donnees.png Graphic file (type png)
 
 <use images/flux_donnees.png>
@@ -1543,7 +1545,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 73--74
  []
 
 
-<../figures/DELTA_DIST_+H_05/DELTA_DIST+H_05_distrib_rmse_val.png, id=308, 462.
+<../figures/DELTA_DIST_+H_05/DELTA_DIST+H_05_distrib_rmse_val.png, id=311, 462.
 528pt x 346.896pt>
 File: ../figures/DELTA_DIST_+H_05/DELTA_DIST+H_05_distrib_rmse_val.png Graphic 
 file (type png)
@@ -1553,7 +1555,7 @@ Package pdftex.def Info: ../figures/DELTA_DIST_+H_05/DELTA_DIST+H_05_distrib_rm
 se_val.png used on input line 82.
 (pdftex.def)             Requested size: 323.76738pt x 242.82553pt.
 
-<../figures/DELTA_DIST_+H_05/DELTA_DIST+H_05_distrib_rmse_dist.png, id=309, 462
+<../figures/DELTA_DIST_+H_05/DELTA_DIST+H_05_distrib_rmse_dist.png, id=312, 462
 .528pt x 346.896pt>
 File: ../figures/DELTA_DIST_+H_05/DELTA_DIST+H_05_distrib_rmse_dist.png Graphic
  file (type png)
@@ -1563,7 +1565,7 @@ Package pdftex.def Info: ../figures/DELTA_DIST_+H_05/DELTA_DIST+H_05_distrib_rm
 se_dist.png used on input line 98.
 (pdftex.def)             Requested size: 323.76738pt x 242.82553pt.
 
-<../figures/DELTA_DIST_+H_05/DELTA_DIST+H_05_preds_targets.png, id=310, 462.528
+<../figures/DELTA_DIST_+H_05/DELTA_DIST+H_05_preds_targets.png, id=313, 462.528
 pt x 346.896pt>
 File: ../figures/DELTA_DIST_+H_05/DELTA_DIST+H_05_preds_targets.png Graphic fil
 e (type png)
@@ -1573,7 +1575,7 @@ Package pdftex.def Info: ../figures/DELTA_DIST_+H_05/DELTA_DIST+H_05_preds_targ
 ets.png used on input line 112.
 (pdftex.def)             Requested size: 323.76738pt x 242.82553pt.
 
-<../figures/DELTA_DIST_+H_05/DELTA_DIST+H_05_preds_targets_zoom.png, id=311, 46
+<../figures/DELTA_DIST_+H_05/DELTA_DIST+H_05_preds_targets_zoom.png, id=314, 46
 2.528pt x 346.896pt>
 File: ../figures/DELTA_DIST_+H_05/DELTA_DIST+H_05_preds_targets_zoom.png Graphi
 c file (type png)
@@ -1648,7 +1650,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 9--10
 
 ] (./annexes.tex
 Annexe A.
-<images/gantt.png, id=354, 1523.6925pt x 294.09875pt>
+<images/gantt.png, id=357, 1523.6925pt x 294.09875pt>
 File: images/gantt.png Graphic file (type png)
  <use images/gantt.png>
 Package pdftex.def Info: images/gantt.png used on input line 9.
@@ -1664,7 +1666,7 @@ Overfull \hbox (15.87724pt too wide) in paragraph at lines 9--10
  <./images/gantt.png>]
 Annexe B.
 
-<../figures/DIST_REL_C_03/DIST_REL_C_03_distrib_rmse_val.png, id=359, 462.528pt
+<../figures/DIST_REL_C_03/DIST_REL_C_03_distrib_rmse_val.png, id=362, 462.528pt
  x 346.896pt>
 File: ../figures/DIST_REL_C_03/DIST_REL_C_03_distrib_rmse_val.png Graphic file 
 (type png)
@@ -1674,7 +1676,7 @@ Package pdftex.def Info: ../figures/DIST_REL_C_03/DIST_REL_C_03_distrib_rmse_va
 l.png used on input line 24.
 (pdftex.def)             Requested size: 346.89514pt x 260.17136pt.
 
-<../figures/DIST_REL_C_03/DIST_REL_C_03_distrib_rmse_dist.png, id=360, 462.528p
+<../figures/DIST_REL_C_03/DIST_REL_C_03_distrib_rmse_dist.png, id=363, 462.528p
 t x 346.896pt>
 File: ../figures/DIST_REL_C_03/DIST_REL_C_03_distrib_rmse_dist.png Graphic file
  (type png)
@@ -1688,7 +1690,7 @@ st.png used on input line 31.
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 
-<../figures/DIST_REL_C_03/DIST_REL_C_03_preds_targets.png, id=361, 462.528pt x 
+<../figures/DIST_REL_C_03/DIST_REL_C_03_preds_targets.png, id=364, 462.528pt x 
 346.896pt>
 File: ../figures/DIST_REL_C_03/DIST_REL_C_03_preds_targets.png Graphic file (ty
 pe png)
@@ -1701,7 +1703,7 @@ ng used on input line 39.
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 
-<../figures/DIST_REL_C_04/DIST_REL_C_04_distrib_rmse_val.png, id=362, 462.528pt
+<../figures/DIST_REL_C_04/DIST_REL_C_04_distrib_rmse_val.png, id=365, 462.528pt
  x 346.896pt>
 File: ../figures/DIST_REL_C_04/DIST_REL_C_04_distrib_rmse_val.png Graphic file 
 (type png)
@@ -1715,7 +1717,7 @@ l.png used on input line 48.
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 
-<../figures/DIST_REL_C_04/DIST_REL_C_04_distrib_rmse_dist.png, id=363, 462.528p
+<../figures/DIST_REL_C_04/DIST_REL_C_04_distrib_rmse_dist.png, id=366, 462.528p
 t x 346.896pt>
 File: ../figures/DIST_REL_C_04/DIST_REL_C_04_distrib_rmse_dist.png Graphic file
  (type png)
@@ -1729,7 +1731,7 @@ st.png used on input line 55.
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 
-<../figures/DIST_REL_C_04/DIST_REL_C_04_preds_targets.png, id=364, 462.528pt x 
+<../figures/DIST_REL_C_04/DIST_REL_C_04_preds_targets.png, id=367, 462.528pt x 
 346.896pt>
 File: ../figures/DIST_REL_C_04/DIST_REL_C_04_preds_targets.png Graphic file (ty
 pe png)
@@ -1766,7 +1768,7 @@ IST_REL_C_04/DIST_REL_C_04_distrib_rmse_dist.png>] [79 <../figures/DIST_REL_C_0
 4/DIST_REL_C_04_preds_targets.png>]
 Annexe C.
 
-<../figures/DIST_REL_CC_01/DIST_REL_CC_01_distrib_rmse_val.png, id=385, 462.528
+<../figures/DIST_REL_CC_01/DIST_REL_CC_01_distrib_rmse_val.png, id=388, 462.528
 pt x 346.896pt>
 File: ../figures/DIST_REL_CC_01/DIST_REL_CC_01_distrib_rmse_val.png Graphic fil
 e (type png)
@@ -1776,7 +1778,7 @@ Package pdftex.def Info: ../figures/DIST_REL_CC_01/DIST_REL_CC_01_distrib_rmse_
 val.png used on input line 78.
 (pdftex.def)             Requested size: 346.89514pt x 260.17136pt.
 
-<../figures/DIST_REL_CC_01/DIST_REL_CC_01_distrib_rmse_dist.png, id=386, 462.52
+<../figures/DIST_REL_CC_01/DIST_REL_CC_01_distrib_rmse_dist.png, id=389, 462.52
 8pt x 346.896pt>
 File: ../figures/DIST_REL_CC_01/DIST_REL_CC_01_distrib_rmse_dist.png Graphic fi
 le (type png)
@@ -1790,7 +1792,7 @@ dist.png used on input line 85.
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 
-<../figures/DIST_REL_CC_01/DIST_REL_CC_01_preds_targets.png, id=387, 462.528pt 
+<../figures/DIST_REL_CC_01/DIST_REL_CC_01_preds_targets.png, id=390, 462.528pt 
 x 346.896pt>
 File: ../figures/DIST_REL_CC_01/DIST_REL_CC_01_preds_targets.png Graphic file (
 type png)
@@ -1803,7 +1805,7 @@ Package pdftex.def Info: ../figures/DIST_REL_CC_01/DIST_REL_CC_01_preds_targets
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 
-<../figures/DIST_REL_OH_02/DIST_REL_OH_02_distrib_rmse_val.png, id=388, 462.528
+<../figures/DIST_REL_OH_02/DIST_REL_OH_02_distrib_rmse_val.png, id=391, 462.528
 pt x 346.896pt>
 File: ../figures/DIST_REL_OH_02/DIST_REL_OH_02_distrib_rmse_val.png Graphic fil
 e (type png)
@@ -1817,7 +1819,7 @@ val.png used on input line 105.
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 
-<../figures/DIST_REL_OH_02/DIST_REL_OH_02_distrib_rmse_dist.png, id=389, 462.52
+<../figures/DIST_REL_OH_02/DIST_REL_OH_02_distrib_rmse_dist.png, id=392, 462.52
 8pt x 346.896pt>
 File: ../figures/DIST_REL_OH_02/DIST_REL_OH_02_distrib_rmse_dist.png Graphic fi
 le (type png)
@@ -1831,7 +1833,7 @@ dist.png used on input line 112.
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 
-<../figures/DIST_REL_OH_02/DIST_REL_OH_02_preds_targets.png, id=390, 462.528pt 
+<../figures/DIST_REL_OH_02/DIST_REL_OH_02_preds_targets.png, id=393, 462.528pt 
 x 346.896pt>
 File: ../figures/DIST_REL_OH_02/DIST_REL_OH_02_preds_targets.png Graphic file (
 type png)
@@ -1844,7 +1846,7 @@ Package pdftex.def Info: ../figures/DIST_REL_OH_02/DIST_REL_OH_02_preds_targets
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 
-<../figures/DIST_REL_CH_02/DIST_REL_CH_02_distrib_rmse_val.png, id=391, 462.528
+<../figures/DIST_REL_CH_02/DIST_REL_CH_02_distrib_rmse_val.png, id=394, 462.528
 pt x 346.896pt>
 File: ../figures/DIST_REL_CH_02/DIST_REL_CH_02_distrib_rmse_val.png Graphic fil
 e (type png)
@@ -1858,7 +1860,7 @@ val.png used on input line 132.
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 
-<../figures/DIST_REL_CH_02/DIST_REL_CH_02_distrib_rmse_dist.png, id=392, 462.52
+<../figures/DIST_REL_CH_02/DIST_REL_CH_02_distrib_rmse_dist.png, id=395, 462.52
 8pt x 346.896pt>
 File: ../figures/DIST_REL_CH_02/DIST_REL_CH_02_distrib_rmse_dist.png Graphic fi
 le (type png)
@@ -1872,7 +1874,7 @@ dist.png used on input line 140.
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 
-<../figures/DIST_REL_CH_02/DIST_REL_CH_02_preds_targets.png, id=393, 462.528pt 
+<../figures/DIST_REL_CH_02/DIST_REL_CH_02_preds_targets.png, id=396, 462.528pt 
 x 346.896pt>
 File: ../figures/DIST_REL_CH_02/DIST_REL_CH_02_preds_targets.png Graphic file (
 type png)
@@ -1885,7 +1887,7 @@ Package pdftex.def Info: ../figures/DIST_REL_CH_02/DIST_REL_CH_02_preds_targets
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 
-<../figures/DIST_REL_CC_03/DIST_REL_CC_03_distrib_rmse_val.png, id=394, 462.528
+<../figures/DIST_REL_CC_03/DIST_REL_CC_03_distrib_rmse_val.png, id=397, 462.528
 pt x 346.896pt>
 File: ../figures/DIST_REL_CC_03/DIST_REL_CC_03_distrib_rmse_val.png Graphic fil
 e (type png)
@@ -1899,7 +1901,7 @@ val.png used on input line 160.
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 
-<../figures/DIST_REL_CC_03/DIST_REL_CC_03_distrib_rmse_dist.png, id=395, 462.52
+<../figures/DIST_REL_CC_03/DIST_REL_CC_03_distrib_rmse_dist.png, id=398, 462.52
 8pt x 346.896pt>
 File: ../figures/DIST_REL_CC_03/DIST_REL_CC_03_distrib_rmse_dist.png Graphic fi
 le (type png)
@@ -1913,7 +1915,7 @@ dist.png used on input line 168.
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 
-<../figures/DIST_REL_CC_03/DIST_REL_CC_03_preds_targets.png, id=396, 462.528pt 
+<../figures/DIST_REL_CC_03/DIST_REL_CC_03_preds_targets.png, id=399, 462.528pt 
 x 346.896pt>
 File: ../figures/DIST_REL_CC_03/DIST_REL_CC_03_preds_targets.png Graphic file (
 type png)
@@ -1926,7 +1928,7 @@ Package pdftex.def Info: ../figures/DIST_REL_CC_03/DIST_REL_CC_03_preds_targets
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 
-<../figures/DIST_REL_CH_03/DIST_REL_CH_03_distrib_rmse_val.png, id=397, 462.528
+<../figures/DIST_REL_CH_03/DIST_REL_CH_03_distrib_rmse_val.png, id=400, 462.528
 pt x 346.896pt>
 File: ../figures/DIST_REL_CH_03/DIST_REL_CH_03_distrib_rmse_val.png Graphic fil
 e (type png)
@@ -1940,7 +1942,7 @@ val.png used on input line 187.
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 
-<../figures/DIST_REL_CH_03/DIST_REL_CH_03_distrib_rmse_dist.png, id=398, 462.52
+<../figures/DIST_REL_CH_03/DIST_REL_CH_03_distrib_rmse_dist.png, id=401, 462.52
 8pt x 346.896pt>
 File: ../figures/DIST_REL_CH_03/DIST_REL_CH_03_distrib_rmse_dist.png Graphic fi
 le (type png)
@@ -1954,7 +1956,7 @@ dist.png used on input line 195.
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 
-<../figures/DIST_REL_CH_03/DIST_REL_CH_03_preds_targets.png, id=399, 462.528pt 
+<../figures/DIST_REL_CH_03/DIST_REL_CH_03_preds_targets.png, id=402, 462.528pt 
 x 346.896pt>
 File: ../figures/DIST_REL_CH_03/DIST_REL_CH_03_preds_targets.png Graphic file (
 type png)
@@ -1967,7 +1969,7 @@ Package pdftex.def Info: ../figures/DIST_REL_CH_03/DIST_REL_CH_03_preds_targets
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 
-<../figures/DIST_REL_OH_03/DIST_REL_OH_03_distrib_rmse_val.png, id=400, 462.528
+<../figures/DIST_REL_OH_03/DIST_REL_OH_03_distrib_rmse_val.png, id=403, 462.528
 pt x 346.896pt>
 File: ../figures/DIST_REL_OH_03/DIST_REL_OH_03_distrib_rmse_val.png Graphic fil
 e (type png)
@@ -1981,7 +1983,7 @@ val.png used on input line 214.
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 
-<../figures/DIST_REL_OH_03/DIST_REL_OH_03_distrib_rmse_dist.png, id=401, 462.52
+<../figures/DIST_REL_OH_03/DIST_REL_OH_03_distrib_rmse_dist.png, id=404, 462.52
 8pt x 346.896pt>
 File: ../figures/DIST_REL_OH_03/DIST_REL_OH_03_distrib_rmse_dist.png Graphic fi
 le (type png)
@@ -1995,7 +1997,7 @@ dist.png used on input line 222.
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 
-<../figures/DIST_REL_OH_03/DIST_REL_OH_03_preds_targets.png, id=402, 462.528pt 
+<../figures/DIST_REL_OH_03/DIST_REL_OH_03_preds_targets.png, id=405, 462.528pt 
 x 346.896pt>
 File: ../figures/DIST_REL_OH_03/DIST_REL_OH_03_preds_targets.png Graphic file (
 type png)
@@ -2008,7 +2010,7 @@ Package pdftex.def Info: ../figures/DIST_REL_OH_03/DIST_REL_OH_03_preds_targets
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 
-<../figures/DIST_REL_CC_04/DIST_REL_CC_04_distrib_rmse_val.png, id=403, 462.528
+<../figures/DIST_REL_CC_04/DIST_REL_CC_04_distrib_rmse_val.png, id=406, 462.528
 pt x 346.896pt>
 File: ../figures/DIST_REL_CC_04/DIST_REL_CC_04_distrib_rmse_val.png Graphic fil
 e (type png)
@@ -2022,7 +2024,7 @@ val.png used on input line 242.
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 
-<../figures/DIST_REL_CC_04/DIST_REL_CC_04_distrib_rmse_dist.png, id=404, 462.52
+<../figures/DIST_REL_CC_04/DIST_REL_CC_04_distrib_rmse_dist.png, id=407, 462.52
 8pt x 346.896pt>
 File: ../figures/DIST_REL_CC_04/DIST_REL_CC_04_distrib_rmse_dist.png Graphic fi
 le (type png)
@@ -2036,7 +2038,7 @@ dist.png used on input line 250.
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 
-<../figures/DIST_REL_CC_04/DIST_REL_CC_04_preds_targets.png, id=405, 462.528pt 
+<../figures/DIST_REL_CC_04/DIST_REL_CC_04_preds_targets.png, id=408, 462.528pt 
 x 346.896pt>
 File: ../figures/DIST_REL_CC_04/DIST_REL_CC_04_preds_targets.png Graphic file (
 type png)
@@ -2049,7 +2051,7 @@ Package pdftex.def Info: ../figures/DIST_REL_CC_04/DIST_REL_CC_04_preds_targets
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 
-<../figures/DIST_REL_CH_04/DIST_REL_CH_04_distrib_rmse_val.png, id=406, 462.528
+<../figures/DIST_REL_CH_04/DIST_REL_CH_04_distrib_rmse_val.png, id=409, 462.528
 pt x 346.896pt>
 File: ../figures/DIST_REL_CH_04/DIST_REL_CH_04_distrib_rmse_val.png Graphic fil
 e (type png)
@@ -2063,7 +2065,7 @@ val.png used on input line 269.
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 
-<../figures/DIST_REL_CH_04/DIST_REL_CH_04_distrib_rmse_dist.png, id=407, 462.52
+<../figures/DIST_REL_CH_04/DIST_REL_CH_04_distrib_rmse_dist.png, id=410, 462.52
 8pt x 346.896pt>
 File: ../figures/DIST_REL_CH_04/DIST_REL_CH_04_distrib_rmse_dist.png Graphic fi
 le (type png)
@@ -2077,7 +2079,7 @@ dist.png used on input line 277.
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 
-<../figures/DIST_REL_CH_04/DIST_REL_CH_04_preds_targets.png, id=408, 462.528pt 
+<../figures/DIST_REL_CH_04/DIST_REL_CH_04_preds_targets.png, id=411, 462.528pt 
 x 346.896pt>
 File: ../figures/DIST_REL_CH_04/DIST_REL_CH_04_preds_targets.png Graphic file (
 type png)
@@ -2090,7 +2092,7 @@ Package pdftex.def Info: ../figures/DIST_REL_CH_04/DIST_REL_CH_04_preds_targets
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 
-<../figures/DIST_REL_OH_04/DIST_REL_OH_04_distrib_rmse_val.png, id=409, 462.528
+<../figures/DIST_REL_OH_04/DIST_REL_OH_04_distrib_rmse_val.png, id=412, 462.528
 pt x 346.896pt>
 File: ../figures/DIST_REL_OH_04/DIST_REL_OH_04_distrib_rmse_val.png Graphic fil
 e (type png)
@@ -2104,7 +2106,7 @@ val.png used on input line 296.
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 
-<../figures/DIST_REL_OH_04/DIST_REL_OH_04_distrib_rmse_dist.png, id=410, 462.52
+<../figures/DIST_REL_OH_04/DIST_REL_OH_04_distrib_rmse_dist.png, id=413, 462.52
 8pt x 346.896pt>
 File: ../figures/DIST_REL_OH_04/DIST_REL_OH_04_distrib_rmse_dist.png Graphic fi
 le (type png)
@@ -2118,7 +2120,7 @@ dist.png used on input line 304.
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 
-<../figures/DIST_REL_OH_04/DIST_REL_OH_04_preds_targets.png, id=411, 462.528pt 
+<../figures/DIST_REL_OH_04/DIST_REL_OH_04_preds_targets.png, id=414, 462.528pt 
 x 346.896pt>
 File: ../figures/DIST_REL_OH_04/DIST_REL_OH_04_preds_targets.png Graphic file (
 type png)
@@ -2502,47 +2504,45 @@ LaTeX Font Warning: Size substitutions with differences
 
  ) 
 Here is how much of TeX's memory you used:
- 8438 strings out of 494433
- 139256 string characters out of 6170337
- 214135 words of memory out of 5000000
- 11501 multiletter control sequences out of 15000+600000
+ 8438 strings out of 493029
+ 139256 string characters out of 6136235
+ 217813 words of memory out of 5000000
+ 11606 multiletter control sequences out of 15000+600000
  23616 words of font info for 48 fonts, out of 8000000 for 9000
- 286 hyphenation exceptions out of 8191
+ 1141 hyphenation exceptions out of 8191
  53i,15n,92p,1439b,439s stack positions out of 5000i,500n,10000p,200000b,80000s
- </home/etudiant/.texmf-var/fonts/pk/ljfour/jknappen/ec/ectt1000.600pk> </hom
-e/etudiant/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecbi2488.600pk> </home/etudia
-nt/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx0700.600pk> </home/etudiant/.texm
-f-var/fonts/pk/ljfour/jknappen/ec/ecrm0600.600pk> </home/etudiant/.texmf-var/fo
-nts/pk/ljfour/jknappen/ec/ecrm0800.600pk> </home/etudiant/.texmf-var/fonts/pk/l
-jfour/jknappen/ec/ecbx1200.600pk> </home/etudiant/.texmf-var/fonts/pk/ljfour/jk
-nappen/ec/ecrm0700.600pk> </home/etudiant/.texmf-var/fonts/pk/ljfour/jknappen/e
-c/ecbx1440.600pk> </home/etudiant/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx20
-74.600pk> </home/etudiant/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecbi1000.600pk
-> </home/etudiant/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1000.600pk> </home
-/etudiant/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx2488.600pk> </home/etudian
-t/.texmf-var/fonts/pk/ljfour/jknappen/ec/eccc1000.600pk> </home/etudiant/.texmf
--var/fonts/pk/ljfour/jknappen/ec/ecrm1000.600pk> </home/etudiant/.texmf-var/fon
-ts/pk/ljfour/jknappen/ec/ecti1000.600pk> </home/etudiant/.texmf-var/fonts/pk/lj
-four/jknappen/ec/ecbx1728.600pk> </home/etudiant/.texmf-var/fonts/pk/ljfour/jkn
-appen/ec/eccc1200.600pk> </home/etudiant/.texmf-var/fonts/pk/ljfour/jknappen/ec
-/eccc1728.600pk></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/c
-mbx5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx7.pf
-b></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></us
-r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/shar
-e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/share/texli
-ve/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texlive/texm
-f-dist/fonts/type1/public/amsfonts/cm/cmmib10.pfb></usr/share/texlive/texmf-dis
-t/fonts/type1/public/amsfonts/cmextra/cmmib7.pfb></usr/share/texlive/texmf-dist
-/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/
-type1/public/amsfonts/cm/cmr5.pfb></usr/share/texlive/texmf-dist/fonts/type1/pu
-blic/amsfonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/ams
-fonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/
-cm/cmsy5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy
-7.pfb>
-Output written on rapport.pdf (96 pages, 7394192 bytes).
+{/usr/share/texmf/fonts/enc/dvips/cm-super/cm-super-t1.enc}</usr/share/texliv
+e/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx5.pfb></usr/share/texlive/texmf
+-dist/fonts/type1/public/amsfonts/cm/cmbx7.pfb></usr/share/texlive/texmf-dist/f
+onts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf-dist/fonts/t
+ype1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/p
+ublic/amsfonts/cm/cmmi5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/a
+msfonts/cm/cmmi7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts
+/cm/cmmib10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cmex
+tra/cmmib7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cm
+r10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb>
+</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/sh
+are/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/te
+xlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb></usr/share/texlive/t
+exmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/share/texmf/fonts/type
+1/public/cm-super/sfbi1000.pfb></usr/share/texmf/fonts/type1/public/cm-super/sf
+bi2488.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfbx0700.pfb></usr/sha
+re/texmf/fonts/type1/public/cm-super/sfbx1000.pfb></usr/share/texmf/fonts/type1
+/public/cm-super/sfbx1200.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfb
+x1440.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfbx1728.pfb></usr/shar
+e/texmf/fonts/type1/public/cm-super/sfbx2074.pfb></usr/share/texmf/fonts/type1/
+public/cm-super/sfbx2488.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfcc
+1000.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfcc1200.pfb></usr/share
+/texmf/fonts/type1/public/cm-super/sfcc1728.pfb></usr/share/texmf/fonts/type1/p
+ublic/cm-super/sfrm0600.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm0
+700.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm0800.pfb></usr/share/
+texmf/fonts/type1/public/cm-super/sfrm1000.pfb></usr/share/texmf/fonts/type1/pu
+blic/cm-super/sfti1000.pfb></usr/share/texmf/fonts/type1/public/cm-super/sftt10
+00.pfb>
+Output written on rapport.pdf (97 pages, 7972274 bytes).
 PDF statistics:
- 1220 PDF objects out of 1440 (max. 8388607)
- 328 compressed objects within 4 object streams
+ 599 PDF objects out of 1000 (max. 8388607)
+ 314 compressed objects within 4 object streams
  0 named destinations out of 1000 (max. 500000)
  381 words of extra memory for PDF output out of 10000 (max. 10000000)
 

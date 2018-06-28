@@ -3,9 +3,9 @@ Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
 The top-level auxiliary file: rapport.aux
 I found no \bibdata command---while reading file rapport.aux
 I found no \bibstyle command---while reading file rapport.aux
-You've used 2 entries,
+You've used 13 entries,
             0 wiz_defined-function locations,
-            85 strings with 511 characters,
+            96 strings with 594 characters,
 and the built_in function-call counts, 0 in all, are:
 = -- 0
 > -- 0
